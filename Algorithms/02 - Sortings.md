@@ -24,6 +24,39 @@ for i=0..n-1:
 
 
 
+```rust
+fn merge(l: Vec<i64>, r: Vec<i64>) -> Vec<i64> {
+    let mut res = Vec::new();
+
+    let mut i = 0 as usize;
+    let mut j = i;
+
+    while i + j < l.len() + r.len() {
+        if i != l.len() && (j == r.len() || l[i] < r[j]) {
+            res.push(l[i]);
+            i += 1;
+        }
+        else {
+            res.push(r[j]);
+            j += 1;
+        }
+    }
+
+    return res;
+}
+
+fn sorted(v: Vec<i64>) -> Vec<i64> {
+    let n = v.len();
+    let m = v / 2usize;
+
+    let res = Vec::new();
+    
+}
+
+```
+
+
+
 
 
 ### Мастер теорема
