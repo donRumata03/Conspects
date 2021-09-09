@@ -18,12 +18,12 @@ print(f"Commit message will be: \"{commit_message}\"")
 
 print("Compiling…")
 
-exit_data = os.system("python compile.py")
+exit_data = run_python_script("compile.py")
 if exit_data != 0:
-	print("{bcolors.FAIL}Failed to comile MathAnalysis conspect! Terminating…{bcolors.ENDC}")
+	colored_print(bcolors.FAIL, "Failed to comile MathAnalysis conspect! Terminating…")
 	exit(1)
 
-print(f"{bcolors.OKGREEN}Successfully compiled => commiting…{bcolors.ENDC}")
+colored_print(bcolors.OKGREEN, "Successfully compiled => commiting…")
 
 os.system(f"git add -u ./")
 os.system(f"git commit -m \"{commit_message}\"")
