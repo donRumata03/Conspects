@@ -1,6 +1,9 @@
 import sys
 import os
 
+from script_common.script_commons import *
+
+
 
 # commit_message = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "Update MathAnalysis conspect"
 commit_message = "Update MathAnalysis conspect"
@@ -14,11 +17,13 @@ print(f"Commit message will be: \"{commit_message}\"")
 
 
 print("Compiling…")
-exit_data = os.system("compile.py")
-if exit_data != 0:
-	print("Failed to comile MathAnalysis conspect! Terminating…")
 
-print("Successfully compiled => commiting…")
+exit_data = os.system("python compile.py")
+if exit_data != 0:
+	print("{bcolors.FAIL}Failed to comile MathAnalysis conspect! Terminating…{bcolors.ENDC}")
+	exit(1)
+
+print(f"{bcolors.OKGREEN}Successfully compiled => commiting…{bcolors.ENDC}")
 
 os.system(f"git add -u ./")
 os.system(f"git commit -m \"{commit_message}\"")
