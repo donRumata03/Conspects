@@ -1,5 +1,10 @@
-# Conspects
-ITMO CT M3138 conspects.
+# Conspects && useful resources
+ITMO CT M3138 useful resources including:
+
+- Conspects
+- Related books
+- Links to recorded lections at youtube
+- HomeTasks
 
 Supported subjects:
 
