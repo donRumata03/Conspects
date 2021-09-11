@@ -1,34 +1,118 @@
+% For xeLatex
+
+% \usepackage{amsmath,amsthm,amssymb}
+% %\usepackage{mathtext}
+% \usepackage{unicode-math}
+
+% \usepackage[T1, T2A]{fontenc}
+% \usepackage[utf8]{inputenc}
+
+% \usepackage[english, russian]{babel}
+
+% % \usepackage{newtxmath,newtxtext}
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+
 
 \documentclass[12pt, a4paper]{article}
 
-\usepackage{amsmath,amsthm,amssymb}
-%\usepackage{mathtext}
-\usepackage{unicode-math}
+% Some fancy symbols
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+% \usepackage{cancel}
+% Bold math
+%\usepackage{bm}
+% Resizing
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+% Optional font for not math-based subjects
+%\usepackage{cmbright}
 
-\usepackage[T1, T2A]{fontenc}
+% Some fancy symbols
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+
+% Math packages
+\usepackage{amsmath,amsthm,amssymb, amsfonts, mathrsfs, dsfont, mathtools}
+\usepackage{mathtext}
+
+\usepackage[bb=boondox]{mathalfa}
+\usepackage{cancel}
+% Bold math
+\usepackage{bm}
+
+
+\usepackage{url}
+% Fancier tables and lists
+\usepackage{booktabs}
+\usepackage{enumitem}
+% Don't indent paragraphs, leave some space between them
+\usepackage{parskip}
+% Hide page number when page is empty
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\usepackage{minted}
+
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+
 
 \usepackage[english, russian]{babel}
 
-% \usepackage{newtxmath,newtxtext}
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
+\newcommand\sN{{\mathbb{N}}}
+\newcommand\sR{{\mathbb{R}}}
+\newcommand\sC{{\mathbb{C}}}
+\newcommand\sZ{{\mathbb{Z}}}
 
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sign}{sign}
+
+\definecolor{correct_color}{HTML}{009900}
+\newcommand\correction[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct_color}{#2}}\ensuremath{\:}}
+\newcommand\green[1]{{\color{correct_color}{#1}}}
+
+\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\newcommand\textbb[1]{{$\mathbb{#1}$}}
 
 \begin{document}
      
     
-    $\acute{П}$
-    $\acute{j}$
+    $\sin x$\\
+    $\sin(x+y)$\\
+    $\supp x$\\
+    $\supp(x+y)$
+
+    \begin{gather}
+        \sN \\
+        \sR \\
+        \sC \\
+        \sZ
+    \end{gather}
+    
+    \begin{gather}\label{eq:upsilon}
+        \Upsilon \\
+        \RNumb{2875} \\
+        \rm 121
+    \end{gather}
+
+    
 
     \begin{equation}
-        \text{привет} = 1
+        \begin{cases}
+            1+1=\correction{3}{2} \\
+            1+1=\correction{2}{3} \\
+            \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle 
+        \end{cases}            
     \end{equation}
 
-    Добрый день, дамы и \textit{ДАМЫ}!
+    \green{Зелёный текст!}\\
+    \correction{Неправильно}{Правильно}
 
-    dfdf
+    \textbb{fsdgfglkdfglkkhkuhkjkh}
 
-    lfghfghfgk;dhfgkjasasssdsasas
+    R: \ref{eq:upsilon} 
 
 \end{document}

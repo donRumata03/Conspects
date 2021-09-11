@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.10)  11 SEP 2021 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.10)  11 SEP 2021 14:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.tex
-(/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.tex
+**/home/vova/Documents/Conspects/MathAnal/MathAnal.tex
+(/home/vova/Documents/Conspects/MathAnal/MathAnal.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -146,7 +146,305 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 ) (/usr/share/texlive/texmf-dist/tex/latex/t2/mathtext.sty
 Package: mathtext 2018/04/14 v1.0 transparent text-and-math defs
 LaTeX Info: Redefining \halign on input line 121.
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/mathalpha/mathalfa.sty) (/usr/share/texlive/texmf-dist/tex/latex/mathalpha/mathalpha.sty
+Package: mathalpha 2019/10/05 - 1.13mathalpha (License LPPL) Michael Sharpe
+ `mathalpha' v1.13, 2019/10/05, a renaming of mathalfa (msharpe) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count191
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+LaTeX Font Info:    Overwriting math alphabet `\mathbb' in version `bold'
+(Font)                  U/BOONDOX-ds/m/n --> U/BOONDOX-ds/b/n on input line 142.
+) (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup8
+\symboldletters=\mathgroup9
+\symboldsymbols=\mathgroup10
+\symboldstmry=\mathgroup11
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
+\@cmidla=\count192
+\@cmidlb=\count193
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
+\@thisruleclass=\count194
+\@lastruleclass=\count195
+\@thisrulewidth=\dimen165
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip59
+\enit@outerparindent=\dimen166
+\enit@toks=\toks28
+\enit@inbox=\box47
+\enit@count@id=\count196
+\enitdp@description=\count197
+) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2020-01-22 v2.0d non-zero parskip adjustments
+ (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count198
+)) (/usr/share/texlive/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen167
+\captionmargin@=\dimen168
+\captionwidth=\dimen169
+\caption@tempdima=\dimen170
+\caption@indent=\dimen171
+\caption@parindent=\dimen172
+\caption@hangindent=\dimen173
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count199
+\c@continuedfloat=\count266
+)
+\c@subfigure=\count267
+\c@subtable=\count268
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count269
+\mult@box=\box48
+\multicol@leftmargin=\dimen174
+\c@unbalance=\count270
+\c@collectmore=\count271
+\doublecol@number=\count272
+\multicoltolerance=\count273
+\multicolpretolerance=\count274
+\full@width=\dimen175
+\page@free=\dimen176
+\premulticols=\dimen177
+\postmulticols=\dimen178
+\multicolsep=\skip60
+\multicolbaselineskip=\skip61
+\partial@page=\box49
+\last@line=\box50
+\maxbalancingoverflow=\dimen179
+\mult@rightbox=\box51
+\mult@grightbox=\box52
+\mult@gfirstbox=\box53
+\mult@firstbox=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\c@minrows=\count275
+\c@columnbadness=\count276
+\c@finalcolumnbadness=\count277
+\last@try=\dimen180
+\multicolovershoot=\dimen181
+\multicolundershoot=\dimen182
+\mult@nat@firstbox=\box92
+\colbreak@box=\box93
+\mc@col@check@num=\count278
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count279
+\FV@InFile=\read2
+\FV@TabBox=\box94
+\c@FancyVerbLine=\count280
+\FV@StepNumber=\count281
+\FV@OutFile=\write3
+) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count282
+\output=\toks29
+\linenoprevgraf=\count283
+\linenumbersep=\dimen183
+\linenumberwidth=\dimen184
+\c@linenumber=\count284
+\c@pagewiselinenumber=\count285
+\c@LN@truepage=\count286
+\c@internallinenumber=\count287
+\c@internallinenumbers=\count288
+\quotelinenumbersep=\dimen185
+\bframerule=\dimen186
+\bframesep=\dimen187
+\bframebox=\box95
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count289
+\c@FV@TrueTabCounter=\count290
+\FV@TabBox@Group=\box96
+\FV@TmpLength=\skip62
+\c@FV@HighlightLinesStart=\count291
+\c@FV@HighlightLinesStop=\count292
+\FV@LoopCount=\count293
+\FV@NCharsBox=\box97
+\FV@BreakIndent=\dimen188
+\FV@BreakIndentNChars=\count294
+\FV@BreakSymbolSepLeft=\dimen189
+\FV@BreakSymbolSepLeftNChars=\count295
+\FV@BreakSymbolSepRight=\dimen190
+\FV@BreakSymbolSepRightNChars=\count296
+\FV@BreakSymbolIndentLeft=\dimen191
+\FV@BreakSymbolIndentLeftNChars=\count297
+\FV@BreakSymbolIndentRight=\dimen192
+\FV@BreakSymbolIndentRightNChars=\count298
+\c@FancyVerbLineBreakLast=\count299
+\FV@LineBox=\box98
+\FV@LineIndentBox=\box99
+\FV@LineWidth=\dimen193
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count300
+\decimalpart=\count301
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip63
+\fb@frw=\dimen194
+\fb@frh=\dimen195
+\FrameRule=\dimen196
+\FrameSep=\dimen197
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count302
+\float@exts=\toks30
+\float@box=\box100
+\@float@everytoks=\toks31
+\@floatcapt=\box101
+)
+\minted@appexistsfile=\read3
+\minted@bgbox=\box102
+\minted@code=\write4
+\c@minted@FancyVerbLineTemp=\count303
+\c@minted@pygmentizecounter=\count304
+\@float@every@listing=\toks32
+\c@listing=\count305
+)
+runsystem(mkdir -p _minted-MathAnal)...disabled (restricted).
+
+
+
+/home/vova/Documents/Conspects/MathAnal/MathAnal.tex:57: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 
+     
+Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for more information.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
  (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
 File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
@@ -351,15 +649,15 @@ File: t2aenc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
    defining Unicode char U+FB05 (decimal 64261)
    defining Unicode char U+FB06 (decimal 64262)
 )
-\symT2Aletters=\mathgroup8
+\symT2Aletters=\mathgroup12
 )
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 112.
  (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
+\inpenc@prehook=\toks33
+\inpenc@posthook=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/02/14 3.40 The Babel package
  (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
@@ -368,11 +666,11 @@ File: switch.def 2020/02/14 3.40 Babel switching mechanism
 Language: english 2017/06/06 v3.3r English support from the babel system
  (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/02/14 3.40 Babel common definitions
-\babel@savecnt=\count191
-\U@D=\dimen153
+\babel@savecnt=\count306
+\U@D=\dimen198
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count192
+\bbl@readstream=\read4
+\bbl@dirlevel=\count307
 )
 Package babel Info: \l@british = using hyphenrules for english
 (babel)             (\language0) on input line 82.
@@ -388,29 +686,44 @@ Package babel Info: \l@newzealand = using hyphenrules for english
 Language: russian 2017/08/12 1.3j Russian support for the Babel system
 Package babel Info: Making " an active character on input line 120.
 Package babel Info: Default for \cyrdash is provided on input line 157.
-)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count193
-\l__pdf_internal_box=\box47
-) (/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux)
-\openout1 = `LinearAlgebra.aux'.
+))
+runsystem(which pygmentize && touch MathAnal.aex)...disabled (restricted).
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+
+
+/home/vova/Documents/Conspects/MathAnal/MathAnal.tex:80: Package minted Error: You must have `pygmentize' installed to use this package.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 \begin{document}
+                     
+Refer to the installation instructions in the minted documentation for more information.
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count308
+\l__pdf_internal_box=\box103
+) (/home/vova/Documents/Conspects/MathAnal/MathAnal.aux)
+\openout1 = `MathAnal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
@@ -421,72 +734,83 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+\Gin@req@height=\dimen199
+\Gin@req@width=\dimen256
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count194
-\scratchdimen=\dimen154
-\scratchbox=\box48
-\nofMPsegments=\count195
-\nofMParguments=\count196
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count197
-\MPscratchDim=\dimen155
-\MPnumerator=\count198
-\makeMPintoPDFobject=\count199
-\everyMPtoPDFconversion=\toks29
-))) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+\scratchcounter=\count309
+\scratchdimen=\dimen257
+\scratchbox=\box104
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen258
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks36
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\Gin@req@height=\dimen156
-\Gin@req@width=\dimen157
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 32.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 32.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 83.
+
+
 LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 32.
+(Font)              using `T2A/cmr/m/n' instead on input line 83.
+
+
+LaTeX Warning: Reference `eq:upsilon' on page 1 undefined on input line 116.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.toc)
-\tf@toc=\write3
-\openout3 = `LinearAlgebra.toc'.
-
- [2] [3] [4] [5] [6] [7] (/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/vova/Documents/Conspects/MathAnal/MathAnal.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 5143 strings out of 482584
- 71841 string characters out of 5956256
- 304440 words of memory out of 5000000
- 20083 multiletter control sequences out of 15000+600000
- 551020 words of font info for 77 fonts, out of 8000000 for 9000
+ 11037 strings out of 482584
+ 179183 string characters out of 5956256
+ 465286 words of memory out of 5000000
+ 25834 multiletter control sequences out of 15000+600000
+ 544862 words of font info for 65 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 37i,13n,32p,547b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.pdf (7 pages, 153397 bytes).
+ 62i,10n,100p,857b,204s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxrl8a.pfb>
+Output written on /home/vova/Documents/Conspects/MathAnal/MathAnal.pdf (1 page, 62324 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

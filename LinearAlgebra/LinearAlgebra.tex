@@ -18,7 +18,7 @@
 
 
 
-\usepackage[T1, T2A]{fontenc}
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 
 
@@ -239,5 +239,21 @@
     \begin{gather}
         x' \vec{e_1} + y' \vec{e_2} + y' \vec{e_3} = x' (\cos(alpha_1)\vec{i} + \cos(alpha_1)\vec{j} +\ldots) + 
     \end{gather}
+
+    \begin{equation}
+        \begin{pmatrix}
+            x \\
+            y \\
+            z
+        \end{pmatrix} = \begin{pmatrix}
+            \cos(\alpha_1) & \cos(\alpha_2) & \cos(\alpha_3) \\
+            \cos(\beta_1) & \cos(\beta_2) & \cos(\beta_3) \\
+            \cos(\gamma_1) & \cos(\gamma_2) & \cos(\gamma_3)
+        \end{pmatrix} \begin{pmatrix}
+            x' \\
+            y' \\
+            z'
+        \end{pmatrix}
+    \end{equation}
 
 \end{document}
