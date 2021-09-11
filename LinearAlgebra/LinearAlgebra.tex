@@ -1,0 +1,243 @@
+\documentclass[12pt, a4paper]{article}
+
+% Some fancy symbols
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+% \usepackage{cancel}
+% Bold math
+%\usepackage{bm}
+% Resizing
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+% Optional font for not math-based subjects
+%\usepackage{cmbright}
+
+% Math packages
+\usepackage{amsmath,amsthm,amssymb, amsfonts, mathrsfs, dsfont, mathtools}
+
+\usepackage{mathtext}
+
+
+
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[english, russian]{babel}
+
+
+\title{LinAlg}
+\author{Latypov V}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \tableofcontents
+    \newpage
+
+    \section{Введение}
+    Преподаватель: Кучерук Е. А. 
+    EMail: kucheruk.e.a@gmail.com
+
+    Литература по линейной алгебры:
+
+    Геометрия Александров
+    Ильин Позняк  Линейная алгебра
+
+    \section{as}
+    
+    Вектор - класс направленных отрезков, определён с точностью до точки приложения.
+
+    Линейные операции:
+    \begin{itemize}
+        \item $\vec{c} = \vec{a} + \vec{b}$
+        \item $\forall \alpha \in \mathbb{R}: \vec(a) \times \alpha$
+    \end{itemize}
+
+    Свойства линейных операций/аксиомы линейного пространства:
+    \begin{enumerate}
+        \item Коммутативность
+        \item Ассоциативность
+        \item Существование нулевого элемента (нуль-вектор  )
+        \item Существование противоположного элемента для каждого 
+                $\forall \vec{A}: \exists \vec{\overline{A}}: \vec{A} + \vec{\overline{A}} = 0$
+        \item Ассоциативность умножения вектора на скаляр: $\beta \times (\vec{A} \times \alpha) = \beta \times (\vec{A} \times \alpha)$
+        \item Дистрибутивность умножения на скаляр относительно сложения чисел: $(\alpha + \beta) \times \vec{v}  = \alpha \vec{v} + \beta \vec{v}$
+        \item Дистрибутивность умножения на скаляр относительно сложения векторов: $(\vec{a} + \vec{b}) \times \alpha  = \alpha \vec{a} + \alpha \vec{b}$
+    \end{enumerate}
+    
+    Два вектора коллинеарны $\vec{a} \parallel \vec{b} \Longleftrightarrow \ldots$
+
+    Линейная комбинация векторов:
+    \begin{equation}
+        \overleftarrow{combination} = \sum_{i = 1}^{n} {\alpha_i \times \vec{v_i}}
+    \end{equation}
+    Комбинация векторов тривиальна, если $\forall \alpha_i = 0$
+    Иначе -- нетривиальная система.
+
+    Система векторов линейно независима, если любая нулевая линейная комбинация тривиальна.
+    Иначе система линейно зависима (например, если есть коллинеарные).
+
+    Если есть хотя бы один нуль-вектор, система тоже линейно зависима (берём коэффициент 0 при нём). 
+
+    Если объединить линейно зависимую с любой, получится линейно зависимая.
+
+    Если система линейно зависима, один из векторов - линейная комбинация каких-то других.
+    \begin{gather}
+        ]~ \alpha_n \neq 0 \\
+        \exists x_i:  \\
+        \vec{v}_n = \sum_{}^{} \vec{v}_i = \frac{1}{\alpha_n}
+    \end{gather}
+
+    Пусть есть прямая. На ней:
+    Базис - любой ненулевой вектор.
+
+    Пусть есть плоскость. На ней:
+    Базис - любая упорядоченная пара неколлинеарных векторов.
+
+    Пусть есть пространствао. На ней:
+    Базис - упорядоченная тройка некомплананых векторов.
+
+    $\alpha_i$ - координаты вектора в базисе.
+
+    Теорема: 
+    Любой вектор пространства может быть разложен по базису, причём единственным образом. 
+    Как в пространстве, так и на прямой с полскостью.
+
+    Доказательство:
+    Базис - векторы $\vec{e}_i$
+    Добавим к ним вектор $x$. Так как была 
+    \[
+        x = \sum_{i = 1}^{n} x_i \times \vec{e_i}
+    \]
+
+    x. Тогда полученная система векторов будет линейно зависимой и вектор x может быть линейно выражен через векторы формула: формула, где формула - некоторые числа. Так мы получили разложение вектора x по базису. Осталось доказать, что это разложение единственно. 
+
+    Докажем несколько теорем, далее работать будем с координатами.
+
+    Следствия теоремы о единственности разложения: 
+
+    \begin{itemize}
+        \item $\vec{a} = \vec{b} \Longleftrightarrow \forall i < n: \vec{a}_i =  \vec{b}_i$
+        \item $\vec{a} + \vec{b} = \vec{c} \Longleftrightarrow \forall i < n: \vec{a}_i + \vec{b}_i = \vec{c}_i$, доказываетсчя через аксиомы линейного пространства
+        \item $\vec{b} = \alpha \times \vec{a}, \alpha \in \mathbb{R} \Longleftrightarrow \vec{b}_i =  \alpha \times \vec{b}_i$
+        \item $\vec{a} \parallel \vec{b}, \vec{a} \neq \vec{0} \Longleftrightarrow \frac{b_1}{a_1} = \frac{b_2}{a_2} = \frac{b_3}{a_3} = \ldots = \alpha \in \mathbb{R}$
+        \item Система коллинеарных векторов ($\geq n + 1$) всегда линейно зависимая (для плоскости либо все коллинеарны, либо 2 неколлинеарных, тогда можно ввести базис, выразив один через другие, для пространства аналогично, только 3 и некомпларнарные)
+    \end{itemize}
+
+    $\vec{l_1}, \vec{l_2}, \vec{l_3}$ базис $V_3$ $\forall v \in V_3 \exists! \forall i \in \{ ~1,~ 2, ~3~\} \alpha_i \in \mathbb{R}: \vec{}$
+
+
+    \section(nСистема координат на плоскости и в пространстве)
+    говорят, что в $V_3$ введена д.с.к (декартова сис коорд), 
+    если в пространстве есть точка О (начало системы коордтнат), 
+    зафиксирован базис $\vec{l_1}, \vec{l_2}, \vec{l_3}$ некомпланарные.
+    
+    Оси кординат - прямые, проходящие через начало координат в направлении базисных векторов.
+
+    Координаты точки - всё равно что координаты радиус-вектора.
+    Геометрически - для нахождения координат проводим (правило параллелограмма) плоскости или вектора параллельные тому, чему нужно.
+
+    Координаты вектора = кординаты конца - координаты начала
+
+
+    Задача:
+    Пусть есть вектор, заданный координатами конца и начала ($A = (a_1, a_2, a_3), B = (b_1, _2, b_3)$).
+    Нужно найти точку $M = (m_1, m_2, m_3): \frac{AM}{MB} = \frac{\lambda}{\mu}$
+
+    Распишем, тогда:
+    \[
+        m_i = \frac{\lambda b_i + \mu a_i}{\lambda + \mu}
+    \]
+    Для середины - понятно, что.
+    
+    В дальнейшем будем рассматривать ортонормированную декартовую систему координат (о.н.д.с.к.).
+    Все единичной длины.
+    
+    Будем обозначать $\vec{i}, \vec{j}, \vec{k}$.
+
+    \begin{equation}
+        \vec{a} = (a_1, a_2, a_3)        
+    \end{equation}
+
+    \begin{equation}
+        a_0 = \frac{\vec{a}}{|a|} 
+        = (\frac{a_1}{\sqrt{\ldots}}, \frac{a_2}{\sqrt{\ldots}}, \frac{a_3}{\sqrt{\ldots}}) 
+        = (\cos(\alpha), \cos(\beta), \cos(\gamma))
+    \end{equation}
+
+    Направляющие коснусы (углов вектора с осями координат)
+    \begin{equation}
+        \cos(\gamma) + cos(\beta) + \cos(\alpha) = 1
+    \end{equation}
+
+    \section{Полярная и сферическая система координат}
+    ПСК определяется точкой и \textbf{полярным} лучём отсчёта из этой точки.
+
+    Связь между полярной и декартовой системой координат.
+    \begin{enumerate}
+        \item $r = \varphi$ - задаёт спираль Архимеда
+        \item Лемниската Бернулли: \begin{gather}
+            (x^2 + y^2)^2 = (x^2 - y^2) \\
+            r^4 = r^2(cos^2(\varphi) - sin(\varphi)) = r^2(cos(2\varphi)) \\
+            r = \sqrt{2\varphi}
+        \end{gather}
+        \item \ldots
+    \end{enumerate}
+    
+    \section{Преобразования координат}
+
+    \subsection{Параллельный перенос, сдвиг}
+    Происходит лишь перенос точки приложения
+
+    \begin{equation}
+        \begin{cases}
+            O' = (x_0, y_0, z_0) ~ in ~ old ~ system \\ 
+            M = \vec{OM} = (x, y, z) \\
+            M = \vec{O'M} = (x', y', z') \\
+            \begin{cases}
+                x = x' + x_0 \\
+                y = y' + y_0 \\
+                z = z' + z_0
+            \end{cases}
+        \end{cases}
+    \end{equation}
+
+    \subsection{Поворот на плоскости}
+
+    \begin{equation}
+        \begin{cases}
+            Old ~ - ~ OXY \\
+            New ~ - ~ OX'Y' \\
+            M = (x, y) \\
+            M = (x', y') \\
+            \begin{cases}
+                x' = r \cos(\varphi) \\
+                y' = r \sin(\varphi)
+            \end{cases} \\
+            \begin{cases}
+                x = r \cos(\varphi + \alpha) = \ldots = x' \cos(\alpha) - y' \sin(\alpha) \\
+                y = r \sin(\varphi + \alpha) = \ldots = x' \sin(\alpha) + y' \cos(\alpha)
+            \end{cases}
+        \end{cases}
+    \end{equation}
+
+    \begin{equation}
+        \binom{x}{y} = \begin{pmatrix}
+            \cos(\alpha) & -\sin(\alpha) \\
+            \sin(\alpha) & \cos(\alpha)
+        \end{pmatrix} \binom{x'}{y'}
+    \end{equation}
+    
+    \subsection{Поворот координат в пространстве}
+    
+    \begin{gather}
+        \vec{e_1} = (\cos(\alpha_1), \cos(\beta_1), \cos(\gamma_1)) \\
+        \vec{e_2} = (\cos(\alpha_2), \cos(\beta_2), \cos(\gamma_2)) \\
+        \vec{e_1} = (\cos(\alpha_3), \cos(\beta_3), \cos(\gamma_3))
+    \end{gather}
+
+    \begin{gather}
+        x' \vec{e_1} + y' \vec{e_2} + y' \vec{e_3} = x' (\cos(alpha_1)\vec{i} + \cos(alpha_1)\vec{j} +\ldots) + 
+    \end{gather}
+
+\end{document}
