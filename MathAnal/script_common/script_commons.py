@@ -19,8 +19,13 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
+def run_command(command):
+    exit_data = os.system(command)
+    return exit_data >> 8 if os.name == 'posix' else exit_data
+
+
 def run_python_script(path_to_script):
-    return os.system(f"{'python3' if os.name == 'posix' else 'python'} {path_to_script}")
+    return run_command(f"{'python3' if os.name == 'posix' else 'python'} {path_to_script}")    
 
 
 def colored_print(color, string, **kwargs):
