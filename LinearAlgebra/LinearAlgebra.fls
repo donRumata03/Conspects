@@ -1,170 +1,181 @@
-PWD /home/vova/Documents/Conspects/LinearAlgebra
-INPUT /etc/texmf/web2c/texmf.cnf
-INPUT /usr/share/texmf/web2c/texmf.cnf
-INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
-INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.tex
-OUTPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.log
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/t2/mathtext.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/t2/mathtext.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t2aenc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t2aenc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-russian/russianb.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-russian/russianb.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux
-INPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux
-OUTPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm2074.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1000.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm0700.tfm
-OUTPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.pdf
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1728.tfm
-INPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.toc
-INPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.toc
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm0800.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm0600.tfm
-OUTPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.toc
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
-INPUT /home/vova/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm
-INPUT /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk
-INPUT /home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+PWD d:\Projects\Education\Conspects\LinearAlgebra
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT d:\Projects\Education\Conspects\LinearAlgebra\LinearAlgebra.tex
+OUTPUT LinearAlgebra.log
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\stmaryrd.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\stmaryrd.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\amscls\amsthm.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\amscls\amsthm.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\mathrsfs.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\mathrsfs.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\doublestroke\dsfont.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\doublestroke\dsfont.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mathtools.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\t2\mathtext.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\t2\mathtext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\cyrillic\t2aenc.def
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\cyrillic\t2aenc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\t2aenc.dfu
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\t2aenc.dfu
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\cyrillic\t2acmr.fd
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\cyrillic\t2acmr.fd
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm1200.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-russian\russianb.ldf
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-russian\russianb.ldf
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT LinearAlgebra.aux
+INPUT LinearAlgebra.aux
+OUTPUT LinearAlgebra.aux
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm2074.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm1440.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs7.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm1000.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm0700.tfm
+OUTPUT LinearAlgebra.pdf
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm1728.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\labx1728.tfm
+INPUT LinearAlgebra.toc
+INPUT LinearAlgebra.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\labx1200.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary8.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs5.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm0800.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\larm0600.tfm
+OUTPUT LinearAlgebra.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\lh\lh-t2a\labx1440.tfm
+INPUT LinearAlgebra.aux
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1200.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1200.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm2074.pk
+INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm2074.pk
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb

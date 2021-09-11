@@ -1,58 +1,55 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.10)  10 SEP 2021 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.3)  11 SEP 2021 10:35
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.tex
-(/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+**d:/Projects/Education/Conspects/LinearAlgebra/LinearAlgebra.tex
+(d:/Projects/Education/Conspects/LinearAlgebra/LinearAlgebra.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-09-03> ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
+\c@part=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks14
+\@emptytoks=\toks15
 \ex@=\dimen135
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen136
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count175
+\inf@bad=\count176
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count176
-\leftroot@=\count177
+\uproot@=\count177
+\leftroot@=\count178
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count178
-\DOTSCASE@=\count179
+\classnum@=\count179
+\DOTSCASE@=\count180
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -61,42 +58,42 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen137
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count180
-\c@MaxMatrixCols=\count181
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
 \dotsspace@=\muskip16
-\c@parentequation=\count182
-\dspbrk@lvl=\count183
-\tag@help=\toks15
-\row@=\count184
-\column@=\count185
-\maxfields@=\count186
-\andhelp@=\toks16
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
+\tag@help=\toks16
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
+\andhelp@=\toks17
 \eqnshift@=\dimen138
 \alignsep@=\dimen139
 \tagshift@=\dimen140
 \tagwidth@=\dimen141
 \totwidth@=\dimen142
 \lineht@=\dimen143
-\@envbody=\toks17
+\@envbody=\toks18
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks18
+\mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
-) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks19
-\thm@bodyfont=\toks20
-\thm@headfont=\toks21
-\thm@notefont=\toks22
-\thm@headpunct=\toks23
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
 \thm@preskip=\skip52
 \thm@postskip=\skip53
 \thm@headsep=\skip54
-\dth@everypar=\toks24
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+\dth@everypar=\toks25
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
@@ -105,36 +102,36 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
-) (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/jknappen\mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup7
-) (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/doublestroke\dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks25
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+\KV@toks@=\toks26
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count187
-\calc@Bcount=\count188
+\calc@Acount=\count188
+\calc@Bcount=\count189
 \calc@Adimen=\dimen144
 \calc@Bdimen=\dimen145
 \calc@Askip=\skip55
 \calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count189
+\calc@Ccount=\count190
 \calc@Cskip=\skip57
-) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count190
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count191
 \l_MT_multwidth_dim=\dimen146
 \origjot=\skip58
 \l_MT_shortvdotswithinadjustabove_dim=\dimen147
@@ -143,16 +140,18 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen150
 \l_MT_above_shortintertext_sep=\dimen151
 \l_MT_below_shortintertext_sep=\dimen152
-) (/usr/share/texlive/texmf-dist/tex/latex/t2/mathtext.sty
-Package: mathtext 2018/04/14 v1.0 transparent text-and-math defs
-LaTeX Info: Redefining \halign on input line 121.
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+\xmathstrut@box=\box47
+\xmathstrut@dim=\dimen153
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/t2\mathtext.sty
+Package: mathtext 2018/04/13 v1.1 transparent text-and-math defs
+LaTeX Info: Redefining \halign on input line 119.
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/cyrillic\t2aenc.def
 File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
 Now handling font encoding T2A ...
 ... processing UTF-8 mapping file for font encoding T2A
- (/usr/share/texlive/texmf-dist/tex/latex/base/t2aenc.dfu
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t2aenc.dfu"
 File: t2aenc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
    defining Unicode char U+00A4 (decimal 164)
    defining Unicode char U+00A7 (decimal 167)
@@ -354,45 +353,47 @@ File: t2aenc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
 \symT2Aletters=\mathgroup8
 )
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 112.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/cyrillic\t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/02/14 3.40 The Babel package
- (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2020/02/14 3.40 Babel switching mechanism
-) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
- (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/02/14 3.40 Babel common definitions
-\babel@savecnt=\count191
-\U@D=\dimen153
- (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\inpenc@prehook=\toks27
+\inpenc@posthook=\toks28
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/09/01 3.48 The Babel package
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/09/01 3.48 Babel common definitions
+\babel@savecnt=\count192
+\U@D=\dimen154
+\l@babelnohyphens=\language79
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
 \bbl@readstream=\read2
-\bbl@dirlevel=\count192
 )
-Package babel Info: \l@british = using hyphenrules for english
-(babel)             (\language0) on input line 82.
-Package babel Info: \l@UKenglish = using hyphenrules for english
-(babel)             (\language0) on input line 83.
+\bbl@dirlevel=\count193
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for english
-(babel)             (\language0) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for english
-(babel)             (\language0) on input line 108.
-) (/usr/share/texlive/texmf-dist/tex/generic/babel-russian/russianb.ldf
-Language: russian 2017/08/12 1.3j Russian support for the Babel system
-Package babel Info: Making " an active character on input line 120.
-Package babel Info: Default for \cyrdash is provided on input line 157.
-)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count193
-\l__pdf_internal_box=\box47
-) (/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux)
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 108.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/babel-russian\russianb.ldf
+File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
+Language: russian 2020/09/09 1.3k Russian support for the Babel system
+Package babel Info: Making " an active character on input line 124.
+Package babel Info: Default for \cyrdash is provided on input line 163.
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count194
+\l__pdf_internal_box=\box48
+) (LinearAlgebra.aux)
 \openout1 = `LinearAlgebra.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -411,52 +412,51 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+ ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count194
-\scratchdimen=\dimen154
-\scratchbox=\box48
-\nofMPsegments=\count195
-\nofMParguments=\count196
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count197
-\MPscratchDim=\dimen155
-\MPnumerator=\count198
-\makeMPintoPDFobject=\count199
-\everyMPtoPDFconversion=\toks29
-))) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+\scratchcounter=\count195
+\scratchdimen=\dimen155
+\scratchbox=\box49
+\nofMPsegments=\count196
+\nofMParguments=\count197
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count198
+\MPscratchDim=\dimen156
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
+\everyMPtoPDFconversion=\toks30
+))) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-\Gin@req@height=\dimen156
-\Gin@req@width=\dimen157
 )
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+)
+LaTeX Info: Redefining \th on input line 31.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\ustmry.fd)
 LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
@@ -465,28 +465,27 @@ LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.toc)
+{C:/Users/Vova/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (LinearAlgebra.toc)
 \tf@toc=\write3
 \openout3 = `LinearAlgebra.toc'.
 
- [2] [3] [4] [5] [6] [7] (/home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.aux)
+ [2] [3] [4] [5] [6] [7] (LinearAlgebra.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5147 strings out of 482584
- 71875 string characters out of 5956256
- 304443 words of memory out of 5000000
- 20086 multiletter control sequences out of 15000+600000
- 551784 words of font info for 78 fonts, out of 8000000 for 9000
- 475 hyphenation exceptions out of 8191
- 37i,13n,32p,547b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk> </home/vova/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/vova/Documents/Conspects/LinearAlgebra/LinearAlgebra.pdf (7 pages, 152599 bytes).
+ 5302 strings out of 481199
+ 74145 string characters out of 2913476
+ 321163 words of memory out of 3000000
+ 20808 multiletter control sequences out of 15000+200000
+ 554534 words of font info for 83 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,13n,36p,548b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on LinearAlgebra.pdf (7 pages, 175151 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 297 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
