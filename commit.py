@@ -4,6 +4,14 @@ import os
 from script_common.script_commons import *
 
 
+decryption = {
+	"Algorithms": "Algorithms and data structures",
+	"CompArch": "Computer architecture",
+	"DiscreteMath": "Discrete mathematics",
+	"LinearAlgebra": "Linear algebra",
+	"MathAnal": "Mathematics anal"
+}
+
 
 # commit_message = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "Update MathAnalysis conspect"
 commit_message = "Update MathAnalysis conspect"
