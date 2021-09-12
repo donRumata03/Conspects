@@ -1,7 +1,7 @@
-PWD d:\Projects\Education\Conspects\MathAnal
+PWD d:\Projects\Education\Conspects\LatexTemplates
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\miktex\data\le\xetex\xelatex.fmt
-INPUT d:\Projects\Education\Conspects\MathAnal\MathAnal.tex
-OUTPUT MathAnal.log
+INPUT d:\Projects\Education\Conspects\LatexTemplates\latex_features_example.tex
+OUTPUT latex_features_example.log
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo
@@ -228,48 +228,11 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontspec\fontspec.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fontspec\fontspec.cfg
-INPUT MathAnal.aux
-INPUT MathAnal.aux
-OUTPUT MathAnal.aux
+INPUT latex_features_example.aux
+INPUT latex_features_example.aux
+OUTPUT latex_features_example.aux
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd
-INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd
-INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary10.tfm
-INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary10.tfm
-INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary7.tfm
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
-INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
-INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs7.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx7.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-OUTPUT MathAnal.xdv
-INPUT MathAnal.toc
-INPUT MathAnal.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
@@ -279,15 +242,23 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary10.tfm
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary8.tfm
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\stmaryrd\stmary6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs5.tfm
@@ -303,5 +274,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
-OUTPUT MathAnal.toc
-INPUT MathAnal.aux
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\boondox\BOONDOX-r-ds.tfm
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\boondox\BOONDOX-r-ds.tfm
+INPUT C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\boondox\BOONDOX-r-ds.tfm
+OUTPUT latex_features_example.xdv
+INPUT latex_features_example.aux

@@ -8,7 +8,7 @@ from script_common.script_commons import *
 
 target_filename = "MathAnal.tex"
 
-compiler = "pdflatex"
+compiler = "xelatex"
 
 
 latex_args = [

@@ -1,118 +1,50 @@
-% For xeLatex
-
-% \usepackage{amsmath,amsthm,amssymb}
-% %\usepackage{mathtext}
-% \usepackage{unicode-math}
-
-% \usepackage[T1, T2A]{fontenc}
-% \usepackage[utf8]{inputenc}
-
-% \usepackage[english, russian]{babel}
-
-% % \usepackage{newtxmath,newtxtext}
-% \usepackage{fontspec}
-% \setmainfont{Times New Roman}
-
-
 \documentclass[12pt, a4paper]{article}
-
-% Some fancy symbols
-\usepackage{textcomp}
-\usepackage{stmaryrd}
-% \usepackage{cancel}
-% Bold math
-%\usepackage{bm}
-% Resizing
-%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-% Optional font for not math-based subjects
-%\usepackage{cmbright}
-
-% Some fancy symbols
-\usepackage{textcomp}
-\usepackage{stmaryrd}
-
-% Math packages
-\usepackage{amsmath,amsthm,amssymb, amsfonts, mathrsfs, dsfont, mathtools}
-\usepackage{mathtext}
-
-\usepackage[bb=boondox]{mathalfa}
-\usepackage{cancel}
-% Bold math
-\usepackage{bm}
+\input{../LatexTemplates/latex_math_header.tex}
 
 
-\usepackage{url}
-% Fancier tables and lists
-\usepackage{booktabs}
-\usepackage{enumitem}
-% Don't indent paragraphs, leave some space between them
-\usepackage{parskip}
-% Hide page number when page is empty
-\usepackage{emptypage}
-\usepackage{subcaption}
-\usepackage{multicol}
-\usepackage{xcolor}
-
-\usepackage{minted}
-
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
 
 
-\usepackage[english, russian]{babel}
+\title{Конспект по математическому анализу \\(1-й семестр)}
 
-\newcommand\sN{{\mathbb{N}}}
-\newcommand\sR{{\mathbb{R}}}
-\newcommand\sC{{\mathbb{C}}}
-\newcommand\sZ{{\mathbb{Z}}}
+\author{
+  Латыпов Владимир (конспектор)\\
+  \texttt{donrumata03@gmail.com}
+  \and
+  Виноградов Олег Леонидович (лектор)\\
+  \texttt{olvin@math.spbu.ru}
+}
 
-\DeclareMathOperator{\supp}{supp}
-\DeclareMathOperator{\sign}{sign}
+\date{\today}
 
-\definecolor{correct_color}{HTML}{009900}
-\newcommand\correction[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct_color}{#2}}\ensuremath{\:}}
-\newcommand\green[1]{{\color{correct_color}{#1}}}
-
-\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-
-\newcommand\textbb[1]{{$\mathbb{#1}$}}
 
 \begin{document}
-     
-    
-    $\sin x$\\
-    $\sin(x+y)$\\
-    $\supp x$\\
-    $\supp(x+y)$
-
-    \begin{gather}
-        \sN \\
-        \sR \\
-        \sC \\
-        \sZ
-    \end{gather}
-    
-    \begin{gather}\label{eq:upsilon}
-        \Upsilon \\
-        \RNumb{2875} \\
-        \rm 121
-    \end{gather}
-
+     \maketitle
+     \newpage
+     \tableofcontents
+     \newpage
     
 
-    \begin{equation}
-        \begin{cases}
-            1+1=\correction{3}{2} \\
-            1+1=\correction{2}{3} \\
-            \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle \sphericalangle 
-        \end{cases}            
-    \end{equation}
+    \section{Введение}
+    
+    \subsection{Множества}
+    
+    \textit{Kurale}\\
+    \textbf{Kurale}\\
+    \textsl{Kurale}\\
 
-    \green{Зелёный текст!}\\
-    \correction{Неправильно}{Правильно}
 
-    \textbb{fsdgfglkdfglkkhkuhkjkh}
-
-    R: \ref{eq:upsilon} 
+    \subsubsection{Определения}
+    
+    \begin{theorem}
+        [Теорема Пифагора]
+        
+        ваывапдварпдоврапжд \\
+        ваывапдварпдоврапждварпварп \\
+        ваывапдварпдоврапждварпварпар \\
+        Правильнор
+        р
+        м
+        вар
+    \end{theorem}
 
 \end{document}

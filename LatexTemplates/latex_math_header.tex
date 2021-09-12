@@ -1,0 +1,117 @@
+% Some fancy symbols
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+% \usepackage{cancel}
+
+% Some fancy symbols
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+
+% Math packages
+\usepackage{amsmath,amsthm,amssymb, amsfonts, mathrsfs, dsfont, mathtools}
+\usepackage{mathtext}
+% Bold math
+\usepackage{bm}
+
+
+\usepackage[bb=boondox]{mathalfa}
+\usepackage{cancel}
+
+
+\usepackage{url}
+% Fancier tables and lists
+\usepackage{booktabs}
+\usepackage{enumitem}
+% Don't indent paragraphs, leave some space between them
+\usepackage{parskip}
+% Hide page number when page is empty
+\usepackage{emptypage}
+
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+% For beautiful code listings:
+% \usepackage{minted}
+
+\usepackage[framemethod=tikz]{mdframed} % For further information see: http://marcodaniel.github.io/mdframed/
+
+
+% Fonts
+\usepackage{fontspec}
+
+% \setmainfont{Times New Roman}
+\setmainfont{Kurale}
+\setmonofont{Fira Code Retina}
+
+% Common number sets
+\newcommand\sN{{\mathbb{N}}}
+\newcommand\sZ{{\mathbb{Z}}}
+\newcommand\sZp{{\mathbb{Z}^{+}}}
+\newcommand\sQ{{\mathbb{Q}}}
+\newcommand\sR{{\mathbb{R}}}
+\newcommand\sRp{{\mathbb{R^{+}}}}
+\newcommand\sC{{\mathbb{C}}}
+
+% Math operators
+
+\makeatletter
+\newcommand\RedeclareMathOperator{%
+  \@ifstar{\def\rmo@s{m}\rmo@redeclare}{\def\rmo@s{o}\rmo@redeclare}%
+}
+% this is taken from \renew@command
+\newcommand\rmo@redeclare[2]{%
+  \begingroup \escapechar\m@ne\xdef\@gtempa{{\string#1}}\endgroup
+  \expandafter\@ifundefined\@gtempa
+     {\@latex@error{\noexpand#1undefined}\@ehc}%
+     \relax
+  \expandafter\rmo@declmathop\rmo@s{#1}{#2}}
+% This is just \@declmathop without \@ifdefinable
+\newcommand\rmo@declmathop[3]{%
+  \DeclareRobustCommand{#2}{\qopname\newmcodes@#1{#3}}%
+}
+\@onlypreamble\RedeclareMathOperator
+\makeatother
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sign}{sign}
+
+\RedeclareMathOperator{\Re}{Re}
+\RedeclareMathOperator{\Im}{Im}
+
+
+\definecolor{correct_color}{HTML}{009900}
+\newcommand\correction[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct_color}{#2}}\ensuremath{\:}}
+\newcommand\green[1]{{\color{correct_color}{#1}}}
+
+\newcommand{\RNumb}[1]{{\uppercase\expandafter{\romannumeral #1\relax}}}
+
+\newcommand\textbb[1]{{$\mathbb{#1}$}}
+
+
+
+% MD framed environments:
+\mdfsetup{skipabove=1em,skipbelow=0em}
+
+% \mdfdefinestyle{definition}{%
+%     linewidth=2pt,%
+%     frametitlebackgroundcolor=white,
+%     % innertopmargin=\topskip,
+% }
+
+\theoremstyle{definition}
+\newmdtheoremenv[nobreak=true]{definition}{Определение}
+\newmdtheoremenv[nobreak=true]{theorem}{Теорема}
+\newmdtheoremenv[nobreak=true]{lemma}{Лемма}
+\newmdtheoremenv[nobreak=true]{problem}{Задача}
+\newmdtheoremenv[nobreak=true]{property}{Свойство}
+\newmdtheoremenv[nobreak=true]{statement}{Утверждение}
+\newmdtheoremenv[nobreak=true]{corollary}{Следствие}
+\newtheorem*{note}{Замечание}
+\newtheorem*{example}{Пример}
+
+
+\renewcommand\qed{\ensuremath{\blacksquare}}
+\renewcommand\vec[1]{\overrightarrow{#1}}
+\newcommand{\eqdef}{\overset{\mathrm{def}}{=\joinrel=}}

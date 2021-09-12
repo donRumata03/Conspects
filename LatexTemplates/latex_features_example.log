@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.7.13)  12 SEP 2021 19:37
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.7.13)  12 SEP 2021 20:20
 entering extended mode
-**d:/Projects/Education/Conspects/MathAnal/MathAnal.tex
-(d:/Projects/Education/Conspects/MathAnal/MathAnal.tex
+**d:/Projects/Education/Conspects/LatexTemplates/latex_features_example.tex
+(d:/Projects/Education/Conspects/LatexTemplates/latex_features_example.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-09-03> ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -740,29 +740,29 @@ LaTeX Info: Redefining \Im on input line 81.
 \c@property=\count327
 \c@statement=\count328
 \c@corollary=\count329
-) (MathAnal.aux)
-\openout1 = `MathAnal.aux'.
+) (latex_features_example.aux)
+\openout1 = `latex_features_example.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box112
@@ -773,115 +773,93 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup12
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 20.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 20.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 20.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 20.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 20.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 20.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 20.
-LaTeX Font Info:    Redeclaring math accent \check on input line 20.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 20.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 20.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 20.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 4.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 4.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 4.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 4.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 4.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 4.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 4.
+LaTeX Font Info:    Redeclaring math accent \check on input line 4.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 4.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 4.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 4.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 4.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 20.
+(Font)              `operators' in the math version `normal' on input line 4.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Kurale(0)/m/n on input line 20.
+(Font)                  OT1/cmr/m/n --> TU/Kurale(0)/m/n on input line 4.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 20.
+(Font)              `operators' in the math version `bold' on input line 4.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Kurale(0)/m/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> TU/Kurale(0)/m/n on input line 4.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Kurale(0)/m/n --> TU/Kurale(0)/m/n on input line 20.
+(Font)                  TU/Kurale(0)/m/n --> TU/Kurale(0)/m/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Kurale(0)/m/it on input line 20.
+(Font)                  OT1/cmr/m/it --> TU/Kurale(0)/m/it on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Kurale(0)/b/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> TU/Kurale(0)/b/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 20.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraCodeRetina(0)/m/n on input line 20.
+(Font)                  OT1/cmtt/m/n --> TU/FiraCodeRetina(0)/m/n on input line 4.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Kurale(0)/m/n --> TU/Kurale(0)/b/n on input line 20.
+(Font)                  TU/Kurale(0)/m/n --> TU/Kurale(0)/b/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Kurale(0)/b/it on input line 20.
+(Font)                  OT1/cmr/bx/it --> TU/Kurale(0)/b/it on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 20.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraCodeRetina(0)/b/n on input line 20.
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 21.
- (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+(Font)                  OT1/cmtt/m/n --> TU/FiraCodeRetina(0)/b/n on input line 4.
+
+
+LaTeX Font Warning: Font shape `TU/Kurale(0)/b/n' undefined
+(Font)              using `TU/Kurale(0)/m/n' instead on input line 5.
+
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 7.
+(C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\ustmry.fd)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21.
-
-(C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/jknappen\ursfs.fd
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 7.
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 21.
+(Font)              using `U/stmry/m/n' instead on input line 7.
 
 [1
 
-]
-
-LaTeX Font Warning: Font shape `TU/Kurale(0)/b/n' undefined
-(Font)              using `TU/Kurale(0)/m/n' instead on input line 23.
-
-(MathAnal.toc)
-\tf@toc=\write4
-\openout4 = `MathAnal.toc'.
-
- [2]
-
-LaTeX Font Warning: Font shape `TU/Kurale(0)/m/it' undefined
-(Font)              using `TU/Kurale(0)/m/n' instead on input line 31.
-
-
-LaTeX Font Warning: Font shape `TU/Kurale(0)/m/sl' undefined
-(Font)              using `TU/Kurale(0)/m/it' instead on input line 33.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
-
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 38.
-[3] (MathAnal.aux)
+] [2] (latex_features_example.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 20024 strings out of 414480
- 418778 string characters out of 2906353
- 722244 words of memory out of 3000000
- 36868 multiletter control sequences out of 15000+200000
- 550244 words of font info for 109 fonts, out of 3000000 for 9000
+ 19850 strings out of 414480
+ 414511 string characters out of 2906353
+ 728272 words of memory out of 3000000
+ 36706 multiletter control sequences out of 15000+200000
+ 544359 words of font info for 82 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 81i,8n,103p,906b,905s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 81i,19n,103p,926b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on MathAnal.xdv (3 pages, 9620 bytes).
+Output written on latex_features_example.xdv (2 pages, 7080 bytes).
