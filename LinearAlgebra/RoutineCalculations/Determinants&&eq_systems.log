@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.7.13)  12 SEP 2021 20:57
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.7.13)  12 SEP 2021 23:04
 entering extended mode
 **d:/Projects/Education/Conspects/LinearAlgebra/RoutineCalculations/Determinants&&eq_systems.tex
 (d:/Projects/Education/Conspects/LinearAlgebra/RoutineCalculations/Determinants&&eq_systems.tex
@@ -839,6 +839,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 6.
 
+
+Overfull \hbox (7.2352pt too wide) detected at line 85
+ []$[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1 []$ 
+ []
+
 [1
 
 ] (Determinants&&eq_systems.aux)
@@ -847,12 +852,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 19859 strings out of 414480
- 415080 string characters out of 2906353
- 722348 words of memory out of 3000000
- 36710 multiletter control sequences out of 15000+200000
+ 19861 strings out of 414480
+ 415101 string characters out of 2906353
+ 729348 words of memory out of 3000000
+ 36712 multiletter control sequences out of 15000+200000
  543792 words of font info for 85 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 81i,7n,103p,950b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 81i,14n,103p,950b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Determinants&&eq_systems.xdv (1 page, 1432 bytes).
+Output written on Determinants&&eq_systems.xdv (1 page, 3852 bytes).

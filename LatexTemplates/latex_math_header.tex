@@ -80,13 +80,13 @@
 \RedeclareMathOperator{\Re}{Re}
 \RedeclareMathOperator{\Im}{Im}
 
-
+% Correction:
 \definecolor{correct_color}{HTML}{009900}
 \newcommand\correction[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct_color}{#2}}\ensuremath{\:}}
 \newcommand\green[1]{{\color{correct_color}{#1}}}
 
+% Roman numbers && fancy symbs:
 \newcommand{\RNumb}[1]{{\uppercase\expandafter{\romannumeral #1\relax}}}
-
 \newcommand\textbb[1]{{$\mathbb{#1}$}}
 
 
@@ -111,7 +111,16 @@
 \newtheorem*{note}{Замечание}
 \newtheorem*{example}{Пример}
 
-
+% Useful symbols:
 \renewcommand\qed{\ensuremath{\blacksquare}}
 \renewcommand\vec[1]{\overrightarrow{#1}}
 \newcommand{\eqdef}{\overset{\mathrm{def}}{=\joinrel=}}
+
+% \newcommand{\detmatrix}[]{}
+
+\newenvironment{detmatrix}
+{
+  \left|\begin{matrix}
+}{
+  \end{matrix}\right|
+}

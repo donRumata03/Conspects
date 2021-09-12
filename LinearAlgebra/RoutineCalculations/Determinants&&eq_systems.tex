@@ -3,14 +3,86 @@
 
 \begin{document}
 
-    \begin{equation}
-        \left|\begin{matrix}
+    \begin{multline}
+        \begin{detmatrix}
             3 & 2 & 2 & 8 \\
             1 & 5 & 4 & -9 \\
             2 & 4 & 6 & -9 \\
             1 & 2 & 3 & -4
-        \end{matrix}\right| = 1
-    \end{equation}
+        \end{detmatrix} = 
+        1 \cdot (-1)^{2 + 1} \cdot 
+        \begin{detmatrix}
+            2 & 2 & 8 \\
+            4 & 6 & -9 \\
+            2 & 3 & -4
+        \end{detmatrix} +
+        5 \cdot (-1)^{2 + 2} \cdot 
+        \begin{detmatrix}
+            3 & 2 & 8 \\
+            2 & 6 & -9 \\
+            1 & 3 & -4
+        \end{detmatrix} + \\
+        4 \cdot (-1)^{2 + 3} \cdot 
+        \begin{detmatrix}
+            3 & 2 & 8 \\
+            2 & 4 & -9 \\
+            1 & 2 & -4
+        \end{detmatrix} +
+        -9 \cdot (-1)^{2 + 4} \cdot 
+        \begin{detmatrix}
+            3 & 2 & 2 \\
+            2 & 4 & 6 \\
+            1 & 2 & 3
+        \end{detmatrix} = \\
+        -1 
+        \begin{detmatrix}
+            2 & 2 & 8 \\
+            4 & 6 & -9 \\
+            2 & 3 & -4
+        \end{detmatrix} +
+        5 
+        \begin{detmatrix}
+            3 & 2 & 8 \\
+            2 & 6 & -9 \\
+            1 & 3 & -4
+        \end{detmatrix}
+        -4 
+        \begin{detmatrix}
+            3 & 2 & 8 \\
+            2 & 4 & -9 \\
+            1 & 2 & -4
+        \end{detmatrix}
+        -9
+        \begin{detmatrix}
+            3 & 2 & 2 \\
+            2 & 4 & 6 \\
+            1 & 2 & 3
+        \end{detmatrix} = \\
+        -1 
+        \left(
+            2 \times (-1)^{1 + 1} \times \begin{detmatrix}
+                6 & -9 \\
+                3 & -4
+            \end{detmatrix} + 2 \times (-1)^{1 + 2} \times \begin{detmatrix}
+                4 & -9 \\
+                2 & -4
+            \end{detmatrix} + 8 \times (-1)^{1 + 3} \times \begin{detmatrix}
+                4 & 6 \\
+                2 & 3
+            \end{detmatrix}
+        \right) \\ +
+        \left(
+            1
+        \right) \\
+        -4 
+        \left(
+            1
+        \right) \\
+        -9
+        \left(
+            1
+        \right)
+    \end{multline}
 
     \textbf{\textit{Hello!}}
 
