@@ -306,4 +306,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT /home/vova/Documents/Conspects/MathAnal/MathAnal.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-ds.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-ds.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-ds.tfm
 INPUT /home/vova/Documents/Conspects/MathAnal/MathAnal.aux

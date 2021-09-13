@@ -28,23 +28,396 @@
     
     \subsection{Множества}
     
-    \textit{Kurale}\\
-    \textbf{Kurale}\\
-    \textsl{Kurale}\\
+    \textit{Kurale}, 
+    \textbf{Kurale},
+    \textsl{Kurale},
+    \textit{\textbf{Kurale}}
 
 
     \subsubsection{Определения}
     
+    \begin{definition}[Множество]
+      $X$ - множество, это аксиома, \\
+      его метафизическая сущность не подлежит обсуждению.  
+    \end{definition}
+    
+    \begin{equation}
+      \begin{cases}
+        x \in X \\
+        x' \notin X
+      \end{cases}
+    \end{equation}
+
+    \begin{example}
+      Задания множества: 
+      \begin{gather}
+        set = \{1, 2, 3\} \\
+        set = \{x | x \in \sN\} \\
+        set = \{\{1, 4\}, 898\}
+      \end{gather}
+    \end{example}
+    
+    \begin{definition}[Подмножество]
+      \begin{equation}
+        A \subset B \Longleftrightarrow \forall a \in A: a \in B
+      \end{equation}
+    \end{definition}
+
+    \section{Вещественные числа}
+    Множество вещестыенных чисел - множество, 
+    удовлетворяющее 16-и аксиомам.
+
+    \begin{enumerate}[]
+      \item Аксиомы поля (9 штук)
+    \end{enumerate}
+
+
+
+
+
+    \section{Оторбражения}
+
+    \begin{definition}[Отображение]
+      $] \exists X, Y~-~sets, f~-~rule$
+      Говорят, что задано оторбражение, если $f: X \longrightarrow! Y$ \\
+      (сопоставляет единстыенный $Y$ каждому $x \in X$)\\
+      
+      Отображение называют $f$, но оно включает как $f$, так и $X, Y$  
+    \end{definition}
+    
+
+    \begin{equation}
+      f: X \longrightarrow Y \isdef f: X \mapsto Y \isdef X \overset{f}{\longrightarrow} Y
+    \end{equation}
+
+
+    Если $X, Y$ - числовые множества, то $f$ - функция.
+    Если $Y$ - числовое множество, $X$ - любое, то это "функционал".
+
+    $X$ - область задания, область отправления.
+    $Y$ - множество значений, область прибытия.
+
+    $x \in X$ - аргумент, независимая переменная.
+
+    \begin{definition}[Последователности]
+      Последовательность - функция натурального аргумента.\\
+      Если при этом $Y$ - число, то $f$ - числовая последовательность.\\
+      А если $\forall y \in Y: y \in \sZ$, то это двусторонняя последовательность.
+    \end{definition}
+
+    \begin{equation}
+      \{x_n\}_{n = 1}^{\infty}
+    \end{equation}
+
+    \begin{definition}
+      Семейство - это то же, что и отображение.
+    \end{definition}
+
+    \begin{definition}[Естественная область определения]
+      Естественная область определения: то, где выражение имеет смысл.
+    \end{definition}
+
+    \begin{definition}
+        \begin{equation}
+          id_X: X \mapsto X
+        \end{equation}
+    \end{definition}
+
+    \begin{equation}
+      f^{-1} \circ а = id_X
+    \end{equation}
+
+    \begin{definition}[Образ]
+      \begin{equation}
+        B = f(A) = \{ y \in Y: \exists x \in A: f(x) = y\}
+      \end{equation}
+    \end{definition}
+
+    \begin{definition}[Прообраз]
+      Прообраз множества $B$:
+      \begin{equation}
+        A = f^-1(B) = \{x \in X: f(x) \in B \}
+      \end{equation}  
+    \end{definition}
+
+    \begin{definition}[Композиция]
+      \ldots
+    \end{definition}
+
+    \subsubsection{Инъекция, сюрьекция, биекция\ldots}
+    $\sphericalangle ~~ f: X \longrightarrow Y$
+
+    \begin{definition}[Инъективное оторбражение]
+      Если $\forall x_1, x_2 \in X: f(x_1) \neq f(x_2)$, то отображение инъективно, \textit{обратимо}.
+    \end{definition}
+
+    \begin{definition}[Обратимое отображение]
+      \begin{equation}
+        f ~ is ~ reversable \Longleftrightarrow \exists f^{-1}: \ldots
+      \end{equation}
+    \end{definition}
+
+
+    \begin{definition}[Сюрьективное оторбражение]
+      Если f(X) = Y, то f сюрьективно или \textit{отображение на}.
+    \end{definition}
+
+    \begin{definition}
+      Если $f$ одновременно и инективно, и сюрьективно, 
+      то $f$ - взаимно-однозначное соответствие или \textit{биективно}.
+    \end{definition}
+
+
+    \subsection{Графики}
+    \begin{definition}[График оторбражения]
+      \begin{equation}
+        \Gamma_f = \{(x, y): x \in X, y = f(x)\} \subset X \times Y
+      \end{equation}
+    \end{definition}
+
     \begin{theorem}
-        [Теорема Пифагора]
-        
-        ваывапдварпдоврапжд \\
-        ваывапдварпдоврапждварпварп \\
-        ваывапдварпдоврапждварпварпар \\
-        Правильнор
-        р
-        м
-        вар
-    \end{theorem} 
+      \begin{equation}
+        \Gamma_f \Longleftrightarrow f
+      \end{equation}
+    \end{theorem}
+
+    \begin{definition}
+      Отображение, сопоставляющее каждому 
+
+      $y \in f(X) \longrightarrow y \in Y$, для которого   
+    \end{definition}
+    
+    \begin{equation}
+      f^{-1}(x): f(X) \mapsto X
+    \end{equation}
+
+    Но что такое $f^{-1}$? Прообраз или обратное отображение?
+    
+    Если обратимо, и имеет значение, то они совпадают
+
+    \begin{definition}[Сужение, распространение, расширение, привЕдение]
+      \begin{gather}
+        ]f: X \mapsto Y, X_0 \subset X \\
+        f|_{X_0}
+      \end{gather}
+    \end{definition}
+
+
+    \subsection{Операции над функициями}
+
+    \begin{itemize}
+      \item Сложение: $(f + g)(x) = f(x) + g(x)$
+      \item Умножение: \ldots
+      \item Деление: \ldots
+      \item Вычитание: \ldots
+      \item \ldots
+    \end{itemize}
+
+    \subsubsection{Многомерные отображения}
+    
+    $f_i$ - Координатные функции отображения $f$
+
+
+    \subsection{Счётные множества}
+
+    Если множества конечны, легко сравнить количество элементов.
+    Если одно конечно, другое - бес, то понятно.
+
+    А вот вопрос - одинаковы ли бесконечности?!
+
+
+
+    \begin{definition}[Равномощные множества]
+      Множества называют \textit{равномощными} \\
+      или \textit{эквивалентными (по мощности)}, если $\exists$ биекция \\
+      (взаимно однозначное соответствие) между ними
+    \end{definition}
+
+    \begin{definition}[Бесконечное множество]
+      Не равномощно никакому подотрезку натурального ряда 
+      $\Longleftrightarrow$ никогда не исчерпается.
+    \end{definition}
+
+    \begin{note}
+      Равномощность множеств - отношение эквивалентности. \\
+      Существут классы эквивалентности по мощности.
+    \end{note}
+
+    \begin{example}
+      Пример равномощных множеств:
+      \begin{itemize}
+        \item Отрезки (возможно, разных длин)
+        \item Концентрические (и не только) окружности
+        \item $\cdots$
+        \item Плоскость и сфера
+        \item Отрезок и плоскость
+        \item Полуинтервал и окружность
+      \end{itemize}
+    \end{example}
+    
+    \begin{definition}
+      $A$ - счётно $\Longleftrightarrow A \sim  \sN$
+      
+      Эквивалетное определение: можно занумеровать 
+      натуральными числами, то есть расположить
+       в виде последовательности
+    \end{definition}
+
+    \begin{example}
+      Положительные, чётные, квадраты натуральных, целые, \dots - всё счётные
+    \end{example}
+
+    \begin{theorem}
+      Всякое бесконечное множество содержит\\
+       счётное подмножество  
+    \end{theorem}
+    \begin{proof}
+      Есть хотя бы один элемент. Обозначим его $a_1$, удалим его. \\
+      \inductdots 
+    \end{proof}
+
+
+    \begin{theorem}
+      Всякое подмножество счётного множества - счётно.  
+    \end{theorem}
+    \begin{proof}
+      $b_{n + 1} = A_{min(\{n | n \in A_{indexes}\})}$, \inductdots
+    \end{proof}
+    
+    Предыдущие 2 теоремы - о бедности натурального ряда.
+
+    \begin{definition}[Не более, чем счётное (НБЧС)]
+       = пустое, конечное или счётное.
+    \end{definition}
+
+    \begin{lemma}
+      $\sN^n, n \in \sN$ - счётное множество
+    \end{lemma}
+    \begin{proof}
+      Заполняем матрицу змейкой по диагонали.
+      Для $n$ измерений: \inductdots
+    \end{proof}
+    
+    \begin{theorem}
+      Не более чем счётное объединение (множество индексов НБЧС) 
+      не более чем счётных множеств - не более чем счётное.
+    \end{theorem}
+    \begin{proof}
+      \begin{equation}
+        B = \bigcup_{k = 1}^{n} A_k \quad or \quad B = \bigcup_{k = 1}^{\infty} A_k
+      \end{equation}
+      Запишем в матрицу: $A_1, A_2 \setminus A_1, \ldots$. Получили не более чем множество $\sN \times \sN$.
+    \end{proof}
+
+    \begin{theorem}
+      Множество $\sQ$ - счётно.
+    \end{theorem}
+    \begin{proof}
+      Догадайтесь!
+    \end{proof}
+
+    \begin{theorem}
+      Множество $\sR \cap [0, 1]$ - несчётно.
+    \end{theorem}
+    \begin{proof}
+      Пусть несчётно.
+      \begin{equation}
+        [0, 1] = \{x_1, x_2, \ldots\}
+      \end{equation}
+      Разобьём орезок на три части: 
+      $\left[0, \frac{1}{3}\right], \left[\frac{1}{3}, \frac{2}{3}\right], \left[\frac{2}{3}, 1\right]$
+      Рассмотрим отрезок, в котором нет точки $x_1$, затем - тот, в котором нет $x_2$, деля на три до бесконечности.
+      Получим последовательность вложенных отрезков $\{[a_n, b_n]\}^{\infty}_{n = 1}$.
+      Тогда по аксиоме о вложенных отрезках $\exists x^{*}: \forall n: x^{*} \in [a_n, b_n]$.
+      Если пронумеровали, значит, был некий $m$, который 
+      Но, по построению, мы строили такой подотрезок 
+    \end{proof}
+
+    \begin{corollary}[Некоторые множества тоже несчётны]
+      \begin{itemize}
+        \item $\sR$ - несчётно, так как иначе его бесконечное подмножество было счётно.
+        \item Любой невырожденный отрезок несчётен
+        \item Любой невырожденный интервал, полуинтервал несчётен
+      \end{itemize}
+    \end{corollary}
+
+    Как строить биекцию, если выколотые точки?
+    
+    \begin{statement}
+      Если $A$ - бесконечно, а $B$ - не более чем счётно, то $A \setminus B$
+    \end{statement}
+
+    \begin{property}[Характеристическое свойство бесконечных множеств]
+      Если
+    \end{property}
+
+    \begin{definition}[$|A| < |B|$]
+      $|A| < |B| \isdef (\exists biection ~ A \leftrightarrow part(B) \land \nexists biection ~ A \leftrightarrow B)$
+      
+    \end{definition}
+
+    \begin{theorem}
+      [Теорема Кантора-Бершнейна]
+      Если $A \sim part(B) \&\& B \sim part(A)$, то $A \sim B$
+
+      (Теорема о том, что мощности можно сравнивать: либо )
+    \end{theorem}
+
+    \begin{statement}
+      Множество всех подмножеств имеют мощность б$\acute{o}$льшую,чем само множнство.
+    \end{statement}
+
+    \section{Последовательности в метрических пространствах}
+
+    \subsection{Предел последовательности}
+
+    \begin{definition}
+      \begin{equation}
+        A = \lim{x_n} \isdef \forall \varepsilon > 0: \exists N_0: \forall n > N_0: |A - x_n| < \varepsilon
+      \end{equation}     
+    \end{definition}
+
+    \begin{definition}
+      [Сходящиеся, расходящиеся последовательности]
+    \end{definition}
+
+    \begin{example}
+      \begin{gather}
+        \lim_{n \to \infty}{\frac{1}{n}} = 0 \\
+        \lim_{n \to \infty}{A} = A
+      \end{gather}
+    \end{example}
+
+    \begin{example}
+      \begin{equation}
+        (!) \quad \forall A: \lim{\{-1, 1, -1, \ldots\}} \neq A
+      \end{equation}
+      Предъявим $\varepsilon = 0.1$: $\exists n_1, n_2: \forall n > n_1: |A - a_{n}| < \varepsilon$
+    \end{example}
+
+    \begin{note}
+      Если проверено малое эпсилон, можно не проверять большие эпсилон. Например, достаточно проверять для всех $|\varepsilon| < 1$ 
+    \end{note}
+
+    \begin{note}
+      Не обязательно находить самый маленький номер, для данного $\varepsilon$.
+    \end{note}
+    
+    \begin{note}
+      Одно или оба (из 2, 3) строгих неравенства можно заменить на нестрогие, это непложно доказать.
+    \end{note}
+    
+    \begin{note}
+      Если заменить конечное число членов, то сходимость не нарушится и предел не изменится.
+    \end{note}
+
+    \begin{note}
+      Последнее неравенство с модулем можно переписать как двойное. Это может быть полезно при некоторых доказательствах.
+      Интервал $(A - \varepsilon, A + \varepsilon)$ - $\varepsilon$-окресность точки $A$.
+      Тогда можно записать предел словами:
+      Для любой окресности точки все члены за исключением конечного множества принадлежат этой окрестности.
+    \end{note}
+
+
 
 \end{document}

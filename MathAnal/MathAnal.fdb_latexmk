@@ -1,13 +1,13 @@
 # Fdb version 3
-["xdvipdfmx"] 1631477785 "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv" "/home/vova/Documents/Conspects/MathAnal/MathAnal.pdf" "/home/vova/Documents/Conspects/MathAnal/MathAnal" 1631477786
-  "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv" 1631477785 9868 a0dbb5d2fdc73105cb34d50dc6d2146d "xelatex"
+["xdvipdfmx"] 1631534556 "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv" "/home/vova/Documents/Conspects/MathAnal/MathAnal.pdf" "/home/vova/Documents/Conspects/MathAnal/MathAnal" 1631534556
+  "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv" 1631534556 142640 d87a07a2d74d9d96324ff0433111ddd9 "xelatex"
   (generated)
   "/home/vova/Documents/Conspects/MathAnal/MathAnal.pdf"
-["xelatex"] 1631477785 "/home/vova/Documents/Conspects/MathAnal/MathAnal.tex" "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv" "MathAnal" 1631477786
-  "../LatexTemplates/latex_math_header.tex" 1631477158 3263 35f18050117c312b17c667dbcdeae3d9 ""
+["xelatex"] 1631534555 "/home/vova/Documents/Conspects/MathAnal/MathAnal.tex" "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv" "MathAnal" 1631534556
+  "../LatexTemplates/latex_math_header.tex" 1631531116 3412 5a60ad78eab29452c70ac776b9ff534b ""
   "/etc/texmf/web2c/texmf.cnf" 1601105987 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vova/Documents/Conspects/MathAnal/MathAnal.aux" 1631477785 415 d55d4c749103f2083cb3759452847e69 ""
-  "/home/vova/Documents/Conspects/MathAnal/MathAnal.tex" 1631477785 1059 18e9543e84b5b7a48406cf77e0092a3e ""
+  "/home/vova/Documents/Conspects/MathAnal/MathAnal.aux" 1631534556 3151 0c0bf04343fcbd76d922b0851073c856 ""
+  "/home/vova/Documents/Conspects/MathAnal/MathAnal.tex" 1631534554 15827 825c1ee9383c3de73ea3f862b253a0ee ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -21,6 +21,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-ds.tfm" 1304615349 916 fbe573b4f4b204cfe65c92e2e101d105 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1136768653 1116 4e6ba9d7914baa6482fd69f67d126380 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -184,13 +185,13 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631270018 3495480 b20696261ba0cb671f4b632b301ab55d ""
-  "MathAnal.aux" 1631477785 415 d55d4c749103f2083cb3759452847e69 "xelatex"
-  "MathAnal.tex" 1631477785 1059 18e9543e84b5b7a48406cf77e0092a3e ""
-  "MathAnal.toc" 1631477785 206 b8e35f7fd72a45a448f95edfe63e7f75 "xelatex"
+  "MathAnal.aux" 1631534556 3151 0c0bf04343fcbd76d922b0851073c856 "xelatex"
+  "MathAnal.tex" 1631534554 15827 825c1ee9383c3de73ea3f862b253a0ee ""
+  "MathAnal.toc" 1631534556 1043 7436fc6d578a761b56d605eec95b6655 "xelatex"
   (generated)
-  "/home/vova/Documents/Conspects/MathAnal/MathAnal.log"
-  "MathAnal.xdv"
-  "MathAnal.toc"
-  "MathAnal.aux"
   "MathAnal.log"
+  "/home/vova/Documents/Conspects/MathAnal/MathAnal.log"
+  "MathAnal.aux"
+  "MathAnal.toc"
   "/home/vova/Documents/Conspects/MathAnal/MathAnal.xdv"
+  "MathAnal.xdv"

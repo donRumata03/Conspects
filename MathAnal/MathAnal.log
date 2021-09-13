@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.9.10)  12 SEP 2021 23:16
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.9.10)  13 SEP 2021 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,26 +848,193 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
  [2]
 LaTeX Font Info:    Font shape `TU/Kurale(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/Kurale(0)/m/it' tried instead on input line 33.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 39.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 60.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 80.
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
+ []
+
+[3]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 102.
+
+Overfull \hbox (7.32343pt too wide) in paragraph at lines 103--106
+[]\TU/Kurale(0)/b/n/12 Определение 4 \TU/Kurale(0)/m/n/12 (Последователности)\TU/Kurale(0)/b/n/12 . []\TU/Kurale(0)/m/n/12 Последовательность - функция
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 38.
-[3] (/home/vova/Documents/Conspects/MathAnal/MathAnal.aux)
+(mdframed)              on input line 112.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 116.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 120.
+Missing character: There is no а in font cmmi12!
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 130.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 136.
+[4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 143.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 150.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 154.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 161.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 165.
+
+Overfull \hbox (2.01036pt too wide) in paragraph at lines 166--168
+[]\TU/Kurale(0)/b/n/12 Определение 14. []\TU/Kurale(0)/m/n/12 Если $\OML/cmm/m/it/12 f$ \TU/Kurale(0)/m/n/12 одновременно и инективно, и сюрьективно,
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 172.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 178.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 184.
+[5]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+
+Overfull \hbox (23.27893pt too wide) in paragraph at lines 199--199
+[]\TU/Kurale(0)/b/n/12 Определение 17 \TU/Kurale(0)/m/n/12 (Сужение, распространение, расширение, привЕдение)\TU/Kurale(0)/b/n/12 .
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 230.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 236.
+
+Overfull \hbox (12.47577pt too wide) in paragraph at lines 237--239
+[]\TU/Kurale(0)/b/n/12 Определение 19 \TU/Kurale(0)/m/n/12 (Бесконечное множество)\TU/Kurale(0)/b/n/12 . []\TU/Kurale(0)/m/n/12 Не равномощно никакому
+ []
+
+[6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 258.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 270.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 280.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 289.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 293.
+ [7]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 301.
+
+Overfull \hbox (1.73358pt too wide) in paragraph at lines 302--304
+[]\TU/Kurale(0)/b/n/12 Теорема 4. []\TU/Kurale(0)/m/n/12 Не более чем счётное объединение (множество индексов
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 312.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 319.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 336.
+
+Overfull \hbox (24.5659pt too wide) in paragraph at lines 338--339
+[]$\U/BOONDOX-ds/m/n/12 R$ \TU/Kurale(0)/m/n/12 - несчётно,
+ []
+
+[8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 346.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 350.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 354.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 359.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 366.
+
+Overfull \hbox (54.46024pt too wide) in paragraph at lines 367--368
+[]\TU/Kurale(0)/b/n/12 Утверждение 2. []\TU/Kurale(0)/m/n/12 Множество всех подмножеств имеют мощность б$[]$льшую,чем
+ []
+
+
+Overfull \hbox (43.36688pt too wide) in paragraph at lines 370--370
+[]\TU/Kurale(0)/b/n/17.28 Последовательности в метрических пространствах 
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 374.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 380.
+[9]
+Overfull \hbox (13.52423pt too wide) in paragraph at lines 399--400
+[]\TU/Kurale(0)/b/n/12 Замечание. []\TU/Kurale(0)/m/n/12 Если проверено малое эпсилон, можно не проверять большие
+ []
+
+
+Overfull \hbox (4.04767pt too wide) in paragraph at lines 407--408
+[]\TU/Kurale(0)/b/n/12 Замечание. []\TU/Kurale(0)/m/n/12 Одно или оба (из 2, 3) строгих неравенства можно заменить
+ []
+
+
+Overfull \hbox (8.09766pt too wide) in paragraph at lines 415--419
+\TU/Kurale(0)/m/n/12 предел словами: Для любой окресности точки все члены за исключением
+ []
+
+[10] (/home/vova/Documents/Conspects/MathAnal/MathAnal.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 19933 strings out of 481030
- 424919 string characters out of 5927867
- 709680 words of memory out of 5000000
- 36488 multiletter control sequences out of 15000+600000
- 547574 words of font info for 114 fonts, out of 8000000 for 9000
+ 20020 strings out of 481030
+ 426800 string characters out of 5927867
+ 720371 words of memory out of 5000000
+ 36573 multiletter control sequences out of 15000+600000
+ 548197 words of font info for 118 fonts, out of 8000000 for 9000
  682 hyphenation exceptions out of 8191
- 81i,8n,102p,905b,907s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,13n,102p,905b,907s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/vova/Documents/Conspects/MathAnal/MathAnal.xdv (3 pages, 9868 bytes).
+Output written on /home/vova/Documents/Conspects/MathAnal/MathAnal.xdv (10 pages, 142640 bytes).
