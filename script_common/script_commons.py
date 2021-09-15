@@ -33,5 +33,6 @@ def colored_print(color, string, **kwargs):
     print(color + string + bcolors.ENDC, **kwargs)
 
 
+
 if __name__ == '__main__':
     colored_print(bcolors.FAIL, "Fail")

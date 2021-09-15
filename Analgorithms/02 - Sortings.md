@@ -6,7 +6,7 @@
 
 
 
-```pseudocode
+```python
 for i=0..n-1:
 	j = i
 	while j > 0 && a[j] < a[j - 1]:
