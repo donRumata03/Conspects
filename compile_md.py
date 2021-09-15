@@ -4,6 +4,7 @@ from script_common.script_commons import *
 
 if len(sys.argv) == 1:
 	colored_print(bcolors.FAIL, "Provide file name as command line argument!")
+	exit(1)
 
 target_filename = sys.argv[1]
 extension = Path(target_filename).suffix

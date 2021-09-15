@@ -1,0 +1,190 @@
+\documentclass[a4paper, 12pt]{article}
+\input{../LatexGloves/latex_math_header.tex}
+
+
+\title{Конспект по дискретной алгебре \\(1-й семестр)}
+
+\author{
+  Латыпов Владимир (конспектор)\\
+  \texttt{donrumata03@gmail.com}, \texttt{tg:@donRumata03}
+  \and
+  Станкевич Андрей Сергеевич (лектор, инструктор по отношениям)\\
+  \texttt{tg:@andrewzta}
+}
+
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \tableofcontents
+    \newpage
+
+
+    \section{Отношения}
+
+    \subsection{Свойства отношений}
+
+    Отношения бывают:
+    \begin{itemize}
+        \item Рефлексивные
+        \item Симметричные
+        \item Антисимметричные
+        \item Транзитивные
+    \end{itemize}
+
+    Транзитивность и квадрат отношения - опрпделения выглядят похоже.
+
+    \begin{definition}[Композиция отношений]
+        \begin{gather}
+            R \subseteq A \times B, G \subseteq A \times B\\
+            T \subseteq A \times C ~ is ~ RG \isdef \exists x \in R \\
+            H \subseteq A, H \eqdef R^2 \\
+            H^0 = \{ (x, x) | x \in A \}
+        \end{gather}
+    \end{definition}
+ 
+    
+    \subsection{Транзитивное замыкание}
+
+    \begin{note}
+        Квадрат отношения "больше на 1" - это отношение "больше на 2".
+    \end{note}
+
+    \begin{definition}[Транзитивное замыкание]\nl
+        Т.З. отношения $R$ - минимальное 
+        по включение транзитивное отношение, содержащие $R$
+    \end{definition}
+
+    \begin{definition}[Замкнутое относительно операции свойство]\nl
+        Оно выполняется для результата этой операции 
+        над объектами, тоже удовлетворяющими этому свойству.
+    \end{definition}
+
+    
+    \begin{note}
+        Не всегда есть минимальное по включению множество, 
+        удовлетворяющее заданному свойству, но тут есть, 
+        так как замкнутое относительно операции пересечения.
+    \end{note}
+
+
+    \begin{definition}[Транзитивное замыкание, эквивалентное]\nl
+        Т.З. отношения $R$:
+        \begin{equation}
+            R^{+} = \bigcup_{i = 1}^{\infty} R^i
+        \end{equation}
+    \end{definition}
+    То, что определения эквивалентны доказывается, через то, что:
+    \begin{itemize}
+        \item Первое подмножество второго
+        \item Второе подмножество первого
+    \end{itemize}
+
+    \begin{definition}[]
+        \begin{equation}
+            R^{*} = \bigcup_{i = 0}^{\infty} R^i
+        \end{equation}
+    \end{definition}
+    
+
+    \begin{note}
+        Бывает такая абстрактная ситуация: 
+        просто так не получается, но если добавить коспозицию 
+        самого с собой бесконечное количество раз, то получится. 
+        
+        Например, пути на графе.
+    \end{note}
+
+
+    \section{Булева алгебра}
+
+    \subsection{Определения}
+
+    Математические основы компьютера требуют знания двоичной логики, 
+    поэтому изучим её основы.
+
+    \begin{equation}
+        \sB = \{ True (1), False(0) \}
+    \end{equation}
+    
+    Булева функция - возвращает boolean.
+    Бывают также n-арные функции: $\sB^n \mapsto \sB$
+
+    
+    Функций $\sB^n \mapsto \sB$: $2^{2^n}$.
+
+    \subsection{Перечислим некоторые функиии...}
+
+    \subsubsection{Функции $n = 0$}
+
+    $\sB^0 = \{ (,) \}$
+    
+    \begin{itemize}
+        \item alwaysTrue
+        \item alwaysFalse
+    \end{itemize}
+
+    \subsubsection{Функции $n = 1$}
+    \begin{itemize}
+        \item $id ~ x$ - проектор
+        \item not
+        \item $0_1$
+        \item $1_1$
+    \end{itemize}
+
+
+    \subsubsection{Функции $n = 2$}
+    \begin{itemize}
+        \item $0000: 0_2$
+        \item $0001: \&\&, \land$
+        \item $0010: \not \rightarrow$
+        \item $0011: P_1$
+        \item $0100: not \leftarrow$
+        \item $0101: P_2$
+        \item $0110: \oplus$
+        \item $0111: \vee$
+        \item $1000: \downarrow$
+        \item $1001: ==$
+        \item $1010: \lnot y$
+        \item \dots % \href{\ldots}{https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B1%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B9_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8&section=4#.D0.91.D0.B8.D0.BD.D0.B0.D1.80.D0.BD.D1.8B.D0.B5_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8}
+    \end{itemize}
+
+
+    \begin{definition}
+        Сохранающие ноль
+    \end{definition}
+
+
+    \subsection{Базовые связки базовых функций}
+
+    Но в реальности 
+
+    \begin{definition}
+        Композиция
+    \end{definition}
+
+    \begin{definition}
+        Подстановка
+    \end{definition}
+
+    \begin{theorem}
+        Через композии и подстановки операций $\{ \land, \lnot, \lor  \}$ можно выразить любую функцию, которая могла бы появиться в таблице
+    \end{theorem}
+    \begin{proof}
+        Функция задаётся бинарной последовательностью длины n (бит для каждого набора аргументов).
+
+        Построим конструкцию. 
+        Бит совпадения некой последовательности с заданной получается через конструкцию 
+        \begin{equation}
+            is(seq) = \bigwedge_{i=0}^{n} (initial\_seq_i == seq_i) = \bigwedge_{i=0}^{n} (seq_i ~ if ~ initial\_seq_i ~ else ~ \lnot seq_i)
+        \end{equation}
+    
+        Затем выберем те последовательности, где пародируемая функция выдаёт 1 и напишем в ответе:
+        \begin{equation}
+            f = \bigvee_{i = 0}^{n} is\_seq_i ~ if ~ seq_i
+        \end{equation}
+    \end{proof}
+
+
+\end{document}

@@ -1,17 +1,38 @@
-import sys
-import os
-
 from script_common.script_commons import *
 
+from git import Repo
 
 decryption = {
-	"Algorithms": "Algorithms and data structures",
-	"CompArch": "Computer architecture",
-	"DiscreteMath": "Discrete mathematics",
-	"LinearAlgebra": "Linear algebra",
-	"MathAnal": "Mathematics anal"
+	"Analgorithms": "Algorithms and data structures",
+	"CUMputerArch": "Computer architecture",
+	"DICKreteMath": "Discrete mathematics",
+	"LinAnalgebra": "Linear algebra",
+	"MathAnalgeBRUH": "Mathematics anal"
 }
 
+extensions_for_compilation = {
+	".tex",
+	".md"
+}
+
+rep = Repo(this_dir)
+
+# Track all files:
+rep.git.add(all=True)
+
+# Filter only files for compilation:
+print(len(rep.git.show("--pretty=", "--name-only")))
+# print(rep.index.diff("HEAD")[1].path())
+a_modified_files = [item.a_path for item in rep.index.diff("HEAD")]
+b_modified_files = [item.b_path for item in rep.index.diff("HEAD")]
+
+print(a_modified_files)
+print(b_modified_files)
+
+# print(f"{rep.untracked_files}")
+
+
+exit()
 
 # commit_message = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "Update MathAnalysis conspect"
 commit_message = "Update MathAnalysis conspect"
