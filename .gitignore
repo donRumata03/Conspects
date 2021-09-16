@@ -1,5 +1,7 @@
 *.synctex.gz
 **/__pycache__
 
+**/.idea/
+
 # Temporary ignore (should move to git lfs):
 /MathAnal/Учебники

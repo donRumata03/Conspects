@@ -7,4 +7,4 @@ if exit_data != 0:
 
 colored_print(bcolors.OKGREEN, "Successfully compiled && commited => pushing")
 
-os.system("git push origin master")
+os.system("git push origin master") 
