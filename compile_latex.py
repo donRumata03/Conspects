@@ -5,19 +5,23 @@
 
 from script_common.script_commons import *
 
-
-target_filename = "MathAnal.tex"
-
-compiler = "xelatex"
+compiler = 'lualatex'
 
 
-latex_args = [
-	"-synctex=1",
-	"-interaction=nonstopmode",
-	"-file-line-error",
-	f"-outdir={this_dir}",
-	f"{this_dir}/{target_filename}"
-]
+def compile_one_file(path) -> bool:
+	file_dir = Path(path).parent.absolute()
+
+	latex_args = [
+		"-synctex=1",
+		"-interaction=nonstopmode",
+		"-file-line-error",
+		f"-outdir={file_dir}",
+		f"path"
+	]
+
+
+
+
 
 
 

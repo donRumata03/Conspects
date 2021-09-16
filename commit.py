@@ -38,7 +38,7 @@ def compile_file(path) -> bool:
 	assert ext in extensions_for_compilation
 	
 	compiler_script = extensions_for_compilation[ext]
-	exit_code = run_python_script(compiler_script)
+	exit_code = run_python_script(compiler_script, path)
 	if exit_code != 0:
 		colored_print(bcolors.FAIL, f"STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return exit_code == 0
@@ -47,15 +47,16 @@ def compile_file(path) -> bool:
 
 rep = Repo(this_dir)
 
-
+changed_files = [item.a_path for item in rep.head.commit.diff(None)]
 
 # Filter only files for compilation:
 files_to_compile = [
-	item.a_path
-	for item in rep.index.diff("HEAD")
-	if Path(item.a_path).suffix in extensions_for_compilation and Path(item.a_path).name != ".md"
+	file
+	for file in changed_files
+	if Path(file).suffix in extensions_for_compilation and Path(file).name != " README.md"
 ]
-print(f"Files to compile: {files_to_compile}")
+print(changed_files)
+print(f"Files to (re)compile: {files_to_compile}")
 
 # COMPILE files:
 for source in files_to_compile:
@@ -63,7 +64,7 @@ for source in files_to_compile:
 	compile_file(source)
 
 
-if "--all" in sys.argv[1:]: # Commit all files at once with name provided:
+if "--all" in sys.argv[1:]:		# Commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
 	assert len(not_option_ids) == 1
 	commit_message = not_option_ids[0]
@@ -76,16 +77,10 @@ if "--all" in sys.argv[1:]: # Commit all files at once with name provided:
 else:
 	# Subsequently processing different file categories:
 
-	# 1.
+	# 1. MD and LaTeX files in DIR € decryption
+	print(files_to_compile)
 
-	commit_message = "Update MathAnalysis conspect"
-	if len(sys.argv) > 1:
-		commit_message += ": " + " ".join(sys.argv[1:])
-	print(f"Commit message will be: \"{commit_message}\"")
-
-	print("Compiling…")
-
-
-
-os.system(f"git add -u ./")
-os.system(f"git commit -m \"{commit_message}\"")
+	# commit_message = "Update MathAnalysis conspect"
+	# if len(sys.argv) > 1:
+	# 	commit_message += ": " + " ".join(sys.argv[1:])
+	# print(f"Commit message will be: \"{commit_message}\"")

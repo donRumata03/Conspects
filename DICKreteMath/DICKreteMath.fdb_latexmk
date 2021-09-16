@@ -1,13 +1,13 @@
 # Fdb version 3
-["xdvipdfmx"] 1631717940 "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv" "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.pdf" "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath" 1631718075
-  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv" 1631717940 62680 2381af9fab4f0f2a688c85662c51ef0e "xelatex"
+["xdvipdfmx"] 1631782006 "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv" "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.pdf" "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath" 1631782006
+  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv" 1631782006 63552 446c18089858afa31abc81f2d679b56a "xelatex"
   (generated)
   "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.pdf"
-["xelatex"] 1631717938 "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.tex" "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv" "DICKreteMath" 1631718075
+["xelatex"] 1631782005 "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.tex" "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv" "DICKreteMath" 1631782006
   "../LatexGloves/latex_math_header.tex" 1631705117 3575 b5ce2a0eeffa24fe2198d07c2b1f4507 ""
   "/etc/texmf/web2c/texmf.cnf" 1601105987 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.aux" 1631717940 2454 fc461b756bec2961da3e33d2fc49a99a ""
-  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.tex" 1631718075 6832 fd4801de262d3878c87ab942ac4fe04a ""
+  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.aux" 1631782006 2454 b73be30d699e358f7b8f3fc734cec003 ""
+  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.tex" 1631782003 7006 4d82e48644181278b4fd7163c4f20ab8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -194,16 +194,16 @@
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty" 1575152173 20606 9687ab75e08c0f04f97928ff5e46e770 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631270018 3495480 b20696261ba0cb671f4b632b301ab55d ""
-  "DICKreteMath.aux" 1631717940 2454 fc461b756bec2961da3e33d2fc49a99a "xelatex"
-  "DICKreteMath.out" 1631717940 812 1eb9455256690b484dfa041464bf4c40 "xelatex"
-  "DICKreteMath.tex" 1631718075 6832 fd4801de262d3878c87ab942ac4fe04a ""
-  "DICKreteMath.toc" 1631717940 995 31d604a42e85e277e87b41a2391b5d6b "xelatex"
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631718363 3495425 bfc02a90a48d9ed3ff82dd6687e98997 ""
+  "DICKreteMath.aux" 1631782006 2454 b73be30d699e358f7b8f3fc734cec003 "xelatex"
+  "DICKreteMath.out" 1631782006 812 1eb9455256690b484dfa041464bf4c40 "xelatex"
+  "DICKreteMath.tex" 1631782003 7006 4d82e48644181278b4fd7163c4f20ab8 ""
+  "DICKreteMath.toc" 1631782006 995 31d604a42e85e277e87b41a2391b5d6b "xelatex"
   (generated)
-  "DICKreteMath.out"
   "DICKreteMath.aux"
   "DICKreteMath.xdv"
-  "DICKreteMath.log"
-  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.log"
+  "DICKreteMath.out"
   "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.xdv"
+  "/home/vova/dev/Education/Conspects/DICKreteMath/DICKreteMath.log"
   "DICKreteMath.toc"
+  "DICKreteMath.log"

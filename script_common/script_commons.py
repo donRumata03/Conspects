@@ -5,6 +5,9 @@ from pathlib import Path
 from inspect import getsourcefile
 from os.path import abspath
 
+from typing import Callable
+
+
 this_dir = Path(abspath(getsourcefile(lambda: 0))).parent.parent.absolute()
 
 
