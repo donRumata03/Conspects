@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.9.15)  17 SEP 2021 13:16
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.9.15)  17 SEP 2021 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.tex
-(/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.tex
+**/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.tex
+(/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -22,7 +22,7 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-) (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/../LatexGloves/latex_math_header.tex (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+) (/home/vova/dev/Education/Conspects/LinAnalgebra/../LatexGloves/latex_math_header.tex (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
@@ -879,7 +879,7 @@ LaTeX Info: Redefining \Im on input line 87.
 \c@property=\count341
 \c@statement=\count342
 \c@corollary=\count343
-) (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.aux)
+) (/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.aux)
 \openout1 = `LinearAlgebra.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -916,7 +916,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 9.
 LaTeX Info: Redefining \pageref on input line 9.
 LaTeX Info: Redefining \nameref on input line 9.
- (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.out) (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.out)
+ (/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.out) (/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.out)
 \@outlinefile=\write4
 \openout4 = `LinearAlgebra.out'.
 
@@ -1140,7 +1140,7 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
-] (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.toc
+] (/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
 (Font)              scaled to size 12.00128pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
@@ -1309,33 +1309,41 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 397.
+
+Overfull \hbox (5.41016pt too wide) in paragraph at lines 401--404
+\TU/Kurale(0)/m/n/12 определителя нулю соответствует возможности выразить одну из строк,
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 408.
+(mdframed)              on input line 406.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 414.
- [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 424.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 424.
- (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 424.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 424.
+(mdframed)              on input line 417.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 423.
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
+ (/home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `LinearAlgebra.out' has not changed.
 (rerunfilecheck)             Checksum: 787156FF8A0C5A26E0CF755E634C2C64;1273.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 424.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
  ) 
 Here is how much of TeX's memory you used:
- 30284 strings out of 481030
- 577302 string characters out of 5927867
+ 30288 strings out of 481030
+ 577379 string characters out of 5927867
  1144576 words of memory out of 5000000
- 46739 multiletter control sequences out of 15000+600000
+ 46743 multiletter control sequences out of 15000+600000
  545948 words of font info for 123 fonts, out of 8000000 for 9000
  682 hyphenation exceptions out of 8191
- 81i,13n,109p,1032b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,13n,109p,1031b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv (11 pages, 150980 bytes).
+Output written on /home/vova/dev/Education/Conspects/LinAnalgebra/LinearAlgebra.xdv (11 pages, 155300 bytes).

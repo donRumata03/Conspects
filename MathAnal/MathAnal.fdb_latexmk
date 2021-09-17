@@ -3,19 +3,19 @@
   "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.xdv" 0 -1 0 "xelatex"
   (generated)
   "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.pdf"
-["xelatex"] 1631702363 "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.tex" "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.xdv" "MathAnal" 1631702363
+["xelatex"] 1631876138 "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.tex" "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.xdv" "MathAnal" 1631876138
   "../LatexTemplates/latex_math_header.tex" 0 -1 0 ""
   "/etc/texmf/web2c/texmf.cnf" 1601105987 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/vova/dev/Education/Conspects/MathAnal/../LatexTemplates/latex_math_header.tex" 0 -1 0 ""
-  "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.aux" 1631702363 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.aux" 1631876138 8 a94a2480d3289e625eea47cd1b285758 ""
   "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.tex" 1631617486 15827 825c1ee9383c3de73ea3f862b253a0ee ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1580683321 20023 e427dd9e17e239bf926ef3aab67fe35e ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo" 1580683321 8447 5c4b8ee712f8e349df2722115bc8c513 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631270018 3495480 b20696261ba0cb671f4b632b301ab55d ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631718363 3495425 bfc02a90a48d9ed3ff82dd6687e98997 ""
   "MathAnal.tex" 1631617486 15827 825c1ee9383c3de73ea3f862b253a0ee ""
   (generated)
-  "MathAnal.log"
-  "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.log"
   "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.xdv"
+  "/home/vova/dev/Education/Conspects/MathAnal/MathAnal.log"
+  "MathAnal.log"
