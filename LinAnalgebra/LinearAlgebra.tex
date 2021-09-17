@@ -308,7 +308,7 @@
     
     \begin{definition}
         \begin{gather}
-            vec\_product: (\sR^2, \sR^2) \mapsto R^2 \\
+            vec\_product: (\sR^2, \sR^2) \mapsto \sR^2 \\
             \vec{a} \times \vec{b} = \vec{c} \isdef
         \end{gather}
         \begin{itemize}
@@ -393,6 +393,15 @@
             \end{detmatrix}
         \end{equation}
     \end{theorem}
+
+    \begin{theorem}
+        Смешанное произведене = 0 $\Leftrightarrow$ векторы компланарны.
+    \end{theorem}
+    \begin{proof}
+        Так как строчки матрицы - координаты векторов, 
+        то равенство определителя нулю соответствует возможности выразить одну из строк, 
+        а значит, и один из векторов, через остальные.
+    \end{proof}
 
     \begin{theorem}
         Вектроное произведение линейно относительно обоих аргументов.
