@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.9.10)  15 SEP 2021 14:25
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.9.15)  17 SEP 2021 12:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1142,92 +1142,187 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ] (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 6.
+(Font)              scaled to size 12.00128pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.40088pt on input line 6.
+(Font)              scaled to size 8.40088pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 6.
+(Font)              scaled to size 6.00064pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 6.
+(Font)              scaled to size 11.99872pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.3991pt on input line 6.
+(Font)              scaled to size 8.3991pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 6.
+(Font)              scaled to size 5.99936pt on input line 7.
 )
 \tf@toc=\write5
 \openout5 = `LinearAlgebra.toc'.
 
  [2]
-Overfull \hbox (0.45782pt too wide) in paragraph at lines 26--28
+Overfull \hbox (0.45782pt too wide) in paragraph at lines 33--35
 \TU/Kurale(0)/m/n/12 Вектор - класс направленных отрезков, определён с точностью до точки
  []
 
-
-Overfull \hbox (8.71815pt too wide) in paragraph at lines 52--55
+[3]
+Overfull \hbox (8.71815pt too wide) in paragraph at lines 59--62
 \TU/Kurale(0)/m/n/12 Комбинация векторов тривиальна, если $[][][] [] []$ Иначе – нетривиальная
  []
 
 
-Overfull \hbox (2.4323pt too wide) in paragraph at lines 56--58
+Overfull \hbox (2.4323pt too wide) in paragraph at lines 63--65
 \TU/Kurale(0)/m/n/12 комбинация тривиальна. Иначе система линейно зависима (например,
  []
 
-[3]
-Overfull \hbox (19.64142pt too wide) in paragraph at lines 63--64
+
+Overfull \hbox (19.64142pt too wide) in paragraph at lines 70--71
 []\TU/Kurale(0)/m/n/12 Если система линейно зависима, один из векторов - линейная комбинация
  []
 
 
-Overfull \hbox (14.6836pt too wide) in paragraph at lines 92--93
+Overfull \hbox (14.6836pt too wide) in paragraph at lines 99--100
 \TU/Kurale(0)/m/n/12 вектор x может быть линейно выражен через векторы формула: формула,
  []
 
 [4]
-Overfull \hbox (15.55331pt too wide) in paragraph at lines 103--104
+Overfull \hbox (15.55331pt too wide) in paragraph at lines 110--111
 []\TU/Kurale(0)/m/n/12 Система коллинеарных векторов ($[] [] [] []$) всегда линейно зависимая
  []
 
 
-Overfull \hbox (36.51721pt too wide) in paragraph at lines 103--104
+Overfull \hbox (36.51721pt too wide) in paragraph at lines 110--111
 \TU/Kurale(0)/m/n/12 тогда можно ввести базис, выразив один через другие, для пространства
  []
 
 
-Overfull \hbox (23.8572pt too wide) in paragraph at lines 109--113
+Overfull \hbox (23.8572pt too wide) in paragraph at lines 116--120
 \TU/Kurale(0)/m/n/12 (начало системы коордтнат), зафиксирован базис $[][] [][] []$ некомпланарные. 
  []
 
 
-Overfull \hbox (28.8172pt too wide) in paragraph at lines 114--115
+Overfull \hbox (28.8172pt too wide) in paragraph at lines 121--122
 []\TU/Kurale(0)/m/n/12 Оси кординат - прямые, проходящие через начало координат в направлении
  []
 
 
-Overfull \hbox (40.9323pt too wide) in paragraph at lines 116--118
+Overfull \hbox (40.9323pt too wide) in paragraph at lines 123--125
 []\TU/Kurale(0)/m/n/12 Координаты точки - всё равно что координаты радиус-вектора. Геометрически
  []
 
 [5] [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 248.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 251.
+
+Missing character: There is no ̂ in font cmmi12!
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 255.
+
+LaTeX Warning: Command \^ invalid in math mode on input line 258.
+
+Missing character: There is no ̂ in font cmmi12!
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 268.
+
+LaTeX Warning: Command \^ invalid in math mode on input line 273.
+
+Missing character: There is no ̂ in font cmmi12!
+
+LaTeX Warning: Command \^ invalid in math mode on input line 273.
+
+Missing character: There is no ̂ in font cmmi12!
+
+Overfull \hbox (2.21094pt too wide) in paragraph at lines 280--281
+[]\TU/Kurale(0)/m/n/12 Чтобы найти кородивнату вектора в прямоугольной системе координат
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 282.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 295.
+[8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 305.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 309.
+Missing character: There is no п in font cmmi12!
+Missing character: There is no р in font cmmi12!
+Missing character: There is no а in font cmmi12!
+Missing character: There is no в in font cmmi12!
+Missing character: There is no а in font cmmi12!
+Missing character: There is no я in font cmmi12!
+Missing character: There is no т in font cmmi12!
+Missing character: There is no р in font cmmi12!
+Missing character: There is no о in font cmmi12!
+Missing character: There is no й in font cmmi12!
+Missing character: There is no к in font cmmi12!
+Missing character: There is no а in font cmmi12!
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 321.
+
+Overfull \hbox (34.86328pt too wide) in paragraph at lines 326--327
+[]\TU/Kurale(0)/m/n/12 Длина скалярного произведения - площадь параллелограмма, натянутого
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 329.
+[9]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 359.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 367.
+
+Overfull \hbox (0.34686pt too wide) in paragraph at lines 369--370
+[]
+ []
+
+
+Overfull \hbox (38.3078pt too wide) in paragraph at lines 369--370
+\TU/Kurale(0)/m/n/12 Произведение равно объёму параллелепипеда со знаком (добавляем
+ []
+
+
+Overfull \hbox (39.71405pt too wide) in paragraph at lines 370--372
+[]\TU/Kurale(0)/m/n/12 Смешанное произведение не меняется при циклической перетановке
+ []
+
+
+Overfull \hbox (32.22716pt too wide) in paragraph at lines 370--372
+\TU/Kurale(0)/m/n/12 векторов. В противном случае знак меняется на противоположный. 
+ []
+
+[10] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 384.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 384.
  (/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 384.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 384.
 Package rerunfilecheck Info: File `LinearAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: 3A1F6BE4A4F1F7E26B6FBE4B09485B08;615.
+(rerunfilecheck)             Checksum: E54B829932C3F17F3F38AB12E3C046A9;1165.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 384.
  ) 
 Here is how much of TeX's memory you used:
- 30115 strings out of 481030
- 572703 string characters out of 5927867
- 1140576 words of memory out of 5000000
- 46573 multiletter control sequences out of 15000+600000
- 545924 words of font info for 120 fonts, out of 8000000 for 9000
+ 30274 strings out of 481030
+ 577078 string characters out of 5927867
+ 1143576 words of memory out of 5000000
+ 46729 multiletter control sequences out of 15000+600000
+ 545948 words of font info for 123 fonts, out of 8000000 for 9000
  682 hyphenation exceptions out of 8191
- 81i,13n,109p,1032b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,13n,109p,1032b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv (7 pages, 73596 bytes).
+Output written on /home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv (11 pages, 135840 bytes).

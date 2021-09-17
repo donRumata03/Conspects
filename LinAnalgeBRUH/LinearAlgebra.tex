@@ -21,7 +21,14 @@
     Геометрия Александров
     Ильин Позняк  Линейная алгебра
 
-    \section{as}
+
+    \section{Ключевые определения}
+    \begin{itemize}
+        \item Векторное произведение векторов
+        \item Определение определителя
+    \end{itemize}
+
+    \section{Векторы}
     
     Вектор - класс направленных отрезков, 
     определён с точностью до точки приложения.
@@ -234,5 +241,144 @@
             z'
         \end{pmatrix}
     \end{equation}
+
+    \section{Операции}
+
+    \subsection{Скалярное произведение}
+    \begin{definition}
+        [Скалярное произведение]
+        \begin{equation}
+            (a, b) = a \cdot b = |a||b| \cdot cos(a\^b)
+        \end{equation}
+    \end{definition}
+
+    \begin{property}[Аксиомы скалярного произведения]
+        \begin{enumerate}
+            \item Симметрия
+            \item Аддитивное по обоим аргеументам: $|a||b| \cdot cos(a\^b)$
+            \item Однородное по обоим аргеументам: $(\lambda\vec{a}, \vec{b}) = \lambda(\vec{a}, \vec{b}) = (\vec{a}, \lambda\vec{b})$
+            \item $(1), (2) \Rightarrow$ линейное по обоим аргеументам
+            \item Положительна определённость: произведение на самого себя всегда $\geq 0$, 
+            причём равенство достигается только для нуль-вектора.
+        \end{enumerate}
+    \end{property}
+
+
+    \subsection{Проекция вектора на вектор}
+    \begin{definition}
+        [Проекция вектора на вектор]
+        \begin{gather}
+            a, b - vectors \\
+            a_b = a \cdot \cos{a\^b}
+        \end{gather}
+
+        \begin{note}
+            Скалярное произведение имеет знак!
+        \end{note}
+    \end{definition}
+
+    Чтобы найти кородивнату вектора в прямоугольной системе координат достаточно умножить его модуль на меня.
+
+    \begin{theorem}
+        [Аддитивность скалярного произведения]
+        \begin{equation}
+            (!) (\vec{a_1} + \vec{a_1}) \cdot \vec{b} = \vec{a_1} \cdot \vec{b} + \vec{a_2} \cdot \vec{b}
+        \end{equation}
+    \end{theorem}
+    \begin{proof}
+        Введём базис $\vec{i}, \vec{j}, \vec{k}$ 
+        вдоль вектора $\vec{b}$: $\frac{}{}$.
+    \end{proof}
+
+    Если операция удовлетворяет всем четырём аксиомам, это скалярное произведение.
+
+    \begin{theorem}
+        \begin{equation}
+            (\vec{a}, \vec{b}) = x_a \cdot x_b + y_a \cdot y_b + z_a \cdot z_b            
+        \end{equation}
+    \end{theorem}
+    \begin{proof}
+        Просто распишем произведение, прдставляя векторы через $\vec{i}, \vec{j}, \vec{k}$
+    \end{proof}
+
+    \subsection{Векторное произведение векторов}
+    \begin{definition}
+        Упорядоченная тройка векторов - правая, если при вращении первого ко второму буравчик двигается к третьему.
+    \end{definition}
+    
+    \begin{definition}
+        \begin{gather}
+            vec\_product: (\sR^2, \sR^2) \mapsto R^2 \\
+            \vec{a} \times \vec{b} = \vec{c} \isdef
+        \end{gather}
+        \begin{itemize}
+            \item $|\vec{c}| = |\vec{c}| \cdot |\vec{c}| \cdot \sin(\varphi)$
+            \item $\vec{c} \perp \vec{a}, \vec{c} \perp \vec{a}$
+            \item $\{ \vec{a}, \vec{b}, \vec{c} \} - правая тройка$
+        \end{itemize}
+    \end{definition}
+
+    \begin{property}
+        \item $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$
+        \item $[a; a] = \vec{0}$
+        \item $\vec{a} \parallel \vec{b} \Leftrightarrow [\vec{a}, \vec{b}] = 0$
+        \item Линейность по обоим аргументам
+        \item Длина скалярного произведения - площадь параллелограмма, натянутого на аргументы.
+    \end{property}
+
+    \begin{theorem}
+        [Векторное произмедение в координатах]
+        \begin{equation}
+            [{\vec {a}},\;{\vec {b}}]=(a_{y}b_{z}-a_{z}b_{y},\;a_{z}b_{x}-a_{x}b_{z},\;a_{x}b_{y}-a_{y}b_{x})
+        \end{equation}
+        
+        Иначе говоря: 
+        \begin{equation}
+            [{\vec {a}},\;{\vec {b}}] = \begin{detmatrix}
+                i & j & k \\
+                a_x & a_y & a_z \\
+                b_x & b_y & b_z
+            \end{detmatrix}
+        \end{equation}
+                
+    \end{theorem}
+    \begin{proof}
+        Заметим, что векторные проивзведения базисных векторов в правом ортонормированном базисе такие:
+        \begin{gather}
+            [\vec{i}, \vec{j}] = \vec{k} \\ 
+            [\vec{j}, \vec{k}] = \vec{i} \\
+            [\vec{k}, \vec{i}] = \vec{j}
+        \end{gather}
+        То есть плюс получается, когда обыный порядок,возможно - со сдвигом
+        
+    \end{proof}
+
+
+    \subsection{Смешанное произведение векторов}
+
+    \begin{definition}
+        [Смешанное произведение векторов]
+        \begin{equation}
+            (\vec{a}, \vec{b}, \vec{c}) = ([\vec{a}, \vec{b}], \vec{c})
+        \end{equation}
+    \end{definition}
+    
+
+    \begin{property}[Свойства смешанного произведения векторов]
+        \begin{enumerate}
+            \item Произведение равно объёму параллелепипеда со знаком (добавляем минус, если вдруг левая тройка).
+            \item Смешанное произведение не меняется при циклической перетановке векторов. 
+            В противном случае знак меняется на противоположный.
+            \item $([\vec{a}, \vec{b}], \vec{c}) = (\vec{a}, [\vec{b}, \vec{c}])$
+            \item Аддитивность
+            \item Однородность
+            \item $\Rightarrow$ Линейность по любому аргументу (за счёт циклической перестановки - линейность по любому аргументу)
+        \end{enumerate}
+    \end{property}
+    \begin{proof} \nl
+        (1) доказывается через нахождение модуля $Sh$ \\
+        (2) Все тройки либо правые, либо левые одновременно, а модуль - через объём однгого и того же параллелограмма \\
+        (3-4) Линейность:  \\
+    \end{proof}
 
 \end{document}

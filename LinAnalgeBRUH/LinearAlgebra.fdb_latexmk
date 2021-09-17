@@ -1,13 +1,13 @@
 # Fdb version 3
-["xdvipdfmx"] 1631705119 "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv" "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.pdf" "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra" 1631705120
-  "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv" 1631705119 73596 59a2a934f398de9717a7a10a016339ef "xelatex"
+["xdvipdfmx"] 1631872730 "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv" "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.pdf" "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra" 1631872730
+  "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv" 1631872730 135840 ca55bfee35cea9c6c0bf210c297da7d3 "xelatex"
   (generated)
   "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.pdf"
-["xelatex"] 1631705117 "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.tex" "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv" "LinearAlgebra" 1631705120
+["xelatex"] 1631872728 "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.tex" "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv" "LinearAlgebra" 1631872730
   "../LatexGloves/latex_math_header.tex" 1631705117 3575 b5ce2a0eeffa24fe2198d07c2b1f4507 ""
   "/etc/texmf/web2c/texmf.cnf" 1601105987 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.aux" 1631705119 1761 491bc43945f17885df978d26bd45a1e3 ""
-  "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.tex" 1631702541 11731 1bf0f11c1b308d592b99edbacdb082be ""
+  "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.aux" 1631872730 3137 71eb4accdfa0487cbad6421ffc1ca5c9 ""
+  "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.tex" 1631872728 18688 442778bcd2384716fc941db28b223476 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -194,16 +194,16 @@
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty" 1575152173 20606 9687ab75e08c0f04f97928ff5e46e770 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631270018 3495480 b20696261ba0cb671f4b632b301ab55d ""
-  "LinearAlgebra.aux" 1631705119 1761 491bc43945f17885df978d26bd45a1e3 "xelatex"
-  "LinearAlgebra.out" 1631705119 615 3a1f6be4a4f1f7e26b6fbe4b09485b08 "xelatex"
-  "LinearAlgebra.tex" 1631702541 11731 1bf0f11c1b308d592b99edbacdb082be ""
-  "LinearAlgebra.toc" 1631705119 770 43179cdf709402563d50130494eacd93 "xelatex"
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1631718363 3495425 bfc02a90a48d9ed3ff82dd6687e98997 ""
+  "LinearAlgebra.aux" 1631872730 3137 71eb4accdfa0487cbad6421ffc1ca5c9 "xelatex"
+  "LinearAlgebra.out" 1631872730 1165 e54b829932c3f17f3f38ab12e3c046a9 "xelatex"
+  "LinearAlgebra.tex" 1631872728 18688 442778bcd2384716fc941db28b223476 ""
+  "LinearAlgebra.toc" 1631872730 1426 f889105de3be3cdc743ef943bb386438 "xelatex"
   (generated)
+  "LinearAlgebra.xdv"
   "LinearAlgebra.aux"
   "LinearAlgebra.toc"
-  "LinearAlgebra.log"
   "LinearAlgebra.out"
-  "LinearAlgebra.xdv"
   "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.log"
+  "LinearAlgebra.log"
   "/home/vova/dev/Education/Conspects/LinAnalgeBRUH/LinearAlgebra.xdv"
