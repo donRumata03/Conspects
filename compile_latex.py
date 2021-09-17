@@ -3,6 +3,9 @@
 
 # lualatex -synctex=1 -interaction=nonstopmode -file-line-error -outdir=d:/Projects/Tests/Chaotic_tests/VS_latex d:/Projects/Tests/Chaotic_tests/VS_latex/main
 
+
+# TODO: Don't forget to clear temporary files!
+
 from script_common.script_commons import *
 
 compiler = 'lualatex'
@@ -18,6 +21,8 @@ def compile_one_file(path) -> bool:
 		f"-outdir={file_dir}",
 		f"path"
 	]
+
+	clear_latex_temp()
 
 
 

@@ -44,9 +44,13 @@
 % \setmathfont{TeX Gyre Termes Math}
 
 \usepackage{fontspec}
+\usepackage{polyglossia}
 
 % \setmainfont{Times New Roman}
-\setmainfont{Kurale}
+\setdefaultlanguage{russian}
+
+\newfontfamily\cyrillicfont{Kurale}
+\setmainfont[Ligatures=TeX]{Kurale}
 \setmonofont{Fira Code Retina}
 
 % Common number sets
@@ -134,3 +138,6 @@
 
 
 \newcommand{\nl}{$~$\\}
+
+\newcommand{\tit}{\maketitle\newpage}
+\newcommand{\tittoc}{\tit\tableofcontents\newpage}
