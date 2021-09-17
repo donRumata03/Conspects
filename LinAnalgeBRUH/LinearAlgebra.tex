@@ -378,7 +378,47 @@
     \begin{proof} \nl
         (1) доказывается через нахождение модуля $Sh$ \\
         (2) Все тройки либо правые, либо левые одновременно, а модуль - через объём однгого и того же параллелограмма \\
-        (3-4) Линейность:  \\
+        (3-4) Линейность: \dots \\
+    \end{proof}
+
+
+    \begin{theorem}
+        Смешанное произведение:
+
+        \begin{equation}
+            (\vec{a}, \vec{b}, \vec{c}) = \begin{detmatrix}
+                a_x & a_y & a_z \\
+                b_x & b_y & b_z \\
+                c_x & c_y & c_z
+            \end{detmatrix}
+        \end{equation}
+    \end{theorem}
+
+    \begin{theorem}
+        Вектроное произведение линейно относительно обоих аргументов.
+    \end{theorem}
+    \begin{proof}
+        Докажем через скалярное произведение самого на себя вектора $\vec{c} = [a_1 + a_2, b] - [a_1, b] - [a_2, b]$, которое равно нулю \dots 
+        Ass - we can!    
+    \end{proof}
+    
+
+    \subsection{Двойное векторное произведение}
+    
+    \begin{definition}
+        \begin{equation}
+            [a, b, c] = \bigl[a, [b, c]\bigr]    
+        \end{equation}
+    \end{definition}
+
+    \begin{theorem}
+        \begin{equation}
+            \bigl[a, [b, c]\bigr] = \vec{b}(\vec{a}, \vec{c}) - \vec{c}(\vec{a}, vec{b})
+        \end{equation}
+        Бац минус цаб!
+    \end{theorem}
+    \begin{proof}
+        Распишем через определители левую часть и по определениям - правую.
     \end{proof}
 
 \end{document}

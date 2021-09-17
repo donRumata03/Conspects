@@ -12,3 +12,4 @@
 \contentsline {subsection}{\numberline {7.2}Проекция вектора на вектор}{8}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Векторное произведение векторов}{9}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Смешанное произведение векторов}{10}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Двойное векторное произведение}{11}{subsection.7.5}%
