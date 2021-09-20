@@ -32,11 +32,7 @@ f(n) = O(g(n))
 $$
 $\Omega(n)$ - оценка снизу.
 $$
-\begin{cases}
-      f(n) = O(n)\\
-      f(n) = \Omega(n)
-\end{cases}
-
-\Longleftrightarrow f(n) = \Theta(n)
+(f(n) = O(n) ~ \&\& ~ f(n) = \Omega(n)) \Longleftrightarrow f(n) = \Theta(n)
 $$
 Будем анализировать только худший случай для данного n.
+
