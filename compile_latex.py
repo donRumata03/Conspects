@@ -73,6 +73,7 @@ def compile_one_file(path) -> bool:
 
 	print("__________________________________________________________________")
 	# Clear typical latex tempFiles:
+	# print([f"{file_dir}/{ext}" for ext in latex_temp_extensions])
 	temp_files = sum([glob.glob(f"{file_dir}/{ext}") for ext in latex_temp_extensions], [])
 	print(f"'{file_name}' LaTeX file's compilation finished ==> clearing temp files:", temp_files)
 	for tf in temp_files:
@@ -81,13 +82,17 @@ def compile_one_file(path) -> bool:
 	return True
 
 
-files_to_compile = collect_files(".tex")
-OK = True
+if __name__ == '__main__':
+	files_to_compile = collect_files(".tex")
+	errors = 0
 
-for filename in files_to_compile:
-	OK = OK and compile_one_file(filename)
-	if not OK:
-		break
+	for filename in files_to_compile:
+		OK = compile_one_file(filename)
+		if not OK:
+			errors += 1
+
+	color = bcolors.OKGREEN if errors == 0 else (bcolors.FAIL if errors == len(files_to_compile) else bcolors.WARNING)
+	colored_print(color, f"CompileLatex.py: compiled {len(files_to_compile)} files with {errors} errors…")
 
 
 
