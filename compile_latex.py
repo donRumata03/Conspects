@@ -6,7 +6,7 @@
 
 import glob
 
-from script_common.compilation_interface import collect_files
+from script_common.compilation_interface import collect_files, compile_file_set
 from script_common.script_commons import *
 
 compiler = 'xelatex'
@@ -79,22 +79,12 @@ def compile_one_file(path) -> bool:
 	for tf in temp_files:
 		os.remove(tf)
 
-	return True
+	return exit_code == 0
 
 
 if __name__ == '__main__':
 	files_to_compile = collect_files(".tex")
-	errors = 0
-
-	for filename in files_to_compile:
-		OK = compile_one_file(filename)
-		if not OK:
-			errors += 1
-
-	color = bcolors.OKGREEN if errors == 0 else (bcolors.FAIL if errors == len(files_to_compile) else bcolors.WARNING)
-	colored_print(color, f"CompileLatex.py: compiled {len(files_to_compile)} files with {errors} errors…")
-
-
+	compile_file_set(files_to_compile, compile_one_file)
 
 # compile_one_file("D:/Projects/Education/Conspects/LinAnalgebra/LinearAlgebra.tex")
 

@@ -31,3 +31,16 @@ def collect_files(extension: str) -> list:
 
     return files_to_compile
 
+
+def compile_file_set(files_to_compile, compiling_function):
+    errors = 0
+
+    for filename in files_to_compile:
+        OK = compiling_function(filename)
+        if not OK:
+            errors += 1
+
+    color = bcolors.OKGREEN if errors == 0 else (bcolors.FAIL if errors == len(files_to_compile) else bcolors.WARNING)
+    colored_print(color, f"Сompiled {len(files_to_compile)} files with {errors} errors…")
+
+
