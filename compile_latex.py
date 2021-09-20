@@ -5,6 +5,7 @@
 
 
 # TODO: Don't forget to clear temporary files!
+import glob
 
 from script_common.script_commons import *
 
@@ -14,6 +15,40 @@ compiler = 'lualatex'
 def compile_one_file(path) -> bool:
 	file_dir = Path(path).parent.absolute()
 
+	latex_temp_extensions = [
+		"*.aux",
+		"*.bbl",
+		"*.blg",
+		"*.idx",
+		"*.ind",
+		"*.lof",
+		"*.lot",
+		"*.out",
+		"*.toc",
+		"*.acn",
+		"*.acr",
+		"*.alg",
+		"*.glg",
+		"*.glo",
+		"*.gls",
+		"*.fls",
+		"*.log",
+		"*.fdb_latexmk",
+		"*.snm",
+		"*.synctex(busy)",
+		"*.synctex.gz(busy)",
+		"*.nav",
+		"*.xdv",
+		"*.dvi",
+		".*ps",
+
+		# Files with this extension can be useful after compilation
+		# but can't be - for github users => remove it after commit
+
+		"*.synctex",
+		"*.synctex.gz"
+	]
+
 	latex_args = [
 		"-synctex=1",
 		"-interaction=nonstopmode",
@@ -22,11 +57,16 @@ def compile_one_file(path) -> bool:
 		f"path"
 	]
 
-	clear_latex_temp()
+	# clear_latex_temp()
+	temp_files = sum([glob.glob(os.path.join(file_dir, ext)) for ext in latex_temp_extensions], [])
+	print(temp_files)
+	for tf in temp_files:
+		os.remove(tf)
 
 
 
-
+compile_one_file("~/dev/Education/Conspects/MathAnal/MathAnal.tex")
+exit()
 
 
 
