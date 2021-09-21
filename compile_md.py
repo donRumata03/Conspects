@@ -30,6 +30,7 @@ def compile_one_file(path) -> bool:
 		f"--to=latex",
 		f"--pdf-engine={compiler}",
 		"-V mainfont='Kurale'",
+		f"--resource-path=\"{target_folder}\"",
 		f"--output=\"{(target_folder / (pure_name + '.pdf')).as_posix()}\"",
 	]
 	compiling_command = f"pandoc {' '.join(pandoc_args)}"
