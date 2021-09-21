@@ -32,17 +32,15 @@ updating_phrases = [
 ]
 
 
-
 def compile_file(path) -> bool:
 	ext = Path(path).suffix
 	assert ext in extensions_for_compilation
-	
+
 	compiler_script = extensions_for_compilation[ext]
 	exit_code = run_python_script(compiler_script, path)
 	if exit_code != 0:
-		colored_print(bcolors.FAIL, f"STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
+		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return exit_code == 0
-
 
 
 rep = Repo(this_dir)
@@ -63,11 +61,15 @@ for source in files_to_compile:
 	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
 	compile_file(source)
 
-
-if "--all" in sys.argv[1:]:		# Commit all files at once with name provided:
+if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
-	assert len(not_option_ids) == 1
+	if len(not_option_ids) != 1:
+		colored_print(bcolors.FAIL, "[Committer] incorrect CLI arguments: regime --all chosen "
+		                            "but there are more than one non-option arguments!")
+		exit(1)
+
 	commit_message = not_option_ids[0]
+	colored_print(bcolors.OKGREEN, "Committing all files with message:", commit_message)
 
 	# Track all files:
 	rep.git.add(all=True)
@@ -80,7 +82,7 @@ else:
 	# 1. MD and LaTeX files in DIR € decryption
 	print(files_to_compile)
 
-	# commit_message = "Update MathAnalysis conspect"
-	# if len(sys.argv) > 1:
-	# 	commit_message += ": " + " ".join(sys.argv[1:])
-	# print(f"Commit message will be: \"{commit_message}\"")
+# commit_message = "Update MathAnalysis conspect"
+# if len(sys.argv) > 1:
+# 	commit_message += ": " + " ".join(sys.argv[1:])
+# print(f"Commit message will be: \"{commit_message}\"")

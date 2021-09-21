@@ -29,12 +29,13 @@ def run_command(command):
     return exit_data >> 8 if os.name == 'posix' else exit_data
 
 
-def run_python_script(path_to_script):
-    return run_command(f"{'python3' if os.name == 'posix' else 'python'} {path_to_script}")    
+def run_python_script(path_to_script, *args):
+    arg_string = "".join(list(args))
+    return run_command(f"{'python3' if os.name == 'posix' else 'python'} {path_to_script} {arg_string}")
 
 
-def colored_print(color, string, **kwargs):
-    print(color + string + bcolors.ENDC, **kwargs)
+def colored_print(color, string, *args, **kwargs):
+    print(color + string + bcolors.ENDC, *args, **kwargs)
 
 
 
