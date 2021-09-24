@@ -151,14 +151,10 @@
     \end{itemize}
 
 
-    \begin{definition}
-        Сохранающие ноль
-    \end{definition}
-
 
     \subsection{Базовые связки базовых функций}
 
-    Но в реальности 
+    Но в реальности мы не хотим всегда задавать функции таблицей. 
 
     \begin{definition}
         Композиция
@@ -169,6 +165,19 @@
     \end{definition}
 
     Подстановка и композиция вместе обеспечивают любой достпный способ комбинации операций.
+
+    \begin{definition}
+        Замыкание множества функций - множество всех функций, которые мы можем выразить через них.
+    \end{definition}
+
+    \begin{definition}
+        Базис (полная система функций) - множество функций, 
+        замыкание которого - универсальное множество функций.
+    \end{definition}
+
+    \subsection{Базисы, критерий поста}
+
+    \subsubsection{Канонический базис}
     
     \begin{theorem}
         Через композии и подстановки операций $\{ \land, \lnot, \lor  \}$ можно выразить любую функцию, которая могла бы появиться в таблице
@@ -187,6 +196,128 @@
             f = \bigvee_{i = 0}^{n} is\_seq_i ~ if ~ seq_i
         \end{equation}
     \end{proof}
+
+
+    \begin{definition}
+        СДНФ - совершенная дизъюнктивная нормальная функция, \ldots
+        СДНФ - совершенная дизъюнктивная нормальная функция, \ldots
+    \end{definition}
+
+    \subsection{Полиномы Жегалкина}
+
+    $\{ \oplus, \land, \boldmath{0} \}$
+
+
+    \begin{lemma}
+        $A, B$ - множества булевых функций
+        $A$ - базис
+        $\forall f \in A: $ можно выразить формулой через $B$
+        Тогда B - базис
+    \end{lemma}
+    \begin{proof}
+        Докажем через индукцию по дереву разбора.
+    \end{proof}
+
+    \begin{theorem}
+        $\{ \oplus, \land, \bm{0} \}$ - базис        
+    \end{theorem}
+    \begin{proof}
+        \begin{equation}
+            \lnot x = x \oplus \mathbb{1}
+            \land \in B
+            x \lor y = \lnot (\lnot x \lor )
+        \end{equation}
+    \end{proof}
+
+    \begin{definition}
+        [Канонический полином Жегалкина]
+        \begin{equation}
+            P=a\oplus \bigoplus _{\begin{array}{c}1\leqslant i_{1}<\ldots <i_{k}\leqslant n\\k\in {\overline {1,n}}\end{array}}a_{i_{1},\ldots ,i_{k}}\wedge x_{i_{1}}\wedge \ldots \wedge x_{i_{k}},\quad a,a_{i_{1},\ldots ,i_{k}}\in \{0,1\}.
+        \end{equation}
+    \end{definition}
+
+    Любой полином преобразованиями можно привести к приведённому полиному.
+
+    \begin{definition}
+        Моном - одночлен (произведение переменных)
+    \end{definition}
+
+    \begin{note}
+        Мономы $\in M$, $|M| = 2^n$:
+
+        \begin{itemize}
+            \item $x, y: M = \{ \mathbb{1}, x, y, xy \}$
+            \item $x, y: M = \dots$
+        \end{itemize}
+    \end{note}
+
+    \begin{theorem}
+        Любая функция, кроме $\mathbb{0}: \exists!$ приведённый полином Жегалкина
+    \end{theorem}
+    \begin{proof}
+        \begin{itemize}
+            \item $\forall$ Булева функция: $\exists$ полином Жегалкина
+            \item количество ПЖ: $2^{2^n}$
+        \end{itemize}
+        $\Longrightarrow$ биекция: $\forall$ ПЖ: $\exists$ БФ
+    \end{proof}
+
+    Полезные, правда, избыточные базисы:
+    \begin{itemize}
+        \item $\mathbb{U}_2$ - все функции от двух аргументов
+        \item $\mathbb{T}_2$ - все пороговые функции от двух аргументов
+    \end{itemize}
+
+
+    \subsection{Критерий Поста}
+    
+    Классы функций:
+    \begin{itemize}
+        \item $F_0: f(0, 0, \ldots, 0) = 0$ - сохранающие ноль
+        \item $F_1: f(1, 1, \ldots, 1) = 1$ - сохранающие ноль
+        \item $F_m: \forall i (a_i \leqslant b_i) \Rightarrow f(a_1,\ldots,a_n)\leqslant f(b_1,\ldots,b_n)$ - монотонные, но только "возрастают"
+        \item $F_s:$ существует ПЖ, не использующий $\land$, таких всего $2^(n + 1)$
+    \end{itemize}
+
+    \begin{theorem} [Теорема Поста]
+        F - базис $\Longleftrightarrow \forall i \in \{ F_0, F_1, L, M, S \}: F \not\subset F_i$
+    \end{theorem}
+    \begin{proof}
+        Первая часть - докажем, что все классы замкнуты, причём существуют функиии вне любого класса.
+        Второе очевидно, первое докажем через дерево разбора.
+
+        Вторая часть - докажем, что если есть $f_0, f_1, f_m, f_s, f_l$, каждая не принадлежит соответствующему классу, 
+        это может быть и одна и та же функция, то через них можно выразить что угодно.
+
+        Да начнётся разбор случаев!
+
+        \begin{enumerate}
+            \item 
+            \begin{equation}
+                \begin{cases}
+                    f_0(1, 1, \dots, 1) = 1 \\
+                    f_0(0, 0, \dots, 0) = 1
+                \end{cases}
+            \end{equation} $\Longrightarrow$ получили $\mathbb{1}$ 
+            \item Кхм.. Тут случаев слишком много, не буду я это записывать\dots
+        \end{enumerate}
+
+    \end{proof}
+
+
+    \begin{note}
+        Критерий Поста конструктивен, поэтому возмодна такая лабораторная: даны таблицы 5 истинности функций каждого типа.
+        Задание: выразить через них в явном виде канонический базис    
+    \end{note}
+    
+    \begin{note}
+        На самом деле, таблицы истинности и формулы - самые неудобные способы работы с булевыми функциями на практике: 
+    \end{note}
+
+
+    \section{Анонс следующей темы: Схемы элементов}
+    А сколько информации содержится в функции, сколько элементов нужно для её выражения, почему обычно - много?!
+    Об этом и обо многом другом вы узнаете на следущей лекции!
 
 
 \end{document}
