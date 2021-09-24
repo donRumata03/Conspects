@@ -1,20 +1,21 @@
 % Some fancy symbols
 \usepackage{textcomp}
 \usepackage{stmaryrd}
-% \usepackage{cancel}
+\usepackage{cancel}
 
 % Some fancy symbols
 \usepackage{textcomp}
 \usepackage{stmaryrd}
 
+\usepackage{array}
+
 % Math packages
 \usepackage{amsmath,amsthm,amssymb, amsfonts, mathrsfs, dsfont, mathtools}
 % \usepackage{mathtext}
 
-\usepackage{bm} % Bold math
 
 \usepackage[bb=boondox]{mathalfa}
-\usepackage{cancel}
+\usepackage{bm}
 
 
 % Refs:
@@ -131,8 +132,8 @@
 \newcommand{\eqdef}{\overset{\mathrm{def}}{=\joinrel=}}
 \newcommand{\isdef}{\overset{\mathrm{def}}{\Longleftrightarrow}}
 \newcommand{\inductdots}{\ensuremath{\overset{induction}{\cdots}}}
-% \newcommand{\detmatrix}[]{}
 
+% Matrix's determinant
 \newenvironment{detmatrix}
 {
   \left|\begin{matrix}
@@ -140,8 +141,21 @@
   \end{matrix}\right|
 }
 
+\newenvironment{complex}
+{
+  \left[\begin{gathered}
+}{
+  \end{gathered}\right.
+}
+
 
 \newcommand{\nl}{$~$\\}
 
 \newcommand{\tit}{\maketitle\newpage}
 \newcommand{\tittoc}{\tit\tableofcontents\newpage}
+
+
+\newcommand{\vova}{  
+    Латыпов Владимир (конспектор)\\
+    {\small \texttt{donrumata03@gmail.com}, \texttt{t.me/donRumata03}, \texttt{github.com/donRumata03}}
+}
