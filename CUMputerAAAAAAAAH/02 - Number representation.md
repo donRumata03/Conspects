@@ -42,7 +42,7 @@
 
 Биты: $1, -2,~ 4, -8,~ 16, -32 \ldots$
 
-$value \in [] $
+$value \in [\dots] $
 
 Если чётное число, то отрицательных значений вдвое больше, чем положительных. Иначе -- наоборот.
 
@@ -188,7 +188,7 @@ std::string output_frac_decimal(frac_number num, int precision) {
         temp *= 10;
         auto dig = temp >> n;
         res += '0' + dig;
-        temp -= dig;
+        temp -= dig << n;
     }
     if (res.back() >= '0' + 5) {
         res.pop_back();
@@ -278,7 +278,7 @@ $$
 | half             | 16   | 5    |
 | single precision | 32   | 8    |
 | double precision | 64   | 11   |
-| quad precison    |      |      |
+| quad precison    | 128  | 15   |
 
 Мантисса в двоичной системе всегда оказывается в виде 1.xxxxxx...
 

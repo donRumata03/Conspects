@@ -1,7 +1,7 @@
 \documentclass[12pt, a4paper]{article}
 \input{../../LatexGloves/latex_math_header.tex}
 
-\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138}
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
 \title{Типовик по линейной алгебре модуль 1: Задания 1 и 2}
 
 \begin{document}
@@ -9,6 +9,8 @@
 
     \section{Задание 1}
 
+    \subsection{Способ №1}
+    
     \begin{multline}
         \begin{detmatrix}
             3 & 2 & 2 & 8 \\
@@ -129,9 +131,91 @@
         \right) = 17
     \end{multline}
 
+
+    \subsection{Способ №2}
+
+
+    \begin{multline}
+        \begin{detmatrix}
+            3 & 2 & 2 & 8 \\
+            1 & 5 & 4 & -9 \\ 
+            2 & 4 & 6 & -9 \\
+            1 & 2 & 3 & -4
+        \end{detmatrix} = 2 \times (-1)^{3 + 1} \times \begin{detmatrix}
+            1 & 5 & -9 \\
+            2 & 4 & -9 \\
+            1 & 2 & -4
+        \end{detmatrix} + 4 \times (-1)^{3 + 2} \times \begin{detmatrix}
+            3 & 2 & 8 \\
+            2 & 4 & -9 \\
+            1 & 2 & -4
+        \end{detmatrix} + \\ 
+        6 \times (-1)^{3 + 3} \times \begin{detmatrix}
+            3 & 2 & 8 \\
+            1 & 5 & -9 \\
+            1 & 2 & -4
+        \end{detmatrix} + 3 \times (-1)^{3 + 4} \times \begin{detmatrix}
+            3 & 2 & 8 \\
+            1 & 5 & -9 \\
+            2 & 4 & -9
+        \end{detmatrix} = \\ 
+        2 \cdot -3 - 4 \cdot 4 + 6 \cdot -40 -3 \cdot -93 = 17
+    \end{multline}
+
+
+    \subsection{Способ №3}
+
+    \begin{multline}
+        \begin{detmatrix}
+            3 & 2 & 2 & 8 \\
+            1 & 5 & 4 & -9 \\ 
+            2 & 4 & 6 & -9 \\
+            1 & 2 & 3 & -4
+        \end{detmatrix} = -\begin{detmatrix}
+            1 & 5 & 4 & -9 \\ 
+            3 & 2 & 2 & 8 \\
+            2 & 4 & 6 & -9 \\
+            1 & 2 & 3 & -4
+        \end{detmatrix} = -\begin{detmatrix}
+            1 & 5   & 4   & -9 \\ 
+            0 & -13 & -10 & 35 \\
+            0 & -6  & -2  & 9 \\
+            0 & -3  & -1  & 5
+        \end{detmatrix} = -\begin{detmatrix}
+            1 & 5   & 4   & -9 \\ 
+            0 & -13 & -10 & 35 \\
+            0 & 0   & 0   & -1 \\
+            0 & -3  & -1  & 5
+        \end{detmatrix} = \\ = -\begin{detmatrix}
+            1 & 5   & 4   & -9 \\ 
+            0 & -13 & -10 & 35 \\
+            0 & 0   & 0   & -1 \\
+            0 & -3  & -1  & 5
+        \end{detmatrix} = \begin{detmatrix}
+            1 & 5   & 4   & -9 \\ 
+            0 & -13 & -10 & 35 \\
+            0 & -3  & -1  & 5 \\
+            0 & 0   & 0   & -1
+        \end{detmatrix} = \\ \begin{detmatrix}
+            1 & 5   & 4   & -9 \\ 
+            0 & -13 & -10 & 35 \\
+            0 & -3 + 13 \cdot \frac{3}{13}  & -1 + 10 \cdot \frac{3}{13}  & 5 - 35 \cdot \frac{3}{13} \\
+            0 & 0   & 0   & -1
+        \end{detmatrix} = 1 \cdot -13 \cdot \left(-1 + 10\frac{3}{13} \right) \cdot -1 = 17
+    \end{multline}
+
     % \textbf{\textit{Hello!}}
  
     \section{Задание 2}
+
+
+    \begin{equation}
+        \begin{cases}
+            x + 4y + 3z = 1 \\
+            2x + 3y + 2z = -2 \\
+            3x + y + z = -3
+        \end{cases}
+    \end{equation}
 
     \begin{equation}
         \Delta = \begin{detmatrix}
