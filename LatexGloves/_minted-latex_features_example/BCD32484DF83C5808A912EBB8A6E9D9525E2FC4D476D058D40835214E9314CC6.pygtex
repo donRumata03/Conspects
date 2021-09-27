@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n+nv}{import} \PYG{n+nv}{numpy} \PYG{n+nv}{as} \PYG{n+nv}{np}
+
+        \PYG{n+nv}{def} \PYG{n+nv}{incmatrix}\PYG{p}{(}\PYG{n+nv}{genl1}\PYG{p}{,}\PYG{n+nv}{genl2}\PYG{p}{):}
+            \PYG{n+nv}{m} \PYG{o}{=} \PYG{n+nv}{len}\PYG{p}{(}\PYG{n+nv}{genl1}\PYG{p}{)}
+            \PYG{n+nv}{n} \PYG{o}{=} \PYG{n+nv}{len}\PYG{p}{(}\PYG{n+nv}{genl2}\PYG{p}{)}
+            \PYG{n+nv}{M} \PYG{o}{=} \PYG{o}{Non}\PYG{n+nv}{e} \PYG{c}{\PYGZsh{}to become the incidence matrix}
+            \PYG{n+nv}{VT} \PYG{o}{=} \PYG{n+nv}{np}\PYG{o}{.}\PYG{n+nv}{zeros}\PYG{p}{((}\PYG{n+nv}{n}\PYG{o}{*}\PYG{n+nv}{m}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nv}{int}\PYG{p}{)}  \PYG{c}{\PYGZsh{}dummy variable}
+
+            \PYG{c}{\PYGZsh{}compute the bitwise xor matrix}
+            \PYG{n+nv}{M1} \PYG{o}{=} \PYG{n+nv}{bitxormatrix}\PYG{p}{(}\PYG{n+nv}{genl1}\PYG{p}{)}
+            \PYG{n+nv}{M2} \PYG{o}{=} \PYG{n+nv}{np}\PYG{o}{.}\PYG{n+nv}{triu}\PYG{p}{(}\PYG{n+nv}{bitxormatrix}\PYG{p}{(}\PYG{n+nv}{genl2}\PYG{p}{),}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+            \PYG{n+nv}{for} \PYG{n+nv}{i} \PYG{n+nv}{in} \PYG{n+nv}{range}\PYG{p}{(}\PYG{n+nv}{m}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{):}
+                \PYG{n+nv}{for} \PYG{n+nv}{j} \PYG{n+nv}{in} \PYG{n+nv}{range}\PYG{p}{(}\PYG{n+nv}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nv}{m}\PYG{p}{):}
+                    \PYG{o}{[}\PYG{n+nv}{r}\PYG{p}{,}\PYG{n+nv}{c}\PYG{o}{]} \PYG{o}{=} \PYG{n+nv}{np}\PYG{o}{.}\PYG{n+nv}{where}\PYG{p}{(}\PYG{n+nv}{M2} \PYG{o}{==} \PYG{n+nv}{M1}\PYG{o}{[}\PYG{n+nv}{i}\PYG{p}{,}\PYG{n+nv}{j}\PYG{o}{]}\PYG{p}{)}
+                    \PYG{n+nv}{for} \PYG{n+nv}{k} \PYG{n+nv}{in} \PYG{n+nv}{range}\PYG{p}{(}\PYG{n+nv}{len}\PYG{p}{(}\PYG{n+nv}{r}\PYG{p}{)):}
+                        \PYG{n+nv}{VT}\PYG{o}{[}\PYG{p}{(}\PYG{n+nv}{i}\PYG{p}{)}\PYG{o}{*}\PYG{n+nv}{n} \PYG{o}{+} \PYG{n+nv}{r}\PYG{o}{[}\PYG{n+nv}{k}\PYG{o}{]]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+                        \PYG{n+nv}{VT}\PYG{o}{[}\PYG{p}{(}\PYG{n+nv}{i}\PYG{p}{)}\PYG{o}{*}\PYG{n+nv}{n} \PYG{o}{+} \PYG{n+nv}{c}\PYG{o}{[}\PYG{n+nv}{k}\PYG{o}{]]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+                        \PYG{n+nv}{VT}\PYG{o}{[}\PYG{p}{(}\PYG{n+nv}{j}\PYG{p}{)}\PYG{o}{*}\PYG{n+nv}{n} \PYG{o}{+} \PYG{n+nv}{r}\PYG{o}{[}\PYG{n+nv}{k}\PYG{o}{]]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+                        \PYG{n+nv}{VT}\PYG{o}{[}\PYG{p}{(}\PYG{n+nv}{j}\PYG{p}{)}\PYG{o}{*}\PYG{n+nv}{n} \PYG{o}{+} \PYG{n+nv}{c}\PYG{o}{[}\PYG{n+nv}{k}\PYG{o}{]]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+
+                        \PYG{n+nv}{if} \PYG{n+nv}{M} \PYG{n+nv}{is} \PYG{o}{Non}\PYG{n+nv}{e}\PYG{p}{:}
+                            \PYG{n+nv}{M} \PYG{o}{=} \PYG{n+nv}{np}\PYG{o}{.}\PYG{n+nv}{copy}\PYG{p}{(}\PYG{n+nv}{VT}\PYG{p}{)}
+                        \PYG{n+nv}{else}\PYG{p}{:}
+                            \PYG{n+nv}{M} \PYG{o}{=} \PYG{n+nv}{np}\PYG{o}{.}\PYG{n+nv}{concatenate}\PYG{p}{((}\PYG{n+nv}{M}\PYG{p}{,} \PYG{n+nv}{VT}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+                        \PYG{n+nv}{VT} \PYG{o}{=} \PYG{n+nv}{np}\PYG{o}{.}\PYG{n+nv}{zeros}\PYG{p}{((}\PYG{n+nv}{n}\PYG{o}{*}\PYG{n+nv}{m}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nv}{int}\PYG{p}{)}
+
+            \PYG{n+nv}{return} \PYG{n+nv}{M}
+\end{Verbatim}

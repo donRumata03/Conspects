@@ -1,0 +1,261 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{ux440ux430ux43dux434ux43eux43cux438ux437ux438ux440ux43eux432ux430ux43dux43dux44bux435-ux430ux43bux433ux43eux440ux438ux442ux43cux44b}{%
+\section{Рандомизированные
+алгоритмы}\label{ux440ux430ux43dux434ux43eux43cux438ux437ux438ux440ux43eux432ux430ux43dux43dux44bux435-ux430ux43bux433ux43eux440ux438ux442ux43cux44b}}
+
+Время работы зависит не только от самого входа, но и от рандома.
+
+Мы в качестве \(T^*(n)\) берём среднее арифметичекое по всем возможным
+входам с весами в виде вероятности.
+
+То есть - информация, которая позволит оценить, сколько мы ожмдаем
+прождать, запустив на некоторых данных .
+
+\[T^*(n) = \sum_{perm} {T(perm)\times probablity(perm)}\]
+
+\hypertarget{quick-sort-ux430ux43bux433ux43eux440ux438ux442ux43c-ux445ux43eux430ux440ux430}{%
+\subsection{Quick sort (алгоритм
+Хоара)}\label{quick-sort-ux430ux43bux433ux43eux440ux438ux442ux43c-ux445ux43eux430ux440ux430}}
+
+Идея: на каждом шагу берём некий элемент, близкий к медианному, затем
+все элементы, которые больше него, отправляем в одну часть, остальные -
+в другую.
+
+Стандартная модификация --- каждый раз берём случайный элемент.
+
+Тогда
+
+\[T^*(n) \leqslant n + \frac{1}{3}\left( T^*\left(\frac{n}{3}\right) + T^*\left(\frac{2n}{3}\right) \right) + \frac{2}{3}\left( T^*\left(n\right) \right)\]
+
+(с вероятностью \(\frac{1}{3}\) мы попадём в центральную треть (в
+отсортированном порядке), которая даже в худшем случае позволяет нам
+более или менее нормально разбить массив)
+
+Докажем по индукции, что \(T^*(n) = n \log n\):
+
+\(\ldots\)
+
+Но не хочется каждый раз выделять память, поэтому делаем всё
+``in-place''
+
+\hypertarget{k-ux43fux43eux440ux44fux434ux43aux43eux432ux430ux44f-ux441ux442ux430ux442ux438ux441ux442ux438ux43aux430}{%
+\subsection{k-порядковая
+статистика}\label{k-ux43fux43eux440ux44fux434ux43aux43eux432ux430ux44f-ux441ux442ux430ux442ux438ux441ux442ux438ux43aux430}}
+
+\textbf{\emph{k-я порядковая статистика}} - k-й элемент, если
+отсортировать массив.
+
+\hypertarget{ux435ux449ux451-ux43eux434ux438ux43d-ux430ux43bux433ux43eux440ux438ux442ux43c-ux445ux43eux430ux440ux430}{%
+\subsubsection{Ещё один алгоритм
+Хоара}\label{ux435ux449ux451-ux43eux434ux438ux43d-ux430ux43bux433ux43eux440ux438ux442ux43c-ux445ux43eux430ux440ux430}}
+
+Будем использовать процедуру рассечения массива элементов из алгоритма
+сортировки
+\href{https://neerc.ifmo.ru/wiki/index.php?title=Быстрая_сортировка}{QuickSort}.
+Пусть нам надо найти \emph{k}-ую порядковую статистику, а после
+рассечения опорный элемент встал на позицию \emph{m}
+
+. Возможно три случая:
+
+\begin{itemize}
+\item
+  \textbf{k = m}. Порядковая статистика найдена.
+\item
+  \textbf{k \textless{} m}. Рекурсивно ищем \emph{k}-ую статистику в
+  первой части массива.
+\item
+  \textbf{k \textgreater{} m}. Рекурсивно ищем \((k−m−1)\)-ую статистику
+  во второй части массива.
+\end{itemize}
+
+\hypertarget{ux43aux43eux434}{%
+\subsubsection{Код}\label{ux43aux43eux434}}
+
+\emph{partition} - разделяет подмассив {[}l, r) шковорнем и возвращает
+его, шкворня, индекс.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{int}\NormalTok{ findOrderStatistic(}\DataTypeTok{int}\NormalTok{[] array, }\DataTypeTok{int}\NormalTok{ k) \{}
+  \DataTypeTok{int}\NormalTok{ left = }\DecValTok{0}\NormalTok{, right = array.length;}
+  \ControlFlowTok{while}\NormalTok{ (}\KeywordTok{true}\NormalTok{) \{}
+    \DataTypeTok{int}\NormalTok{ mid = partition(array, left, right);}
+
+    \ControlFlowTok{if}\NormalTok{ (mid == k) \{}
+      \ControlFlowTok{return}\NormalTok{ array[mid];}
+\NormalTok{    \}}
+    \ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (k \textless{} mid) \{}
+\NormalTok{      right = mid;}
+\NormalTok{    \}}
+    \ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{      left = mid + }\DecValTok{1}\NormalTok{;}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{ux430ux43bux433ux43eux440ux438ux442ux43c-ux43fux44fux442ux438-ux43cux443ux436ux438ux43aux43eux432-ux431ux43bux44eux43cux430-ux444ux43bux43eux439ux434ux430-ux43fux440ux430ux442ux442ux430-ux440ux438ux432ux435ux441ux442ux430-ux438-ux442ux430ux440ux44cux44fux43dux430}{%
+\subsubsection{Алгоритм пяти мужиков: Блюма, Флойда, Пратта, Ривеста и
+Тарьяна}\label{ux430ux43bux433ux43eux440ux438ux442ux43c-ux43fux44fux442ux438-ux43cux443ux436ux438ux43aux43eux432-ux431ux43bux44eux43cux430-ux444ux43bux43eux439ux434ux430-ux43fux440ux430ux442ux442ux430-ux440ux438ux432ux435ux441ux442ux430-ux438-ux442ux430ux440ux44cux44fux43dux430}}
+
+\begin{quote}
+Бывает такое, что лучший известный алгоритм для некоторой задачи
+работает за лучшее вермя, чем лучший из известных детерминированных. Это
+тот случай...
+\end{quote}
+
+Алгоритм пытается за \(O(n)\) найти наилучший шкворень (разделяющий
+элемент).
+
+\begin{itemize}
+\item
+  Делим на блоки по 5 элементов
+\item
+  Сортируем каждое по возрастанию
+\item
+  Берём медиану в каждом блоке
+\item
+  Найдём медианный элемент среди этих медианных элементов...
+\item
+  Как? Конечно же, так же - рекурсивно!
+\end{itemize}
+
+Утверждается, что мы получим хороший x.
+
+Найдём время работы:
+
+\[T(n) \leqslant n + T\left(\frac{n}{5}\right) + T\left( \frac{7n}{10} \right)\]
+
+А это линейное время.
+
+Тут константа похуже, чем в рандомизированом... Но зато никакого
+рандома! Можно ночью спать спокойно.
+
+Почему блоки по 5? Это минимальное нечётное число, которое подходит.
+Подробнее - в ДЗ.
+
+\hypertarget{ux43cux43eux436ux43dux43e-ux43bux438-ux441ux43eux440ux442ux438ux440ux43eux432ux430ux442ux44c-ux431ux44bux441ux442ux440ux435ux435-ux447ux435ux43c-ux437ux430}{%
+\subsection{\texorpdfstring{Можно ли сортировать быстрее, чем за
+\(n \log n\)}{Можно ли сортировать быстрее, чем за n \textbackslash log n}}\label{ux43cux43eux436ux43dux43e-ux43bux438-ux441ux43eux440ux442ux438ux440ux43eux432ux430ux442ux44c-ux431ux44bux441ux442ux440ux435ux435-ux447ux435ux43c-ux437ux430}}
+
+Обычно доказательство такого очень сложная. (Сложно доказать, что
+чего-то не может существовать).
+
+Но тут не очень сложно.
+
+Докажем, что нужно сделать как минимум \(n \log n\) сравнений.
+
+В зависимости от сравнения можно менять слеующие действия.
+
+Построим дерево таким образом.
+
+Разных данных есть \(n!\) штук, и их все нужно соритровать.
+
+Тогда высота дерева
+\(\approx log(n!) = \sum_{i = 1}^{n} \log i \geq \frac{n}{2} \log \frac{n}{2} = \Omega (n \log n)\).
+
+Но это работает только если мы умеем только сравнивать.
+
+Но, например, с числами можно делать более полезные вещи, например,
+реализовав bucket sort.
+
+\begin{quote}
+HINT: Можно доказывать невозможность решения задачи за некоторое время,
+сказав, что тогда можно было бы отсортировать быстрее, чем за
+\(n \log n\)
+\end{quote}
+
+\end{document}

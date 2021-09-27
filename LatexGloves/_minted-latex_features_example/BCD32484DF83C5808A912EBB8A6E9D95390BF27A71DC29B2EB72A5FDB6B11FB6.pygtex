@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYG{n}{import}\PYG{+w}{ }\PYG{n}{numpy}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{np}
+
+\PYG{+w}{        }\PYG{n}{def}\PYG{+w}{ }\PYG{n}{incmatrix}\PYG{o}{(}\PYG{n}{genl1}\PYG{o}{,}\PYG{n}{genl2}\PYG{o}{):}
+\PYG{+w}{            }\PYG{n}{m}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{len}\PYG{o}{(}\PYG{n}{genl1}\PYG{o}{)}
+\PYG{+w}{            }\PYG{n}{n}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{len}\PYG{o}{(}\PYG{n}{genl2}\PYG{o}{)}
+\PYG{+w}{            }\PYG{n}{M}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{None}\PYG{+w}{ }\PYG{c}{\PYGZsh{}to become the incidence matrix}
+\PYG{+w}{            }\PYG{n}{VT}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{o}{((}\PYG{n}{n}\PYG{o}{*}\PYG{n}{m}\PYG{o}{,}\PYG{l+m}{1}\PYG{o}{),}\PYG{+w}{ }\PYG{n}{int}\PYG{o}{)}\PYG{+w}{  }\PYG{c}{\PYGZsh{}dummy variable}
+
+\PYG{+w}{            }\PYG{c}{\PYGZsh{}compute the bitwise xor matrix}
+\PYG{+w}{            }\PYG{n}{M1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{bitxormatrix}\PYG{o}{(}\PYG{n}{genl1}\PYG{o}{)}
+\PYG{+w}{            }\PYG{n}{M2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{o}{.}\PYG{n}{triu}\PYG{o}{(}\PYG{n}{bitxormatrix}\PYG{o}{(}\PYG{n}{genl2}\PYG{o}{),}\PYG{l+m}{1}\PYG{o}{)}
+
+\PYG{+w}{            }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{o}{(}\PYG{n}{m}\PYG{o}{\PYGZhy{}}\PYG{l+m}{1}\PYG{o}{):}
+\PYG{+w}{                }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{j}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{o}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m}{1}\PYG{o}{,}\PYG{+w}{ }\PYG{n}{m}\PYG{o}{):}
+\PYG{+w}{                    }\PYG{o}{[}\PYG{n}{r}\PYG{o}{,}\PYG{n}{c}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{o}{(}\PYG{n}{M2}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{M1}\PYG{o}{[}\PYG{n}{i}\PYG{o}{,}\PYG{n}{j}\PYG{o}{])}
+\PYG{+w}{                    }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{k}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{o}{(}\PYG{n+nb}{len}\PYG{o}{(}\PYG{n}{r}\PYG{o}{)):}
+\PYG{+w}{                        }\PYG{n}{VT}\PYG{o}{[(}\PYG{n}{i}\PYG{o}{)*}\PYG{n}{n}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{r}\PYG{o}{[}\PYG{n}{k}\PYG{o}{]]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{o}{;}
+\PYG{+w}{                        }\PYG{n}{VT}\PYG{o}{[(}\PYG{n}{i}\PYG{o}{)*}\PYG{n}{n}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{c}\PYG{o}{[}\PYG{n}{k}\PYG{o}{]]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{o}{;}
+\PYG{+w}{                        }\PYG{n}{VT}\PYG{o}{[(}\PYG{n}{j}\PYG{o}{)*}\PYG{n}{n}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{r}\PYG{o}{[}\PYG{n}{k}\PYG{o}{]]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{o}{;}
+\PYG{+w}{                        }\PYG{n}{VT}\PYG{o}{[(}\PYG{n}{j}\PYG{o}{)*}\PYG{n}{n}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{c}\PYG{o}{[}\PYG{n}{k}\PYG{o}{]]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{o}{;}
+
+\PYG{+w}{                        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{M}\PYG{+w}{ }\PYG{n}{is}\PYG{+w}{ }\PYG{n}{None}\PYG{o}{:}
+\PYG{+w}{                            }\PYG{n}{M}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{o}{.}\PYG{n}{copy}\PYG{o}{(}\PYG{n}{VT}\PYG{o}{)}
+\PYG{+w}{                        }\PYG{k}{else}\PYG{o}{:}
+\PYG{+w}{                            }\PYG{n}{M}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{o}{.}\PYG{n}{concatenate}\PYG{o}{((}\PYG{n}{M}\PYG{o}{,}\PYG{+w}{ }\PYG{n}{VT}\PYG{o}{),}\PYG{+w}{ }\PYG{l+m}{1}\PYG{o}{)}
+
+\PYG{+w}{                        }\PYG{n}{VT}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{o}{((}\PYG{n}{n}\PYG{o}{*}\PYG{n}{m}\PYG{o}{,}\PYG{l+m}{1}\PYG{o}{),}\PYG{+w}{ }\PYG{n}{int}\PYG{o}{)}
+
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{M}
+\end{Verbatim}
