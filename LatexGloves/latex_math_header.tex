@@ -165,3 +165,10 @@
     Латыпов Владимир (конспектор)\\
     {\small \texttt{t.me/donRumata03}, \texttt{github.com/donRumata03}, \texttt{donrumata03@gmail.com}}
 }
+
+
+\usepackage{tikz}
+\newcommand{\circled}[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\newcommand{\contradiction}{\circled{!!!}}
