@@ -1,0 +1,116 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=40mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре модуль 1: Задание 4 «Аналитическая геометрия на плоскости»}
+
+\begin{document}
+    \tittoc
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        
+        12. На прямой $x − 3y + 13 = 0$ найти точки, отстоящие от прямой $x + 2y + 3 = 0$ на расстоянии $\sqrt{5}$. Сделать рисунок.
+    \end{statement}
+
+    \section{Переформулировка}
+
+    Вспомним, что расстояние от точки $p$ до прямой $L$:
+
+    \begin{equation}
+        \rho(p, L) = \frac {|L_A p_x + L_B P_y + P_c|}{\sqrt {L_A^{2}+L_B^{2}}}
+    \end{equation}
+    
+    Нам нужно найти точки прямой $x − 3y + 13 = 0$ такие, 
+    чтобы $\rho(p, x + 2y + 3 = 0)$ было равно $\sqrt{5}$.
+
+    \section{Нахождение множества точек, отстоящего на нужное расстояние от прямой}
+
+    \begin{gather}
+        \frac {|1 p_x + 2 p_y + 3|}{\sqrt {1^{2}+2^{2}}} = \sqrt{5} \\
+        \frac {|p_x + 2 p_y + 3|}{\sqrt {5}} = \sqrt{5} \\
+        |p_x + 2 p_y + 3| = 5 \\
+        \begin{complex}
+            p_x + 2 p_y + 3 = 5 \\
+            p_x + 2 p_y + 3 = -5 \\
+        \end{complex} \\
+        \begin{complex}
+            p_x + 2 p_y -2 = 0 \\
+            p_x + 2 p_y + 8 = 0
+        \end{complex}
+    \end{gather}
+
+
+    \section{Нахождение ответа}
+    
+    Расссмотрим персечения одной из этий прямых и исходной, 
+    то есть $x − 3y + 13 = 0$ (ведь рассматриваемые точки лежат лишь на ней).
+    
+    \begin{gather}
+        \begin{complex}
+            \begin{cases}
+                x + 2 y -2 = 0 \\
+                x − 3y + 13 = 0
+            \end{cases} \\
+            \begin{cases}
+                x + 2 y + 8 = 0 \\
+                x − 3y + 13 = 0
+            \end{cases}
+        \end{complex} \\
+        \begin{complex}
+            \begin{cases}
+                5 y - 15 = 0 \Leftrightarrow y = 3 \\
+                x − 3y + 13 = 0
+            \end{cases} \\
+            \begin{cases}
+                5 y - 5 = 0 \Leftrightarrow y = 1 \\
+                x − 3y + 13 = 0
+            \end{cases}
+        \end{complex} \\
+        \begin{complex}
+            \begin{cases}
+                y = 3 \\
+                x − 9 + 13 = 0 \Leftrightarrow x = -4
+            \end{cases} \\
+            \begin{cases}
+                y = 1 \\
+                x − 3 + 13 = 0 \Leftrightarrow x = -10
+            \end{cases}
+        \end{complex}
+    \end{gather}
+
+    То есть в ответе точки:
+    \begin{itemize}
+        \item $(-4, 3)$
+        \item $(-10, 1)$
+    \end{itemize}
+
+
+    \section{Построение рисунка}
+
+    Нарисуем рисунок
+
+    % TODO: построить графики и отметить на них точки https://tex.stackexchange.com/a/104064
+    % TODO: вставить сюда экспортированное из геогебры: resources/1.4_figure.pdf
+
+    \begin{sidewaysfigure}[h!]
+        \centering
+        \includegraphics[width=\paperwidth]{resources/1.4_figure.pdf}
+        \caption{Чертёж}
+        \label{fig:main_figure}
+    \end{sidewaysfigure}
+    \FloatBarrier
+
+\end{document}
