@@ -11,12 +11,27 @@ from git import Repo
 
 ################################################					Settings: 			##############################
 
-decryption = {
+subject_decryption = {
 	"Analgorithms": "Algorithms and data structures",
-	"CUMputerArch": "Computer architecture",
+	"CUMputerAAAAAAAAH": "Computer architecture",
 	"DICKreteMath": "Discrete mathematics",
 	"LinAnalgebra": "Linear algebra",
 	"MathAnalgeBRUH": "Mathematics anal"
+}
+
+special_dir_decryption = {
+	"LatexGloves": "templates for LaTeX",
+	"Fonts": "some magic with fonts",
+	"Docs": "documentation of something",
+	"script_common": "compiling/committing script commons"
+}
+
+extension_decryption = {
+	".py": "compiling/committing script",
+	".md": "Markdown conspect",
+	".tex": "LaTeX conspect",
+	".pdf": "Compiled conspect",
+	".png": "Image"
 }
 
 extensions_for_compilation = {
@@ -28,7 +43,8 @@ updating_phrases = [
 	"Update",
 	"Work on",
 	"Modify",
-	"Commit changes into"
+	"Commit changes into",
+	"Edit"
 ]
 
 
