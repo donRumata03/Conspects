@@ -37,4 +37,6 @@ committing them with proper commit messages and splitting the changes between co
 // TODO!
 
 - Insure you have a working latex distribution. The mainstream options are: tex-live for Linux && MacOS and MikTex for Windows.
--  
+  Note that MikTex automatically installs all required packages at compilation while tex-live requiers them to be pre-downloaded by `tlmgr` (tex-live manager) utility.
+  If you experience problems with `tlmgr`'s work, visit this page: 
+- 
