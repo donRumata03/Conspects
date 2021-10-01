@@ -82,8 +82,16 @@ def compile_one_file(path) -> bool:
 	return exit_code == 0
 
 
+def latex_file_should_be_compiled(path: str):
+	latex_template_files = [os.path.normpath(os.path.join(conspects_root_dir, p)) for p in [
+		"LatexGloves/latex_math_header.tex",
+	]]
+
+	return os.path.normpath(path) not in latex_template_files
+
+
 if __name__ == '__main__':
-	files_to_compile = collect_files(".tex")
+	files_to_compile = collect_files(".tex", latex_file_should_be_compiled)
 	compile_file_set(files_to_compile, compile_one_file)
 
 # compile_one_file("D:/Projects/Education/Conspects/LinAnalgebra/LinearAlgebra.tex")

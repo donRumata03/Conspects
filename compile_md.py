@@ -50,7 +50,6 @@ def compile_one_file(path) -> bool:
 def md_file_should_be_compiled(path: str):
 	path_obj = Path(path)
 	name = path_obj.stem
-	print(path, name)
 
 	return name.upper() != name
 

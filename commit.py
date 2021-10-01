@@ -59,7 +59,7 @@ def compile_file(path) -> bool:
 	return exit_code == 0
 
 
-rep = Repo(this_dir)
+rep = Repo(conspects_root_dir)
 
 changed_files = [item.a_path for item in rep.head.commit.diff(None)]
 

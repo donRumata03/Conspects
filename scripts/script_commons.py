@@ -9,7 +9,7 @@ from os.path import abspath
 from typing import Callable
 
 
-this_dir = Path(abspath(getsourcefile(lambda: 0))).parent.parent.absolute()
+conspects_root_dir = Path(abspath(getsourcefile(lambda: 0))).parent.parent.absolute()
 
 
 class bcolors:

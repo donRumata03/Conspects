@@ -11,7 +11,7 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
 
         while user_answer.lower() not in ["y", "n"]:
             if not all_files_cached:
-                files_to_compile = list(map(str, this_dir.rglob("*" + extension)))
+                files_to_compile = list(map(str, conspects_root_dir.rglob("*" + extension)))
                 if filtering_function is not None:
                     files_to_compile = list(filter(filtering_function, files_to_compile))
                 all_files_cached = True
