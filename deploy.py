@@ -1,4 +1,4 @@
-from script_common.script_commons import *
+from scripts.script_commons import *
 
 exit_data = run_python_script("commit.py")
 if exit_data != 0:

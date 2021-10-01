@@ -1,5 +1,5 @@
-from script_common.compilation_interface import collect_files, compile_file_set
-from script_common.script_commons import *
+from scripts.compilation_interface import collect_files, compile_file_set
+from scripts.script_commons import *
 
 # pandoc '02 - Sortings.md' -f markdown --to=latex --pdf-engine=lualatex -s -o test.pdf
 
@@ -47,8 +47,17 @@ def compile_one_file(path) -> bool:
 	return exit_code == 0
 
 
+def md_file_should_be_compiled(path: str):
+	path_obj = Path(path)
+	name = path_obj.stem
+	print(path, name)
+
+	return name.upper() != name
+
+
 if __name__ == '__main__':
-	files_to_compile = collect_files(".md")
+	files_to_compile = collect_files(".md", md_file_should_be_compiled)
+
 	compile_file_set(files_to_compile, compile_one_file)
 
 

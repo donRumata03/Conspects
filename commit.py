@@ -1,11 +1,11 @@
-# Ignore README.md files
+# Ignore (don't compile) README.md files
 # tex and md files in {./DIR/}, DIR in decryption directories are committed separately for each directory with message about being conspect
 # files in subdirs of dirs in «decryption» dict are committed in groups by full directory paths, the paths participate in messages
 # Other paths are committed together. If there are .py files, it's written «…including python scripts».
 # If there (not in DIR € decryption or its subdirs) are almost only python files (n_python ≈100%n_files and no files are .tex or .md), it's
 
 
-from script_common.script_commons import *
+from scripts.script_commons import *
 
 from git import Repo
 
@@ -23,7 +23,7 @@ special_dir_decryption = {
 	"LatexGloves": "templates for LaTeX",
 	"Fonts": "some magic with fonts",
 	"Docs": "documentation of something",
-	"script_common": "compiling/committing script commons"
+	"scripts": "compiling/committing script commons"
 }
 
 extension_decryption = {

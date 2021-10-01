@@ -6,8 +6,8 @@
 
 import glob
 
-from script_common.compilation_interface import collect_files, compile_file_set
-from script_common.script_commons import *
+from scripts.compilation_interface import collect_files, compile_file_set
+from scripts.script_commons import *
 
 compiler = 'xelatex'
 
