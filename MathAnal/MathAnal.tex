@@ -421,24 +421,24 @@
   \section{Метрические пространства}
 
   \begin{definition}
-  Функция $\ro: X \times X \mapsto \sR_{+}$ называется метрикой или расстоянием в множестве $X$, если:
+  Функция $\rho: X \times X \mapsto \sR_{+}$ называется метрикой или расстоянием в множестве $X$, если:
 
   \begin{enumerate}
-    \item $\ro (x, y) = 0 \Rightleftarrow x = y$
-    \item  $\ro (x, y) = \ro (y, x)$
-    \item $\ro (x, z) \leqslant \ro (x, y) + \ro (y, z)$
+    \item $\rho (x, y) = 0 \Rightleftarrow x = y$
+    \item  $\rho (x, y) = \rho (y, x)$
+    \item $\rho (x, z) \leqslant \rho (x, y) + \rho (y, z)$
   \end{enumerate}
   \end{definition}
 
   \begin{definition}
   [Метрическое пространство]
 
-  Пара $(X, \ro)$ называется метрическим пространством, если выполняются свойства (1-3), а сами свойства - метриечские пространства.
+  Пара $(X, \rho)$ называется метрическим пространством, если выполняются свойства (1-3), а сами свойства - метриечские пространства.
   \end{definition}
 
   \begin{example}
   Если \begin{equation}
-    \ro(x, y) = \begin{cases}
+    \rho(x, y) = \begin{cases}
       0, x = y \\
       1, x \neq y
     \end{cases}
@@ -448,31 +448,31 @@
 
   \begin{example}
   \begin{equation}
-    X = \sR, \ro(x, y) = |x - y|
+    X = \sR, \rho(x, y) = |x - y|
   \end{equation}
   \end{example}
 
   \begin{example}
   \begin{equation}
-    X = \sR^m ~ or ~ \sC^m, \ro(x, y) = \sqrt{\sum_{k = 1}^{m} |x_k - y_k|^2}
+    X = \sR^m ~ or ~ \sC^m, \rho(x, y) = \sqrt{\sum_{k = 1}^{m} |x_k - y_k|^2}
   \end{equation} - это Евклидовы расстоянине и пространство
   \end{example}
 
   \begin{example}
   \begin{equation}
-    X = \sR^m ~ or ~ \sC^m, \ro(x, y) = \sqrt{\sum_{k = 1}^{m} |x_k - y_k|^2}
+    X = \sR^m ~ or ~ \sC^m, \rho(x, y) = \sqrt{\sum_{k = 1}^{m} |x_k - y_k|^2}
   \end{equation} - это Евклидовы расстоянине и пространство
   \end{example}
 
   \begin{example}
   \begin{equation}
-    X = \sR^m ~ or ~ \sC^m, \ro(x, y) = \sum_{k = 1}^{m} |x_k - y_k|
+    X = \sR^m ~ or ~ \sC^m, \rho(x, y) = \sum_{k = 1}^{m} |x_k - y_k|
   \end{equation} - это Манхеттновские расстоянине и пространство
   \end{example}
 
   \begin{example}
   \begin{equation}
-    X = \sR^m ~ or ~ \sC^m, \ro(x, y) = \max_{k = 1}^{m} |x_k - y_k|
+    X = \sR^m ~ or ~ \sC^m, \rho(x, y) = \max_{k = 1}^{m} |x_k - y_k|
   \end{equation} - это (КАКОЕ?) расстоянине и пространство
   \end{example}
 
@@ -495,7 +495,7 @@
   \begin{definition}
   [Подпространство]
   $(X, ro)$, $Y \subset X$, 
-  $\Rightarrow \ro|_{Y \times Y}$ - расстояние в $Y$.
+  $\Rightarrow \rho|_{Y \times Y}$ - расстояние в $Y$.
   Тогда $Y$ - подпространство $X$.
   \end{definition}
 
@@ -506,9 +506,9 @@
 
   \begin{equation}
     \begin{cases}
-      r > 0 \quad B(a, r) = \{ x \in X: \ro(a, x) < r \} - open ~ ball \\
-      r \geqslant 0 \quad \overline{B}(a, r) = \{ x \in X: \ro(a, x) \leqslant r \} - closed ~ ball \\
-      r \geqslant 0 \quad S(a, r) = \{ x \in X: \ro(a, x) = r \} - sphere
+      r > 0 \quad B(a, r) = \{ x \in X: \rho(a, x) < r \} - open ~ ball \\
+      r \geqslant 0 \quad \overline{B}(a, r) = \{ x \in X: \rho(a, x) \leqslant r \} - closed ~ ball \\
+      r \geqslant 0 \quad S(a, r) = \{ x \in X: \rho(a, x) = r \} - sphere
     \end{cases}
   \end{equation}
   \end{definition}
@@ -521,7 +521,7 @@
   [Предел в метрический пространствах]
   $a \in X$, точка $a$ - предел последовательности, если 
   \begin{equation}
-    \forall \varepsilon \exists N: \forall n > N: \ro(x_n, a) < \varepsilon
+    \forall \varepsilon \exists N: \forall n > N: \rho(x_n, a) < \varepsilon
   \end{equation}
   \end{definition}
 
@@ -530,10 +530,10 @@
   Предел последовательности в метрических пространствах единстенен.
   \end{theorem}
   \begin{proof}
-  Запросим $\varepsilon = \frac12 \ro(a, b)$, возьмём $\varepsilon$
+  Запросим $\varepsilon = \frac12 \rho(a, b)$, возьмём $\varepsilon$
   окрестности обеих кандидатов на предел.
   Возьмём $n = max(N_1, N_2)$, тогда для него значение одновременно принадлежит обоим шарам.
-  И тогда $\ro(a, b) = \leqslant \ro(a, x_n) + \ro(x_n, b) < 2\varepsilon = \ro(a, b)$, пришли к противоречию! \contradiction
+  И тогда $\rho(a, b) = \leqslant \rho(a, x_n) + \rho(x_n, b) < 2\varepsilon = \rho(a, b)$, пришли к противоречию! \contradiction
   \end{proof}
 
   \begin{definition}
@@ -546,7 +546,7 @@
   \end{note}
 
   \begin{note}
-  $x_n \to a \Leftrightarrow \ro(x_n, a) \to 0$
+  $x_n \to a \Leftrightarrow \rho(x_n, a) \to 0$
   \end{note}
 
   \begin{theorem}
@@ -697,9 +697,12 @@
 
   \begin{definition}
     [Метрика порождена нормой]
-    Если $\ro(x, y) = \left\lVertrt x - y \right\rVert$
+    Если $\rho(x, y) = \left\lVertrt x - y \right\rVert$
   \end{definition}
 
+  \begin{definition}
+    Сходимость по норме - это сходимость по метрике, порождённой этой нормой
+  \end{definition}
 
   \begin{note}
     "Многочлены степени не больше $n$" - векторное пространство
