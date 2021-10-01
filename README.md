@@ -8,7 +8,7 @@ ITMO CT M3138 useful resources including:
 
 ## Supported subjects
 
-- [Algorithms adnd data structures](Analgorithms)
+- [Algorithms and data structures](Analgorithms)
 - [Mathematical analysis](MathAnal)
 - [Discrete Mathematics](DICKreteMath)
 - [Computer architecture](CUMputerAAAAAAAAH)
@@ -26,6 +26,7 @@ Latex is — through XeLaTeX compiler (its killer features were modern font supp
 And .md files are compiled to pdf by [pandoc](https://pandoc.org/).
 
 But, unfortunately, these tools require: too much command line arguments and escaping characters, clearing temp files, providing temp files and many other additional procedures.
+[latexmk](https://mg.readthedocs.io/latexmk.html) partially solves the issues, but still leaves much to be desired.
 
 To automate those actions there are some scripts written within the framework of this repo.
 Moreover, the scripts are also capable of detecting you changes (using Git API), 
@@ -34,9 +35,9 @@ committing them with proper commit messages and splitting the changes between co
 
 ## Building && contributing instruction
 
-// TODO!
-
 - Insure you have a working latex distribution. The mainstream options are: tex-live for Linux && MacOS and MikTex for Windows.
   Note that MikTex automatically installs all required packages at compilation while tex-live requiers them to be pre-downloaded by `tlmgr` (tex-live manager) utility.
   If you experience problems with `tlmgr`'s work, visit this page: 
 - Install font pack from directory `Fonts/Kurale`
+- Install latexmk (via package manager on Linux or using )
+- Install an IDE for efficient work with latex (I've recently switched to Visual Studio Code from Texify Idea. It's a bit less clever but offers some tasty features…)
