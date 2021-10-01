@@ -1,7 +1,8 @@
-from script_common.script_commons import *
+from scripts.script_commons import *
 import glob
 
-def collect_files(extension: str) -> list:
+
+def collect_files(extension: str, filtering_function: Callable = None) -> list:
     files_to_compile = []
     if len(sys.argv) == 1:
         user_answer = ""
@@ -11,6 +12,8 @@ def collect_files(extension: str) -> list:
         while user_answer.lower() not in ["y", "n"]:
             if not all_files_cached:
                 files_to_compile = list(map(str, this_dir.rglob("*" + extension)))
+                if filtering_function is not None:
+                    files_to_compile = list(filter(filtering_function, files_to_compile))
                 all_files_cached = True
 
             colored_print(bcolors.WARNING, f"Name of file to compile isn't provided!\n"
