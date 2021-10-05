@@ -33,7 +33,7 @@ Moreover, the scripts are also capable of detecting you changes (using Git API),
 committing them with proper commit messages and splitting the changes between commits wisely.
 
 
-## Building && contributing instruction
+## Requierd tools' installation
 
 - Insure you have a working latex distribution. The mainstream options are: tex-live for Linux && MacOS and MikTex for Windows.
   Note that MikTex automatically installs all required packages at compilation while tex-live requiers them to be pre-downloaded by `tlmgr` (tex-live manager) utility.
@@ -41,3 +41,10 @@ committing them with proper commit messages and splitting the changes between co
 - Install font pack from directory `Fonts/Kurale`
 - Install latexmk (via package manager on Linux or from binaries. In the second case — don't forget to install perl before…)
 - Install an IDE for efficient work with latex (I've recently switched to Visual Studio Code from Texify Idea. It's a bit less clever but offers some tasty features…)
+- To compile Markdown to pdf from console you also need to install pandoc. There are should not be any pitfalls…
+- For editing Markdown files I recommend [Typora - a truly minimal markdown editor](https://typora.io/). As well as pandoc, typora supports something called «enriched markdown» (my own term). But it's much more convenient to edit md conspects in typora but compile through pandoc. Unfortunately, «enriched markdowns» are a bit different, so you probably need to make sure that you files are maintaind compilable…
+
+
+## Building && contributing instruction
+
+Now, when all the desired sowtware is installed, it's time to get used to python sripts for common operations with conspects.
