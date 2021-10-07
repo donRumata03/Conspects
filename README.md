@@ -59,6 +59,17 @@ What are scripts responsible for:
 
 Those things can drastically boost your performance at writing electronic conspects.
 
+Basically, typical workflow is as following:
+- Write some code in latex editor. Optionally - use its recompiling-on-fly features.
+- Just run python script ``./deploy.py``. It will:
+  - Compile changed conspect source files
+  - For each committing group - ``git add`` it; 
+    ``commit`` with respective message;
+  - ``git push`` the commits to ``origin/master`` branch
+
+> Stop those stupid attempts of renaming ``master`` branch to ``main``!
+> The master will finally punish such an impudent slaves!
+
 At the moment there are the following script files
 
 📦ProjectRoot \
