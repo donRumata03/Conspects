@@ -49,8 +49,15 @@ committing them with proper commit messages and splitting the changes between co
 
 Now, when all the desired software is installed, it's time to get used to python scripts for common operations with conspects.
 
-With the scripts you can:
-- Compile latex source code to PDFs 
+What are scripts responsible for:
+- Compile LaTeX source code to PDFs with special settings (latexmk; xelatex)
+- Compile Markdown source code to PDFs with special settings
+- Track changes using git api
+- Distributing changes between commits smartly
+- Commit naming based on folders in which the changes were made
+- Fully automatically perform the actions above and run ``git push`` after that.
+
+Those things can drastically boost your performance at writing electronic conspects.
 
 At the moment there are the following script files
 
@@ -68,4 +75,4 @@ At the moment there are the following script files
 
 ## Contributing instructions
 
-Let teachers feel the force of open-source conspects!
+Let the teachers feel the _force of open-source conspects_!
