@@ -172,3 +172,16 @@
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
 \newcommand{\contradiction}{\circled{!!!}}
+
+% Make especially big math:
+
+\makeatletter
+\newcommand{\biggg}{\bBigg@\thr@@}
+\newcommand{\Biggg}{\bBigg@{4.5}}
+\def\bigggl{\mathopen\biggg}
+\def\bigggm{\mathrel\biggg}
+\def\bigggr{\mathclose\biggg}
+\def\Bigggl{\mathopen\Biggg}
+\def\Bigggm{\mathrel\Biggg}
+\def\Bigggr{\mathclose\Biggg}
+\makeatother
