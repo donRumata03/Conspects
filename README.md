@@ -42,7 +42,11 @@ committing them with proper commit messages and splitting the changes between co
 - Install latexmk (via package manager on Linux or from binaries. In the second case — don't forget to install perl before…)
 - Install an IDE for efficient work with latex (I've recently switched to Visual Studio Code from Texify Idea. It's a bit less clever but offers some tasty features…)
 - To compile Markdown to pdf from console you also need to install pandoc. There are should not be any pitfalls…
-- For editing Markdown files I recommend [Typora - a truly minimal markdown editor](https://typora.io/). As well as pandoc, typora supports something called «enriched markdown» (my own term). But it's much more convenient to edit md conspects in typora but compile through pandoc. Unfortunately, «enriched markdowns» are a bit different, so you probably need to make sure that you files are maintaind compilable…
+- For editing Markdown files I recommend [Typora - a truly minimal markdown editor](https://typora.io/).
+  As well as pandoc, typora supports something called «enriched markdown» (my own term).
+  But it's much more convenient to edit md conspects in typora but compile through pandoc. 
+  Unfortunately, «enriched markdowns» are a bit different and not fully compatible, 
+  so you probably need to make sure that you files are maintained compilable…
 
 
 ## Building with scripts
@@ -68,21 +72,23 @@ Basically, typical workflow is as following:
   - ``git push`` the commits to ``origin/master`` branch
 
 > Stop those stupid attempts of renaming ``master`` branch to ``main``!
-> The master will finally punish such an impudent slaves!
+> The master will finally punish such a naughty slaves!
 
 At the moment there are the following script files
 
+```
 📦ProjectRoot \
  ┣ 📂scripts \
  ┃ ┗ 📜some...\
- ┃ ┗ 📜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;implementation... \
- ┃ ┗ 📜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details... \
- ┃ ┗ 📜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.py... \
+ ┃ ┗ 📜    implementation... \
+ ┃ ┗ 📜                  details... \
+ ┃ ┗ 📜                         .py... \
  ┣ 📜 compile_md.py \
  ┣ 📜 compile_latex.py \
  ┣ 📜 commit.py \
  ┣ 📜 deploy.py \
  ┗ 📜 ***some other files...***
+```
 
 ## Contributing instructions
 
