@@ -72,9 +72,16 @@ Basically, typical workflow is as following:
   - ``git push`` the commits to ``origin/master`` branch
 
 > Stop those stupid attempts of renaming ``master`` branch to ``main``!
-> The master will finally punish such a naughty slaves!
+> The master will finally punish such naughty slaves!
 
-At the moment there are the following script files
+At the moment there are the following script files intended for simplifying 
+everyday conspectors' activities:
+
+- deploy.py - description's already provided above
+- commit.py - is responsible for all `deploy`'s work except running `git push`
+- compile_latex.py - compiles specified LaTeX files
+- compile_latex.py - compiles 
+
 
 ```
 📦ProjectRoot \
