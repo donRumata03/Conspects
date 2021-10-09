@@ -54,8 +54,8 @@ def compile_one_file(path) -> bool:
 		"-synctex=1",
 		"-interaction=nonstopmode",
 		"-file-line-error",
-		f"-outdir={file_dir}",
-		f"{path}"
+		f"-outdir=\"{file_dir}\"",
+		f"\"{path}\""
 	]
 
 	compiling_command = f"latexmk -{compiler} " + " ".join(latex_args)
@@ -93,30 +93,3 @@ def latex_file_should_be_compiled(path: str):
 if __name__ == '__main__':
 	files_to_compile = collect_files(".tex", latex_file_should_be_compiled)
 	compile_file_set(files_to_compile, compile_one_file)
-
-# compile_one_file("D:/Projects/Education/Conspects/LinAnalgebra/LinearAlgebra.tex")
-
-
-
-# compile_command = f"latexmk -{compiler} " + " ".join(latex_args)
-#
-# colored_print(bcolors.OKGREEN, f"Compiling with command: {compile_command}")
-#
-# exit_data_compile = run_command(compile_command)
-# exit_data_clear = run_command("latexmk -c")
-#
-# if exit_data_compile == 0 and exit_data_clear == 0:
-# 	colored_print(bcolors.OKGREEN, f"Successfully compiled!")
-# 	exit(0)
-# else:
-# 	error_source = "?…"
-# 	exit_data = 0
-# 	if exit_data_compile != 0:
-# 		error_source = "compile"
-# 		exit_data = exit_data_compile
-# 	elif exit_data_clear != 0:
-# 		error_source = "clear temp files"
-# 		exit_data = exit_data_clear
-#
-# 	colored_print(bcolors.FAIL, f"Failed to {error_source}! Exit code: {exit_data}")
-# 	exit(1)

@@ -98,7 +98,7 @@ else:
 	# 1. MD and LaTeX files in DIR € decryption
 	print(files_to_compile)
 
-# commit_message = "Update MathAnalysis conspect"
-# if len(sys.argv) > 1:
-# 	commit_message += ": " + " ".join(sys.argv[1:])
-# print(f"Commit message will be: \"{commit_message}\"")
+# Separate commit for compiled files:
+if files_to_compile:
+	rep.git.add(all=True)
+	rep.git.commit(m="Compile files")
