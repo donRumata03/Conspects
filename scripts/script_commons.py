@@ -6,8 +6,7 @@ from pathlib import Path
 from inspect import getsourcefile
 from os.path import abspath
 
-from typing import Callable
-
+from typing import Callable, Iterable
 
 conspects_root_dir = Path(abspath(getsourcefile(lambda: 0))).parent.parent.absolute()
 
@@ -35,9 +34,19 @@ def run_python_script(path_to_script, *args):
 
 
 def colored_print(color, string, *args, **kwargs):
-    print(color + string + bcolors.ENDC, *args, **kwargs)
+    print(color, string, bcolors.ENDC, *args, **kwargs)
 
+
+def split(sequence: Iterable, pred: Callable):
+    sat, non_sat = [], []
+    for el in sequence:
+        if pred(el):
+            sat.append(el)
+        else:
+            non_sat.append(el)
+
+    return sat, non_sat
 
 
 if __name__ == '__main__':
-    colored_print(bcolors.FAIL, "Fail")
+    colored_print(bcolors.FAIL, float("NaN") ** float("NaN"))

@@ -73,9 +73,11 @@ print(changed_files)
 print(f"Files to (re)compile: {files_to_compile}")
 
 # COMPILE files:
+compiled_at_least_something_successfully = False
 for source in files_to_compile:
 	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
-	compile_file(source)
+	compiled_at_least_something_successfully |= compile_file(source) # Writing would trigger short-circuit and some files wouldn't be compiled :)
+
 
 if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
@@ -93,12 +95,23 @@ if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name pr
 	rep.git.commit(m=commit_message)
 
 else:
-	# Subsequently processing different file categories:
+	# Subsequently processing different file categories
+	# Those thing have special meaning:
+	# - DIR € decryption
+	# - ./DIR/.../.../... DIR € decryption
+	# - .py files in other places
+
 
 	# 1. MD and LaTeX files in DIR € decryption
 	print(files_to_compile)
+	print("Committing primary conspects: ")
+	primary_conspects, changed_files = split(changed_files, lambda path: print(path))
+	exit(0)
 
 # Separate commit for compiled files:
-if files_to_compile:
+if compiled_at_least_something_successfully:
+	compiled_pdfs = [item.a_path for item in rep.head.commit.diff(None) if Path(item.a_path).suffix == ".pdf"]
+	compiled_names = [Path(path).name for path in compiled_pdfs]
+
 	rep.git.add(all=True)
-	rep.git.commit(m="Compile files")
+	rep.git.commit(m=f"Compile these conspects: {','.join(compiled_names)}")
