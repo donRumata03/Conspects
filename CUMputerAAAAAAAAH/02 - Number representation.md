@@ -435,13 +435,13 @@ n = int(input())
 
 l, r = 0, n
 
-while r - l > 1e-20:
-    m = (l + r) / 2
-    if m ** 2 > n:
-        r = m
-    else:
+while r - l > 1e-10:
+	m = (l + r) / 2
+	if m ** 2 > n:
+		r = m
+	else:
 		l = m
-    print(f"Current range: ({l}, {r})")
+	print(f"Current range: ({l}, {r})")
 print(f"Approx answer = {(l + r) / 2}")
 ```
 
