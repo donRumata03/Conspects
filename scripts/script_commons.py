@@ -6,7 +6,12 @@ from pathlib import Path
 from inspect import getsourcefile
 from os.path import abspath
 
-from typing import Callable, Iterable
+
+from typing import Callable, Iterable, List
+
+import itertools as it
+import random
+
 
 conspects_root_dir = Path(abspath(getsourcefile(lambda: 0))).parent.parent.absolute()
 
@@ -37,7 +42,10 @@ def colored_print(color, string, *args, **kwargs):
     print(color, string, bcolors.ENDC, *args, **kwargs)
 
 
+
+
 def split(sequence: Iterable, pred: Callable):
+    """ Splits sequence into two parts by predicate: trues, falses """
     sat, non_sat = [], []
     for el in sequence:
         if pred(el):
@@ -46,6 +54,12 @@ def split(sequence: Iterable, pred: Callable):
             non_sat.append(el)
 
     return sat, non_sat
+
+def try_return(to_try, default):
+    if to_try:
+        return to_try
+    else:
+        return default
 
 
 if __name__ == '__main__':
