@@ -149,6 +149,13 @@ else:
 		rep.git.commit(
 			m=f"{random.choice(updating_phrases)} {subject_decryption[subj_folder]} conspect with topic: \"{topic_folders}\" ({describe_file_formats(paths)})")
 
+	# 3. Python scripts «for compiling and committing»:
+
+	# 4. Supporting materials (non-connected pdfs; images and etc.) by directory:
+
+	# 5. Unknown files by directory (or empty)…
+
+
 
 	# TODO: handle addition pdfs not connected to conspect sources and images for md and tex
 
