@@ -52,27 +52,42 @@ def compile_file(path) -> bool:
 	assert ext in extensions_for_compilation
 
 	compiler_script = extensions_for_compilation[ext]
-	exit_code = 0 # run_python_script(compiler_script, path)
+	exit_code = 0  # run_python_script(compiler_script, path)
 	if exit_code != 0:
 		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return exit_code == 0
 
+
 def describe_file_formats(file_list: List[str]):
 	return ",".join([(extension_decryption[ext] if ext in extension_decryption else f"{ext} file")
 	                 + ("s" if len(list(files)) > 1 else "")
-	        for ext, files in it.groupby(file_list, lambda path: Path(path).suffix)])
+	                 for ext, files in it.groupby(file_list, lambda path: Path(path).suffix)])
+
 
 def file_is_conspect_source_in_decryption_subfolder(path: str):
 	p = Path(path).parts
 	return p and Path(p[0]).is_dir() and p[0] in subject_decryption and Path(path).suffix in {".tex", ".md"}
 
+
 def file_is_conspect_source_in_decryption(path: str):
 	return file_is_conspect_source_in_decryption_subfolder(path) and len(Path(path).parts) == 2
 
 
+def is_pdf_associated_with_source(path: str):
+	p = Path(path)
+	return p.suffix == ".pdf" and \
+	       p.stem in [pretendent.stem for pretendent in p.parent.iterdir() if
+	                  pretendent.suffix in extensions_for_compilation]
+
+
+# print(is_pdf_associated_with_source("LinAnalgebra/LinearAlgebra.pdf"))
+# print(is_pdf_associated_with_source("LinAnalgebra/LinearAlgebra.tex"))
+# print(is_pdf_associated_with_source("LinAnalgebra/PhysTech_vector_products.pdf"))
+
+
 rep = Repo(conspects_root_dir)
 
-changed_files = [item.a_path for item in rep.head.commit.diff(None)]
+changed_files = [item.a_path for item in rep.head.commit.diff(None) if not is_pdf_associated_with_source(item.a_path)]
 
 # Filter only files for compilation:
 files_to_compile = [
@@ -87,8 +102,8 @@ print(f"Files to (re)compile: {files_to_compile}")
 compiled_at_least_something_successfully = False
 for source in files_to_compile:
 	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
-	compiled_at_least_something_successfully |= compile_file(source) # Writing would trigger short-circuit and some files wouldn't be compiled :)
-
+	compiled_at_least_something_successfully |= compile_file(
+		source)  # Writing would trigger short-circuit and some files wouldn't be compiled :)
 
 if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
@@ -112,7 +127,6 @@ else:
 	# - ./DIR/.../.../... DIR € decryption
 	# - .py files in other places
 
-
 	# 1. MD and LaTeX files in DIR € decryption
 	# print(files_to_compile)
 	# print("Committing primary conspects: ")
@@ -122,18 +136,25 @@ else:
 		paths = list(ps)
 		rep.index.add(paths)
 		# print(describe_file_formats(paths))
-		rep.git.commit(m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
+		rep.git.commit(
+			m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
 
-	# 2.
-	# primary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption(path))
+	# 2. Conspects in subdirectories is ones in decryption:
+	primary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption_subfolder(path))
+	for group, ps in it.groupby(primary_conspects, lambda p: Path(p).parent):
+		paths = list(ps)
+		subj_folder, topic_folders = Path(group).parts[0], Path(*Path(group).parts[1:]).as_posix()
 
-	# TODO: handle addition pdfs not connected to conpect sources and images for md and tex
+		rep.index.add(paths)
+		rep.git.commit(
+			m=f"{random.choice(updating_phrases)} {subject_decryption[subj_folder]} conspect with topic: \"{topic_folders}\" ({describe_file_formats(paths)})")
+
+
+	# TODO: handle addition pdfs not connected to conspect sources and images for md and tex
 
 	# All the other files appeared before we started compilation!
 
-
 	exit(0)
-
 
 # Separate commit for compiled files:
 if compiled_at_least_something_successfully:
