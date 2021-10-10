@@ -125,8 +125,9 @@ else:
 		rep.git.commit(m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
 
 	# 2.
-	primary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption(path))
+	# primary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption(path))
 
+	# TODO: handle addition pdfs not connected to conpect sources and images for md and tex
 
 	# All the other files appeared before we started compilation!
 
