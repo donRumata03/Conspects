@@ -52,7 +52,7 @@ def compile_file(path) -> bool:
 	assert ext in extensions_for_compilation
 
 	compiler_script = extensions_for_compilation[ext]
-	exit_code = 0  # run_python_script(compiler_script, path)
+	exit_code = run_python_script(compiler_script, path)
 	if exit_code != 0:
 		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return exit_code == 0
@@ -64,13 +64,24 @@ def describe_file_formats(file_list: List[str]):
 	                 for ext, files in it.groupby(file_list, lambda path: Path(path).suffix)])
 
 
+# Predicates for grouping files:
+
+def file_in_subj_subdir(path):
+	p = Path(path)
+	return p and Path(p[0]).is_dir() and p[0] in subject_decryption
+
+
 def file_is_conspect_source_in_decryption_subfolder(path: str):
-	p = Path(path).parts
-	return p and Path(p[0]).is_dir() and p[0] in subject_decryption and Path(path).suffix in {".tex", ".md"}
+	return file_in_subj_subdir(path) and Path(path).suffix in {".tex", ".md"}
 
 
 def file_is_conspect_source_in_decryption(path: str):
 	return file_is_conspect_source_in_decryption_subfolder(path) and len(Path(path).parts) == 2
+
+
+def in_template_subdir(path):
+	p = Path(path)
+	return p and Path(p[0]).is_dir() and p[0] == "LatexGloves"
 
 
 def is_pdf_associated_with_source(path: str):
@@ -140,8 +151,8 @@ else:
 			m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
 
 	# 2. Conspects in subdirectories is ones in decryption:
-	primary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption_subfolder(path))
-	for group, ps in it.groupby(primary_conspects, lambda p: Path(p).parent):
+	secondary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption_subfolder(path))
+	for group, ps in it.groupby(secondary_conspects, lambda p: Path(p).parent):
 		paths = list(ps)
 		subj_folder, topic_folders = Path(group).parts[0], Path(*Path(group).parts[1:]).as_posix()
 
@@ -150,18 +161,34 @@ else:
 			m=f"{random.choice(updating_phrases)} {subject_decryption[subj_folder]} conspect with topic: \"{topic_folders}\" ({describe_file_formats(paths)})")
 
 	# 3. Python scripts «for compiling and committing»:
+	changed_scripts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".py")
+	rep.index.add(changed_scripts)
+	rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
-	# 4. Supporting materials (non-connected pdfs; images and etc.) by directory:
+	# 4. Latex templates and demonstration:
+	latex_templates, changed_files = split(changed_files, lambda path: in_template_subdir(path))
+	rep.index.add(latex_templates)
+	rep.git.commit(m=f"{random.choice(updating_phrases)} latex templates")
 
-	# 5. Unknown files by directory (or empty)…
+
+	# 5. Supporting materials (non-connected pdfs; images and etc.) by directory (if it's subject's subdir):
+	# TODO: Mark only certain file extensions as supporting materials:
+	#  non-connected pdfs; images and something else
+	#  (observe actual practice for it)
+	supporting_materials, changed_files = split(changed_files, lambda path: file_in_subj_subdir(path))
+
+	for subj_folder, path_it in it.groupby(supporting_materials, lambda p: Path(p).parts[0]):
+		paths = list(path_it)
+		rep.index.add(paths)
+		rep.git.commit(
+			m=f"Add supporting materials for {subject_decryption[subj_folder]} ({describe_file_formats(paths)})")
 
 
+	# 6. Unknown files by directory (or empty)…
+	rep.index.add(latex_templates)
+	rep.git.commit(m=f"{random.choice(updating_phrases)} latex templates")
 
-	# TODO: handle addition pdfs not connected to conspect sources and images for md and tex
-
-	# All the other files appeared before we started compilation!
-
-	exit(0)
+# All the other files appeared before we started compilation!
 
 # Separate commit for compiled files:
 if compiled_at_least_something_successfully:
