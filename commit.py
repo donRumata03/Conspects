@@ -52,7 +52,7 @@ def compile_file(path) -> bool:
 	assert ext in extensions_for_compilation
 
 	compiler_script = extensions_for_compilation[ext]
-	exit_code = run_python_script(compiler_script, path)
+	exit_code = run_python_script(compiler_script, '"' + path + "'")
 	if exit_code != 0:
 		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return exit_code == 0
@@ -66,9 +66,12 @@ def describe_file_formats(file_list: List[str]):
 
 # Predicates for grouping files:
 
+def file_in_topic_subdir(path, topic_dirs):
+	p = Path(path).parts
+	return p and Path(p[0]).is_dir() and p[0] in topic_dirs
+
 def file_in_subj_subdir(path):
-	p = Path(path)
-	return p and Path(p[0]).is_dir() and p[0] in subject_decryption
+	return file_in_topic_subdir(path, subject_decryption)
 
 
 def file_is_conspect_source_in_decryption_subfolder(path: str):
@@ -139,8 +142,6 @@ else:
 	# - .py files in other places
 
 	# 1. MD and LaTeX files in DIR € decryption
-	# print(files_to_compile)
-	# print("Committing primary conspects: ")
 	primary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption(path))
 	# Split by starting folder:
 	for group, ps in it.groupby(primary_conspects, lambda p: Path(p).parts[0]):
@@ -183,17 +184,22 @@ else:
 		rep.git.commit(
 			m=f"Add supporting materials for {subject_decryption[subj_folder]} ({describe_file_formats(paths)})")
 
+	# 6. Font-connected stuff:
+	changed_fonts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".ttf" or file_in_topic_subdir(path, ["Fonts"]))
+	rep.index.add(changed_scripts)
+	rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
-	# 6. Unknown files by directory (or empty)…
-	rep.index.add(latex_templates)
-	rep.git.commit(m=f"{random.choice(updating_phrases)} latex templates")
+
+	# 7. Unknown files by directory (or empty)…
+	rep.index.add(changed_files)
+	rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {','.join(changed_files)}")
 
 # All the other files appeared before we started compilation!
 
 # Separate commit for compiled files:
 if compiled_at_least_something_successfully:
 	compiled_pdfs = [item.a_path for item in rep.head.commit.diff(None) if Path(item.a_path).suffix == ".pdf"]
-	compiled_names = [Path(path).name for path in compiled_pdfs]
+	compiled_names = [Path(path).stem for path in compiled_pdfs]
 
 	rep.git.add(all=True)
 	rep.git.commit(m=f"Compile these conspects: {','.join(compiled_names)}")
