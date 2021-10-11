@@ -41,6 +41,11 @@ def run_python_script(path_to_script, *args):
 def colored_print(color, string, *args, **kwargs):
     print(color, string, bcolors.ENDC, *args, **kwargs)
 
+def print_red(string, *args, **kwargs):
+    colored_print(bcolors.FAIL, string, *args, **kwargs)
+
+def print_green(string, *args, **kwargs):
+    colored_print(bcolors.OKGREEN, string, *args, **kwargs)
 
 
 

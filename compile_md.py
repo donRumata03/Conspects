@@ -20,7 +20,7 @@ def compile_one_file(path) -> bool:
 
 	extension = Path(path).suffix
 	if extension != ".md":
-		print(f"Extension is {extension}, should be md")
+		print_red(f"Extension is: \"{extension}\", should be md!!!")
 	assert extension == ".md"
 	pure_name = Path(path).stem
 	target_folder = Path(path).parent

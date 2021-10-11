@@ -8,6 +8,8 @@ from scripts.script_commons import *
 
 from git import Repo
 
+import compile_latex, compile_md
+
 ################################################					Settings: 			##############################
 
 subject_decryption = {
@@ -33,9 +35,13 @@ extension_decryption = {
 	".png": "Image"
 }
 
-extensions_for_compilation = {
+compiling_script_by_extension = {
 	".tex": "compile_latex.py",
 	".md": "compile_md.py"
+}
+compiling_function_by_extension = {
+	".tex": compile_latex.compile_one_file,
+	".md": compile_md.compile_one_file
 }
 
 updating_phrases = [
@@ -49,13 +55,14 @@ updating_phrases = [
 
 def compile_file(path) -> bool:
 	ext = Path(path).suffix
-	assert ext in extensions_for_compilation
+	assert ext in compiling_function_by_extension
 
-	compiler_script = extensions_for_compilation[ext]
-	exit_code = run_python_script(compiler_script, '"' + path + "'")
-	if exit_code != 0:
+	compiler_function = compiling_function_by_extension[ext]
+	success = compiler_function(path)
+	if not success:
 		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
-	return exit_code == 0
+	return success
+
 
 
 def describe_file_formats(file_list: List[str]):
@@ -91,7 +98,7 @@ def is_pdf_associated_with_source(path: str):
 	p = Path(path)
 	return p.suffix == ".pdf" and \
 	       p.stem in [pretendent.stem for pretendent in p.parent.iterdir() if
-	                  pretendent.suffix in extensions_for_compilation]
+	                  pretendent.suffix in compiling_script_by_extension]
 
 
 # print(is_pdf_associated_with_source("LinAnalgebra/LinearAlgebra.pdf"))
@@ -107,9 +114,9 @@ changed_files = [item.a_path for item in rep.head.commit.diff(None) if not is_pd
 files_to_compile = [
 	file
 	for file in changed_files
-	if Path(file).suffix in extensions_for_compilation and Path(file).name != " README.md"
+	if Path(file).suffix in compiling_script_by_extension and Path(file).stem.upper() != Path(file).stem
 ]
-print(changed_files)
+print(f"Changed files: {changed_files}")
 print(f"Files to (re)compile: {files_to_compile}")
 
 # COMPILE files:
