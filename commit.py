@@ -208,7 +208,7 @@ else:
 	# 7. Unknown files by directory (or empty)…
 	if changed_files:
 		rep.index.add(changed_files)
-		rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {','.join(changed_files)}")
+		rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {', '.join(changed_files)}")
 
 # All the other files appeared before we started compilation!
 
@@ -218,4 +218,4 @@ if successfully_compiled_files > 0:
 	compiled_names = [Path(path).stem for path in compiled_pdfs]
 
 	rep.git.add(all=True)
-	rep.git.commit(m=f"Compile these conspects: {','.join(compiled_names)}")
+	rep.git.commit(m=f"Compile these conspects: {', '.join(compiled_names)}")
