@@ -5,7 +5,7 @@ if exit_data != 0:
 	colored_print(bcolors.FAIL, "Failed to compile or commit => can't push! Terminating…")
 	exit(1)
 
-colored_print(bcolors.OKGREEN, "Successfully compiled && commited => pushing")
+print_green("[Deployer] Successfully compiled && committed => pushing")
 
 os.system("git push origin master")
 
