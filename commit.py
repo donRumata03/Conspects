@@ -116,25 +116,30 @@ files_to_compile = [
 	for file in changed_files
 	if Path(file).suffix in compiling_script_by_extension and Path(file).stem.upper() != Path(file).stem
 ]
-print(f"Changed files: {changed_files}")
-print(f"Files to (re)compile: {files_to_compile}")
+print_green(f"[Committer] Changed files: {changed_files}")
+print_green(f"[Committer] Files to (re)compile: {files_to_compile}")
 
 # COMPILE files:
-compiled_at_least_something_successfully = False
+# TODO: use compilation_interface.compile_file_set function to compile!
+successfully_compiled_files = 0
 for source in files_to_compile:
 	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
-	compiled_at_least_something_successfully |= compile_file(
-		source)  # Writing would trigger short-circuit and some files wouldn't be compiled :)
+	successfully_compiled_files += 1 if compile_file(source) else 0
+
+print_green(f"[Committer] Compiled everything possible and required ({successfully_compiled_files}/{len(files_to_compile)} successful)")
 
 if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
 	if len(not_option_ids) != 1:
-		colored_print(bcolors.FAIL, "[Committer] incorrect CLI arguments: regime --all chosen "
+		print_red("[Committer] incorrect CLI arguments: regime --all chosen "
 		                            "but there are more than one non-option arguments!")
+		exit(1)
+	elif not rep.head.commit.diff(None):
+		print_red("[Committer] There are no changed files to compile!")
 		exit(1)
 
 	commit_message = not_option_ids[0]
-	colored_print(bcolors.OKGREEN, "Committing all files with message:", commit_message)
+	print_green("Committing all files with message:", commit_message)
 
 	# Track all files:
 	rep.git.add(all=True)
@@ -170,13 +175,15 @@ else:
 
 	# 3. Python scripts «for compiling and committing»:
 	changed_scripts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".py")
-	rep.index.add(changed_scripts)
-	rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
+	if changed_scripts:
+		rep.index.add(changed_scripts)
+		rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
 	# 4. Latex templates and demonstration:
 	latex_templates, changed_files = split(changed_files, lambda path: in_template_subdir(path))
-	rep.index.add(latex_templates)
-	rep.git.commit(m=f"{random.choice(updating_phrases)} latex templates")
+	if latex_templates:
+		rep.index.add(latex_templates)
+		rep.git.commit(m=f"{random.choice(updating_phrases)} latex templates")
 
 
 	# 5. Supporting materials (non-connected pdfs; images and etc.) by directory (if it's subject's subdir):
@@ -193,18 +200,20 @@ else:
 
 	# 6. Font-connected stuff:
 	changed_fonts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".ttf" or file_in_topic_subdir(path, ["Fonts"]))
-	rep.index.add(changed_scripts)
-	rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
+	if changed_fonts:
+		rep.index.add(changed_scripts)
+		rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
 
 	# 7. Unknown files by directory (or empty)…
-	rep.index.add(changed_files)
-	rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {','.join(changed_files)}")
+	if changed_files:
+		rep.index.add(changed_files)
+		rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {','.join(changed_files)}")
 
 # All the other files appeared before we started compilation!
 
 # Separate commit for compiled files:
-if compiled_at_least_something_successfully:
+if successfully_compiled_files > 0:
 	compiled_pdfs = [item.a_path for item in rep.head.commit.diff(None) if Path(item.a_path).suffix == ".pdf"]
 	compiled_names = [Path(path).stem for path in compiled_pdfs]
 
