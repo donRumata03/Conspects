@@ -64,20 +64,23 @@ def compile_file_set(files_to_compile, compiling_function):
     colored_print(color, f"Conducted CUMpilation of {len(files_to_compile)} files: {len(successful_files)} - successfully, {len(files_with_errors)} - with errors…")
 
     blue_divider()
+
+
+    def print_files_with_times(compilation_descriptors, col):
+        for file_data in compilation_descriptors:
+            print(file_data.path, end=' ')
+            colored_print(col, "(" + str(round(file_data.comp_time, 1)) + " s)")
+
     if successful_files:
         print_green("These files were compiled successfully:")
-        # print_green("\n".join(successful_files))
-        for file_data in successful_files:
-            print(file_data.path, end=' ')
-            print_green("(" + str(file_data.comp_time) + ")")
+        print_files_with_times(successful_files, bcolors.OKGREEN)
 
     blue_divider()
     if files_with_errors:
         print_red(f"ERRORS occurred while compiling these files:")
-        # print_red("\n".join(files_with_errors))
-        for file_data in files_to_compile:
-            print(file_data.path, end=' ')
-            print_red("(" + str(file_data.comp_time) + ")")
+        print_files_with_times(files_with_errors, bcolors.FAIL)
+
+    return successful_files, files_to_compile
 
 
 if __name__ == '__main__':

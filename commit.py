@@ -3,7 +3,9 @@
 # files in subdirs of dirs in «decryption» dict are committed in groups by full directory paths, the paths participate in messages
 # Other paths are committed together. If there are .py files, it's written «…including python scripts».
 # If there (not in DIR € decryption or its subdirs) are almost only python files (n_python ≈100%n_files and no files are .tex or .md), it's
+from typing import Tuple
 
+from scripts import compilation_interface
 from scripts.script_commons import *
 
 from git import Repo
@@ -53,15 +55,15 @@ updating_phrases = [
 ]
 
 
-def compile_file(path) -> bool:
+def compile_file(path) -> Tuple[bool, float]:
 	ext = Path(path).suffix
 	assert ext in compiling_function_by_extension
 
 	compiler_function = compiling_function_by_extension[ext]
-	success = compiler_function(path)
-	if not success:
+	compilation_output = compiler_function(path)
+	if not compilation_output[0]:
 		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
-	return success
+	return compilation_output
 
 
 
@@ -121,12 +123,16 @@ print_green(f"[Committer] Files to (re)compile: {files_to_compile}")
 
 # COMPILE files:
 # TODO: use compilation_interface.compile_file_set function to compile!
-successfully_compiled_files = 0
-for source in files_to_compile:
-	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
-	successfully_compiled_files += 1 if compile_file(source) else 0
 
-print_green(f"[Committer] Compiled everything possible and required ({successfully_compiled_files}/{len(files_to_compile)} successful)")
+# successfully_compiled_files = 0
+# for source in files_to_compile:
+# 	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
+# 	successfully_compiled_files += 1 if compile_file(source) else 0
+
+successful_files, all_files = compilation_interface.compile_file_set(files_to_compile, compile_file)
+successfully_compiled_files_n = len(successful_files)
+
+print_green(f"[Committer] Compiled everything possible and required ({successfully_compiled_files_n}/{len(files_to_compile)} successful)")
 
 if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
@@ -213,7 +219,7 @@ else:
 # All the other files appeared before we started compilation!
 
 # Separate commit for compiled files:
-if successfully_compiled_files > 0:
+if successful_files > 0:
 	compiled_pdfs = [item.a_path for item in rep.head.commit.diff(None) if Path(item.a_path).suffix == ".pdf"]
 	compiled_names = [Path(path).stem for path in compiled_pdfs]
 

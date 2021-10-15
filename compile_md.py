@@ -1,3 +1,5 @@
+from typing import Tuple
+
 from scripts.compilation_interface import collect_files, compile_file_set
 from scripts.script_commons import *
 
@@ -15,7 +17,7 @@ from scripts.script_commons import *
 # target_folder = Path(target_filename).parent
 
 
-def compile_one_file(path) -> bool:
+def compile_one_file(path) -> Tuple[bool, float]:
 	compiler = "lualatex"
 
 	extension = Path(path).suffix
@@ -39,14 +41,16 @@ def compile_one_file(path) -> bool:
 	colored_print(bcolors.OKGREEN, f"Compiling {Path(path).name} file with command: {compiling_command}")
 
 	comp_start = time.perf_counter()
+	comp_time = time.perf_counter() - comp_start
+
 	exit_code = run_command(compiling_command)
+
 	if exit_code != 0:
 		colored_print(bcolors.FAIL, f"Error at compiling Markdown file: {Path(path).name}!")
 	else:
-		comp_time = time.perf_counter() - comp_start
 		colored_print(bcolors.OKGREEN, f"Successfully compiled with {compiler} in {round(comp_time, 1)} seconds!")
 
-	return exit_code == 0
+	return exit_code == 0, comp_time
 
 
 def md_file_should_be_compiled(path: str):
