@@ -216,7 +216,7 @@ else:
 		rep.index.add(changed_files)
 		rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {', '.join(changed_files)}")
 
-# All the other files appeared before we started compilation!
+# ***All the other files appeared before we started compilation***
 
 # Separate commit for compiled files:
 if successful_files:
