@@ -1,0 +1,583 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.7.13)  15 OCT 2021 00:44
+entering extended mode
+**"d:/Projects/Education/Conspects/LinAnalgebra/RoutineCalculations/1.5 - AnalGeom_space.tex"
+("d:/Projects/Education/Conspects/LinAnalgebra/RoutineCalculations/1.5 - AnalGeom_space.tex"
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-09-03> ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (../../LatexGloves/latex_math_header.tex ("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen135
+\ar@mcellbox=\box45
+\extrarowheight=\dimen136
+\NC@list=\toks15
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box46
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen137
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen138
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count172
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count173
+\leftroot@=\count174
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count175
+\DOTSCASE@=\count176
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen139
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count177
+\c@MaxMatrixCols=\count178
+\dotsspace@=\muskip16
+\c@parentequation=\count179
+\dspbrk@lvl=\count180
+\tag@help=\toks17
+\row@=\count181
+\column@=\count182
+\maxfields@=\count183
+\andhelp@=\toks18
+\eqnshift@=\dimen140
+\alignsep@=\dimen141
+\tagshift@=\dimen142
+\tagwidth@=\dimen143
+\totwidth@=\dimen144
+\lineht@=\dimen145
+\@envbody=\toks19
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks26
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup7
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/doublestroke\dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count184
+\calc@Bcount=\count185
+\calc@Adimen=\dimen146
+\calc@Bdimen=\dimen147
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count186
+\calc@Cskip=\skip59
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count187
+\l_MT_multwidth_dim=\dimen148
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen149
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen150
+\l_MT_above_intertext_sep=\dimen151
+\l_MT_below_intertext_sep=\dimen152
+\l_MT_above_shortintertext_sep=\dimen153
+\l_MT_below_shortintertext_sep=\dimen154
+\xmathstrut@box=\box49
+\xmathstrut@dim=\dimen155
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mathalpha\mathalfa.sty) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mathalpha\mathalpha.sty
+Package: mathalpha 2019/10/05 - 1.13mathalpha (License LPPL) Michael Sharpe
+ `mathalpha' v1.13, 2019/10/05, a renaming of mathalfa (msharpe) ("C:\Program Files\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex" ("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count188
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+LaTeX Font Info:    Overwriting math alphabet `\mathbb' in version `bold'
+(Font)                  U/BOONDOX-ds/m/n --> U/BOONDOX-ds/b/n on input line 142.
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\bm.sty"
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup8
+\symboldletters=\mathgroup9
+\symboldsymbols=\mathgroup10
+\symboldstmry=\mathgroup11
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen156
+\captionmargin@=\dimen157
+\captionwidth=\dimen158
+\caption@tempdima=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count189
+\c@continuedfloat=\count190
+)
+\c@KVtest=\count191
+\sf@farskip=\skip61
+\sf@captopadj=\dimen163
+\sf@capskip=\skip62
+\sf@nearskip=\skip63
+\c@subfigure=\count192
+\c@subfigure@save=\count193
+\c@lofdepth=\count194
+\c@subtable=\count195
+\c@subtable@save=\count196
+\c@lotdepth=\count197
+\sf@top=\skip64
+\sf@bottom=\skip65
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 105.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\xetex.def"
+File: xetex.def 2020/08/26 v5.0i Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen164
+\Gin@req@width=\dimen165
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box50
+)
+\tc@llx=\dimen166
+\tc@lly=\dimen167
+\tc@urx=\dimen168
+\tc@ury=\dimen169
+Package trimclip Info: Using driver 'tc-xetex.def'.
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/adjustbox\tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen170
+\adjbox@Height=\dimen171
+\adjbox@Depth=\dimen172
+\adjbox@Totalheight=\dimen173
+\adjbox@pwidth=\dimen174
+\adjbox@pheight=\dimen175
+\adjbox@pdepth=\dimen176
+\adjbox@ptotalheight=\dimen177
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count198
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box51
+\sift@deathcycles=\count199
+\@vwid@loff=\dimen178
+\@vwid@roff=\dimen179
+)) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\rotating.sty"
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count266
+\rotFPtop=\skip66
+\rotFPbot=\skip67
+\rot@float@box=\box52
+\rot@mess@toks=\toks30
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen180
+\Hy@linkcounter=\count267
+\Hy@pagecounter=\count268
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count269
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing ON on input line 4482.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\backref.sty"
+Package: backref 2020/01/14 v1.40 Bibliographical back referencing
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/atveryend\atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+))
+\c@Hy@tempcnt=\count270
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen181
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count271
+\Field@Width=\dimen182
+\Fld@charsize=\dimen183
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing ON on input line 6360.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/atbegshi\atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count272
+\c@Item=\count273
+\c@Hfootnote=\count274
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hxetex.def"
+File: hxetex.def 2020-05-15 v7.00e Hyperref driver for XeTeX
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def"
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count275
+\HyField@AnnotCount=\count276
+\Fld@listcount=\count277
+\c@bookmark@seq@number=\count278
+\Hy@SectionHShift=\skip68
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen184
+\lightrulewidth=\dimen185
+\cmidrulewidth=\dimen186
+\belowrulesep=\dimen187
+\belowbottomsep=\dimen188
+\aboverulesep=\dimen189
+\abovetopsep=\dimen190
+\cmidrulesep=\dimen191
+\cmidrulekern=\dimen192
+\defaultaddspace=\dimen193
+\@cmidla=\count279
+\@cmidlb=\count280
+\@aboverulesep=\dimen194
+\@belowrulesep=\dimen195
+\@thisruleclass=\count281
+\@lastruleclass=\count282
+\@thisrulewidth=\dimen196
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip69
+\enit@outerparindent=\dimen197
+\enit@toks=\toks31
+\enit@inbox=\box54
+\enit@count@id=\count283
+\enitdp@description=\count284
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count285
+)) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/emptypage\emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\multicol.sty"
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count286
+\mult@box=\box55
+\multicol@leftmargin=\dimen198
+\c@unbalance=\count287
+\c@collectmore=\count288
+\doublecol@number=\count289
+\multicoltolerance=\count290
+\multicolpretolerance=\count291
+\full@width=\dimen199
+\page@free=\dimen256
+\premulticols=\dimen257
+\postmulticols=\dimen258
+\multicolsep=\skip70
+\multicolbaselineskip=\skip71
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen259
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@gfirstbox=\box60
+\mult@firstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\c@minrows=\count292
+\c@columnbadness=\count293
+\c@finalcolumnbadness=\count294
+\last@try=\dimen260
+\multicolovershoot=\dimen261
+\multicolundershoot=\dimen262
+\mult@nat@firstbox=\box99
+\colbreak@box=\box100
+\mc@col@check@num=\count295
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+\csq@reset=\count296
+\csq@gtype=\count297
+\csq@glevel=\count298
+\csq@qlevel=\count299
+\csq@maxlvl=\count300
+\csq@tshold=\count301
+\csq@ltx@everypar=\toks32
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/mdframed\mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty" ("C:\Program Files\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-09-03 L3 programming layer (loader) 
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-xetex.def"
+File: l3backend-xetex.def 2020-09-01 L3 backend support: XeTeX
+\g__graphics_track_int=\count302
+\l__pdf_internal_box=\box101
+\g__pdf_backend_object_int=\count303
+\g__pdf_backend_annotation_int=\count304
+))
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse-generic.tex"
+\l__xparse_current_arg_int=\count305
+\g__xparse_grabber_int=\count306
+\l__xparse_m_args_int=\count307
+\l__xparse_v_nesting_int=\count308
+)) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/zref\zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/zref\zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count309
+Package zref Info: New property: abspage on input line 66.
+) (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/needspace\needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip72
+\c@mdf@globalstyle@cnt=\count310
+\mdf@skipabove@length=\skip73
+\mdf@skipbelow@length=\skip74
+\mdf@leftmargin@length=\skip75
+\mdf@rightmargin@length=\skip76
+\mdf@innerleftmargin@length=\skip77
+\mdf@innerrightmargin@length=\skip78
+\mdf@innertopmargin@length=\skip79
+\mdf@innerbottommargin@length=\skip80
+\mdf@splittopskip@length=\skip81
+\mdf@splitbottomskip@length=\skip82
+\mdf@outermargin@length=\skip83
+\mdf@innermargin@length=\skip84
+\mdf@linewidth@length=\skip85
+\mdf@innerlinewidth@length=\skip86
+\mdf@middlelinewidth@length=\skip87
+\mdf@outerlinewidth@length=\skip88
+\mdf@roundcorner@length=\skip89
+\mdf@footenotedistance@length=\skip90
+\mdf@userdefinedwidth@length=\skip91
+\mdf@needspace@length=\skip92
+\mdf@frametitleaboveskip@length=\skip93
+\mdf@frametitlebelowskip@length=\skip94
+\mdf@frametitlerulewidth@length=\skip95
+\mdf@frametitleleftmargin@length=\skip96
+\mdf@frametitlerightmargin@length=\skip97
+\mdf@shadowsize@length=\skip98
+\mdf@extratopheight@length=\skip99
+\mdf@subtitleabovelinewidth@length=\skip100
+\mdf@subtitlebelowlinewidth@length=\skip101
+\mdf@subtitleaboveskip@length=\skip102
+\mdf@subtitlebelowskip@length=\skip103
+\mdf@subtitleinneraboveskip@length=\skip104
+\mdf@subtitleinnerbelowskip@length=\skip105
+\mdf@subsubtitleabovelinewidth@length=\skip106
+\mdf@subsubtitlebelowlinewidth@length=\skip107
+\mdf@subsubtitleaboveskip@length=\skip108
+\mdf@subsubtitlebelowskip@length=\skip109
+\mdf@subsubtitleinneraboveskip@length=\skip110
+\mdf@subsubtitleinnerbelowskip@length=\skip111
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty" ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty" ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty" ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen263
+\pgfutil@tempdimb=\dimen264
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box102
+ 
