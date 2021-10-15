@@ -38,8 +38,13 @@ def run_python_script(path_to_script, *args):
     return run_command(f"{'python3' if os.name == 'posix' else 'python'} {path_to_script} {arg_string}")
 
 
-def colored_print(color, string, *args, **kwargs):
-    print(color, string, bcolors.ENDC, *args, **kwargs)
+def colored_print(color, value_to_print, *args, **kwargs):
+    # print(color, end="")
+    # print(string, *args, **kwargs)
+    # print(bcolors.ENDC, end="")
+
+    print(color + str(value_to_print) + bcolors.ENDC, *args, **kwargs)
+
 
 def print_red(string, *args, **kwargs):
     colored_print(bcolors.FAIL, string, *args, **kwargs)
@@ -60,6 +65,7 @@ def split(sequence: Iterable, pred: Callable):
 
     return sat, non_sat
 
+
 def try_return(to_try, default):
     if to_try:
         return to_try
@@ -67,5 +73,14 @@ def try_return(to_try, default):
         return default
 
 
+def divider():
+    return "_________________________________________________________________"
+
+
+def blue_divider():
+    colored_print(bcolors.OKBLUE, divider())
+
+
 if __name__ == '__main__':
     colored_print(bcolors.FAIL, float("NaN") ** float("NaN"))
+    print("fglfdgl")

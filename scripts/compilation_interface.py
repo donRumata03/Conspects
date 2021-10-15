@@ -1,3 +1,5 @@
+import os.path
+
 from scripts.script_commons import *
 import glob
 
@@ -18,7 +20,7 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
 
             colored_print(bcolors.WARNING, f"Name of file to compile isn't provided!\n"
                                            f"Are you sure that you really want to re-compile "
-                                           f"ALL the \"{extension}\" files in ./ and its subdirs: {files_to_compile}? [Y/N]: ", end="")
+                                           f"ALL the \"{extension}\" files in ./ and its subdirs: {[str(Path(os.path.relpath(f))) for f in files_to_compile]}? [Y/N]: ", end="")
             user_answer = input()
             if user_answer.lower() == "y":
                 print("OK, recompiling all files...")
@@ -37,14 +39,42 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
 
 def compile_file_set(files_to_compile, compiling_function):
     errors = 0
+    successful_files = []
+    files_with_errors = []
 
     for filename in files_to_compile:
-        colored_print(bcolors.OKBLUE, "____________________________________________________")
+        blue_divider()
+        pretty_path = str(Path(os.path.relpath(filename, conspects_root_dir)).as_posix())
+
         OK = compiling_function(filename)
         if not OK:
-            errors += 1
+            files_with_errors.append(pretty_path)
+        else:
+            successful_files.append(pretty_path)
 
     color = bcolors.OKGREEN if errors == 0 else (bcolors.FAIL if errors == len(files_to_compile) else bcolors.WARNING)
-    colored_print(color, f"СUMpiled {len(files_to_compile)} files with {errors} errors…")
+
+    blue_divider()
+    colored_print(bcolors.OKBLUE, "                     Compilation Report")
+
+    colored_print(color, f"Conducted CUMpilation of {len(files_to_compile)} files: {len(successful_files)} - successfully, {len(files_with_errors)} - with errors…")
+
+    blue_divider()
+    print_green("These files were compiled successfully:")
+    print_green("\n".join(successful_files))
+
+    blue_divider()
+    if files_with_errors:
+        print_red(f"ERRORS occured while compiling these files:")
+        print_red("\n".join(files_with_errors))
 
 
+if __name__ == '__main__':
+    print(os.path.commonprefix([
+        "/home/vova/dev/Education/Conspects",
+        "/home/vova/dev/Education/Conspects/LinAnalgebra/RoutineCalculations/1.4 - AnalGeom_plane.tex"
+    ]))
+    print(os.path.relpath(
+        "/home/vova/dev/Education/Conspects/LinAnalgebra/RoutineCalculations/1.4 - AnalGeom_plane.tex",
+        "/home/vova/dev/Education/Conspects/"
+    ))

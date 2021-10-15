@@ -70,10 +70,11 @@ def compile_one_file(path) -> bool:
 	else:
 		colored_print(bcolors.OKGREEN, f"Successfully compiled with {compiler} in {round(comp_time, 1)} seconds!")
 
+	blue_divider()
 
-	print("__________________________________________________________________")
 	# Clear typical latex tempFiles:
 	# print([f"{file_dir}/{ext}" for ext in latex_temp_extensions])
+
 	temp_files = sum([glob.glob(f"{file_dir}/{ext}") for ext in latex_temp_extensions], [])
 	print(f"'{file_name}' LaTeX file's compilation finished ==> clearing temp files:", temp_files)
 	for tf in temp_files:
