@@ -5,6 +5,7 @@
 
 
 import glob
+from typing import Optional, Union, Tuple
 
 from scripts.compilation_interface import collect_files, compile_file_set
 from scripts.script_commons import *
@@ -12,7 +13,7 @@ from scripts.script_commons import *
 compiler = 'xelatex'
 
 
-def compile_one_file(path) -> bool:
+def compile_one_file(path) -> Tuple[bool, float]:
 	file_dir = Path(path).parent.absolute()
 	file_name = Path(path).name
 
@@ -80,7 +81,7 @@ def compile_one_file(path) -> bool:
 	for tf in temp_files:
 		os.remove(tf)
 
-	return exit_code == 0
+	return exit_code == 0, comp_time
 
 
 def latex_file_should_be_compiled(path: str):

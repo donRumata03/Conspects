@@ -1,4 +1,5 @@
 import os.path
+from collections import namedtuple
 
 from scripts.script_commons import *
 import glob
@@ -38,6 +39,8 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
 
 
 def compile_file_set(files_to_compile, compiling_function):
+    FileData = namedtuple("FileData", ['path', 'comp_time'])
+
     errors = 0
     successful_files = []
     files_with_errors = []
@@ -46,11 +49,12 @@ def compile_file_set(files_to_compile, compiling_function):
         blue_divider()
         pretty_path = str(Path(os.path.relpath(filename, conspects_root_dir)).as_posix())
 
-        OK = compiling_function(filename)
+        OK, compilation_time = compiling_function(filename)
+        this_file_data = FileData(path=pretty_path, comp_time=compilation_time)
         if not OK:
-            files_with_errors.append(pretty_path)
+            files_with_errors.append(this_file_data)
         else:
-            successful_files.append(pretty_path)
+            successful_files.append(this_file_data)
 
     color = bcolors.OKGREEN if errors == 0 else (bcolors.FAIL if errors == len(files_to_compile) else bcolors.WARNING)
 
@@ -60,13 +64,20 @@ def compile_file_set(files_to_compile, compiling_function):
     colored_print(color, f"Conducted CUMpilation of {len(files_to_compile)} files: {len(successful_files)} - successfully, {len(files_with_errors)} - with errors…")
 
     blue_divider()
-    print_green("These files were compiled successfully:")
-    print_green("\n".join(successful_files))
+    if successful_files:
+        print_green("These files were compiled successfully:")
+        # print_green("\n".join(successful_files))
+        for file_data in successful_files:
+            print(file_data.path, end=' ')
+            print_green("(" + str(file_data.comp_time) + ")")
 
     blue_divider()
     if files_with_errors:
-        print_red(f"ERRORS occured while compiling these files:")
-        print_red("\n".join(files_with_errors))
+        print_red(f"ERRORS occurred while compiling these files:")
+        # print_red("\n".join(files_with_errors))
+        for file_data in files_to_compile:
+            print(file_data.path, end=' ')
+            print_red("(" + str(file_data.comp_time) + ")")
 
 
 if __name__ == '__main__':
