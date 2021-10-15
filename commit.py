@@ -219,7 +219,7 @@ else:
 # All the other files appeared before we started compilation!
 
 # Separate commit for compiled files:
-if successful_files > 0:
+if successful_files:
 	compiled_pdfs = [item.a_path for item in rep.head.commit.diff(None) if Path(item.a_path).suffix == ".pdf"]
 	compiled_names = [Path(path).stem for path in compiled_pdfs]
 
