@@ -3,6 +3,7 @@
 # files in subdirs of dirs in «decryption» dict are committed in groups by full directory paths, the paths participate in messages
 # Other paths are committed together. If there are .py files, it's written «…including python scripts».
 # If there (not in DIR € decryption or its subdirs) are almost only python files (n_python ≈100%n_files and no files are .tex or .md), it's
+import itertools
 from typing import Tuple
 
 from scripts import compilation_interface
@@ -236,9 +237,10 @@ print_green("[Committer] Finished committing successfully")
 print_green("These commits have been made:")
 blue_divider()
 
-print(rep.commit().hexsha)
-for p in rep.commit().iter_parents():
-	print(p.hexsha)
+commits_made = list(itertools.takewhile(lambda c: c.hexsha != last_commit_before_launch.hexsha,
+                                        itertools.chain([rep.commit()], rep.commit().iter_parents())))
+for p in commits_made:
+	print(p)
 # print(, "->", rep.commit().hexsha)
 
 print(last_commit_before_launch.hexsha)
