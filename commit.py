@@ -93,7 +93,7 @@ def file_is_conspect_source_in_decryption(path: str):
 
 
 def in_template_subdir(path):
-	p = Path(path)
+	p = Path(path).parts
 	return p and Path(p[0]).is_dir() and p[0] == "LatexGloves"
 
 
