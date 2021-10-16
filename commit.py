@@ -6,12 +6,12 @@
 import itertools
 from typing import Tuple
 
-from scripts import compilation_interface
-from scripts.script_commons import *
-
 from git import Repo
 
-import compile_latex, compile_md
+import compile_latex
+import compile_md
+from scripts import compilation_interface
+from scripts.script_commons import *
 
 ################################################					Settings: 			##############################
 
@@ -61,11 +61,10 @@ def compile_file(path) -> Tuple[bool, float]:
 	assert ext in compiling_function_by_extension
 
 	compiler_function = compiling_function_by_extension[ext]
-	compilation_output = compiler_function(path)
+	compilation_output = compiler_function(path, False)
 	if not compilation_output[0]:
 		colored_print(console_colors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return compilation_output
-
 
 
 def describe_file_formats(file_list: List[str]):
@@ -79,6 +78,7 @@ def describe_file_formats(file_list: List[str]):
 def file_in_topic_subdir(path, topic_dirs):
 	p = Path(path).parts
 	return p and Path(p[0]).is_dir() and p[0] in topic_dirs
+
 
 def file_in_subj_subdir(path):
 	return file_in_topic_subdir(path, subject_decryption)
@@ -104,11 +104,6 @@ def is_pdf_associated_with_source(path: str):
 	                  pretendent.suffix in compiling_script_by_extension]
 
 
-# print(is_pdf_associated_with_source("LinAnalgebra/LinearAlgebra.pdf"))
-# print(is_pdf_associated_with_source("LinAnalgebra/LinearAlgebra.tex"))
-# print(is_pdf_associated_with_source("LinAnalgebra/PhysTech_vector_products.pdf"))
-
-
 rep = Repo(conspects_root_dir)
 last_commit_before_launch = rep.commit()
 
@@ -123,14 +118,8 @@ files_to_compile = [
 print_green(f"[Committer] Changed files: {changed_files}")
 print_green(f"[Committer] Files to (re)compile: {files_to_compile}")
 
+
 # COMPILE files:
-# TODO: use compilation_interface.compile_file_set function to compile!
-
-# successfully_compiled_files = 0
-# for source in files_to_compile:
-# 	colored_print(bcolors.OKGREEN, f"Compiling {source}…")
-# 	successfully_compiled_files += 1 if compile_file(source) else 0
-
 successful_files, all_files = compilation_interface.compile_file_set(files_to_compile, compile_file)
 successfully_compiled_files_n = len(successful_files)
 

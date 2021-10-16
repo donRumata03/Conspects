@@ -27,6 +27,8 @@ class console_colors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+def query_dev_null():
+    return "/dev/null" if os.name == "posix" else "NUL"
 
 def run_command(command):
     exit_data = os.system(command)

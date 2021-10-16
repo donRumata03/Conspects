@@ -59,7 +59,10 @@ def compile_one_file(path, show_compiler_output=True) -> Tuple[bool, float]:
 		f"\"{path}\""
 	]
 
-	compiling_command = f"latexmk -{compiler} " + " ".join(latex_args)
+	compiling_command = f"latexmk -{compiler} " \
+	                    + " ".join(latex_args) \
+	                    + (f" > {query_dev_null()}" if not show_compiler_output else "")
+
 	colored_print(console_colors.OKGREEN, f"Compiling with command: {compiling_command}")
 
 	comp_start = time.perf_counter()

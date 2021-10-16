@@ -17,7 +17,7 @@ from scripts.script_commons import *
 # target_folder = Path(target_filename).parent
 
 
-def compile_one_file(path) -> Tuple[bool, float]:
+def compile_one_file(path, show_compilation_output=False) -> Tuple[bool, float]:
 	compiler = "lualatex"
 
 	extension = Path(path).suffix
