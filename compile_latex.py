@@ -13,7 +13,7 @@ from scripts.script_commons import *
 compiler = 'xelatex'
 
 
-def compile_one_file(path) -> Tuple[bool, float]:
+def compile_one_file(path, show_compiler_output=True) -> Tuple[bool, float]:
 	file_dir = Path(path).parent.absolute()
 	file_name = Path(path).name
 
