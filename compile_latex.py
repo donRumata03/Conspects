@@ -60,16 +60,16 @@ def compile_one_file(path) -> Tuple[bool, float]:
 	]
 
 	compiling_command = f"latexmk -{compiler} " + " ".join(latex_args)
-	colored_print(bcolors.OKGREEN, f"Compiling with command: {compiling_command}")
+	colored_print(console_colors.OKGREEN, f"Compiling with command: {compiling_command}")
 
 	comp_start = time.perf_counter()
 	exit_code = run_command(compiling_command)
 	comp_time = time.perf_counter() - comp_start
 	if exit_code != 0:
-		colored_print(bcolors.FAIL, f"Error at compiling latex file: {Path(path).name}!")
+		colored_print(console_colors.FAIL, f"Error at compiling latex file: {Path(path).name}!")
 		# return False
 	else:
-		colored_print(bcolors.OKGREEN, f"Successfully compiled with {compiler} in {round(comp_time, 1)} seconds!")
+		colored_print(console_colors.OKGREEN, f"Successfully compiled with {compiler} in {round(comp_time, 1)} seconds!")
 
 	blue_divider()
 

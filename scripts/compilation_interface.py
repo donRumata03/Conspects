@@ -19,7 +19,7 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
                     files_to_compile = list(filter(filtering_function, files_to_compile))
                 all_files_cached = True
 
-            colored_print(bcolors.WARNING, f"Name of file to compile isn't provided!\n"
+            colored_print(console_colors.WARNING, f"Name of file to compile isn't provided!\n"
                                            f"Are you sure that you really want to re-compile "
                                            f"ALL the \"{extension}\" files in ./ and its subdirs: {[str(Path(os.path.relpath(f))) for f in files_to_compile]}? [Y/N]: ", end="")
             user_answer = input()
@@ -27,7 +27,7 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
                 print("OK, recompiling all files...")
                 break
             elif user_answer.lower() == "n":
-                colored_print(bcolors.FAIL, "Recompiling all files CANCELLED")
+                colored_print(console_colors.FAIL, "Recompiling all files CANCELLED")
                 exit(-1)
             else:
                 print()
@@ -40,7 +40,7 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
 
 def compile_file_set(files_to_compile, compiling_function):
     if not files_to_compile:
-        colored_print(bcolors.WARNING, "[FileSetCompiler] Sorry, there are no files to compile")
+        colored_print(console_colors.WARNING, "[FileSetCompiler] Sorry, there are no files to compile")
         return [], []
 
     FileData = namedtuple("FileData", ['path', 'comp_time'])
@@ -60,10 +60,10 @@ def compile_file_set(files_to_compile, compiling_function):
         else:
             successful_files.append(this_file_data)
 
-    color = bcolors.OKGREEN if errors == 0 else (bcolors.FAIL if errors == len(files_to_compile) else bcolors.WARNING)
+    color = console_colors.OKGREEN if errors == 0 else (console_colors.FAIL if errors == len(files_to_compile) else console_colors.WARNING)
 
     blue_divider()
-    colored_print(bcolors.OKBLUE, "                     Compilation Report")
+    colored_print(console_colors.OKBLUE, "                     Compilation Report")
 
     colored_print(color, f"Conducted CUMpilation of {len(files_to_compile)} file{'s' if len(files_to_compile) > 1 else ''}: {len(successful_files)} - successfully, {len(files_with_errors)} - with errors…")
 
@@ -76,12 +76,12 @@ def compile_file_set(files_to_compile, compiling_function):
 
     if successful_files:
         print_green("These files were compiled successfully:")
-        print_files_with_times(successful_files, bcolors.OKGREEN)
+        print_files_with_times(successful_files, console_colors.OKGREEN)
 
     blue_divider()
     if files_with_errors:
         print_red(f"ERRORS occurred while compiling these files:")
-        print_files_with_times(files_with_errors, bcolors.FAIL)
+        print_files_with_times(files_with_errors, console_colors.FAIL)
 
     return successful_files, files_to_compile
 

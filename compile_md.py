@@ -38,7 +38,7 @@ def compile_one_file(path) -> Tuple[bool, float]:
 		f"--output=\"{(target_folder / (pure_name + '.pdf')).as_posix()}\"",
 	]
 	compiling_command = f"pandoc {' '.join(pandoc_args)}"
-	colored_print(bcolors.OKGREEN, f"Compiling {Path(path).name} file with command: {compiling_command}")
+	colored_print(console_colors.OKGREEN, f"Compiling {Path(path).name} file with command: {compiling_command}")
 
 	comp_start = time.perf_counter()
 	comp_time = time.perf_counter() - comp_start
@@ -46,9 +46,9 @@ def compile_one_file(path) -> Tuple[bool, float]:
 	exit_code = run_command(compiling_command)
 
 	if exit_code != 0:
-		colored_print(bcolors.FAIL, f"Error at compiling Markdown file: {Path(path).name}!")
+		colored_print(console_colors.FAIL, f"Error at compiling Markdown file: {Path(path).name}!")
 	else:
-		colored_print(bcolors.OKGREEN, f"Successfully compiled with {compiler} in {round(comp_time, 1)} seconds!")
+		colored_print(console_colors.OKGREEN, f"Successfully compiled with {compiler} in {round(comp_time, 1)} seconds!")
 
 	return exit_code == 0, comp_time
 

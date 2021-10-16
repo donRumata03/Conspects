@@ -63,7 +63,7 @@ def compile_file(path) -> Tuple[bool, float]:
 	compiler_function = compiling_function_by_extension[ext]
 	compilation_output = compiler_function(path)
 	if not compilation_output[0]:
-		colored_print(bcolors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
+		colored_print(console_colors.FAIL, f"[Committer] STRONG WARNING: Couldn't compile {ext} file \"{path}\"")
 	return compilation_output
 
 
@@ -241,7 +241,3 @@ commits_made = list(itertools.takewhile(lambda c: c.hexsha != last_commit_before
                                         itertools.chain([rep.commit()], rep.commit().iter_parents())))
 
 run_command(f"git show --name-only {' '.join(map(lambda c: c.hexsha, commits_made))}")
-
-# print(, "->", rep.commit().hexsha)
-
-# print(last_commit_before_launch.hexsha)

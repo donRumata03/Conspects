@@ -16,7 +16,7 @@ import random
 conspects_root_dir = Path(abspath(getsourcefile(lambda: 0))).parent.parent.absolute()
 
 
-class bcolors:
+class console_colors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
@@ -43,15 +43,15 @@ def colored_print(color, value_to_print, *args, **kwargs):
     # print(string, *args, **kwargs)
     # print(bcolors.ENDC, end="")
 
-    print(color + str(value_to_print) + bcolors.ENDC, *args, **kwargs)
+    print(color + str(value_to_print) + console_colors.ENDC, *args, **kwargs)
 
 
 def print_red(string, *args, **kwargs):
-    colored_print(bcolors.FAIL, string, *args, **kwargs)
+    colored_print(console_colors.FAIL, string, *args, **kwargs)
 
 
 def print_green(string, *args, **kwargs):
-    colored_print(bcolors.OKGREEN, string, *args, **kwargs)
+    colored_print(console_colors.OKGREEN, string, *args, **kwargs)
 
 
 def split(sequence: Iterable, pred: Callable):
@@ -78,9 +78,9 @@ def divider():
 
 
 def blue_divider():
-    colored_print(bcolors.OKBLUE, divider())
+    colored_print(console_colors.OKBLUE, divider())
 
 
 if __name__ == '__main__':
-    colored_print(bcolors.FAIL, float("NaN") ** float("NaN"))
+    colored_print(console_colors.FAIL, float("NaN") ** float("NaN"))
     print("fglfdgl")
