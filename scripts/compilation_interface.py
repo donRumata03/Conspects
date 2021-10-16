@@ -39,6 +39,10 @@ def collect_files(extension: str, filtering_function: Callable = None) -> list:
 
 
 def compile_file_set(files_to_compile, compiling_function):
+    if not files_to_compile:
+        colored_print(bcolors.WARNING, "[FileSetCompiler] Sorry, there are no files to compile")
+        return [], []
+
     FileData = namedtuple("FileData", ['path', 'comp_time'])
 
     errors = 0
@@ -61,10 +65,9 @@ def compile_file_set(files_to_compile, compiling_function):
     blue_divider()
     colored_print(bcolors.OKBLUE, "                     Compilation Report")
 
-    colored_print(color, f"Conducted CUMpilation of {len(files_to_compile)} files: {len(successful_files)} - successfully, {len(files_with_errors)} - with errors…")
+    colored_print(color, f"Conducted CUMpilation of {len(files_to_compile)} file{'s' if len(files_to_compile) > 1 else ''}: {len(successful_files)} - successfully, {len(files_with_errors)} - with errors…")
 
     blue_divider()
-
 
     def print_files_with_times(compilation_descriptors, col):
         for file_data in compilation_descriptors:
