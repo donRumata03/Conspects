@@ -239,7 +239,7 @@ blue_divider()
 
 commits_made = list(itertools.takewhile(lambda c: c.hexsha != last_commit_before_launch.hexsha,
                                         itertools.chain([rep.commit()], rep.commit().iter_parents())))
-rep.git.show("HEAD")
+rep.git.show("HEAD~1")
 
 # print(, "->", rep.commit().hexsha)
 
