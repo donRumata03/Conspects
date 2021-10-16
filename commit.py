@@ -232,7 +232,9 @@ if successful_files:
 blue_divider()
 print_green("[Committer] Finished committing successfully")
 print_green("These commits have been made:")
+blue_divider()
 
 
-print(last_commit_before_launch.message)
+print(rep.commit().name_rev, "->", rep.commit().hexsha)
+
 print(last_commit_before_launch.hexsha)
