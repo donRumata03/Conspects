@@ -237,7 +237,7 @@ print_green("[Committer] Finished committing successfully")
 print_green("These commits have been made:")
 blue_divider()
 
-commits_made = list(itertools.takewhile(lambda c: c.hexsha != last_commit_before_launch.hexsha,
-                                        itertools.chain([rep.commit()], rep.commit().iter_parents())))
+commits_made = reversed(list(itertools.takewhile(lambda c: c.hexsha != last_commit_before_launch.hexsha,
+                                        itertools.chain([rep.commit()], rep.commit().iter_parents()))))
 
 run_command(f"git show --name-only {' '.join(map(lambda c: c.hexsha, commits_made))}")
