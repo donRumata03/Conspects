@@ -236,6 +236,7 @@ print_green("[Committer] Finished committing successfully")
 print_green("These commits have been made:")
 blue_divider()
 
+print(rep.commit().hexsha)
 for p in rep.commit().iter_parents():
 	print(p.hexsha)
 # print(, "->", rep.commit().hexsha)
