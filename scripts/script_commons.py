@@ -49,9 +49,9 @@ def colored_print(color, value_to_print, *args, **kwargs):
 def print_red(string, *args, **kwargs):
     colored_print(bcolors.FAIL, string, *args, **kwargs)
 
+
 def print_green(string, *args, **kwargs):
     colored_print(bcolors.OKGREEN, string, *args, **kwargs)
-
 
 
 def split(sequence: Iterable, pred: Callable):
