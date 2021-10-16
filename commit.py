@@ -243,4 +243,4 @@ for p in commits_made:
 	print(p)
 # print(, "->", rep.commit().hexsha)
 
-print(last_commit_before_launch.hexsha)
+# print(last_commit_before_launch.hexsha)
