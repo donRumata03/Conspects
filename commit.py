@@ -20,7 +20,7 @@ subject_decryption = {
 	"CUMputerAAAAAAAAH": "Computer architecture",
 	"DICKreteMath": "Discrete mathematics",
 	"LinAnalgebra": "Linear algebra",
-	"MathAnalgeBRUH": "Mathematics anal"
+	"MathAnal": "Mathematics anal"
 }
 
 special_dir_decryption = {
