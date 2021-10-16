@@ -109,6 +109,7 @@ def is_pdf_associated_with_source(path: str):
 
 
 rep = Repo(conspects_root_dir)
+last_commit_before_launch = rep.commit()
 
 changed_files = [item.a_path for item in rep.head.commit.diff(None) if not is_pdf_associated_with_source(item.a_path)]
 
@@ -225,3 +226,12 @@ if successful_files:
 
 	rep.git.add(all=True)
 	rep.git.commit(m=f"Compile these conspects: {', '.join(compiled_names)}")
+
+# Print commits made during this script's work:
+
+blue_divider()
+print_green("[Committer] Finished committing successfully")
+print_green("These commits have been made:")
+
+print(last_commit_before_launch)
+print(last_commit_before_launch.name)
