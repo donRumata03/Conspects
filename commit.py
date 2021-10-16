@@ -236,4 +236,3 @@ print_green("These commits have been made:")
 
 print(last_commit_before_launch.message)
 print(last_commit_before_launch.hexsha)
-
