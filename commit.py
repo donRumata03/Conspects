@@ -231,10 +231,13 @@ if successful_files:
 
 blue_divider()
 print_green("[Committer] Finished committing successfully")
+# if
+
 print_green("These commits have been made:")
 blue_divider()
 
-
-print(rep.commit().name_rev, "->", rep.commit().hexsha)
+for p in rep.commit().iter_parents():
+	print(p.hexsha)
+# print(, "->", rep.commit().hexsha)
 
 print(last_commit_before_launch.hexsha)
