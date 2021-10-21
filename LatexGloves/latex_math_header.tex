@@ -7,6 +7,7 @@
 \usepackage{textcomp}
 \usepackage{stmaryrd}
 
+
 \usepackage{array}
 
 % Math packages
@@ -22,6 +23,10 @@
 \usepackage{placeins}
 \usepackage{rotating}
 
+
+
+\usepackage{lipsum}
+\usepackage{psvectorian} % Insanely fancy text separators!
 
 
 % Refs:
@@ -95,16 +100,10 @@
 \makeatother
 
 
-\DeclareMathOperator{\supp}{supp}
-\DeclareMathOperator{\sign}{sign}
-
-\RedeclareMathOperator{\Re}{Re}
-\RedeclareMathOperator{\Im}{Im}
-
 % Correction:
 \definecolor{correct_color}{HTML}{009900}
 \newcommand\correction[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct_color}{#2}}\ensuremath{\:}}
-\newcommand\green[1]{{\color{correct_color}{#1}}}
+\newcommand\inGreen[1]{{\color{correct_color}{#1}}}
 
 % Roman numbers && fancy symbs:
 \newcommand{\RNumb}[1]{{\uppercase\expandafter{\romannumeral #1\relax}}}
@@ -185,3 +184,40 @@
 \def\Bigggm{\mathrel\Biggg}
 \def\Bigggr{\mathclose\Biggg}
 \makeatother
+
+
+% Texts dividers:
+
+\newcommand{\ornamentleft}{%
+    \psvectorian[width=2em]{2}%
+}
+\newcommand{\ornamentright}{%
+    \psvectorian[width=2em,mirror]{2}%
+}
+\newcommand{\ornamentbreak}{%
+    \begin{center}
+    \ornamentleft\quad\ornamentright
+    \end{center}%
+}
+\newcommand{\ornamentheader}[1]{%
+    \begin{center}
+    \ornamentleft
+    \quad{\large\emph{#1}}\quad % style as desired
+    \ornamentright
+    \end{center}%
+}
+
+
+% Math operators
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Fr}{Fr}
+
+
+\RedeclareMathOperator{\Re}{Re}
+\RedeclareMathOperator{\Im}{Im}
