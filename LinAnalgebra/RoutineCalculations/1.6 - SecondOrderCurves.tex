@@ -1,0 +1,96 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=30mm,
+    right=30mm,
+    top=30mm,
+    bottom=20mm
+}
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре модуль 1: Задание 6 «Кривые второго порядка»}
+
+\begin{document}
+    \tittoc
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        
+        12. Оси гиперболы совпадают с осями координат. Гипербола проходит
+        через точки пересечения параболы $x^2 = 2y$ с прямой $x − 2y + 6 = 0$.
+        
+        Составить уравнение этой гиперболы.
+
+        Сделать рисунок.
+    \end{statement}
+
+    \section{Решение}
+
+    Для начала найдём эти точки пересечения, решив квадратное уравнение:
+    \begin{gather}
+        \begin{cases}
+            x^2 = 2y \\
+            x − 2y + 6 = 0
+        \end{cases} \\
+        \begin{cases}
+            y = \frac{x^2}{2} \\
+            x − 2\cdot \frac{x^2}{2} + 6 = 0
+        \end{cases} \\
+        x^2 - x - 6 = 0 \\
+        \begin{complex}
+            x = -2, y = \frac{2^2}{2} = 2 \\
+            x = 3, y = \frac{3^2}{2} = 4.5
+        \end{complex}
+    \end{gather}
+
+    То есть гипербола должна проходить через точки $(-2, 2)$ и $(3, 4.5)$.
+
+    У параболы, указанной в условии, остаётся только два переметра — настоящая и мнимая полуоси.
+    Найдём их значения, потровав, что гипербола проходит там, где надо.
+
+    \begin{gather}
+        \begin{cases}
+            \frac{(-2)^2}{a^2} - \frac{2^2}{b^2} = 1 \\
+            \frac{3^2}{a^2} - \frac{\left(\frac{9}{2}\right)^2}{b^2} = 1
+        \end{cases}
+    \end{gather}
+
+    За $\alpha$ обозначим $a^2$, за $\beta$ — $b^2$, помним, что оба параметра больше нуля.
+
+    \begin{gather}
+        \begin{cases}
+            4\beta - 4\alpha = \alpha\beta \\
+            9\beta - \frac{81}{4} \alpha = \alpha\beta
+        \end{cases} \\
+        4\beta - 4\alpha = 9\beta - \frac{81}{4} \alpha \\
+        \frac{65}{4}\alpha = 5\beta \\
+        \beta = \frac{13}{4}\alpha \\
+        4 \left( \frac{13}{4}\alpha \right) - 4\alpha = \alpha \cdot \frac{13}{4}\alpha \\
+        13 - 4 = \frac{13}{4}\alpha \Longrightarrow \alpha = \frac{9 \cdot 4}{13} \Longrightarrow a = \sqrt{\alpha} = \frac{6}{\sqrt{13}} \\
+        \beta = \frac{13}{4}\alpha = \frac{\cancel{13}}{\cancel{4}} \cdot \frac{9 \cdot \cancel{4}}{\cancel{13}} = 9 \Longrightarrow b = \sqrt{\beta} = 3
+    \end{gather}
+
+    Таким образом, уравнение гиперболы:
+    \begin{equation}
+        \frac{13}{36} x^2 - \frac{y^2}{9} = 1
+    \end{equation}
+
+
+    \section{Иллюстрация}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.6_figure.pdf}
+        \caption{Чертёж}
+        \label{fig:main_figure}
+    \end{figure}
+    \FloatBarrier
+
+
+\end{document}
