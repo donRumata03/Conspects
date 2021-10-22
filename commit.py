@@ -56,6 +56,27 @@ updating_phrases = [
 ]
 
 
+def try_add_file_to_git(path: str, repository):
+	try:
+		repository.index.add(path)
+	except Exception as e:
+		colored_print(console_colors.WARNING, f"Can't add file (probably, it doesn';'t exist anymore): {path}")
+		print("The exception:", e)
+
+
+def try_add_many_files_to_git(file_paths: List[str], repository):
+	for p in file_paths:
+		try_add_file_to_git(p, repository)
+
+
+def try_commit(repository, m):
+	try:
+		repository.git.commit(m=m)
+	except Exception as e:
+		colored_print(console_colors.WARNING, "Failed to commit with message: {m}… Probably, there are no files left")
+		print("The exception:", e)
+
+
 def compile_file(path) -> Tuple[bool, float]:
 	ext = Path(path).suffix
 	assert ext in compiling_function_by_extension
@@ -118,18 +139,18 @@ files_to_compile = [
 print_green(f"[Committer] Changed files: {changed_files}")
 print_green(f"[Committer] Files to (re)compile: {files_to_compile}")
 
-
 # COMPILE files:
 successful_files, all_files = compilation_interface.compile_file_set(files_to_compile, compile_file)
 successfully_compiled_files_n = len(successful_files)
 
-print_green(f"[Committer] Compiled everything possible and required ({successfully_compiled_files_n}/{len(files_to_compile)} successful)")
+print_green(
+	f"[Committer] Compiled everything possible and required ({successfully_compiled_files_n}/{len(files_to_compile)} successful)")
 
 if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name provided:
 	not_option_ids = [s for s in sys.argv[1:] if s and s[0] != "-"]
 	if len(not_option_ids) != 1:
 		print_red("[Committer] incorrect CLI arguments: regime --all chosen "
-		                            "but there are more than one non-option arguments!")
+		          "but there are more than one non-option arguments!")
 		exit(1)
 	elif not rep.head.commit.diff(None):
 		print_red("[Committer] There are no changed files to compile!")
@@ -141,7 +162,7 @@ if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name pr
 	# Track all files:
 	rep.git.add(all=True)
 	# Commit with given message:
-	rep.git.commit(m=commit_message)
+	try_commit(rep, m=commit_message)
 
 else:
 	# Subsequently processing different file categories
@@ -155,33 +176,33 @@ else:
 	# Split by starting folder:
 	for group, ps in it.groupby(primary_conspects, lambda p: Path(p).parts[0]):
 		paths = list(ps)
-		rep.index.add(paths)
+		try_add_many_files_to_git(paths, rep)
 		# print(describe_file_formats(paths))
-		rep.git.commit(
-			m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
+		try_commit(rep,
+		           m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
 
 	# 2. Conspects in subdirectories is ones in decryption:
-	secondary_conspects, changed_files = split(changed_files, lambda path: file_is_conspect_source_in_decryption_subfolder(path))
+	secondary_conspects, changed_files = split(changed_files,
+	                                           lambda path: file_is_conspect_source_in_decryption_subfolder(path))
 	for group, ps in it.groupby(secondary_conspects, lambda p: Path(p).parent):
 		paths = list(ps)
 		subj_folder, topic_folders = Path(group).parts[0], Path(*Path(group).parts[1:]).as_posix()
 
-		rep.index.add(paths)
-		rep.git.commit(
+		try_add_many_files_to_git(paths, rep)
+		try_commit(rep,
 			m=f"{random.choice(updating_phrases)} {subject_decryption[subj_folder]} conspect with topic: \"{topic_folders}\" ({describe_file_formats(paths)})")
 
 	# 3. Python scripts «for compiling and committing»:
 	changed_scripts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".py")
 	if changed_scripts:
-		rep.index.add(changed_scripts)
-		rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
+		try_add_many_files_to_git(changed_scripts, rep)
+		try_commit(rep, m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
 	# 4. Latex templates and demonstration:
 	latex_templates, changed_files = split(changed_files, lambda path: in_template_subdir(path))
 	if latex_templates:
-		rep.index.add(latex_templates)
-		rep.git.commit(m=f"{random.choice(updating_phrases)} latex templates")
-
+		try_add_many_files_to_git(latex_templates, rep)
+		try_commit(rep, m=f"{random.choice(updating_phrases)} latex templates")
 
 	# 5. Supporting materials (non-connected pdfs; images and etc.) by directory (if it's subject's subdir):
 	# TODO: Mark only certain file extensions as supporting materials:
@@ -191,21 +212,22 @@ else:
 
 	for subj_folder, path_it in it.groupby(supporting_materials, lambda p: Path(p).parts[0]):
 		paths = list(path_it)
-		rep.index.add(paths)
-		rep.git.commit(
+		try_add_many_files_to_git(paths, rep)
+		try_commit(rep,
 			m=f"Add supporting materials for {subject_decryption[subj_folder]} ({describe_file_formats(paths)})")
 
 	# 6. Font-connected stuff:
-	changed_fonts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".ttf" or file_in_topic_subdir(path, ["Fonts"]))
+	changed_fonts, changed_files = split(changed_files,
+	                                     lambda path: Path(path).suffix == ".ttf" or file_in_topic_subdir(path,
+	                                                                                                      ["Fonts"]))
 	if changed_fonts:
-		rep.index.add(changed_scripts)
-		rep.git.commit(m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
-
+		try_add_many_files_to_git(changed_scripts, rep)
+		try_commit(rep, m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
 	# 7. Unknown files by directory (or empty)…
 	if changed_files:
-		rep.index.add(changed_files)
-		rep.git.commit(m=f"{random.choice(updating_phrases)} some unknown files: {', '.join(changed_files)}")
+		try_add_many_files_to_git(changed_files, rep)
+		try_commit(rep, m=f"{random.choice(updating_phrases)} some unknown files: {', '.join(changed_files)}")
 
 # ***All the other files appeared before we started compilation***
 
@@ -215,7 +237,7 @@ if successful_files:
 	compiled_names = [Path(path).stem for path in compiled_pdfs]
 
 	rep.git.add(all=True)
-	rep.git.commit(m=f"Compile these conspects: {', '.join(compiled_names)}")
+	try_commit(rep, m=f"Compile these conspects: {', '.join(compiled_names)}")
 
 # Print commits made during this script's work:
 
@@ -227,6 +249,6 @@ print_green("These commits have been made:")
 blue_divider()
 
 commits_made = reversed(list(itertools.takewhile(lambda c: c.hexsha != last_commit_before_launch.hexsha,
-                                        itertools.chain([rep.commit()], rep.commit().iter_parents()))))
+                                                 itertools.chain([rep.commit()], rep.commit().iter_parents()))))
 
 run_command(f"git show --name-only {' '.join(map(lambda c: c.hexsha, commits_made))}")
