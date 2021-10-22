@@ -128,6 +128,7 @@ def is_pdf_associated_with_source(path: str):
 rep = Repo(conspects_root_dir)
 last_commit_before_launch = rep.commit()
 
+rep.git.add(all=True)
 changed_files = [item.a_path for item in rep.head.commit.diff(None) if not is_pdf_associated_with_source(item.a_path)]
 
 # Filter only files for compilation:
