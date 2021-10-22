@@ -129,7 +129,7 @@ rep = Repo(conspects_root_dir)
 last_commit_before_launch = rep.commit()
 
 rep.git.add(all=True)
-changed_files = [item.a_path for item in rep.head.commit.diff(None) if not is_pdf_associated_with_source(item.a_path)]
+changed_files = [item.b_path for item in rep.head.commit.diff(None) if not is_pdf_associated_with_source(item.b_path)]
 
 # Filter only files for compilation:
 files_to_compile = [
@@ -234,7 +234,7 @@ else:
 
 # Separate commit for compiled files:
 if successful_files:
-	compiled_pdfs = [item.a_path for item in rep.head.commit.diff(None) if Path(item.a_path).suffix == ".pdf"]
+	compiled_pdfs = [item.b_path for item in rep.head.commit.diff(None) if Path(item.b_path).suffix == ".pdf"]
 	compiled_names = [Path(path).stem for path in compiled_pdfs]
 
 	rep.git.add(all=True)
