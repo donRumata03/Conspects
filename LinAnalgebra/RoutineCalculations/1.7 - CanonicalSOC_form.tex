@@ -28,11 +28,104 @@
         канонической и исходной системе координат, а также найти параметры
         кривой.
 
-        12. $7\sqrt{5} x^2 + \sqrt{5}y^2 + 8\sqrt{5}xy + 72x = 36y + 27\sqrt{5} = 0$
+        12. $7\sqrt{5} x^2 + \sqrt{5}y^2 + 8\sqrt{5}xy + 72x + 36y + 27\sqrt{5} = 0$
     \end{statement}
 
     \section{Решение}
 
-    \dots
+
+    \subsection{Поворот системы координат}
+    
+    Для начала найдём такой поворот, чтобы член $x'y'$ исчез.
+    \begin{equation}
+        \begin{cases}
+            x = cos(\alpha) x' - sin(\alpha) y' \\
+            y = sin(\alpha) x' + cos(\alpha) y'
+        \end{cases}
+    \end{equation}
+
+    Тогда коэффициент перед $x'y'$ будет:
+    \begin{multline}
+        7\sqrt{5} \left( -2 cos(\alpha) sin(\alpha) \right) + 8\sqrt{5} \left( cos^2(\alpha) - sin^2(\alpha) \right) + \sqrt{5} \left( 2 cos(\alpha) sin(\alpha) \right) = \\
+        \sqrt{5} ( cos(\alpha) sin(\alpha) (7 \cdot -2 + 2) + 8 cos^2(\alpha) - 8 sin^2(\alpha) )
+    \end{multline}
+
+    Этот коэффициент должен быть равен нулю. Тогда:
+    \begin{gather}
+        -12 cos(\alpha) sin(\alpha) + 8cos^2(\alpha) - 8sin^2(\alpha) = 0 \\
+        -12tg(\alpha) + 8 - 8tg^2(\alpha) = 0 \\
+        4\xi^2 + 6\xi - 4 = 0 \\
+        \xi_{1, 2} = \{ -2, \frac{1}{2} \}
+    \end{gather}
+
+    Возьмём $tg(\alpha) = \frac{1}{2}$ и $\alpha \in (0, \frac{\pi}{2})$.
+    Тогда $sin, cos > 0$
+    \begin{gather}
+        sin(\alpha) = \frac{tg(\alpha)}{\sqrt{1 + tg^2(\alpha)}} = \frac{1}{2} \frac{1}{\sqrt{\frac{5}{4}}} = \frac{1}{\sqrt{5}} = \frac{\sqrt{5}}{5} \\
+        cos(\alpha) = \frac{1}{\sqrt{1 + tg^2(\alpha)}} = \frac{1}{\sqrt{\frac{5}{4}}} = \frac{2}{\sqrt{5}} = \frac{2\sqrt{5}}{5}
+    \end{gather}
+
+    Тогда старые координаты так выражаются через новые:
+    \begin{equation}
+        \begin{cases}
+            x = \frac{2\sqrt{5}}{5} x' - \frac{\sqrt{5}}{5} y' \\
+            y = \frac{\sqrt{5}}{5} x' + \frac{2\sqrt{5}}{5} y'
+        \end{cases}
+    \end{equation}
+
+    Тогда перепишем уравнение в новой системе коодинат:
+    \begin{multline}
+        7\sqrt{5} \left(\frac{2\sqrt{5}}{5} x' - \frac{\sqrt{5}}{5} y'\right)^2 + \\
+        \sqrt{5} \left(\frac{\sqrt{5}}{5} x' + \frac{2\sqrt{5}}{5} y'\right)^2 + \\
+        8\sqrt{5} \left(\frac{2\sqrt{5}}{5} x' - \frac{\sqrt{5}}{5} y'\right)\left(\frac{\sqrt{5}}{5} x' + \frac{2\sqrt{5}}{5} y'\right) + \\
+        72 \left(\frac{2\sqrt{5}}{5} x' - \frac{\sqrt{5}}{5} y'\right) + \\
+        36 \left(\frac{\sqrt{5}}{5} x' + \frac{2\sqrt{5}}{5} y' \right) + \\
+        27\sqrt{5} \\
+        = 0
+    \end{multline}
+
+    \begin{multline}
+        \frac{28 x'^2}{\sqrt{5}} - \frac{28 x' y'}{\sqrt{5}} + \frac{7 y'^2}{\sqrt{5}} + \\
+        \frac{x'^2}{\sqrt{5}} + \frac{4 x' y'}{\sqrt{5}} + \frac{4 y'^2}{\sqrt{5}} + \\
+        \frac{16 x'^2}{\sqrt{5}} + \frac{24 x' y'}{\sqrt{5}} - \frac{16 y'^2}{\sqrt{5}} + \\
+        \frac{144 x'}{\sqrt{5}} - \frac{72 y'}{\sqrt{5}} + \\
+        \frac{36 x'}{\sqrt{5}} + \frac{72 y'}{\sqrt{5}} + \\
+        27\sqrt{5} \\
+        = 0
+    \end{multline}
+
+    \begin{equation}
+        9x'^2 + 36'x - y'^2 + 27 = 0
+    \end{equation}
+
+    \subsection{Параллельный перенос}
+
+    Выделим полные квадраты:
+    \begin{equation}
+        9x'^2 + 36x' - y'^2 + 27 = 9(x'^2 + 4x' + 4) - y'^2 - 9 = 9(x' + 2)^2 - y'^2 - 9 = 0
+    \end{equation}
+    
+    Назовём:
+    \begin{equation}
+        \begin{cases}
+            x'' = x' + 2 \\
+            y'' = y'
+        \end{cases} \\
+        \begin{cases}
+            x' = x'' - 2 \\
+            y' = y''
+        \end{cases}
+    \end{equation}
+    
+    Тогда уравнение в системе координат «два штриха» будет таким:
+    
+    \begin{equation}
+        9x''^2 - y'^2 = 9
+    \end{equation}
+
+    \begin{equation}
+        \frac{x''^2}{1} - \frac{y'^2}{9} = 1
+    \end{equation}
+
 
 \end{document}
