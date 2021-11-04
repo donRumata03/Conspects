@@ -935,11 +935,52 @@
   \end{note}
 
 
+  \begin{theorem}
+    [Открытость и замкнутость в пространстве и подпространстве]
+    Пусть $D \subset Y \subset X$.
+    \begin{enumerate}
+      \item $D$ открыто в $Y$ $\Longleftrightarrow$ $\exists G$, 
+      открытое в $X$, причём $D = G \cap Y$.
+      \item $D$ закрыто в $Y$ $\Longleftrightarrow$ $\exists F$, 
+      закрытое в $X$, причём $D = G \cap Y$.
+    \end{enumerate}
+  \end{theorem}
+
+
+
+
+
   \section{Компактность, принцип выбора, полнота}
 
   \begin{definition}
     [Покрытие] 
-    Это такое семейство множеств, 
+    Это такое семейство множеств, объединение которого — надмножество исходного.
   \end{definition}
+
+  \begin{statement}
+    Покрытие открыто, если все множества его семейства открыты.
+  \end{statement}
+
+  \begin{definition}
+    [Компактность]
+    Подмножество метрического пространства \textit{компактно}, 
+    если из любого открытого покрытия 
+    можно извлечь конечное подпокрытие.
+  \end{definition}
+
+  \begin{lemma}
+    Свойства компактности равносильны 
+    в метрическом пространстве и в его подпространстве.
+  \end{lemma}
+
+  \begin{theorem}
+    [Простейшие свойства компактов]
+    \begin{enumerate}
+      \item Компактность $\Rightarrow$ замкнутость и ограниченность.
+      \item $X$ компактно, $K \subset X$, $K$ - замкнуто $\Rightarrow$ $K$ - компактно.
+    \end{enumerate}
+  \end{theorem}
+
+
 
   \end{document}
