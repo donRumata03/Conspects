@@ -12,7 +12,7 @@
 
 
 \author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
-\title{Типовик по линейной алгебре модуль 1: Задание 6 «Кривые второго порядка»}
+\title{Типовик по линейной алгебре модуль 1: Задание 7 «Каноническая форма кривых второго порядка»}
 
 \begin{document}
     \tittoc
@@ -124,8 +124,56 @@
     \end{equation}
 
     \begin{equation}
-        \frac{x''^2}{1} - \frac{y'^2}{9} = 1
+        \frac{x''^2}{1^2} - \frac{y'^2}{3^2} = 1
     \end{equation}
+
+    То есть это гипербола, полуось: $1$, мнимая полуось: $3$.
+
+    Таким образом, координаты для системы «один штрих» будут выражаться как:
+    \begin{equation}
+        \begin{cases}
+            x' = x'' - 2 \\
+            y' = y''
+        \end{cases}
+    \end{equation}
+    (То есть сдвиг влево относительно двух штрихов)
+
+    А для изначальной СК:
+    \begin{equation}
+        \begin{cases}
+            x = cos(\alpha) x' - sin(\alpha) y' = cos(\alpha) (x'' - 2) - sin(\alpha) y'' \\
+            y = sin(\alpha) x' + cos(\alpha) y' = sin(\alpha) (x'' - 2) + cos(\alpha) y''
+        \end{cases}
+    \end{equation}
+
+    \section{Иллюстрации}
+    Тогда нарисуем картинки (в обратном порядке):
+
+    (сейчас нет возможности сдать типовик в на руки, поэтому рисунки пока в электронном формате…)
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.7_two_strokes.pdf}
+        \caption{Чертёж в системе координат 2 штриха}
+        \label{fig:main_figure}
+    \end{figure}
+    \FloatBarrier
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.7_one_stroke.pdf}
+        \caption{Чертёж в системе координат 1 штрих}
+        \label{fig:main_figure}
+    \end{figure}
+    \FloatBarrier
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.7_original.pdf}
+        \caption{Чертёж в изначальной системе координат}
+        \label{fig:main_figure}
+    \end{figure}
+    \FloatBarrier
 
 
 \end{document}

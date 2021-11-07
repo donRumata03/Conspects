@@ -1,0 +1,72 @@
+% 12. D = {z : |z + i| ≤ 1, |3π/2 − arg z| < π/3};
+
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре модуль 2: Задание 2 «Комплексные множества»}
+
+\begin{document}
+    \tittoc
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        
+        Изобразить на комплексной плоскости множество D.
+
+        12. $D = \{z : |z + i| \leqslant 1, \left|\frac{3π}{2} − \arg z \right| < \frac{π}{3} \}$
+    \end{statement}
+
+    \section{Решение}
+
+    Первое условие на $z$ ($|z + i| \leqslant 1$) 
+    соответствует окружности с центром в $(0, -1)$ и радиусом $1$.
+
+    Второе — условие на аргумент $z$.
+    \begin{equation}
+        \begin{cases}
+            \arg z - \frac{3π}{2} < \frac{\pi}{3} \\
+            \arg z - \frac{3π}{2} > -\frac{\pi}{3}
+        \end{cases}
+    \end{equation}
+
+    \begin{equation}
+        \begin{cases}
+            \arg z < \frac{3π}{2} + \frac{\pi}{3} = \frac{11\pi}{6} \\
+            \arg z > \frac{3π}{2} - \frac{\pi}{3} = \frac{7\pi}{6} \\
+            \arg z \in [0, 2\pi)
+        \end{cases}
+    \end{equation}
+
+    \begin{equation}
+        \arg z \in \left(\frac{7\pi}{6}, \frac{11\pi}{6}\right)
+    \end{equation}
+
+
+    \section{Иллюстрация}
+
+    К сожалению, нет возможности сдать этот типовик очно, 
+    поэтому пока картинка в электронном виде…
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/2.2_figure.png}
+        \caption{Чертёж}
+        \label{fig:main_figure}
+    \end{figure}
+    \FloatBarrier
+
+
+\end{document}
