@@ -1,0 +1,99 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре модуль 2: Задание 2 «Комплексные множества»}
+
+\begin{document}
+    \tittoc
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        
+        Решить неоднородную систему линейных уравнений.
+
+        \begin{equation}
+            \begin{cases}
+                x_1 − 2x_2 + x_3 − 2x_4 + x_5 = 0 \\
+                2x_1 − 4x_2 − x_3 + x_4 = −9 \\
+                2x_1 − 2x_2 + 2x_3 − 2x_4 + x_5 = 4 \\
+                x_1 + x_3 = 4 \\
+                4x_1 − 6x_2 + 4x_3 − 6x_4 + 3x_5 = 4
+            \end{cases}
+        \end{equation}
+            
+    \end{statement}
+
+    \section{Решение}
+
+    Приведём расширенную матрицу коэффициентов к трапецевидной форме:
+    \begin{multline} 
+        \begin{pmatrix}
+            1 & -2 & 1  & -2 & 1 & \vrule & 0  \\
+            2 & -4 & -1 & 1  & 0 & \vrule & -9 \\
+            2 & -2 & 2  & -2 & 1 & \vrule & 4 \\
+            1 & 0  & 1  & 0  & 0 & \vrule & 4 \\
+            4 & -6 & 4  & -6 & 3 & \vrule & 4 \\
+        \end{pmatrix} \equiv \\ \begin{pmatrix}
+            1 & -2 & 1 & -2 & 1 & \vrule & 0  \\
+            0 & 0 & -3 & 5  & -2 & \vrule & -9 \\
+            0 & 2 & 0  & 2 & -1 & \vrule & 4 \\
+            0 & 2  & 0 & 2  & -1 & \vrule & 4 \\
+            0 & 2 & 0  & 2 & -1 & \vrule & 4 \\
+        \end{pmatrix} \equiv \\ \begin{pmatrix}
+            1 & -2 & 1 & -2 & 1 & \vrule & 0  \\
+            0 & 2 & 0  & 2 & -1 & \vrule & 4 \\
+            0 & 0 & -3 & 5  & -2 & \vrule & -9 \\
+        \end{pmatrix} \equiv \\ \begin{pmatrix}
+            1 & -2 & 1 & \vrule & 2t_1 - t_2  \\
+            0 & 2 & 0  & \vrule & 4 - 2t_1 + t_2 \\
+            0 & 0 & -3 & \vrule & -9 - 5t_1 + 2t_2 \\
+        \end{pmatrix} \equiv \\ \begin{pmatrix}
+            1 & 0 & 1 & \vrule & - 4 + 4 t_1 - 2 t_2 \\
+            0 & 2 & 0  & \vrule & 4 - 2t_1 + t_2 \\
+            0 & 0 & -3 & \vrule & -9 - 5t_1 + 2t_2 \\
+        \end{pmatrix} \equiv \\ \begin{pmatrix}
+            1 & 0 & 0 & \vrule & - 4 + 4 t_1 - 2 t_2 + \frac13 (-9 - 5t_1 + 2t_2) \\
+            0 & 2 & 0  & \vrule & 4 - 2t_1 + t_2 \\
+            0 & 0 & -3 & \vrule & -9 - 5t_1 + 2t_2 \\
+        \end{pmatrix} \equiv \\ \begin{pmatrix}
+            1 & 0 & 0 & \vrule & -7 + \frac73 t_1 - \frac43 t_2 \\
+            0 & 1 & 0  & \vrule & 2 - t_1 + \frac12 t_2 \\
+            0 & 0 & 1 & \vrule & 3 + \frac53 t_1 - \frac23 t_2 \\
+        \end{pmatrix}
+    \end{multline}
+
+    \begin{equation}
+        \begin{pmatrix}
+            x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
+        \end{pmatrix} = \begin{pmatrix}
+            -7 \\ 2 \\ 3 \\ 0 \\ 0
+        \end{pmatrix} + t_1 \begin{pmatrix}
+            \frac73 \\ -1 \\ \frac53 \\ 1 \\ 0
+        \end{pmatrix} + t_2 \begin{pmatrix}
+            -\frac43 \\ \frac12 \\ -\frac23 \\ 0 \\ 1
+        \end{pmatrix}
+    \end{equation}
+
+    Получили частное решение системы плюс линейную оболочку — общее решение однородной системы, 
+    то есть в сумме общее решение НЕоднородной системы. 
+
+    \begin{equation}
+        dim(L) = n - rg(A)
+    \end{equation}
+
+    $rg(A)$ мы уже попутно вывели, как раз получается, что $2 = 5 - 3$
+
+\end{document}
