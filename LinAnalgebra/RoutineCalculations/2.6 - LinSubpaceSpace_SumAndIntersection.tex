@@ -22,6 +22,10 @@
     \begin{statement}
         Условие таково: 
 
+        Подпространство $L_1$ задано как линейная оболочка векторов $A_1$ и $A_2$.
+        Подпространство $L_2$ задано как линейная оболочка векторов $B_1$, $B_2$ и $B_3$.
+        Найти базис и размерность суммы и пересечения этих подпространств.
+
         \begin{gather}
             A_1 = \begin{pmatrix}
                 1 & 3 & −1 & 1 & 2
@@ -53,24 +57,155 @@
                 1 & 5 & 4 & -5 & 3 \\
                 2 & 4 & -1 & -1 & 0
         \end{pmatrix} = \rg \left(\begin{matrix}
-            1 & 3 & 1 & -1 & 1 \\
-            0 & -8 & -5 & 5 & -4 \\
-            0 & 2 & 3 & -2 & 2 \\
-            0 & 2 & 3 & -4 & 2 \\
-            0 & -2 & -3 & 1 & -2
-        \end{matrix}\right) \\ = \rg \left(\begin{matrix}
-            1 & 3 & 1 & -1 & 1 \\
-            0 & -8 & -5 & 5 & -4 \\
-            0 & 8 & 12 & -8 & 8 \\
-            0 & 8 & 12 & -16 & 8 \\
-            0 & -8 & -12 & 4 & -8
-        \end{matrix}\right) = \rg \left(\begin{matrix}
-            1 & 3 & 1 & -1 & 1 \\
-            0 & 8 & 12 & -8 & 8 \\
-            0 & 0 & 7 & -3 & 4 \\
-            0 & 0 & 0 & -8 & 0 \\
-            0 & 0 & 0 & -4 & 0
-        \end{matrix}\right)
+            1 & 0 & 1 & -1 & 1 \\
+            3 & -8 & -2 & 2 & -1 \\
+            -1 & 2 & 2 & -1 & 1 \\
+            1 & 2 & 4 & -5 & 3 \\
+            2 & -2 & -1 & -1 & 0
+        \end{matrix}\right) = \\ \rg \left(\begin{matrix}
+            1 & 0 & 0 & 0 & 0 \\
+            3 & -8 & -5 & 5 & -4 \\
+            -1 & 2 & 3 & -2 & 2 \\
+            1 & 2 & 3 & -4 & 2 \\
+            2 & -2 & -3 & 1 & -2
+        \end{matrix}\right) = 1 + \rg \left(\begin{matrix}
+            -8 & -5 & 5 & -4 \\
+            2 & 3 & -2 & 2 \\
+            2 & 3 & -4 & 2 \\
+            -2 & -3 & 1 & -2
+        \end{matrix}\right) \\ = 1 + \rg \left(\begin{matrix}
+           -18 & 10 &  5 & 6 \\
+           -2 & -3 & -2 &  -2 \\
+           -6 & -9 & -4 &  -6 \\
+            0 & 0  &  1 & 0
+        \end{matrix}\right) = 2 + \rg \left(\begin{matrix}
+            -18 & 10 & 6 \\
+            -2 & -3 & -2 \\
+            -6 & -9 & -6
+         \end{matrix}\right) \\ = 2 + \rg \left(\begin{matrix}
+            -9 & 5 & 3 \\
+            2 & 3 & 2 \\
+            2 & 3 & 2
+         \end{matrix}\right) = 2 + \rg \left(\begin{matrix}
+            -9 & 5 & 3 \\
+            2 & 3 & 2
+         \end{matrix}\right) = 4
     \end{multline}
+
+    То есть базисными векторами берём $A_1, A_2, B_1, B_2$.
+
+    Размерность суммы: $4$.
+
+    \section{Базис и размерность пересечения}
+
+    Размерность пересечения можно найти сразу:
+
+    \begin{equation}
+        \dim L_1 \cap L_2 = \dim A + \dim B - \dim A + B = 1
+    \end{equation}
+
+    Вектор принадлежит пересечению подпространств 
+    $\Leftrightarrow$ он может быть разложен как 
+    по векторам одного порпространства, так и по векторам другого.
+
+    \begin{equation}
+        v \in \L_1 \cap L_2 \Leftrightarrow v 
+        = \sum_{i = 1}^2 A_i x_i 
+        = \sum_{i = 1}^3 B_i y_i
+    \end{equation}
+
+    Тогда мы получим СЛОУ:
+    
+    \begin{equation}
+        x_1 A_1 + x_2 A_2 - y_1 B_1 - y_2 B_2 - y_3 B_3 = \mathbb{0}
+    \end{equation}
+
+    Так как $A_1, A_2, B_1, B_2$ — это базис, выбираем $y_3$ в качестве параметра.
+
+    (примечание — знак эквивалентности в LaTeX \texttt{\\equiv} 
+    отображается как $\equiv$)
+
+    \begin{multline}
+        \begin{pmatrix}
+            1 & 3 & -1 & 1 & \vrule & t \\
+            3 & 1 & 2 & -2 & \vrule & -t \\
+            -1 & -1 & -2 & 1 & \vrule & t \\
+            1 & 5 & -4 & 5 & \vrule & 3t \\
+            2 & 4 & 1 & 1 & \vrule & 0
+        \end{pmatrix} \equiv \begin{pmatrix}
+            1 & 3 & -1 & 1 & \vrule & t \\
+            0 & -8 & 5 & -5 & \vrule & -4t \\
+            0 & 2 & -3 & 2 & \vrule & 2t \\
+            0 & 2 & -3 & 4 & \vrule & 2t \\
+            0 & -2 & 3 & -1 & \vrule & -2t
+        \end{pmatrix} \\ \equiv \begin{pmatrix}
+            1 & 3 & -1 & 1 & \vrule & t \\
+            0 & 2 & -3 & 2 & \vrule & 2t \\
+            0 & -8 & 5 & -5 & \vrule & -4t \\
+            0 & 2 & -3 & 4 & \vrule & 2t \\
+            0 & -2 & 3 & -1 & \vrule & -2t
+        \end{pmatrix} \equiv \begin{pmatrix}
+            1 & 3 & -1 & 1 & \vrule & t \\
+            0 & 2 & -3 & 2 & \vrule & 2t \\
+            0 & 0 & -7 & 3 & \vrule & 4t \\
+            0 & 0 & 0 & 2 & \vrule & 0 \\
+            0 & 0 & 0 & 1 & \vrule & 0
+        \end{pmatrix} \\ \equiv \begin{pmatrix}
+            1 & 3 & -1 & 0 & \vrule & t \\
+            0 & 2 & -3 & 0 & \vrule & 2t \\
+            0 & 0 & -7 & 0 & \vrule & 4t \\
+            0 & 0 & 0  & 1 & \vrule & 0
+        \end{pmatrix} \equiv \begin{pmatrix}
+            21 & 62 & -21 & 0 & \vrule & 21t \\
+            0 & 14  & -21 & 0 & \vrule & 14t \\
+            0 & 0   & -21 & 0 & \vrule & 12t \\
+            0 & 0   & 0  & 1 & \vrule & 0
+        \end{pmatrix} \\ \equiv \begin{pmatrix}
+            21 & 62 & 0   & 0 & \vrule & 9t \\
+            0 & 14  & 0   & 0 & \vrule & 2t \\
+            0 & 0   & -21 & 0 & \vrule & 12t \\
+            0 & 0   & 0   & 1 & \vrule & 0
+        \end{pmatrix} \equiv \begin{pmatrix}
+            147 & 434 & 0   & 0 & \vrule & 63t \\
+            0 & 434  & 0   & 0 & \vrule & 62t \\
+            0 & 0   & -21 & 0 & \vrule & 12t \\
+            0 & 0   & 0   & 1 & \vrule & 0
+        \end{pmatrix} \\ \equiv \begin{pmatrix}
+            147 & 0 & 0   & 0 & \vrule & 1t \\
+            0 & 434  & 0   & 0 & \vrule & 62t \\
+            0 & 0   & -21 & 0 & \vrule & 12t \\
+            0 & 0   & 0   & 1 & \vrule & 0
+        \end{pmatrix} \equiv \begin{pmatrix}
+            1 & 0 & 0   & 0 & \vrule & \frac{1}{147} t \\
+            0 & 1  & 0   & 0 & \vrule & \frac17 t \\
+            0 & 0   & 1 & 0 & \vrule & - \frac{4}{7}t \\
+            0 & 0   & 0   & 1 & \vrule & 0
+        \end{pmatrix}
+    \end{multline}
+
+    То есть
+
+    \begin{equation}
+        \begin{pmatrix}
+            x_1 \\ x_2 \\ y_ 1 \\ y_2 \\ y_3
+        \end{pmatrix} = t \begin{pmatrix}
+            \frac{1}{147} \\ \frac17 \\ -\frac{4}{7} \\ 0 \\ 1
+        \end{pmatrix} \equiv t \begin{pmatrix}
+            1 \\ 21 \\ -84 \\ 0 \\ 147
+        \end{pmatrix}
+    \end{equation}
+
+    Тогда единственный вектор пересечения представим как:
+
+    \begin{equation}
+        v = 1 A_1 + 21 A_2 = \begin{pmatrix}
+            64 \\ 24 \\ -22 \\ 106 \\ 86
+        \end{pmatrix} \approx -84 B_1 + 147 B_3 = \begin{pmatrix}
+            63 \\ 21 \\ -21 \\ 105 \\ 84
+        \end{pmatrix}
+    \end{equation}
+
+    Примерно равно получилось, потому что я где-то 
+    совсем чуть-чуть обсчитался, но суть понятна.
 
 \end{document}

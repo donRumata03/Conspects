@@ -1,0 +1,251 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре «Дизъюнктные подпространства»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+
+        \begin{enumerate}
+            \item Найдите общее решение с.л.о.у. – линейное подпространство $L$.
+            \item Для линейного подпространства $L$ постройте какое-либо прямое дополнение $L'$,
+            дополнив ф.с.р. с.л.о.у. до базиса всего пространства векторами канонического базиса.
+            \item Найдите проекции $x_1$ и $x_2$ вектора $x$ на подпространство L параллельно $L'$, и на
+            подпространство $L'$ параллельно $L$, соответственно.
+            \item Убедитесь, что $x_1$ + $x_2$ = $x$. Выполните проверку, подставив $x_1$ в исходную СЛОУ.
+        \end{enumerate}
+        
+        В п.3 и п.4 можно использовать матричный калькулятор для решения с.л.н.у. и
+        проверки, предварительно выписав все системы, для которых он будет использован.
+
+        Задано $L$ через СЛОУ с матрицей коэффициентов:
+        \begin{equation}
+            A = \begin{pmatrix}
+                1 & 3 & -1 & 12 & -1 \\
+                2 & -2 & 1 & -10 & 1 \\
+                3 & 1 & 0 & 2 & 0
+            \end{pmatrix}
+        \end{equation}
+
+        А также
+        \begin{equation}
+            x = \begin{pmatrix}
+                2 & -2 & -5 & 13 & 1
+            \end{pmatrix}^T
+        \end{equation}
+    \end{statement}
+
+    \section{Нахождение L}
+
+    \begin{multline}
+        \begin{pmatrix}
+            1 & 3 & -1 & 12 & -1 & \vrule & 0 \\
+            2 & -2 & 1 & -10 & 1 & \vrule & 0 \\
+            3 & 1 & 0 & 2 & 0 & \vrule & 0
+        \end{pmatrix} \equiv \left(\begin{matrix}
+            1 & 3 & -1 & 12 & -1 & 0 \\
+            0 & -8 & 3 & -34 & 3 & 0 \\
+            0 & -8 & 3 & -34 & 3 & 0
+        \end{matrix}\right) \\ \equiv \left(\begin{matrix}
+            1 & 3 & -1 & 12 & -1 & 0 \\
+            0 & 1 & \frac{-3}{8} & \frac{17}{4} & \frac{-3}{8} & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+    В конце концов, за параметры берём 
+    \begin{equation}
+        \begin{cases}
+            t_1 = x_3 \\
+            t_2 = x_4 \\
+            t_3 = x_5
+        \end{cases}
+    \end{equation}
+
+    И тогда 
+    
+    \begin{multline}
+        \begin{pmatrix}
+            x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
+        \end{pmatrix} = 
+        t_1 \left(\begin{matrix}
+            \frac{-1}{8} \\ \frac{3}{8} \\ 1 \\ 0 \\ 0
+        \end{matrix}\right) + 
+        t_2 \left(\begin{matrix}
+            \frac{3}{4} \\
+            \frac{-17}{4} \\
+            0 \\
+            1 \\
+            0
+        \end{matrix}\right) + 
+        t_3 \left(\begin{matrix}
+            \frac{-1}{8} \\
+            \frac{3}{8} \\
+            0 \\
+            0 \\
+            1
+        \end{matrix}\right)  \\ \equiv t_1 \left(\begin{matrix}
+            -1 \\ 3 \\ 8 \\ 0 \\ 0
+        \end{matrix}\right) + 
+        t_2 \left(\begin{matrix}
+            3 \\
+            -17 \\
+            0 \\
+            4 \\
+            0
+        \end{matrix}\right) + 
+        t_3 \left(\begin{matrix}
+            -1 \\
+            3 \\
+            0 \\
+            0 \\
+            8
+        \end{matrix}\right)
+    \end{multline}
+
+
+
+    \section{Нахождение прямого дополнения $L'$ к $L$}
+
+    Можно дописать к этим векторам все векторы базиса и найти ранг,
+    попутно определяя базис. Но можно заметить, что 
+    
+    \begin{equation}
+        \rg \left(\begin{matrix}
+            -1 & 3 & 8 & 0 & 0 \\
+            3 & -17 & 0 & 4 & 0 \\
+            -1 & 3 & 0 & 0 & 8 \\
+            1 & 0 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 & 0
+        \end{matrix}\right) = 5
+    \end{equation}
+
+    И тогда:
+    \begin{gather}
+        L' = span(b_1, b_2) \\
+        B_1 = \begin{pmatrix}
+            1 & 0 & 0 & 0 & 0
+        \end{pmatrix} \\
+        B_2 = \begin{pmatrix}
+            0 & 1 & 0 & 0 & 0
+        \end{pmatrix}
+    \end{gather}
+
+    \section{Разложить вектор x по L и $L'$}
+
+    То есть 
+    \begin{equation}
+        x = y_1 A_1 + y_2 A_2 + y_3 A_3 + z_1 B_1 + z_2 B_2
+    \end{equation}
+
+    И тогда
+    \begin{gather}
+        x_1 = y_1 A_1 + y_2 A_2 + y_3 A_3 \\
+        x_2 = z_1 B_1 + z_2 B_2        
+    \end{gather}
+
+    Ну, давайте решим систему для разложения:
+
+    \begin{equation}
+        \left(\begin{matrix}
+            -1 & 3 & -1 & 1 & 0 \\
+            3 & -17 & 3 & 0 & 1 \\
+            8 & 0 & 0 & 0 & 0 \\
+            0 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 8 & 0 & 0
+        \end{matrix}\right) \begin{pmatrix}
+                y_1 \\ y_2 \\ y_3 \\ z_1 \\ z_2
+        \end{pmatrix} = \begin{pmatrix}
+            2 \\ -2 \\ -5 \\ 13 \\ 1
+        \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        \begin{pmatrix}
+            y_1 \\ y_2 \\ y_3 \\ z_1 \\ z_2
+        \end{pmatrix} =
+        \left(\begin{matrix}
+            \frac{-5}{8} \\
+            \frac{13}{4} \\
+            \frac{1}{8} \\
+            \frac{-33}{4} \\
+            \frac{219}{4}
+            \end{matrix}\right)
+    \end{equation}
+
+    Тогдa:
+    
+    \begin{gather}
+        x_1 = y_1 A_1 + y_2 A_2 + y_3 A_3 = \begin{pmatrix}
+            \frac{41}{4} \\ -\frac{227}{4} \\ -5 \\ 13 \\ 1
+        \end{pmatrix} \\
+        x_2 = z_1 B_1 + z_2 B_2 = \begin{pmatrix}
+            \frac{-33}{4} \\
+            \frac{219}{4} \\
+            0 \\ 0 \\ 0
+        \end{pmatrix}
+    \end{gather}
+
+    Проверяем
+    \begin{equation}
+        x_1 + x_2 = \begin{pmatrix}
+            2 \\ -2 \\ -5 \\ 13 \\ 1            
+        \end{pmatrix} = x
+    \end{equation}
+
+    Подставив $x_1$ в систему, заметим, что он является решением, 
+    а $x_2$ — нет. Проверка успешна.
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & 3 & -1 & 12 & -1 \\
+            2 & -2 & 1 & -10 & 1 \\
+            3 & 1 & 0 & 2 & 0
+            \end{matrix}\right) \left(\begin{matrix}
+                \frac{41}{4} \\
+                \frac{-227}{4} \\
+                -5 \\
+                13 \\
+                1
+                \end{matrix}\right) = \left(\begin{matrix}
+                    0 \\
+                    0 \\
+                    0
+                    \end{matrix}\right) = \mathbb{0}
+    \end{equation}
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & 3 & -1 & 12 & -1 \\
+            2 & -2 & 1 & -10 & 1 \\
+            3 & 1 & 0 & 2 & 0
+        \end{matrix}\right) \left(\begin{matrix}
+            \frac{-33}{4} \\
+            \frac{219}{4} \\
+            0 \\
+            0 \\
+            0
+        \end{matrix}\right) = \left(\begin{matrix}
+            156 \\
+            -126 \\
+            30
+        \end{matrix}\right) \neq \mathbb{0}
+    \end{equation}
+
+\end{document}

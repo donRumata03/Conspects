@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре «Дополнительное ДЗ №1»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        Линейные подпространства $L_1, L_2$ заданы системами линейных уравнений.
+        
+        \begin{enumerate}
+            \item Найти базисы линейных подпространств 
+            \item Доказать, что являются прямыми дополнениями друг друга до $\sR^5$
+            \item Марица перехода от канонического базиса к базису суммы
+            \item Разложить вектор $x = \begin{pmatrix}
+                2 & 4 & -2 & 5 & -3
+            \end{pmatrix}^T$ по $L_1, L_2$
+        \end{enumerate}
+    \end{statement}
+
+    \section{Нахождение базисных векторов}
+
+    Для начала решим системы:
+    \begin{equation}
+        L_1 = x_2 \left(\begin{matrix}
+            \frac{1}{2} \\
+            1 \\
+            0 \\
+            0 \\
+            0
+        \end{matrix}\right) + x_5 \left(\begin{matrix}
+            \frac{1}{2} \\
+            0 \\
+            -4 \\
+            0 \\
+            1
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        L_2 = x_3 \left(\begin{matrix}
+            2 \\
+            4 \\
+            1 \\
+            0 \\
+            0
+        \end{matrix}\right) + x_4 \left(\begin{matrix}
+            1 \\
+            2 \\
+            0 \\
+            1 \\
+            0
+            \end{matrix}\right) + x_5 \begin{pmatrix}
+            0 \\ 0\\0\\0\\1
+        \end{pmatrix}
+    \end{equation}
+
+    \section{Доказательство прямодополняемости}
+    Заметим, что ранг сконкатенированной матрицы, 
+    то есть размерность суммы, равен 5, 
+    а значит, пересечение — $\{\mathbb{0}\}$, 
+    то есть они действительно дизъюнктны и в сумме дают $\sR^5$.
+
+\end{document}
