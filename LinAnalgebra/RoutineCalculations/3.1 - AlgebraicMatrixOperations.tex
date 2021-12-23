@@ -1,0 +1,213 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре модуль 3: Задание 1 «Алгебраические операции с матрицами»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        
+        Даны две квадратные матрицы A и B.
+        \begin{enumerate}
+            \item Вычислить коммутатор матриц $[A, B] = A · B − B · A$
+            \item Найти матрицу $A^{−1}$ методом Гаусса. Проверить, что $A \cdot A^{-1} = E$.
+            \item Найти матрицу $B^{−1}$ методом методом Гаусса.
+            \item Найти значение полинома $f(x) = 2x^2 − 3x + 5$ от матрицы $A$. 
+        \end{enumerate}
+        
+        \begin{equation}
+            A = \begin{pmatrix}
+                3 & 1 & 2 \\
+                −1 & 0 & 2 \\
+                1 & 2 & 1
+            \end{pmatrix}, B = \begin{pmatrix}
+                0 & −1 & 2 \\
+                2 & 1 & 1 \\
+                3 & 7 & 1
+            \end{pmatrix}
+        \end{equation}
+            
+    \end{statement}
+
+    \section{Решение}
+
+    \subsection{Подзадача 1}
+    
+    \begin{equation}
+        [A, B] = A · B − B · A
+    \end{equation}
+
+    \begin{multline}
+        AB = \left(\begin{matrix}
+            3\cdot0+1\cdot2+2\cdot3 & 3\cdot\left(-1\right)+1\cdot1+2\cdot7 & 3\cdot2+1\cdot1+2\cdot1 \\
+            -1\cdot0+0\cdot2+2\cdot3 & -1\cdot\left(-1\right)+0\cdot1+2\cdot7 & -1\cdot2+0\cdot1+2\cdot1 \\
+            1\cdot0+2\cdot2+1\cdot3 & 1\cdot\left(-1\right)+2\cdot1+1\cdot7 & 1\cdot2+2\cdot1+1\cdot1
+            \end{matrix}\right) \\ = \left(\begin{matrix}
+                8 & 12 & 9 \\
+                6 & 15 & 0 \\
+                7 & 8 & 5
+                \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        BA = \left(\begin{matrix}
+            0\cdot3+\left(-1\right)\cdot\left(-1\right)+2\cdot1 & 0\cdot1+\left(-1\right)\cdot0+2\cdot2 & 0\cdot2+\left(-1\right)\cdot2+2\cdot1 \\
+            2\cdot3+1\cdot\left(-1\right)+1\cdot1 & 2\cdot1+1\cdot0+1\cdot2 & 2\cdot2+1\cdot2+1\cdot1 \\
+            3\cdot3+7\cdot\left(-1\right)+1\cdot1 & 3\cdot1+7\cdot0+1\cdot2 & 3\cdot2+7\cdot2+1\cdot1
+            \end{matrix}\right) \\ = \left(\begin{matrix}
+                3 & 4 & 0 \\
+                6 & 4 & 7 \\
+                3 & 5 & 21
+                \end{matrix}\right)
+    \end{multline}
+
+    \begin{equation}
+        [A, B] = \left(\begin{matrix}
+            8 & 12 & 9 \\
+            6 & 15 & 0 \\
+            7 & 8 & 5
+            \end{matrix}\right)
+         - \left(\begin{matrix}
+                3 & 4 & 0 \\
+                6 & 4 & 7 \\
+                3 & 5 & 21
+            \end{matrix}\right) = \left(\begin{matrix}
+                5 & 8 & 9 \\
+                0 & 11 & -7 \\
+                4 & 3 & -16
+                \end{matrix}\right)
+    \end{equation}
+
+    \subsection{Подзадача 2}
+
+    Найдём $A^{-1}$ методом Гаусса.
+    С помощью элементарных преобразований над строками добьемся того,
+    чтобы слева оказалась единичная матрица.
+
+    \begin{multline}
+        \left(\begin{matrix}
+            3 & 1 & 2 &  \vrule & 1 & 0 & 0 \\
+            -1 & 0 & 2 & \vrule & 0 & 1 & 0 \\
+            1 & 2 & 1 &  \vrule & 0 & 0 & 1
+            \end{matrix}\right) \\ \equiv \left(\begin{matrix}
+                1 & \frac{1}{3} & \frac{2}{3} &               \vrule & \frac{1}{3} & 0 & 0 \\                -1 & 0 & 2 &                                  \vrule & 0 & 1 & 0 \\
+                1 & 2 & 1 &                                   \vrule & 0 & 0 & 1
+                \end{matrix}\right) \\ \equiv \left(\begin{matrix}
+                    1 & \frac{1}{3} & \frac{2}{3} & \vrule & \frac{1}{3} & 0 & 0 \\
+                    0 & \frac{1}{3} & \frac{8}{3} & \vrule & \frac{1}{3} & 1 & 0 \\
+                    0 & \frac{5}{3} & \frac{1}{3} & \vrule & \frac{-1}{3} & 0 & 1
+                    \end{matrix}\right) \\ \equiv \left(\begin{matrix}
+                        1 & \frac{1}{3} & \frac{2}{3} & \vrule & \frac{1}{3} & 0 & 0 \\
+                        0 & 1 & 8 &                     \vrule & 1 & 3 & 0 \\
+                        0 & 5 & 1 &                     \vrule &-1 & 0 & 3
+                        \end{matrix}\right) \\ \equiv \left(\begin{matrix}
+                            1 & \frac{1}{3} & \frac{2}{3} & \frac{1}{3} & 0 & 0 \\
+                            0 & 1 & 8 &                     1 & 3 & 0 \\
+                            0 & 0 & -13 &                   -2 & -5 & 1
+                            \end{matrix}\right) \\ \equiv \left(\begin{matrix}
+                                13 & 0 & 0 & \vrule & 4 & -3 & -2 \\
+                                0 & 13 & 0 & \vrule & -3 & -1 & 8 \\
+                                0 & 0 & 13 & \vrule & 2 & 5 & -1
+                                \end{matrix}\right)
+    \end{multline}
+
+    Тогда:
+
+    \begin{equation}
+        A^{-1} = \left(\begin{matrix}
+            \frac{4}{13} & \frac{-3}{13} & \frac{-2}{13} \\
+            \frac{-3}{13} & \frac{-1}{13} & \frac{8}{13} \\
+            \frac{2}{13} & \frac{5}{13} & \frac{-1}{13}
+            \end{matrix}\right)
+    \end{equation}
+
+    Проверим — подходит:
+
+    \begin{multline}
+        A A^{-1} = \left(\begin{matrix}
+            3 & 1 & 2 \\
+            -1 & 0 & 2 \\
+            1 & 2 & 1
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            \frac{4}{13} & \frac{-3}{13} & \frac{-2}{13} \\
+            \frac{-3}{13} & \frac{-1}{13} & \frac{8}{13} \\
+            \frac{2}{13} & \frac{5}{13} & \frac{-1}{13}
+        \end{matrix}\right) \\ = \left(\begin{matrix}
+            3\cdot \left(\frac{4}{13}\right)+1\cdot \left(\frac{-3}{13}\right)+2\cdot \left(\frac{2}{13}\right) & 3\cdot \left(\frac{-3}{13}\right)+1\cdot \left(\frac{-1}{13}\right)+2\cdot \left(\frac{5}{13}\right) & 3\cdot \left(\frac{-2}{13}\right)+1\cdot \left(\frac{8}{13}\right)+2\cdot \left(\frac{-1}{13}\right) \\
+            -1\cdot \left(\frac{4}{13}\right)+0\cdot \left(\frac{-3}{13}\right)+2\cdot \left(\frac{2}{13}\right) & -1\cdot \left(\frac{-3}{13}\right)+0\cdot \left(\frac{-1}{13}\right)+2\cdot \left(\frac{5}{13}\right) & -1\cdot \left(\frac{-2}{13}\right)+0\cdot \left(\frac{8}{13}\right)+2\cdot \left(\frac{-1}{13}\right) \\
+            1\cdot \left(\frac{4}{13}\right)+2\cdot \left(\frac{-3}{13}\right)+1\cdot \left(\frac{2}{13}\right) & 1\cdot \left(\frac{-3}{13}\right)+2\cdot \left(\frac{-1}{13}\right)+1\cdot \left(\frac{5}{13}\right) & 1\cdot \left(\frac{-2}{13}\right)+2\cdot \left(\frac{8}{13}\right)+1\cdot \left(\frac{-1}{13}\right)
+        \end{matrix}\right) \\ = \left(\begin{matrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{matrix}\right)
+    \end{multline}
+    
+    \section{Подзадача 3}
+    Найдём обратную матрицу к $B$ (тоже методом Гаусса).
+
+
+    \newpage
+    \newpage
+    
+    \section{Подзадача 4}
+
+    Найдём сначала $A^2$:
+
+    \begin{multline}
+        A^2 = A \cdot A = \left(\begin{matrix}
+            3 & 1 & 2 \\
+            -1 & 0 & 2 \\
+            1 & 2 & 1
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            3 & 1 & 2 \\
+            -1 & 0 & 2 \\
+            1 & 2 & 1
+        \end{matrix}\right) \\ = \left(\begin{matrix}
+            3\cdot 3+1\cdot \left(-1\right)+2\cdot 1 & 3\cdot 1+1\cdot 0+2\cdot 2 & 3\cdot 2+1\cdot 2+2\cdot 1 \\
+            -1\cdot 3+0\cdot \left(-1\right)+2\cdot 1 & -1\cdot 1+0\cdot 0+2\cdot 2 & -1\cdot 2+0\cdot 2+2\cdot 1 \\
+            1\cdot 3+2\cdot \left(-1\right)+1\cdot 1 & 1\cdot 1+2\cdot 0+1\cdot 2 & 1\cdot 2+2\cdot 2+1\cdot 1
+            \end{matrix}\right) = \left(\begin{matrix}
+                10 & 7 & 10 \\
+                -1 & 3 & 0 \\
+                2 & 3 & 7
+            \end{matrix}\right)
+    \end{multline}
+
+    Тогда:
+    \begin{multline}
+        f(A) = 2 \left(\begin{matrix}
+            10 & 7 & 10 \\
+            -1 & 3 & 0 \\
+            2 & 3 & 7
+        \end{matrix}\right) − 3 \left(\begin{matrix}
+            3 & 1 & 2 \\
+            -1 & 0 & 2 \\
+            1 & 2 & 1
+        \end{matrix}\right) + 5 \left(\begin{matrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{matrix}\right) = \left(\begin{matrix}
+            -19 & -19 & -26 \\
+            1 & -4 & 4 \\
+            -4 & -5 & -14
+        \end{matrix}\right)
+    \end{multline}
+    
+\end{document}
