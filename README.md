@@ -16,6 +16,7 @@ ITMO CT M3138 useful resources including:
 
 ## Awaited subjects:
 - FuckToAnal Programming
+- Programming PornoDicks (Paradigms)
 
 ## Brief technical description 
 
