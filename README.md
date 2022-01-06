@@ -14,7 +14,17 @@ ITMO CT M3138 useful resources including:
 - [Computer architecture](CUMputerAAAAAAAAH)
 - [Linear algebra](LinAnalgebra)
 
+## Awaited subjects:
+- FuckToAnal Programming
+- Programming PornoDicks (Paradigms)
+
 ## Brief technical description 
+
+
+            
+    
+
+          
 
 There are two major conspect formats:
 - LaTeX
