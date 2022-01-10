@@ -32,7 +32,9 @@
 
     \section{Решение}
 
-    Для начала найдём эти точки пересечения, решив квадратное уравнение:
+    \ornamentheader{Что исправлено? Раньше не учитывалось, что, исходя из формулировки задачи оси гиперболы могут «совпадать с осями координат» двумя разными способами}
+
+    Для начала найдём эти точки пересечения, решив квадратное уравнение (для обоих случаев они совпадают):
     \begin{gather}
         \begin{cases}
             x^2 = 2y \\
@@ -51,8 +53,17 @@
 
     То есть гипербола должна проходить через точки $(-2, 2)$ и $(3, 4.5)$.
 
-    У параболы, указанной в условии, остаётся только два переметра — настоящая и мнимая полуоси.
-    Найдём их значения, потровав, что гипербола проходит там, где надо.
+    У параболы, указанной в условии, остаётся только два параметра — главная и мнимая полуоси.
+    Причём есть два варианта их ориертации: \begin{enumerate}
+        \item Главная полуось совпадает с осью $OX$, минимая — с осью $OY$.
+        \item Наоборот: Главная полуось совпадает с осью $OY$, минимая — с осью $OX$.
+    \end{enumerate}.
+
+    Рассмотрим оба случая.
+
+    \subsection{Случай 1}
+
+    Найдём их значения, потребовав, что гипербола проходит там, где надо.
 
     \begin{gather}
         \begin{cases}
@@ -61,7 +72,7 @@
         \end{cases}
     \end{gather}
 
-    За $\alpha$ обозначим $a^2$, за $\beta$ — $b^2$, помним, что оба параметра больше нуля.
+    За $\alpha$ обозначим $a^2$, за $\beta$ — $b^2$, помним, что оба параметра больше нуля.
 
     \begin{gather}
         \begin{cases}
@@ -76,19 +87,64 @@
         \beta = \frac{13}{4}\alpha = \frac{\cancel{13}}{\cancel{4}} \cdot \frac{9 \cdot \cancel{4}}{\cancel{13}} = 9 \Longrightarrow b = \sqrt{\beta} = 3
     \end{gather}
 
-    Таким образом, уравнение гиперболы:
+    Таким образом, уравнение гиперболы в этом случае:
     \begin{equation}
         \frac{13}{36} x^2 - \frac{y^2}{9} = 1
     \end{equation}
 
 
-    \section{Иллюстрация}
+    \subsection{Случай 2}
 
-    (в силу дистанционности режима пока картинки будет отрендерены в виде векторной графики…)
+    Аналогичные уравнения, но с переменой главной и мнимой полуосей местами 
+    гарантируют нам прохождение через точки пересечения:
+    
+    \begin{gather}
+        \begin{cases}
+            \frac{(-2)^2}{b^2} - \frac{2^2}{a^2} = 1 \\
+            \frac{3^2}{b^2} - \frac{\left(\frac{9}{2}\right)^2}{a^2} = 1
+        \end{cases}
+    \end{gather}
+
+    Всё ещё за $\alpha$ обозначим $a^2$, за $\beta$ — $b^2$. И всё ещё помним, что оба параметра больше нуля.
+
+    \begin{gather}
+        \begin{cases}
+            4\alpha - 4\beta = \alpha\beta \\
+            9\alpha - \frac{81}{4} \beta = \alpha\beta
+        \end{cases} \\
+        4\alpha - 4\beta = 9\alpha - \frac{81}{4} \beta \\
+        \beta \left( \frac{81}{4} - 4 \right) = 5\alpha \\
+        \beta \left( \frac{65}{4} \right) = 5\alpha \\
+        \begin{cases}
+            \alpha = \beta \left( \frac{65}{20} \right) \\
+            4\alpha - 4\beta = \alpha\beta
+        \end{cases} \\
+        \begin{cases}
+            \alpha = \beta \left( \frac{65}{20} \right) \\
+            4 \cancel{\beta} \left( \frac{65}{20} \right) - 4\cancel{\beta} = \cancel{\beta} \left( \frac{65}{20} \right)\beta
+        \end{cases} \\
+        4 \left( \frac{65}{20} \right) - 4 = \frac{65}{20} \beta \\
+        \beta = \frac{4 \left( \frac{65}{20} \right) - 4}{\frac{65}{20}} = \frac{36}{13} \\
+        \alpha = \frac{65}{20} \times \frac{36}{13} = 9
+    \end{gather}
+
+    Кто бы мог подумать: мы решили то же уравнение, только с $\alpha$ и $\beta$ изменёнными местами.
+    И получили тот же самый ответ. Следовательно, он уж точно верный.
+
+    Соответственно, уравнение второй гиперболы:
+    \begin{equation}
+        \frac{13}{36} y^2 - \frac{x^2}{9} = 1
+    \end{equation}
+
+
+    \section{Иллюстрация}
+    
+    (здесь будет нарисован чертёж)
+    
 
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=\textwidth]{resources/1.6_figure.pdf}
+        \includegraphics[width=\textwidth]{resources/1.6_grid.png}
         \caption{Чертёж}
         \label{fig:main_figure}
     \end{figure}
