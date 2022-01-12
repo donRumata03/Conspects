@@ -39,6 +39,10 @@
     \section{Решение}
 
     Приведём расширенную матрицу коэффициентов к трапецевидной форме:
+
+    (напоминаю, что $\equiv$ — значок эквивалентности в latex)
+
+
     \begin{multline} 
         \begin{pmatrix}
             1 & -2 & 1  & -2 & 1 & \vrule & 0  \\
@@ -57,21 +61,21 @@
             0 & 2 & 0  & 2 & -1 & \vrule & 4 \\
             0 & 0 & -3 & 5  & -2 & \vrule & -9 \\
         \end{pmatrix} \equiv \\ \begin{pmatrix}
-            1 & -2 & 1 & \vrule & 2t_1 - t_2  \\
-            0 & 2 & 0  & \vrule & 4 - 2t_1 + t_2 \\
-            0 & 0 & -3 & \vrule & -9 - 5t_1 + 2t_2 \\
+            3 & -6 & 3 & -6 & 3 & \vrule & 0  \\
+            0 & 2 & 0  & 2 & -1 & \vrule & 4 \\
+            0 & 0 & -3 & 5  & -2 & \vrule & -9 \\
         \end{pmatrix} \equiv \\ \begin{pmatrix}
-            1 & 0 & 1 & \vrule & - 4 + 4 t_1 - 2 t_2 \\
-            0 & 2 & 0  & \vrule & 4 - 2t_1 + t_2 \\
-            0 & 0 & -3 & \vrule & -9 - 5t_1 + 2t_2 \\
+            3 & 0 & 0 & 5 & -2 & \vrule & 3 \\
+            0 & 2 & 0  & 2 & -1 & \vrule & 4 \\
+            0 & 0 & -3 & 5  & -2 & \vrule & -9 \\
         \end{pmatrix} \equiv \\ \begin{pmatrix}
-            1 & 0 & 0 & \vrule & - 4 + 4 t_1 - 2 t_2 + \frac13 (-9 - 5t_1 + 2t_2) \\
-            0 & 2 & 0  & \vrule & 4 - 2t_1 + t_2 \\
-            0 & 0 & -3 & \vrule & -9 - 5t_1 + 2t_2 \\
+            3 & 0 & 0 & \vrule & 3 -5 t_1 + 2 t_2 \\
+            0 & 2 & 0  & \vrule & 4 -2t_1 + t_2 \\
+            0 & 0 & -3 & \vrule & -9 -5t_1 + 2t_2
         \end{pmatrix} \equiv \\ \begin{pmatrix}
-            1 & 0 & 0 & \vrule & -7 + \frac73 t_1 - \frac43 t_2 \\
-            0 & 1 & 0  & \vrule & 2 - t_1 + \frac12 t_2 \\
-            0 & 0 & 1 & \vrule & 3 + \frac53 t_1 - \frac23 t_2 \\
+            1 & 0 & 0 & \vrule & 1 -\frac53 t_1 + \frac23 t_2 \\
+            0 & 1 & 0  & \vrule & 2 -t_1 + \frac12 t_2 \\
+            0 & 0 & 1 & \vrule & 3 + \frac53 t_1 - \frac23 t_2
         \end{pmatrix}
     \end{multline}
 
@@ -79,15 +83,21 @@
         \begin{pmatrix}
             x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
         \end{pmatrix} = \begin{pmatrix}
-            -7 \\ 2 \\ 3 \\ 0 \\ 0
+            1 \\ 2 \\ 3 \\ 0 \\ 0
         \end{pmatrix} + t_1 \begin{pmatrix}
-            \frac73 \\ -1 \\ \frac53 \\ 1 \\ 0
+            -\frac53 \\ -1 \\ \frac53 \\ 1 \\ 0
         \end{pmatrix} + t_2 \begin{pmatrix}
-            -\frac43 \\ \frac12 \\ -\frac23 \\ 0 \\ 1
+            \frac23 \\ \frac12 \\ -\frac23 \\ 0 \\ 1
+        \end{pmatrix} \equiv \begin{pmatrix}
+            1 \\ 2 \\ 3 \\ 0 \\ 0
+        \end{pmatrix} + t_1 \begin{pmatrix}
+            -5 \\ -3 \\ 5 \\ 3 \\ 0
+        \end{pmatrix} + t_2 \begin{pmatrix}
+            2 \\ \frac32 \\ -2 \\ 0 \\ 3
         \end{pmatrix}
     \end{equation}
 
-    Получили частное решение системы плюс линейную оболочку — общее решение однородной системы, 
+    Получили частное решение системы плюс линейную оболочку фср — общее решение однородной системы, 
     то есть в сумме общее решение НЕоднородной системы. 
 
     \begin{equation}
@@ -95,5 +105,80 @@
     \end{equation}
 
     $rg(A)$ мы уже попутно вывели, как раз получается, что $2 = 5 - 3$
+
+    Проверим, подставив для нескольких значений параметров в уравнение. (умножив матрицы)
+
+    1. $t_1 = t_2 = 0$
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & -2 & 1 & -2 & 1 \\
+            2 & -4 & -1 & 1 & 0 \\
+            2 & -2 & 2 & -2 & 1 \\
+            1 & 0 & 1 & 0 & 0 \\
+            4 & -6 & 4 & -6 & 3
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            1 \\
+            2 \\
+            3 \\
+            0 \\
+            0
+        \end{matrix}\right) =\left(\begin{matrix}
+            0 \\
+            -9 \\
+            4 \\
+            4 \\
+            4
+        \end{matrix}\right)
+    \end{equation}
+
+    2. $t_1 = 1, t_2 = 0$
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & -2 & 1 & -2 & 1 \\
+            2 & -4 & -1 & 1 & 0 \\
+            2 & -2 & 2 & -2 & 1 \\
+            1 & 0 & 1 & 0 & 0 \\
+            4 & -6 & 4 & -6 & 3
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            -4 \\
+            -1 \\
+            8 \\
+            3 \\
+            0
+        \end{matrix}\right) =\left(\begin{matrix}
+            0 \\
+            -9 \\
+            4 \\
+            4 \\
+            4
+        \end{matrix}\right)
+    \end{equation}
+
+    3. $t_1 = 0, t_2 = 1$
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & -2 & 1 & -2 & 1 \\
+            2 & -4 & -1 & 1 & 0 \\
+            2 & -2 & 2 & -2 & 1 \\
+            1 & 0 & 1 & 0 & 0 \\
+            4 & -6 & 4 & -6 & 3
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            3 \\
+            7/2 \\
+            1 \\
+            0 \\
+            3
+        \end{matrix}\right) =\left(\begin{matrix}
+            0 \\
+            -9 \\
+            4 \\
+            4 \\
+            4
+        \end{matrix}\right)
+    \end{equation}
+
 
 \end{document}

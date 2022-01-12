@@ -44,6 +44,41 @@
         \end{cases}
     \end{equation}
 
+    Тогда уравение превращается в:
+    \begin{multline}
+        7\sqrt{5} (cos(\alpha) x' - sin(\alpha) y')^2 \\
+        + \sqrt{5}(sin(\alpha) x' + cos(\alpha) y')^2 \\
+        + 8\sqrt{5}(cos(\alpha) x' - sin(\alpha) y')(sin(\alpha) x' + cos(\alpha) y') \\
+        + 72 (cos(\alpha) x' - sin(\alpha) y') \\
+        + 36 (sin(\alpha) x' + cos(\alpha) y') \\
+        + 27\sqrt{5}
+    \end{multline}
+
+    После expansion получается:
+    \begin{multline}
+        7 \sqrt{5} x'^2\cos^2\left(α\right) \\
+        + \sqrt{5}x'^2\sin^2\left(α\right) \\
+        + 8\sqrt{5}x'^2\cos \left(α\right)\sin \left(α\right) \\
+        + 8\sqrt{5}x'y'\cos^2\left(α\right) \\
+        - 8\sqrt{5}x'y'\sin ^2\left(α\right) \\
+        - 12\sqrt{5}x'y'\sin \left(α\right)\cos \left(α\right) \\
+        + 72x'\cos \left(α\right) \\
+        + 36x'\sin \left(α\right) \\
+        + 7\sqrt{5}y'^2\sin ^2\left(α\right) \\
+        + \sqrt{5}y'^2\cos ^2\left(α\right) \\
+        - 8\sqrt{5}y'^2\sin \left(α\right)\cos \left(α\right) \\
+        - 72y'\sin \left(α\right) \\
+        + 36y'\cos \left(α\right) \\
+        + 27\sqrt{5}
+    \end{multline}
+
+    Выделяем члены с $x' y'$:
+    \begin{equation}
+        + 8\sqrt{5}x'y'\cos^2\left(α\right) \\
+        - 8\sqrt{5}x'y'\sin ^2(α) \\
+        - 12\sqrt{5}x'y'\sin (α) \cos(α)
+    \end{equation}
+
     Тогда коэффициент перед $x'y'$ будет:
     \begin{multline}
         7\sqrt{5} \left( -2 cos(\alpha) sin(\alpha) \right) + 8\sqrt{5} \left( cos^2(\alpha) - sin^2(\alpha) \right) + \sqrt{5} \left( 2 cos(\alpha) sin(\alpha) \right) = \\
@@ -58,7 +93,10 @@
         \xi_{1, 2} = \{ -2, \frac{1}{2} \}
     \end{gather}
 
-    Возьмём $tg(\alpha) = \frac{1}{2}$ и $\alpha \in (0, \frac{\pi}{2})$.
+    Для любого $\alpha$ с одним из этих тангенсов (таких $\alpha$ всего 4) исчезнет перекрёсный член в новой системе координат.
+
+    Возьмём, например, $tg(\alpha) = \frac{1}{2}$ и $\alpha \in (0, \frac{\pi}{2})$.
+    Будет $\alpha = arctg\left( \frac{1}{2} \right)$
     Тогда $sin, cos > 0$
     \begin{gather}
         sin(\alpha) = \frac{tg(\alpha)}{\sqrt{1 + tg^2(\alpha)}} = \frac{1}{2} \frac{1}{\sqrt{\frac{5}{4}}} = \frac{1}{\sqrt{5}} = \frac{\sqrt{5}}{5} \\
@@ -72,6 +110,17 @@
             y = \frac{\sqrt{5}}{5} x' + \frac{2\sqrt{5}}{5} y'
         \end{cases}
     \end{equation}
+
+    И новая система коодинат будет выглядеть вот так относительно старой:
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.7_grid_x'.png}
+        \caption{Система координат $(X', Y')$ относительно исходной}
+        \label{fig:grid_1}
+    \end{figure}
+    \FloatBarrier
+    
 
     Тогда перепишем уравнение в новой системе коодинат:
     \begin{multline}
@@ -94,6 +143,7 @@
         = 0
     \end{multline}
 
+    Получили:
     \begin{equation}
         9x'^2 + 36'x - y'^2 + 27 = 0
     \end{equation}
@@ -105,7 +155,7 @@
         9x'^2 + 36x' - y'^2 + 27 = 9(x'^2 + 4x' + 4) - y'^2 - 9 = 9(x' + 2)^2 - y'^2 - 9 = 0
     \end{equation}
     
-    Назовём:
+    Назовём, получив выражение координат системы $(X', Y')$ через $(X'', Y'')$ и наоборот:
     \begin{equation}
         \begin{cases}
             x'' = x' + 2 \\
@@ -117,6 +167,16 @@
         \end{cases}
     \end{equation}
     
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.7_grid_x'.png}
+        \caption{Система координат $(O'', X'', Y'')$ относительно СК $(O', X', Y')$}
+        \label{fig:grid_2}
+    \end{figure}
+    \FloatBarrier
+
+    \section{Малювание в системе координат два штриха}
+
     Тогда уравнение в системе координат «два штриха» будет таким:
     
     \begin{equation}
@@ -127,7 +187,30 @@
         \frac{x''^2}{1^2} - \frac{y'^2}{3^2} = 1
     \end{equation}
 
-    То есть это гипербола, полуось: $1$, мнимая полуось: $3$.
+    То есть это гипербола, главная полуось: $a = 1$, 
+    мнимая полуось: $b = 3$,
+    $c = \sqrt{a^2 + b^2} = \sqrt{1 + 9} = \sqrt{10}$.
+    Ещё параметры гиперболы:
+
+    \begin{gather}
+        \varepsilon = \frac{c}{a} = \frac{\sqrt{10}}{1} = \sqrt{10} \\
+        F_l, F_r = (\mp c; 0) = (\mp \sqrt{10}; 0) \\
+        V_l, V_r = (\mp a; 0)
+        D_l, D_r: x'' = \mp \frac{a}{\varepsilon} = \mp \frac{1}{\sqrt{10}} = \mp \frac{\sqrt{10}}{10}
+    \end{gather}
+
+    И выглядеть она будет:
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{resources/1.7_grid_x'.png}
+        \caption{Гипербола в системе координат $(O'', X'', Y'')$}
+        \label{fig:grid_3}
+    \end{figure}
+    \FloatBarrier
+
+
+    \section{Итоговое преобразование координат}
 
     Таким образом, координаты для системы «один штрих» будут выражаться как:
     \begin{equation}
@@ -136,44 +219,144 @@
             y' = y''
         \end{cases}
     \end{equation}
-    (То есть сдвиг влево относительно двух штрихов)
+    (То есть сдвиг влево относительно двух штрихов на 2)
 
     А для изначальной СК:
-    \begin{equation}
+    \begin{gather}
         \begin{cases}
-            x = cos(\alpha) x' - sin(\alpha) y' = cos(\alpha) (x'' - 2) - sin(\alpha) y'' \\
-            y = sin(\alpha) x' + cos(\alpha) y' = sin(\alpha) (x'' - 2) + cos(\alpha) y''
+            x = cos(\alpha) x' - sin(\alpha) y' = cos(\alpha) (x'' - 2) - sin(\alpha) y'' = \frac{2 \sqrt{5}}{5} (x'' - 2) - \frac{\sqrt{5}}{5} y'' \\
+            y = sin(\alpha) x' + cos(\alpha) y' = \frac{\sqrt{5}}{5} (x'' - 2) + \frac{2 \sqrt{5}}{5} y''
+        \end{cases} \\
+        \begin{cases}
+            x = \frac{2 \sqrt{5}}{5} x'' - \frac{\sqrt{5}}{5} y'' - \frac{4 \sqrt{5}}{5} \\
+            y = \frac{\sqrt{5}}{5} x'' + \frac{2 \sqrt{5}}{5} y'' - \frac{2 \sqrt{5}}{5}
         \end{cases}
+    \end{gather}
+
+    Пользуясь этим, мы можем найти координаты ключевых характеристических фигур нашей гиперболы.
+
+    Во-первых — $O''$ в исходной СК: $\left( -\frac{4 \sqrt{5}}{5}; -\frac{2 \sqrt{5}}{5} \right) \approx (-1.8; -0.9)$.
+
+    Далее — в расход идут вершины и фокусы. В новой системе:
+    
+    \begin{equation}
+        V_1, V_2 =
+            \left(
+                \frac{2 \sqrt{5}}{5} \cdot (\mp 1) - \frac{4 \sqrt{5}}{5};
+                \frac{\sqrt{5}}{5} \cdot (\mp 1) - \frac{2 \sqrt{5}}{5} 
+            \right)
     \end{equation}
 
-    \section{Иллюстрации}
-    Тогда нарисуем картинки (в обратном порядке):
+    \begin{equation}
+        V_1, V_2 =
+            \left(
+                \frac{2 \sqrt{5}}{5} \cdot (\mp 1) - \frac{4 \sqrt{5}}{5};
+                \frac{\sqrt{5}}{5} \cdot (\mp 1) - \frac{2 \sqrt{5}}{5} 
+            \right)
+    \end{equation}
 
-    (сейчас нет возможности сдать типовик в на руки, поэтому рисунки пока в электронном формате…)
+    \begin{gather}
+        V_1 \approx
+            \left(
+                -2.7; -1.3 
+            \right) \\
+        V_2 \approx
+        \left(
+            -0.9; -0.5
+        \right)
+    \end{gather}
+     
 
+    \begin{equation}
+        F_1, F_2 =
+            \left(
+                \frac{2 \sqrt{5}}{5} \cdot (\mp \sqrt{10}) - \frac{4 \sqrt{5}}{5};
+                \frac{\sqrt{5}}{5} \cdot (\mp \sqrt{10}) - \frac{2 \sqrt{5}}{5} 
+            \right)
+    \end{equation}
+
+    \begin{gather}
+        F_l \approx \left(
+                -4.6; \,
+                -2.3
+            \right) \\
+        F_r \approx \left(
+            1.; \,
+            .5
+        \right)
+    \end{gather}
+
+    Выразим наоборот — новые координаты через старые.
+
+    \begin{gather}
+        \begin{cases}
+            x = \frac{2 \sqrt{5}}{5} x'' - \frac{\sqrt{5}}{5} y'' - \frac{4 \sqrt{5}}{5} \\
+            y = \frac{\sqrt{5}}{5} x'' + \frac{2 \sqrt{5}}{5} y'' - \frac{2 \sqrt{5}}{5}
+        \end{cases} \\
+        \begin{cases}
+            x = \frac{2 \sqrt{5}}{5} x'' - \frac{\sqrt{5}}{5} y'' - \frac{4 \sqrt{5}}{5} \\
+            2y = \frac{2\sqrt{5}}{5} x'' + \frac{4 \sqrt{5}}{5} y'' - \frac{4 \sqrt{5}}{5}
+        \end{cases} \\
+        \begin{cases}
+            x - 2y = (- \frac{\sqrt{5}}{5} - \frac{4 \sqrt{5}}{5} ) y'' = -\frac{5\sqrt{5}}{5} y'' = -\sqrt{5} y'' \\
+            2y = \frac{2\sqrt{5}}{5} x'' + \frac{4 \sqrt{5}}{5} y'' - \frac{4 \sqrt{5}}{5}
+        \end{cases} \\
+        \begin{cases}
+            y'' = \frac{2y - x}{\sqrt{5}} = \frac{2 \sqrt{5}}{5} y - \frac{\sqrt{5}}{5} x \\
+            x = \frac{2 \sqrt{5}}{5} x'' - \frac{\sqrt{5}}{5} (\frac{2 \sqrt{5}}{5} y - \frac{\sqrt{5}}{5} x) - \frac{4 \sqrt{5}}{5}
+        \end{cases} \\
+        \frac{2 \sqrt{5}}{5} x'' = x + \frac{\sqrt{5}}{5} \left(\frac{2 \sqrt{5}}{5} y - \frac{\sqrt{5}}{5} x \right) + \frac{4 \sqrt{5}}{5} \\
+        \frac{2 \sqrt{5}}{5} x'' = x + \frac{2}{5} y - \frac{1}{5} x + \frac{4 \sqrt{5}}{5} = \frac{4}{5} x + \frac{2}{5} y + \frac{4 \sqrt{5}}{5} \\
+        x'' = \frac{\sqrt{5}}{2} \left( \frac{4}{5} x + \frac{2}{5} y + \frac{4 \sqrt{5}}{5} \right) = \frac{2 \sqrt{5}}{5} x + \frac{\sqrt{5}}{5} y + 2 \\
+        \begin{cases}
+            x'' = \frac{2 \sqrt{5}}{10} x + \frac{\sqrt{5}}{5} y + 2 \\
+            y'' = - \frac{\sqrt{5}}{5} x + \frac{2 \sqrt{5}}{5} y
+        \end{cases}
+    \end{gather}
+
+
+    Теперь тяжёлая артилерия: оси координат.
+
+    \begin{multline}
+        O''Y'': x'' \equiv 0 \\
+        \Longleftrightarrow \frac{2 \sqrt{5}}{5} x + \frac{\sqrt{5}}{5} y + 2 = 0 \\
+        \Longleftrightarrow \frac{\sqrt{5}}{5} y = -2 -\frac{2 \sqrt{5}}{5} x \\
+        \Longleftrightarrow y = -2\sqrt{5} -\frac{2 \sqrt{5} \times \sqrt{5} }{5} x = -2\sqrt{5} - 2x
+    \end{multline}
+
+    \begin{multline}
+        O''X'': y'' \equiv 0 \\
+        \Longleftrightarrow - \frac{\sqrt{5}}{5} x + \frac{2 \sqrt{5}}{5} y = 0 \\
+        \Longleftrightarrow \frac{2 \sqrt{5}}{5} y = \frac{\sqrt{5}}{5} x \\
+        \Longleftrightarrow y = \frac{\sqrt{5}}{5} \times \frac{\sqrt{5}}{2} x = \frac{1}{2} x
+    \end{multline}
+
+
+    И, наконец, директриссы:
+    
+    \begin{gather}
+        D_l: x'' = -\frac{\sqrt{10}}{10} \\
+        \frac{2 \sqrt{5}}{5} x + \frac{\sqrt{5}}{5} y + 2 = -\frac{\sqrt{10}}{10} \\
+        y = -2 x - 2 \sqrt{5} - \frac{\sqrt{2}}{2}
+    \end{gather}
+    
+    \begin{gather}
+        D_r: x'' = +\frac{\sqrt{10}}{10} \\
+        \frac{2 \sqrt{5}}{5} x + \frac{\sqrt{5}}{5} y + 2 = +\frac{\sqrt{10}}{10} \\
+        y = -2 x - 2 \sqrt{5} + \frac{\sqrt{2}}{2}
+    \end{gather}
+
+    \section{Итоговая иллюстрация}
+    
+    Теперь мы можем изобразить гиперболу в исходой системе координат.
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=\textwidth]{resources/1.7_two_strokes.pdf}
-        \caption{Чертёж в системе координат 2 штриха}
-        \label{fig:main_figure}
+        \includegraphics[width=\textwidth]{resources/1.7_grid_left.png}
+        \caption{Гипербола в системе координат $(O, X, Y)$}
+        \label{fig:grid_4}
     \end{figure}
-    \FloatBarrier
-
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{resources/1.7_one_stroke.pdf}
-        \caption{Чертёж в системе координат 1 штрих}
-        \label{fig:main_figure}
-    \end{figure}
-    \FloatBarrier
-
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{resources/1.7_original.pdf}
-        \caption{Чертёж в изначальной системе координат}
-        \label{fig:main_figure}
-    \end{figure}
-    \FloatBarrier
+    \FloatBarrier 
+    
 
 
 \end{document}
