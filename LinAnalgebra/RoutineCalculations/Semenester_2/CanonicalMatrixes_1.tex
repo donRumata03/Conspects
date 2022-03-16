@@ -1,0 +1,462 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Канонический вид матрицы. Часть 1»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие можно найти здесь: \url{https://drive.google.com/drive/folders/1_B-ViudQ3-Y385yQO-gfcOkDFWMWNXK3}
+
+        Data section:
+
+        \begin{equation}
+            F = \left(\begin{matrix}
+                0 & -10 & 3 & -5 \\
+                -4 & 12 & -6 & 4 \\
+                4 & 20 & -4 & 10 \\
+                12 & 0 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            G = \left(\begin{matrix}
+                -22 & 20 & 4 & -36 \\
+                22 & 4 & 10 & 12 \\
+                5 & -19 & -9 & 24 \\
+                27 & -13 & 3 & 34
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            P = \left(\begin{matrix}
+                -4 & 6 & 3 & 3 \\
+                3 & -6 & -3 & -2 \\
+                -3 & 5 & 2 & 2 \\
+                -6 & 11 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            Q = \left(\begin{matrix}
+                -26 & -39 & 65 & 13 \\
+                -18 & -27 & 45 & 9 \\
+                -16 & -24 & 40 & 8 \\
+                -26 & -39 & 65 & 13
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            V = \left(\begin{matrix}
+                -5 & 8 & 4 & -10 \\
+                5 & -7 & 8 & -5 \\
+                0 & -4 & -7 & 4 \\
+                2 & 8 & 4 & -17
+            \end{matrix}\right)
+        \end{equation}
+
+        
+        \begin{equation}
+            W = \left(\begin{matrix}
+                1 & 2 & -4 & -4 \\
+                10 & -1 & 10 & 8 \\
+                -2 & 2 & -1 & -4 \\
+                4 & -4 & 10 & 11
+            \end{matrix}\right)
+        \end{equation}
+    \end{statement}
+
+
+    \section{Нахождение спектра и собственных подпространств матрицы}
+
+
+    \subsection{Характеристическеий многочлен}
+    Для каждой из матриц $F, G, P, Q, V, W$ запишем характеристический многочлен $χ(t)$
+    в виде определителя матрицы оператора, дефект которого ищем и найжём явное выражения характетистического многочлена 
+    с помощью матричного калькулятора.
+
+    \begin{multline}
+        \chi_F(t) = \\
+        = \det (F-tE) = \left|\begin{matrix}
+            0-t & -10 & 3 & -5 \\
+            -4 & 12-t & -6 & 4 \\
+            4 & 20 & -4-t & 10 \\
+            12 & 0 & 6 & 4-t
+        \end{matrix}\right| = \\
+        = t^4-12 \cdot t^3+52 \cdot t^2-96 \cdot t+64=(t-2) \cdot (t-4) \cdot (t-2) \cdot (t-4)=0
+    \end{multline}
+
+    \begin{multline}
+        \chi_G(t) = \\
+        = \det (G-tE) = \left|\begin{matrix}
+            -22-t & 20 & 4 & -36 \\
+            22 & 4-t & 10 & 12 \\
+            5 & -19 & -9-t & 24 \\
+            27 & -13 & 3 & 34-t
+        \end{matrix}\right| = \\
+        = t^4-7 \cdot t^3-58 \cdot t^2+220 \cdot t+600 = (t+6) \cdot (t+2) \cdot (t-5) \cdot (t-10)
+    \end{multline}
+
+    \begin{multline}
+        \chi_P(t) = \\
+        = \det (P-tE) = \left|\begin{matrix}
+            -4-t & 6 & 3 & 3 \\
+            3 & -6-t & -3 & -2 \\
+            -3 & 5 & 2-t & 2 \\
+            -6 & 11 & 6 & 4-t
+        \end{matrix}\right| = \\
+        = t^4+4 \cdot t^3+6 \cdot t^2+4 \cdot t+1 = (t+1)^2 \cdot (t+1)^2
+    \end{multline}
+
+    \begin{multline}
+        \chi_Q(t) = \\
+        = \det (Q-tE) = \left|\begin{matrix}
+            -26-t & -39 & 65 & 13 \\
+            -18 & -27-t & 45 & 9 \\
+            -16 & -24 & 40-t & 8 \\
+            -26 & -39 & 65 & 13-t
+        \end{matrix}\right| = \\
+        = t^4
+    \end{multline}
+
+    \begin{multline}
+        \chi_V(t) = \\
+        = \det (V-tE) = \left|\begin{matrix}
+            -5-t & 8 & 4 & -10 \\
+            5 & -7-t & 8 & -5 \\
+            0 & -4 & -7-t & 4 \\
+            2 & 8 & 4 & -17-t
+        \end{matrix}\right| = \\
+        = t^4+36 \cdot t^3+478 \cdot t^2+2772 \cdot t+5929=(t+11) \cdot (t+7) \cdot (t+11) \cdot (t+7)
+    \end{multline}
+
+    \begin{multline}
+        \chi_W(t) = \\
+        = \det (W-tE) = \left|\begin{matrix}
+            1-t & 2 & -4 & -4 \\
+            10 & -1-t & 10 & 8 \\
+            -2 & 2 & -1-t & -4 \\
+            4 & -4 & 10 & 11-t
+        \end{matrix}\right| = \\
+        = t^4-10 \cdot t^3+28 \cdot t^2-6 \cdot t-45=(t+1) \cdot (t-5) \cdot (t-3)^2
+    \end{multline}
+
+
+    \subsection{Корни характеристического многочлена, алгебраическая кратность}
+
+    Обозначим за $A_{Matrix}$ множество корней в вещественных числах с учётом кратности (пары, где первый элемент — корень, воторой — его кратность).
+
+    \begin{gather}
+        A_F = \{ (2, 2), (4, 2) \} \\
+        A_G = \{ (-6, 1), (-2, 1), (5, 1), (10, 1) \} \\
+        A_P = \{ (-1, 4) \} \\
+        A_Q = \{ (0, 4) \} \\
+        A_V = \{ (-11, 2), (-7, 2) \} \\
+        A_W = \{ (-1, 1), (5, 1), (3, 2) \}
+    \end{gather}
+
+    Заметим, что у всех матриц все корни характеристического многочлена лежат в $\sR$.
+
+    \subsection{Нахождение определителя и следа матрицы}
+
+    Как известно, след матрицы — это сумма всех корней с учётом кратности, а определитель — их произведение:
+    $\prod\limits_{i=1}^n\lambda_i=\det A$ и $\sum\limits_{i=1}^n\lambda_i=\tr A$
+
+    Тогда:
+
+    \begin{gather}
+        \det F = 2^2 \cdot 4^2 = 64 \\
+        \tr F = 2 \cdot 2 + 4 \cdot 2 = 12
+    \end{gather}
+    Проверим, всё сходится. Проделаем то же самое для остальных матриц.
+
+    \begin{gather}
+        \det G = -6 \cdot -2 \cdot 5 \cdot 10 = 600 \\
+        \tr G = -6 + -2 + 5 + 10 = 7 \\
+        \det P = -1^4 = 1 \\
+        \tr P = -1 \cdot 4 = -4 \\
+        \det Q = 0^4 = 0 \\
+        \tr Q = 0 \cdot 4 = 0 \\
+        \det V = -11^2 \cdot -7^2 = 5929 \\
+        \tr V = -11 \cdot 2 + -7 \cdot 2 = -36 \\
+        \det W = -1 \cdot 5 \cdot 3 ^2 = -45 \\
+        \tr W = -1 + 5 + 3 \cdot 2 = 10
+    \end{gather}
+
+    \subsection{СЛОУ для собственных подпространств}
+    
+    Найдём ядра (\textit{чистый изумруд!}) операторов $\mathcal{A} - \lambda \mathcal{E}$ 
+    для всех собственных чисел $\lambda$ для каждого оператора:
+
+    \begin{equation}
+        v \in V_\lambda \Leftrightarrow (\mathcal{A} - \lambda \mathcal{E})v = \mathbb{0}
+    \end{equation}
+
+    Перечислим матрицы для операторов и с.ч.:
+
+    \subsubsection{Матрица F}
+
+    \begin{equation}
+        F - 2 E = \left(\begin{matrix}
+            -2 & -10 & 3 & -5 \\
+            -4 & 10 & -6 & 4 \\
+            4 & 20 & -6 & 10 \\
+            12 & 0 & 6 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \begin{equation}
+        F - 4 E = \left(\begin{matrix}
+            -4 & -10 & 3 & -5 \\
+            -4 & 8 & -6 & 4 \\
+            4 & 20 & -8 & 10 \\
+            12 & 0 & 6 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+
+
+    \subsubsection{Матрица G}
+
+    \begin{equation}
+        G - (-6) E = \left(\begin{matrix}
+            -16 & 20 & 4 & -36 \\
+            22 & 10 & 10 & 12 \\
+            5 & -19 & -3 & 24 \\
+            27 & -13 & 3 & 40
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        G - (-2) E = \left(\begin{matrix}
+            -20 & 20 & 4 & -36 \\
+            22 & 6 & 10 & 12 \\
+            5 & -19 & -7 & 24 \\
+            27 & -13 & 3 & 36
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        G - 5 E = \left(\begin{matrix}
+            -27 & 20 & 4 & -36 \\
+            22 & -1 & 10 & 12 \\
+            5 & -19 & -14 & 24 \\
+            27 & -13 & 3 & 29
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        G - 10 E = \left(\begin{matrix}
+            -32 & 20 & 4 & -36 \\
+            22 & -6 & 10 & 12 \\
+            5 & -19 & -19 & 24 \\
+            27 & -13 & 3 & 24
+        \end{matrix}\right)
+    \end{equation}
+
+
+
+
+    \subsubsection{Матрица P}
+
+    \begin{equation}
+        P - (-1) E = \left(\begin{matrix}
+            -3 & 6 & 3 & 3 \\
+            3 & -5 & -3 & -2 \\
+            -3 & 5 & 3 & 2 \\
+            -6 & 11 & 6 & 5
+        \end{matrix}\right)
+    \end{equation}
+
+
+
+
+    \subsubsection{Матрица Q}
+
+    \begin{equation}
+        Q - 0 E = \left(\begin{matrix}
+            -26 & -39 & 65 & 13 \\
+            -18 & -27 & 45 & 9 \\
+            -16 & -24 & 40 & 8 \\
+            -26 & -39 & 65 & 13
+        \end{matrix}\right)
+    \end{equation}
+
+
+
+
+    \subsubsection{Матрица V}
+
+    \begin{equation}
+        V - (-11) E = \left(\begin{matrix}
+            6 & 8 & 4 & -10 \\
+            5 & 4 & 8 & -5 \\
+            0 & -4 & 4 & 4 \\
+            2 & 8 & 4 & -6
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        V - (-7) E = \left(\begin{matrix}
+            2 & 8 & 4 & -10 \\
+            5 & 0 & 8 & -5 \\
+            0 & -4 & 0 & 4 \\
+            2 & 8 & 4 & -10
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \subsubsection{Матрица W}
+
+    \begin{equation}
+        W - (-1) E = \left(\begin{matrix}
+            2 & 2 & -4 & -4 \\
+            10 & 0 & 10 & 8 \\
+            -2 & 2 & 0 & -4 \\
+            4 & -4 & 10 & 12
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        W - 5 E = \left(\begin{matrix}
+            -4 & 2 & -4 & -4 \\
+            10 & -6 & 10 & 8 \\
+            -2 & 2 & -6 & -4 \\
+            4 & -4 & 10 & 6
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        W - 3 E = \left(\begin{matrix}
+            -2 & 2 & -4 & -4 \\
+            10 & -4 & 10 & 8 \\
+            -2 & 2 & -4 & -4 \\
+            4 & -4 & 10 & 8
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \subsection{Решение СЛОУ, нахождение геометрических кратностей}
+    
+    Для каждой матрицы найдём базисы подпространств 
+    для каждого собственного числа и проверим, 
+    получается ли сделать базис всего пространства их собстыенных векторов
+    (так как пр-ва дизъюнктны, проверяем сумму размерностей).
+
+    Данные о каждой матрице запишем как множество из пар собственных чисел
+    и набора векторов для этого числа. Геометрические кратности в таком случае — количества векторов в базисах.
+
+    \begin{equation}
+        F: \left\{ 
+            \left(2, \left\{\begin{pmatrix} -5\\4\\10\\0 \end{pmatrix}, \begin{pmatrix} -5\\-14\\0\\30 \end{pmatrix} \right\} \right),
+            \left(4, \left\{\begin{pmatrix} -1\\1\\2\\0 \end{pmatrix}, \begin{pmatrix} 0\\-1\\0\\2 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{equation}
+    
+    \begin{multline}
+        G: \left\{
+            \left(-6, \left\{\begin{pmatrix} -1\\1\\0\\1 \end{pmatrix} \right\} \right),
+            \left(-2, \left\{\begin{pmatrix} -1\\3\\-2\\2 \end{pmatrix} \right\} \right), \right. \\ \left.
+            \left(5, \left\{\begin{pmatrix} 0\\2\\-1\\1 \end{pmatrix} \right\} \right),
+            \left(10, \left\{\begin{pmatrix} -1\\0\\1\\1 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{multline}
+
+    \begin{equation}
+        P: \left\{ 
+            \left(-1, \left\{\begin{pmatrix} 1\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} -1\\-1\\0\\1 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{equation}
+    
+    \begin{equation}
+        Q: \left\{ 
+            \left(0, \left\{\begin{pmatrix} -3\\2\\0\\0 \end{pmatrix}, \begin{pmatrix} 5\\0\\2\\0 \end{pmatrix}, \begin{pmatrix} 1\\0\\0\\2 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{equation}
+    
+    \begin{equation}
+        V: \left\{ 
+            \left(-11, \left\{\begin{pmatrix} 3\\2\\-1\\3 \end{pmatrix} \right\} \right),
+            \left(-7, \left\{\begin{pmatrix} 1\\1\\0\\1 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{equation}
+    
+    \begin{equation}
+        W: \left\{ 
+            \left(-1, \left\{\begin{pmatrix} -2\\8\\-2\\5 \end{pmatrix} \right\} \right),
+            \left(5, \left\{\begin{pmatrix} -1\\-2\\-1\\1 \end{pmatrix} \right\} \right),
+            \left(3, \left\{\begin{pmatrix} 0\\2\\0\\1 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{equation}
+ 
+    
+    \section{Диагональное представление}
+
+    Видим, что базис и собственных векторов получилось составить только для F и G.
+    Приведём их к диагональному виду. Для этого построим матрицу перехода к базису с.в.
+
+    \subsection{Матрица F}
+
+    \begin{equation}
+        T_F = \begin{pmatrix}
+            -5 & -5 & -1 & 0 \\
+            4 & -14 & 1 & -1 \\
+            10 & 0 & 2 & 0 \\
+            0 & 30 & 0 & 2
+        \end{pmatrix}
+    \end{equation}
+    
+    Проверим, что:
+    \begin{equation}
+        T_F^{-1} \cdot F \cdot T_F = \left(\begin{matrix}
+            2 & 0 & 0 & 0 \\
+            0 & 2 & 0 & 0 \\
+            0 & 0 & 4 & 0 \\
+            0 & 0 & 0 & 4
+        \end{matrix}\right)
+    \end{equation}
+
+    А вот и проверка:
+    \url{https://matrixcalc.org/#%7B%7B-5,-5,-1,0%7D,%7B4,-14,1,-1%7D,%7B10,0,2,0%7D,%7B0,30,0,2%7D%7D%5E(-1)*%7B%7B0,-10,3,-5%7D,%7B-4,12,-6,4%7D,%7B4,20,-4,10%7D,%7B12,0,6,4%7D%7D*%7B%7B-5,-5,-1,0%7D,%7B4,-14,1,-1%7D,%7B10,0,2,0%7D,%7B0,30,0,2%7D%7D}
+
+
+
+    \subsection{Матрица G}
+
+    \begin{equation}
+        T_G = \begin{pmatrix}
+            -1 & -1 & 0 & -1 \\
+            1 & 3 & 2 & 0 \\
+            0 & -2 & -1 & 1 \\
+            1 & 2 & 1 & 1
+        \end{pmatrix}
+    \end{equation}
+    
+    Проверим, что:
+    \begin{equation}
+        T_G^{-1} \cdot G \cdot T_G = \left(\begin{matrix}
+            -6 & 0 & 0 & 0 \\
+            0 & -2 & 0 & 0 \\
+            0 & 0 & 5 & 0 \\
+            0 & 0 & 0 & 10
+        \end{matrix}\right)
+    \end{equation}
+
+    Ссылка на проверку: \url{https://matrixcalc.org/#%7B%7B-1,-1,0,-1%7D,%7B1,3,2,0%7D,%7B0,-2,-1,1%7D,%7B1,2,1,1%7D%7D%5E(-1)*%7B%7B-22,20,4,-36%7D,%7B22,4,10,12%7D,%7B5,-19,-9,24%7D,%7B27,-13,3,34%7D%7D*%7B%7B-1,-1,0,-1%7D,%7B1,3,2,0%7D,%7B0,-2,-1,1%7D,%7B1,2,1,1%7D%7D}
+
+\end{document}

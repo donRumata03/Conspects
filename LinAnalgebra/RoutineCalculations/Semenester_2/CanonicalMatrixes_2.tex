@@ -1,0 +1,212 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Канонический вид матрицы. Часть 2»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие можно найти здесь: \url{https://drive.google.com/drive/folders/1_B-ViudQ3-Y385yQO-gfcOkDFWMWNXK3}
+
+        Data section:
+
+        \begin{equation}
+            F = \left(\begin{matrix}
+                0 & -10 & 3 & -5 \\
+                -4 & 12 & -6 & 4 \\
+                4 & 20 & -4 & 10 \\
+                12 & 0 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            G = \left(\begin{matrix}
+                -22 & 20 & 4 & -36 \\
+                22 & 4 & 10 & 12 \\
+                5 & -19 & -9 & 24 \\
+                27 & -13 & 3 & 34
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            P = \left(\begin{matrix}
+                -4 & 6 & 3 & 3 \\
+                3 & -6 & -3 & -2 \\
+                -3 & 5 & 2 & 2 \\
+                -6 & 11 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            Q = \left(\begin{matrix}
+                -26 & -39 & 65 & 13 \\
+                -18 & -27 & 45 & 9 \\
+                -16 & -24 & 40 & 8 \\
+                -26 & -39 & 65 & 13
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            V = \left(\begin{matrix}
+                -5 & 8 & 4 & -10 \\
+                5 & -7 & 8 & -5 \\
+                0 & -4 & -7 & 4 \\
+                2 & 8 & 4 & -17
+            \end{matrix}\right)
+        \end{equation}
+
+        
+        \begin{equation}
+            W = \left(\begin{matrix}
+                1 & 2 & -4 & -4 \\
+                10 & -1 & 10 & 8 \\
+                -2 & 2 & -1 & -4 \\
+                4 & -4 & 10 & 11
+            \end{matrix}\right)
+        \end{equation}
+    \end{statement}
+
+
+    \section{Построение спектрального разложения диагонализируемой матрицы}
+
+    План: строим проекторы в собственном базисе, потом переходим в канонический.
+    (Всё это только для матриц F и G)
+
+    \subsection{Матрица F}
+
+    \begin{multline}
+        P_2 = T_F \cdot {\mathcal{P}_2}_v \cdot T_F^{-1} = \\
+        T_F \cdot \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) \cdot T_F^-1 = \\
+        \left(\begin{matrix}
+            2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            2 & -4 & 3 & -2 \\
+            -2 & -10 & 4 & -5 \\
+            -6 & 0 & -3 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+    *** Прямо как у Маяковского… ***
+
+    \begin{multline}
+        P_4 = T_F \cdot {\mathcal{P}_4}_v \cdot T_F^{-1} = \\
+        T_F \cdot \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right) \cdot T_F^-1 = \\
+        \left(\begin{matrix}
+            -1 & -5 & \frac{3}{2} & \frac{-5}{2} \\
+            -2 & 5 & -3 & 2 \\
+            2 & 10 & -3 & 5 \\
+            6 & 0 & 3 & 1
+        \end{matrix}\right)
+    \end{multline}
+
+    Проверим, что 
+    \begin{equation}
+        2 P_{2} + 4 P_{4} = F
+    \end{equation}
+
+    \url{https://matrixcalc.org/#%7B%7B2,5,-3/2,5/2%7D,%7B2,-4,3,-2%7D,%7B-2,-10,4,-5%7D,%7B-6,0,-3,0%7D%7D*2+%7B%7B-1,-5,3/2,-5/2%7D,%7B-2,5,-3,2%7D,%7B2,10,-3,5%7D,%7B6,0,3,1%7D%7D*4}
+
+
+    \subsection{Матрица G}
+
+    \begin{multline}
+        P_{-6} = T_G \cdot {\mathcal{P}_{-6}}_v \cdot T_G^{-1} = \\
+        T_G \cdot \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) \cdot T_G^{-1} = \\
+        \left(\begin{matrix}
+            2 & -2 & -1 & 3 \\
+            -2 & 2 & 1 & -3 \\
+            0 & 0 & 0 & 0 \\
+            -2 & 2 & 1 & -3
+        \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        P_{-2} = T_G \cdot {\mathcal{P}_{-2}}_v \cdot T_G^{-1} = \\
+         T_G \cdot \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) \cdot T_G^{-1} = \\
+        \left(\begin{matrix}
+            0 & 1 & 1 & -1 \\
+            0 & -3 & -3 & 3 \\
+            0 & 2 & 2 & -2 \\
+            0 & -2 & -2 & 2
+        \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        P_{5} = T_G \cdot {\mathcal{P}_{5}}_v \cdot T_G^{-1} = \\
+         T_G \cdot \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) \cdot T_G^{-1} = \\
+        \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            2 & 2 & 2 & 0 \\
+            -1 & -1 & -1 & 0 \\
+            1 & 1 & 1 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+
+    \begin{multline}
+        P_{10} = T_G \cdot {\mathcal{P}_{10}}_v \cdot T_G^{-1} = \\
+         T_G \cdot \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right) \cdot T_G^{-1} = \\
+        \left(\begin{matrix}
+            -1 & 1 & 0 & -2 \\
+            0 & 0 & 0 & 0 \\
+            1 & -1 & 0 & 2 \\
+            1 & -1 & 0 & 2
+        \end{matrix}\right)
+    \end{multline}
+
+    Кто бы мог подумать, но 
+    \begin{equation}
+        -6 P_{-6} + -2 P_{-2} + 5 P_{5} + 10 P_{10} = G
+    \end{equation}
+
+
+    Не верите? Проверьте, вот ссылка!
+
+    \url{https://matrixcalc.org/#%7B%7B2,-2,-1,3%7D,%7B-2,2,1,-3%7D,%7B0,0,0,0%7D,%7B-2,2,1,-3%7D%7D*(-6)+%7B%7B0,1,1,-1%7D,%7B0,-3,-3,3%7D,%7B0,2,2,-2%7D,%7B0,-2,-2,2%7D%7D*(-2)+%7B%7B0,0,0,0%7D,%7B2,2,2,0%7D,%7B-1,-1,-1,0%7D,%7B1,1,1,0%7D%7D*5+%7B%7B-1,1,0,-2%7D,%7B0,0,0,0%7D,%7B1,-1,0,2%7D,%7B1,-1,0,2%7D%7D*10}
+
+    Всё, пора спать…………
+
+\end{document}

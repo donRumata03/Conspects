@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Задание 2 модуля 3. Ядро и образ линейного оператора»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        Автоморфизм $\mathfrak{A} : \sR^5 \mapsto \sR^5$ (этот загадочный значок — это, оказывается, «А красивое»)
+        задан в стандартном базисе 
+        пространства $R^5$ матрицей $A$. Найти ядро и образ линейного оператора $\mathfrak{A}$, указать их размерности.
+    
+        Матрица:
+        \begin{equation}
+            A = \begin{pmatrix}
+                -2 & -2 & 1 & 1 & -1 \\
+                1 & -1 & 2 & 2 & 2 \\
+                -1 & -3 & 3 & 3 & 1 \\
+                1 & 1 & 3 & 3 & -1 \\
+                0 & 2 & 1 & 1 & -3
+            \end{pmatrix}
+        \end{equation}
+    \end{statement}
+
+    Найдём сначала ядро: решим уравнение $A x = \mathbb{0}$, получив все точки $\sR^5$, 
+    переходящие в ноль. Множество решений и будет ядром.
+
+    Получаем
+
+    \begin{equation}
+        \Ker \mathfrak{A} = t_1 \left(\begin{matrix}
+            0 \\
+            0 \\
+            -1 \\
+            1 \\
+            0
+        \end{matrix}\right) + t_2 \left(\begin{matrix}
+            -11 \\
+            9 \\
+            3 \\
+            0 \\
+            7
+        \end{matrix}\right)
+    \end{equation}
+
+    Для нахождения образа достаточно найти базу столбцов и объявить, что ответ — их линейная оболочка.
+    Это лучше, чем просто сказать, что это линейная оболочка всех столбцов, понятно почему…
+    За одно проверим ранг.
+
+    \begin{equation}
+        rg A = rg \begin{pmatrix}
+            1 & 0 & 0 & 0 & \frac{11}{7} \\
+            0 & 1 & 0 & 0 & -\frac{9}{7} \\
+            0 & 0 & 1 & 1 & -\frac{3}{7} \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0
+        \end{pmatrix} = 3
+    \end{equation}
+
+    База строк: 
+
+    \begin{equation}
+        B = \left\{ 
+            \begin{pmatrix}
+                -2 \\ 1 \\ -1 \\ 1 \\ 0
+            \end{pmatrix},
+            \begin{pmatrix}
+                -2 \\ -1 \\ -3 \\ 1 \\ 2
+            \end{pmatrix},
+            \begin{pmatrix}
+                1 \\ 2 \\ 3 \\ 3 \\ 1
+            \end{pmatrix}
+        \right\}
+    \end{equation}
+
+    Соответственно, $\Img \mathfrak{A} = \Lin B$
+
+
+\end{document}

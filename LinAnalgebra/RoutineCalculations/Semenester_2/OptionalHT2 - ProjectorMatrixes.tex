@@ -1,0 +1,350 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Дополнительное ДЗ №2»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково: 
+        Линейные подпространства $L_1, L_2$ заданы системами линейных уравнений.
+        
+        \begin{enumerate}
+            \item Найти матрицы операторов (в каноническом базисе) проектирования $P_1$, $P_2$, на линейные подпространства $L_1$, $L_2$ соответственно.
+            \item Проверить, что $P_1^2 = P_1, P_2^2 = P_2, P_1P_2 = 0, P_1 + P_2 = E$
+            \item Найти $\Ker P_i, \Img P_i \forall i \in \{ 1, 2 \}$. 
+            Проверить, что $\Ker P_1 = L_2, \Ker P_2 = L_1, \Img P_1 = L_1, \Img P_2 = L_2$
+            \item Найти проекции $x_1, x_2$, вектора $x = \begin{pmatrix}
+                2 & 4 & -2 & 5 & -3
+            \end{pmatrix}^T$ на подпространство $L_1$ параллельно $L_2$ 
+            и на подпространство $L_2$ параллельно $L_1$ соответственно 
+            с помощью операторов проектирования $P_1$ и $P_2$.
+            Сравнить с результатами, полученными в доп.д.з.No1
+        \end{enumerate}
+
+        Data section:
+
+        \begin{multline}
+            \left\{\begin{array}{l}
+                2 x_{1}-x_{2}+x_{3}+2 x_{4}+3 x_{5}=0 \\
+                6 x_{1}-3 x_{2}+2 x_{3}+4 x_{4}+5 x_{5}=0 \\
+                6 x_{1}-3 x_{2}+4 x_{3}+8 x_{4}+13 x_{5}=0 \\
+                4 x_{1}-2 x_{2}+x_{3}+x_{4}+2 x_{5}=0
+            \end{array}
+            \text { и }
+            2 x_{1}=x_{2}=4 x_{3}+2 x_{4},\right. \\ \text { соответственно }
+        \end{multline}
+    \end{statement}
+
+    \section{Нахождение матриц операторов}
+
+    Во-первых заметим, что обе матрицы — из канонического в канонический базис.
+
+    Вспомним, что у нас были матрицы перехода между канонческим базисом и базисом из объединения $L_1 \cap L_2$.
+    (сами базисы мы тоже нашли).
+
+    \begin{equation}
+        L_1 = x_2 \left(\begin{matrix}
+            \frac{1}{2} \\
+            1 \\
+            0 \\
+            0 \\
+            0
+        \end{matrix}\right) + x_5 \left(\begin{matrix}
+            \frac{1}{2} \\
+            0 \\
+            -4 \\
+            0 \\
+            1
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        L_2 = x_3 \left(\begin{matrix}
+            2 \\
+            4 \\
+            1 \\
+            0 \\
+            0
+        \end{matrix}\right) + x_4 \left(\begin{matrix}
+            1 \\
+            2 \\
+            0 \\
+            1 \\
+            0
+            \end{matrix}\right) + x_5 \begin{pmatrix}
+            0 \\ 0\\0\\0\\1
+        \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        T_{E \to L} = \left(\begin{matrix}
+            \frac{1}{2} & \frac{1}{2} & 2 & 1 & 0 \\
+            1 & 0 & 4 & 2 & 0 \\
+            0 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        T_{L \to E} = \left(\begin{matrix}
+            -32 & 17 & -4 & -2 & 0 \\
+            2 & -1 & 0 & 0 & 0 \\
+            8 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{equation}
+
+    Заметим, что в базисе $L$ матрица проектора на $L_1$, например, — это всего лишь
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & 0 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    А матрица проектора в каноническом базисе — это
+    \begin{equation}
+        T_{E \to L} \cdot {P_1}_L \cdot T_{L \to E}
+    \end{equation}
+
+    Так найдём же их!
+
+    \begin{multline}
+        {P_1}_E = T_{E \to L} \cdot {P_1}_L \cdot T_{L \to E} = \\
+        \left(\begin{matrix}
+            \frac{1}{2} & \frac{1}{2} & 2 & 1 & 0 \\
+            1 & 0 & 4 & 2 & 0 \\
+            0 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 0 & 1
+        \end{matrix}\right) \left(\begin{matrix}
+            1 & 0 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0
+        \end{matrix}\right) \left(\begin{matrix}
+            -32 & 17 & -4 & -2 & 0 \\
+            2 & -1 & 0 & 0 & 0 \\
+            8 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            \frac{1}{2} & \frac{1}{2} & 0 & 0 & 0 \\
+            1 & 0 & 0 & 0 & 0 \\
+            0 & -4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 & 0
+        \end{matrix}\right) \left(\begin{matrix}
+            -32 & 17 & -4 & -2 & 0 \\
+            2 & -1 & 0 & 0 & 0 \\
+            8 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            -15 & 8 & -2 & -1 & 0 \\
+            -32 & 17 & -4 & -2 & 0 \\
+            -8 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            2 & -1 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        {P_2}_E = T_{E \to L} \cdot {P_2}_L \cdot T_{L \to E} = \\
+        \left(\begin{matrix}
+            \frac{1}{2} & \frac{1}{2} & 2 & 1 & 0 \\
+            1 & 0 & 4 & 2 & 0 \\
+            0 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 0 & 1
+        \end{matrix}\right) \left(\begin{matrix}
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0 & 1
+        \end{matrix}\right) \left(\begin{matrix}
+            -32 & 17 & -4 & -2 & 0 \\
+            2 & -1 & 0 & 0 & 0 \\
+            8 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            0 & 0 & 2 & 1 & 0 \\
+            0 & 0 & 4 & 2 & 0 \\
+            0 & 0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0 & 1
+        \end{matrix}\right) \left(\begin{matrix}
+            -32 & 17 & -4 & -2 & 0 \\
+            2 & -1 & 0 & 0 & 0 \\
+            8 & -4 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            16 & -8 & 0 & 1 & 0 \\
+            32 & -16 & 0 & 2 & 0 \\
+            8 & -4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{multline}
+
+    \section{Проверка}
+    
+    \begin{multline}
+        P_1^2 = \\
+        \left(\begin{matrix}
+            -15 & 8 & -2 & -1 & 0 \\
+            -32 & 17 & -4 & -2 & 0 \\
+            -8 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            2 & -1 & 0 & 0 & 0
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            -15 & 8 & -2 & -1 & 0 \\
+            -32 & 17 & -4 & -2 & 0 \\
+            -8 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            2 & -1 & 0 & 0 & 0
+        \end{matrix}\right) = \\ \left(\begin{matrix}
+            -15 & 8 & -2 & -1 & 0 \\
+            -32 & 17 & -4 & -2 & 0 \\
+            -8 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            2 & -1 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        P_2^2 = \\
+        \left(\begin{matrix}
+            16 & -8 & 0 & 1 & 0 \\
+            32 & -16 & 0 & 2 & 0 \\
+            8 & -4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            16 & -8 & 0 & 1 & 0 \\
+            32 & -16 & 0 & 2 & 0 \\
+            8 & -4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) = \\ \left(\begin{matrix}
+            16 & -8 & 0 & 1 & 0 \\
+            32 & -16 & 0 & 2 & 0 \\
+            8 & -4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        P_1P_2 = \\
+        \left(\begin{matrix}
+            -15 & 8 & -2 & -1 & 0 \\
+            -32 & 17 & -4 & -2 & 0 \\
+            -8 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            2 & -1 & 0 & 0 & 0
+        \end{matrix}\right) \cdot \left(\begin{matrix}
+            16 & -8 & 0 & 1 & 0 \\
+            32 & -16 & 0 & 2 & 0 \\
+            8 & -4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            -2 & 1 & 0 & 0 & 1
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+    \begin{multline}
+        P_1 + P_2 = \\
+        \left(\begin{matrix}
+            1 & 0 & -2 & 0 & 0 \\
+            0 & 1 & -4 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0 & 1
+        \end{matrix}\right) \approx \\
+        \left(\begin{matrix}
+            1 & 0 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0 & 1
+        \end{matrix}\right) 
+    \end{multline}
+
+    \section{Разложение вектора}
+
+    Теперь спроектируем вектор $x$ на эти пространства.
+
+    \begin{equation}
+        P_1 x = \left(\begin{matrix}
+            -15 & 8 & -2 & -1 & 0 \\
+            -32 & 17 & -4 & -2 & 0 \\
+            -8 & 4 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 \\
+            2 & -1 & 0 & 0 & 0
+        \end{matrix}\right) \left(\begin{matrix}
+            2 \\
+            4 \\
+            -2 \\
+            5 \\
+            -3
+        \end{matrix}\right) = \left(\begin{matrix}
+            1 \\
+            2 \\
+            0 \\
+            0 \\
+            0
+        \end{matrix}\right)
+    \end{equation}
+
+    Сходится с первым ДЗ.
+
+    \begin{equation}
+        P_2 x = \left(\begin{matrix}
+            5 \\
+            10 \\
+            0 \\
+            5 \\
+            -3
+        \end{matrix}\right)
+    \end{equation}
+
+    Не совсем сходится с первым ДЗ…
+
+
+\end{document}

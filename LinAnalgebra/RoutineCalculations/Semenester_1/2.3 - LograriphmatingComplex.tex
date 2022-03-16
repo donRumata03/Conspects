@@ -1,0 +1,98 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=20mm,
+    right=20mm,
+    top=10mm,
+    bottom=10mm
+}
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 12}}}}
+\title{Типовик по линейной алгебре модуль 2: Задания 3 «Функции комплексного переменного» и 4 «Нахождение корней многочлена»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия задания 3}
+
+    \begin{statement}
+        Условие таково: 
+        
+        Найти все значения функции в указанной точке:
+
+        12. $sin (1 − 5i)$
+    \end{statement}
+
+    \section{Решение задания 3}
+
+    Заметим, что функция однозначна.
+    По нашем определению синуса комплексного числа:
+
+    \begin{multline}
+        sin(z) = \frac{e^{iz} - e^{-iz}}{2i} = 
+        \frac{e^{i (x + yi)} - e^{-i (x + yi)}}{2i} = 
+        \frac{e^{-y + ix} - e^{y - ix}}{2i} = 
+        \frac{e^{-y} e^{ix} - e^{y} e^{-ix}}{2i}
+    \end{multline}
+
+    \begin{multline}
+        sin(1 - 5i) = \frac{e^{5} e^{i} - e^{-5} e^{-i}}{2i} = \\
+        -\frac{i}{2} \left( e^{5} (\cos 1 + i\sin 1) - e^{-5} (\cos 1 - i\sin 1) \right) = \\
+        -\frac{i}{2} \left( \cos 1 (e^{5} - e^{-5}) + i\sin 1 (e^{5} + e^{-5}) \right) = \\
+        \frac12 \sin 1 (e^{5} + e^{-5}) + \frac12 i \cos 1  (e^{-5} - e^{5})
+    \end{multline}
+
+
+    \section{Формулировка условия задания 4}
+
+    \begin{statement}
+        Условие таково: 
+        
+        Найти корни многочлена и изобразить их на комплексной плоскости.
+
+        12. $z^4 + z^2 − 2$
+    \end{statement}
+
+    \section{Решение задания 4}
+    Положим $t = z^2$.
+
+    \begin{gather}
+        t^2 + t - 2 = 0 \\
+        t_{1, 2} = \{-2, 1\}
+    \end{gather}
+
+    Для каждого значения $t$ есть два решения уравнения $z^2 = t$ (то есть $z = \sqrt{t}$):
+
+    \begin{equation}
+        \begin{cases}
+            z = 1 \\
+            z = e^{i \pi} = -1 \\
+            z \in \sqrt{-2} = \sqrt{2 e^{i \pi}} = \{ \sqrt{2} e^{\frac{i\pi}{2}}, \sqrt{2} e^{\frac{3i\pi}{2}} \}
+        \end{cases}
+    \end{equation}
+
+    То есть значения:
+    \begin{equation}
+        \{ 1, -1, i\sqrt{2}, -i\sqrt{2} \}
+    \end{equation}
+
+
+    \section{Иллюстрация к заданию 4}
+    
+    % \begin{sidewaysfigure}[h!]
+    %     \centering
+    %     \includegraphics[width=\paperwidth]{resources/2.4_figure.pdf}
+    %     \caption{Чертёж}
+    %     \label{fig:main_figure}
+    % \end{sidewaysfigure}
+    % \FloatBarrier
+
+
+
+    
+
+\end{document}
