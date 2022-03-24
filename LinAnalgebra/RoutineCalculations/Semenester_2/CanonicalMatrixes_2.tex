@@ -207,6 +207,119 @@
 
     \url{https://matrixcalc.org/#%7B%7B2,-2,-1,3%7D,%7B-2,2,1,-3%7D,%7B0,0,0,0%7D,%7B-2,2,1,-3%7D%7D*(-6)+%7B%7B0,1,1,-1%7D,%7B0,-3,-3,3%7D,%7B0,2,2,-2%7D,%7B0,-2,-2,2%7D%7D*(-2)+%7B%7B0,0,0,0%7D,%7B2,2,2,0%7D,%7B-1,-1,-1,0%7D,%7B1,1,1,0%7D%7D*5+%7B%7B-1,1,0,-2%7D,%7B0,0,0,0%7D,%7B1,-1,0,2%7D,%7B1,-1,0,2%7D%7D*10}
 
-    Всё, пора спать…………
+    
+
+
+
+    \section{Вычисление функции от диагонализируемой матрицы}
+
+    Сделаем это для матриц $F$ и $G$ двумя способами:
+    \begin{equation}
+        f(t M) = \sum {f(t\lambda) P_\lambda} = T f(\mathfrak{L})
+    \end{equation}
+
+    \subsection{Экспонента}
+
+    \begin{equation}
+        e^{t F} = T_F \left(\begin{matrix}
+            e^2 & 0 & 0 & 0 \\
+            0 & e^2 & 0 & 0 \\
+            0 & 0 & e^4 & 0 \\
+            0 & 0 & 0 & e^4
+        \end{matrix}\right) T_F^-1 = 
+        \left(\begin{matrix}
+            -e^4+2*e^2 & -5*e^4+5*e^2 & \frac{3*e^4-3*e^2}{2} & \frac{-5*e^4+5*e^2}{2} \\
+            -2*e^4+2*e^2 & 5*e^4-4*e^2 & -3*e^4+3*e^2 & 2*e^4-2*e^2 \\
+            2*e^4-2*e^2 & 10*e^4-10*e^2 & -3*e^4+4*e^2 & 5*e^4-5*e^2 \\
+            6*e^4-6*e^2 & 0 & 3*e^4-3*e^2 & e^4
+        \end{matrix}\right)
+    \end{equation}
+
+    Посчитаем также через проекторы.
+
+    \begin{multline}
+        e^{t F} = e^2 P_2 + e^4 P_4 = \\
+        e^2 \left(\begin{matrix}
+            2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            2 & -4 & 3 & -2 \\
+            -2 & -10 & 4 & -5 \\
+            -6 & 0 & -3 & 0
+        \end{matrix}\right) + e^4 \left(\begin{matrix}
+            -1 & -5 & \frac{3}{2} & \frac{-5}{2} \\
+            -2 & 5 & -3 & 2 \\
+            2 & 10 & -3 & 5 \\
+            6 & 0 & 3 & 1
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            -e^4+2*e^2 & -5*e^4+5*e^2 & \frac{3*e^4-3*e^2}{2} & \frac{-5*e^4+5*e^2}{2} \\
+            -2*e^4+2*e^2 & 5*e^4-4*e^2 & -3*e^4+3*e^2 & 2*e^4-2*e^2 \\
+            2*e^4-2*e^2 & 10*e^4-10*e^2 & -3*e^4+4*e^2 & 5*e^4-5*e^2 \\
+            6*e^4-6*e^2 & 0 & 3*e^4-3*e^2 & e^4
+        \end{matrix}\right)
+    \end{multline}
+
+    Проверили, сошлось.
+
+    То же самое для $G$.
+
+    \begin{equation}
+        e^{t G} = T_G \left(\begin{matrix}
+            e^{-6} & 0 & 0 & 0 \\
+            0 & e^{-2} & 0 & 0 \\
+            0 & 0 & e^{5} & 0 \\
+            0 & 0 & 0 & e^{10}
+        \end{matrix}\right) T_G^-1 = 1
+
+    \end{equation}
+
+    Посчитаем также через проекторы.
+
+    \begin{multline}
+        e^{t F} = e^{-6} = \\
+        e^{-6}
+    \end{multline}
+
+
+    \subsection{Обращение}
+
+
+    Очевидно, обе матрицы невырождены, так как в спектре нет нулей, обратим мы, конечно, $F$ — меньше возни.
+
+    \begin{equation}
+        F^{-1} = T_F \left(\begin{matrix}
+            \frac12 & 0 & 0 & 0 \\
+            0 & \frac12 & 0 & 0 \\
+            0 & 0 & \frac14 & 0 \\
+            0 & 0 & 0 & \frac14
+        \end{matrix}\right) T_F^-1 = \left(\begin{matrix}
+            \frac{3}{4} & \frac{5}{4} & \frac{-3}{8} & \frac{5}{8} \\
+            \frac{1}{2} & \frac{-3}{4} & \frac{3}{4} & \frac{-1}{2} \\
+            \frac{-1}{2} & \frac{-5}{2} & \frac{5}{4} & \frac{-5}{4} \\
+            \frac{-3}{2} & 0 & \frac{-3}{4} & \frac{1}{4}
+        \end{matrix}\right)
+    \end{equation}
+ 
+    А вот — с помощью проекторов:
+    \begin{multline}
+        F^{-1} = \frac12 P_{2} + \frac14 P_4 = \\
+        \frac12 \left(\begin{matrix}
+            2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            2 & -4 & 3 & -2 \\
+            -2 & -10 & 4 & -5 \\
+            -6 & 0 & -3 & 0
+        \end{matrix}\right) + \frac14 \left(\begin{matrix}
+            -1 & -5 & \frac{3}{2} & \frac{-5}{2} \\
+            -2 & 5 & -3 & 2 \\
+            6 & 0 & 3 & 1
+            2 & 10 & -3 & 5 \\
+        \end{matrix}\right) = \\ 
+        \left(\begin{matrix}
+            \frac{3}{4} & \frac{5}{4} & \frac{-3}{8} & \frac{5}{8} \\
+            \frac{1}{2} & \frac{-3}{4} & \frac{3}{4} & \frac{-1}{2} \\
+            \frac{-1}{2} & \frac{-5}{2} & \frac{5}{4} & \frac{-5}{4} \\
+            \frac{-3}{2} & 0 & \frac{-3}{4} & \frac{1}{4}
+        \end{matrix}\right)
+    \end{multline}
+    
 
 \end{document}
