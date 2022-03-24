@@ -222,10 +222,10 @@
 
     \begin{equation}
         e^{t F} = T_F \left(\begin{matrix}
-            e^2 & 0 & 0 & 0 \\
-            0 & e^2 & 0 & 0 \\
-            0 & 0 & e^4 & 0 \\
-            0 & 0 & 0 & e^4
+            e^{2t} & 0 & 0 & 0 \\
+            0 & e^{2t} & 0 & 0 \\
+            0 & 0 & e^{4t} & 0 \\
+            0 & 0 & 0 & e^{4t}
         \end{matrix}\right) T_F^-1 = 
         \left(\begin{matrix}
             -e^4+2*e^2 & -5*e^4+5*e^2 & \frac{3*e^4-3*e^2}{2} & \frac{-5*e^4+5*e^2}{2} \\
@@ -238,7 +238,7 @@
     Посчитаем также через проекторы.
 
     \begin{multline}
-        e^{t F} = e^2 P_2 + e^4 P_4 = \\
+        e^{t F} = e^{2t} P_2 + e^{4t} P_4 = \\
         e^2 \left(\begin{matrix}
             2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
             2 & -4 & 3 & -2 \\
@@ -268,16 +268,51 @@
             0 & e^{-2} & 0 & 0 \\
             0 & 0 & e^{5} & 0 \\
             0 & 0 & 0 & e^{10}
-        \end{matrix}\right) T_G^-1 = 1
+        \end{matrix}\right) T_G^-1 = \left(\begin{matrix}
+            \frac{-e^16+2}{e^6} & \frac{e^16+e^4-2}{e^6} & \frac{e^4-1}{e^6} & \frac{-2*e^16-e^4+3}{e^6} \\
+            \frac{2*e^11-2}{e^6} & \frac{2*e^11-3*e^4+2}{e^6} & \frac{2*e^11-3*e^4+1}{e^6} & \frac{3*e^4-3}{e^6} \\
+            e^10-e^5 & \frac{-e^12-e^7+2}{e^2} & \frac{-e^7+2}{e^2} & \frac{2*e^12-2}{e^2} \\
+            \frac{e^16+e^11-2}{e^6} & \frac{-e^16+e^11-2*e^4+2}{e^6} & \frac{e^11-2*e^4+1}{e^6} & \frac{2*e^16+2*e^4-3}{e^6}
+        \end{matrix}\right)
 
     \end{equation}
 
     Посчитаем также через проекторы.
 
     \begin{multline}
-        e^{t F} = e^{-6} = \\
-        e^{-6}
+        e^{t F} = e^{-6t} P_{-6} + e^{-2t} P{-2} + e^{5t} P_{5} + e^{10t} P_{10} = \\
+        e^{-6t} \left(\begin{matrix}
+            2 & -2 & -1 & 3 \\
+            -2 & 2 & 1 & -3 \\
+            0 & 0 & 0 & 0 \\
+            -2 & 2 & 1 & -3
+        \end{matrix}\right) + e^{-2t} \left(\begin{matrix}
+            0 & 1 & 1 & -1 \\
+            0 & -3 & -3 & 3 \\
+            0 & 2 & 2 & -2 \\
+            0 & -2 & -2 & 2
+        \end{matrix}\right) + \\
+         e^{5t} \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            2 & 2 & 2 & 0 \\
+            -1 & -1 & -1 & 0 \\
+            1 & 1 & 1 & 0
+        \end{matrix}\right) + e^{10t} \left(\begin{matrix}
+            -1 & 1 & 0 & -2 \\
+            0 & 0 & 0 & 0 \\
+            1 & -1 & 0 & 2 \\
+            1 & -1 & 0 & 2
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            \frac{-e^\left(16*t\right)+2}{e^\left(6*t\right)} & \frac{e^\left(16*t\right)+e^\left(4*t\right)-2}{e^\left(6*t\right)} & \frac{e^\left(4*t\right)-1}{e^\left(6*t\right)} & \frac{-2*e^\left(16*t\right)-e^\left(4*t\right)+3}{e^\left(6*t\right)} \\
+            \frac{2*e^\left(11*t\right)-2}{e^\left(6*t\right)} & \frac{2*e^\left(11*t\right)-3*e^\left(4*t\right)+2}{e^\left(6*t\right)} & \frac{2*e^\left(11*t\right)-3*e^\left(4*t\right)+1}{e^\left(6*t\right)} & \frac{3*e^\left(4*t\right)-3}{e^\left(6*t\right)} \\
+            e^\left(10*t\right)-e^\left(5*t\right) & \frac{-e^\left(12*t\right)-e^\left(7*t\right)+2}{e^\left(2*t\right)} & \frac{-e^\left(7*t\right)+2}{e^\left(2*t\right)} & \frac{2*e^\left(12*t\right)-2}{e^\left(2*t\right)} \\
+            \frac{e^\left(16*t\right)+e^\left(11*t\right)-2}{e^\left(6*t\right)} & \frac{-e^\left(16*t\right)+e^\left(11*t\right)-2*e^\left(4*t\right)+2}{e^\left(6*t\right)} & \frac{e^\left(11*t\right)-2*e^\left(4*t\right)+1}{e^\left(6*t\right)} & \frac{2*e^\left(16*t\right)+2*e^\left(4*t\right)-3}{e^\left(6*t\right)}
+        \end{matrix}\right)
     \end{multline}
+
+    Проверим, что результаты сошлись:
+    \url{https://matrixcalc.org/#%7B%7B2,-2,-1,3%7D,%7B-2,2,1,-3%7D,%7B0,0,0,0%7D,%7B-2,2,1,-3%7D%7D*e%5E(-6*t)+%7B%7B0,1,1,-1%7D,%7B0,-3,-3,3%7D,%7B0,2,2,-2%7D,%7B0,-2,-2,2%7D%7D*e%5E(-2*t)+%7B%7B0,0,0,0%7D,%7B2,2,2,0%7D,%7B-1,-1,-1,0%7D,%7B1,1,1,0%7D%7D*e%5E(5*t)+%7B%7B-1,1,0,-2%7D,%7B0,0,0,0%7D,%7B1,-1,0,2%7D,%7B1,-1,0,2%7D%7D*e%5E(10*t)=%7B%7B(-e%5E(16*t)+2)/e%5E(6*t),(e%5E(16*t)+e%5E(4*t)-2)/e%5E(6*t),(e%5E(4*t)-1)/e%5E(6*t),(-2*e%5E(16*t)-e%5E(4*t)+3)/e%5E(6*t)%7D,%7B(2*e%5E(11*t)-2)/e%5E(6*t),(2*e%5E(11*t)-3*e%5E(4*t)+2)/e%5E(6*t),(2*e%5E(11*t)-3*e%5E(4*t)+1)/e%5E(6*t),(3*e%5E(4*t)-3)/e%5E(6*t)%7D,%7Be%5E(10*t)-e%5E(5*t),(-e%5E(12*t)-e%5E(7*t)+2)/e%5E(2*t),(-e%5E(7*t)+2)/e%5E(2*t),(2*e%5E(12*t)-2)/e%5E(2*t)%7D,%7B(e%5E(16*t)+e%5E(11*t)-2)/e%5E(6*t),(-e%5E(16*t)+e%5E(11*t)-2*e%5E(4*t)+2)/e%5E(6*t),(e%5E(11*t)-2*e%5E(4*t)+1)/e%5E(6*t),(2*e%5E(16*t)+2*e%5E(4*t)-3)/e%5E(6*t)%7D%7D}
 
 
     \subsection{Обращение}
@@ -320,6 +355,49 @@
             \frac{-3}{2} & 0 & \frac{-3}{4} & \frac{1}{4}
         \end{matrix}\right)
     \end{multline}
+ 
+    Калькулятор говорит нам, что
+
+    \begin{multline}
+        F F^-1 = \left(\begin{matrix}
+            \frac{3}{4} & \frac{5}{4} & \frac{-3}{8} & \frac{5}{8} \\
+            \frac{1}{2} & \frac{-3}{4} & \frac{3}{4} & \frac{-1}{2} \\
+            \frac{-1}{2} & \frac{-5}{2} & \frac{5}{4} & \frac{-5}{4} \\
+            \frac{-3}{2} & 0 & \frac{-3}{4} & \frac{1}{4}
+        \end{matrix}\right) \left(\begin{matrix}
+            0 & -10 & 3 & -5 \\
+            -4 & 12 & -6 & 4 \\
+            4 & 20 & -4 & 10 \\
+            12 & 0 & 6 & 4
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            \frac{3}{4}*0+\frac{5}{4}*\left(-4\right)+\frac{-3}{8}*4+\frac{5}{8}*12 & \frac{3}{4}*\left(-10\right)+\frac{5}{4}*12+\frac{-3}{8}*20+\frac{5}{8}*0 & \frac{3}{4}*3+\frac{5}{4}*\left(-6\right)+\frac{-3}{8}*\left(-4\right)+\frac{5}{8}*6 & \frac{3}{4}*\left(-5\right)+\frac{5}{4}*4+\frac{-3}{8}*10+\frac{5}{8}*4 \\
+            \frac{1}{2}*0+\frac{-3}{4}*\left(-4\right)+\frac{3}{4}*4+\frac{-1}{2}*12 & \frac{1}{2}*\left(-10\right)+\frac{-3}{4}*12+\frac{3}{4}*20+\frac{-1}{2}*0 & \frac{1}{2}*3+\frac{-3}{4}*\left(-6\right)+\frac{3}{4}*\left(-4\right)+\frac{-1}{2}*6 & \frac{1}{2}*\left(-5\right)+\frac{-3}{4}*4+\frac{3}{4}*10+\frac{-1}{2}*4 \\
+            \frac{-1}{2}*0+\frac{-5}{2}*\left(-4\right)+\frac{5}{4}*4+\frac{-5}{4}*12 & \frac{-1}{2}*\left(-10\right)+\frac{-5}{2}*12+\frac{5}{4}*20+\frac{-5}{4}*0 & \frac{-1}{2}*3+\frac{-5}{2}*\left(-6\right)+\frac{5}{4}*\left(-4\right)+\frac{-5}{4}*6 & \frac{-1}{2}*\left(-5\right)+\frac{-5}{2}*4+\frac{5}{4}*10+\frac{-5}{4}*4 \\
+            \frac{-3}{2}*0+0*\left(-4\right)+\frac{-3}{4}*4+\frac{1}{4}*12 & \frac{-3}{2}*\left(-10\right)+0*12+\frac{-3}{4}*20+\frac{1}{4}*0 & \frac{-3}{2}*3+0*\left(-6\right)+\frac{-3}{4}*\left(-4\right)+\frac{1}{4}*6 & \frac{-3}{2}*\left(-5\right)+0*4+\frac{-3}{4}*10+\frac{1}{4}*4
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{multline}
+
+    А значит, ответ получился верным.
+
+    \section{Построение минимального многочлена}
+
+    Для каждой матрицы сначала построим минималные аннуоляторы
+    векторов канонического базиса, попутно подддержживая НОК этих многочленов. 
+    Если на каком-то шагу его стапень совпала с размерностью пространства, пришло время остановиться, 
+    ведь минимальный многочлен всегда делит характеристический.
+
+    Имея НОК всех аннуляторов, то есть $\phi(t)$, проверим, что его корни совпадают с корнями $\chi(t)$,
+    причём должно быть $m(\lambda) \leqslant \alpha(\lambda)$.
+
+    \subsection{Матрица F}
+
     
 
 \end{document}
