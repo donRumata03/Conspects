@@ -1,0 +1,227 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Канонический вид матрицы. Часть 4»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие можно найти здесь: \url{https://drive.google.com/file/d/1S739UJN5bLqxEaGsPdMDfRmLOZEzdFg7/view?usp=sharing}
+
+        Data section:
+
+        \begin{equation}
+            F = \left(\begin{matrix}
+                0 & -10 & 3 & -5 \\
+                -4 & 12 & -6 & 4 \\
+                4 & 20 & -4 & 10 \\
+                12 & 0 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            G = \left(\begin{matrix}
+                -22 & 20 & 4 & -36 \\
+                22 & 4 & 10 & 12 \\
+                5 & -19 & -9 & 24 \\
+                27 & -13 & 3 & 34
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            P = \left(\begin{matrix}
+                -4 & 6 & 3 & 3 \\
+                3 & -6 & -3 & -2 \\
+                -3 & 5 & 2 & 2 \\
+                -6 & 11 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            Q = \left(\begin{matrix}
+                -26 & -39 & 65 & 13 \\
+                -18 & -27 & 45 & 9 \\
+                -16 & -24 & 40 & 8 \\
+                -26 & -39 & 65 & 13
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            V = \left(\begin{matrix}
+                -5 & 8 & 4 & -10 \\
+                5 & -7 & 8 & -5 \\
+                0 & -4 & -7 & 4 \\
+                2 & 8 & 4 & -17
+            \end{matrix}\right)
+        \end{equation}
+
+        
+        \begin{equation}
+            W = \left(\begin{matrix}
+                1 & 2 & -4 & -4 \\
+                10 & -1 & 10 & 8 \\
+                -2 & 2 & -1 & -4 \\
+                4 & -4 & 10 & 11
+            \end{matrix}\right)
+        \end{equation}
+    \end{statement}
+
+
+    \section{Нахождение жордановой формы матрицы}
+
+
+    Для матриц F и G жорданова форма просто совпадает с диагональной.
+    Остальные сейчас поймём, как выглядят.
+
+    \section{Матрица P}
+
+    Для $P$ у нас одно собственное число, и это $-1$.
+    Так как геометрическая кратность 2, будет две клетки, 
+    причём кратность в минимальном многочлене — 3, а это максимальная высота башни. То есть будут клетки размером 1 и 3.
+    
+    \begin{equation}
+        J = \left(\begin{matrix}
+            -1 & 0 & 0 & 0 \\
+            0 & -1 & 1 & 0 \\
+            0 & 0 & -1 & 1 \\
+            0 & 0 & 0 & -1
+        \end{matrix}\right)
+    \end{equation}
+
+    
+    \section{Матрица Q}
+
+    Одно собственное число, и это $0$.
+    Так как геометрическая кратность 3, будет три клетки, 
+    причём кратность в минимальном многочлене — 2, а это максимальная высота башни. То есть будут клетки размером 1, 1 и 2.
+    
+    \begin{equation}
+        J = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \section{Матрица V}
+
+    Cобственные числа — $-11, -7$.
+    Для каждого кратности в характеристическом и минимальном многочленах 2, а геометрическая — 1, 
+    то есть для каждого будет одна башня высотой 2.
+    
+    \begin{equation}
+        J = \left(\begin{matrix}
+            -11 & 1 & 0 & 0 \\
+            0 & -11 & 0 & 0 \\
+            0 & 0 & -7 & 1 \\
+            0 & 0 & 0 & -7
+        \end{matrix}\right)
+    \end{equation}
+
+    
+    \section{Матрица W}
+
+    Cобственные числа — $-1, 3, 5$.
+    Для -1 и 5 просто одна единичная клетка, а вот $m(3) = 2$, то есть будет башня высотой 2.
+    
+    \begin{equation}
+        J = \left(\begin{matrix}
+            -1 & 0 & 0 & 0 \\
+            0 & 3 & 1 & 0 \\
+            0 & 0 & 3 & 0 \\
+            0 & 0 & 0 & 5
+        \end{matrix}\right)
+    \end{equation}
+
+    
+    
+    \section{Построение жорданового базиса}
+
+    Для рассматриваемых матриц построим цепочки из подпространств $\mathfrak{K}_r$.
+    Затем найдём циклические базисы и запишем их в столбцы матрицы перехода.
+
+    \section{Матрица P}
+
+    Рассматриваем единственный корень.
+
+    \begin{equation}
+        V_{-1} = \mathfrak{K}_1 = \Lin \left\{ \begin{pmatrix} 1\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} -1\\-1\\0\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+    \begin{equation}
+        \mathfrak{K}_2 = \Ker (\mathcal{P} - (-1) \mathcal{E})^{2} = \Lin \left\{ \begin{pmatrix} 2\\1\\0\\0 \end{pmatrix}, \begin{pmatrix} 1\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} 1\\0\\0\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+
+    \begin{equation}
+        K_{-1} = \mathfrak{K}_3 = \Lin \left\{ \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\0\\1 \end{pmatrix}  \right\}
+    \end{equation}
+    
+    У нас будет один циклический базис, начинающийся с $\mathfrak{K}_3$, то есть длины три, один — начинающийскя с собственного длины один.
+
+    Выписывая векторы $\mathfrak{K}_2$ в матрицу и добавляя к ним векторы канонического базиса из $\mathfrak{K}_3$, считая ранг, поймём, какого вектора не хватает.
+
+    В целом очевидно, что не хватает $\begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}$.
+
+    Будем применять к нему оператор $(\mathcal{P} - (-1) \mathcal{E})$.
+
+    Получим, что 
+
+    \begin{equation}
+        (j_4, j_3, j_2) = \left( \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \left(\begin{matrix}
+            -3 \\
+            3 \\
+            -3 \\
+            -6
+        \end{matrix}\right), \left(\begin{matrix}
+            0 \\
+            -3 \\
+            3 \\
+            3
+        \end{matrix}\right) \right)
+    \end{equation}
+
+    Заметим, что если действовать дальше, будет обнуляться.
+
+    $j_1$ получаем из собственного пространства, чтобы он не лежал в найденной башне. Например, $j_1 = \begin{pmatrix}1\\0\\1\\0\end{pmatrix}$
+
+    Запишем $T = (j_1, j_2, j_3, j_4)$ Получим
+
+    \begin{equation}
+        T_{canonical \to j} = \left(\begin{matrix}
+            1 & 0 & -3 & 1 \\
+            0 & -3 & 3 & 0 \\
+            1 & 3 & -3 & 0 \\
+            0 & 3 & -6 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверим, что 
+    \begin{equation}
+        T \cdot J \cdot T^{-1} = \left(\begin{matrix}
+            -4 & 6 & 3 & 3 \\
+            3 & -6 & -3 & -2 \\
+            -3 & 5 & 2 & 2 \\
+            -6 & 11 & 6 & 4
+        \end{matrix}\right) = P
+    \end{equation}
+
+    Это определённо успех.
+
+\end{document}

@@ -1,0 +1,867 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Канонический вид матрицы. Часть 3»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие можно найти здесь: \url{https://drive.google.com/file/d/1yLuU3nt1vEcIRbmDE4mNnO6OZ2JXiAAu/view?usp=sharing}
+
+        Data section:
+
+        \begin{equation}
+            F = \left(\begin{matrix}
+                0 & -10 & 3 & -5 \\
+                -4 & 12 & -6 & 4 \\
+                4 & 20 & -4 & 10 \\
+                12 & 0 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            G = \left(\begin{matrix}
+                -22 & 20 & 4 & -36 \\
+                22 & 4 & 10 & 12 \\
+                5 & -19 & -9 & 24 \\
+                27 & -13 & 3 & 34
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            P = \left(\begin{matrix}
+                -4 & 6 & 3 & 3 \\
+                3 & -6 & -3 & -2 \\
+                -3 & 5 & 2 & 2 \\
+                -6 & 11 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            Q = \left(\begin{matrix}
+                -26 & -39 & 65 & 13 \\
+                -18 & -27 & 45 & 9 \\
+                -16 & -24 & 40 & 8 \\
+                -26 & -39 & 65 & 13
+            \end{matrix}\right)
+        \end{equation}
+
+        \begin{equation}
+            V = \left(\begin{matrix}
+                -5 & 8 & 4 & -10 \\
+                5 & -7 & 8 & -5 \\
+                0 & -4 & -7 & 4 \\
+                2 & 8 & 4 & -17
+            \end{matrix}\right)
+        \end{equation}
+
+        
+        \begin{equation}
+            W = \left(\begin{matrix}
+                1 & 2 & -4 & -4 \\
+                10 & -1 & 10 & 8 \\
+                -2 & 2 & -1 & -4 \\
+                4 & -4 & 10 & 11
+            \end{matrix}\right)
+        \end{equation}
+    \end{statement}
+
+
+    \section{Построение спектральных проекторов}
+
+    \subsection{Полиномиальное разлжение единицы}
+
+    \subsubsection{Матрица F}
+
+    Строим полиномиальное разлжение 1-цы на многочлены из идеалов, порождённых минимальным многочленом.
+    
+    $\varphi(t) = (t - 2)(t - 4)$, тогда можно представить: 
+    
+    \begin{equation}
+        \frac{1}{\varphi(t)} = \frac{A}{t - 2} + \frac{B}{t - 4}
+    \end{equation}
+
+    У нас здесь и везде далее не будет неразложимых множителей, 
+    все просто линейные в какой-то степени, поэтому везде сработает Лагранж:
+
+    Если $A_\beta$ — коэффициент перед $\frac{1}{(t - a)^\beta}$, то
+    \begin{equation}
+        A_\beta = \beta ! \frac{P(t)}{Q^{(\beta)}(t)}{\Bigr |}_{t=a}
+    \end{equation}
+
+    У нас $P(t) = 1$, $Q = \varphi$.
+
+    Например, A для матрицы F:
+    \begin{equation}
+        A = 1 \frac{1}{2(2 - 3)} = -\frac{1}{2}
+    \end{equation}
+
+    \begin{equation}
+        \frac{1}{(t - 2)(t - 4)} = \frac{1}{2 (t - 4)} - \frac{1}{2 (t - 2)}
+    \end{equation}
+
+    \begin{equation}
+        1 = \frac{1}{2} (t - 2) - \frac{1}{2} (t - 4)
+    \end{equation}
+
+    \subsubsection{Матрица G}
+
+    \begin{multline}
+        \frac{1}{(t + 6)(t + 2)(t - 5)(t- 10)} = \\
+        -\frac{1}{385 (t - 5)} + \frac{1}{336 (t + 2)} - \frac{1}{704 (t + 6)} + \frac{1}{960 (t - 10)}
+    \end{multline}
+    
+    \begin{multline}
+        1 = -\frac{1}{385} (t + 6)(t + 2)(t- 10) + \frac{1}{336} (t + 6)(t - 5)(t- 10) \\
+        - \frac{1}{704} (t + 2)(t - 5)(t- 10)+ \frac{1}{960} (t + 6)(t + 2)(t - 5)
+    \end{multline}
+
+    \subsubsection{Матрица P}
+
+    \begin{equation}
+        \frac{1}{(t + 1)^3} = \frac{1}{(t + 1)^3}
+    \end{equation}
+
+    \begin{equation}
+        1 = 1
+    \end{equation}
+
+    \subsubsection{Матрица Q}
+
+    \begin{equation}
+        \frac{1}{t^2} = \frac{1}{t^2}
+    \end{equation}
+
+    \begin{equation}
+        1 = 1
+    \end{equation}
+
+    
+    \subsubsection{Матрица V}
+
+    \begin{multline}
+        \frac{1}{(t + 7)^2(t + 11)^2} = \\
+         \frac{1}{32 (t + 11)} + \frac{1}{16 (t + 11)^2} - \frac{1}{32 (t + 7)} + \frac{1}{16 (t + 7)^2}
+    \end{multline}
+
+    \begin{multline}
+        1 = \\ \frac{1}{32} (t + 7)^2(t + 11) + \frac{1}{16} (t+7)^2 - \frac{1}{32} (t + 7)(t+11)^2 + \frac{1}{16} (t + 11)^2 = \\
+        (t + 7)^2 \frac{t + 13}{32} + (t + 11)^2 \frac{-t-5}{32}
+    \end{multline}
+
+    
+    \subsubsection{Матрица W}
+
+    \begin{multline}
+        \frac{1}{(t - 5)(t + 1)(t - 3)^2} = \\
+        -\frac{1}{32 (t - 3)} - \frac{1}{96 (t + 1)} - \frac{1}{8 (t - 3)^2} + \frac{1}{24 (t - 5)}
+    \end{multline}
+
+    \begin{multline}
+        1 = \\ -\frac{1}{32} \left((t - 5)(t + 1)\right) (t + 1) - \frac{1}{96}(t - 5)(t - 3)^2 + \frac{1}{24} (t + 1) (t - 3)^2
+    \end{multline}
+
+
+    
+    \subsection{Спекртальные проекторы через многочлены от матриц}
+
+    \subsubsection{Матрица F}
+
+    \begin{equation}
+        P_4 = \frac{1}{2} (F - 2E) = \left(\begin{matrix}
+            -2 & -10 & 3 & -5 \\
+            -4 & 10 & -6 & 4 \\
+            4 & 20 & -6 & 10 \\
+            12 & 0 & 6 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \begin{equation}
+        P_2 = -\frac{1}{2} (F - 4E) = \left(\begin{matrix}
+            2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            2 & -4 & 3 & -2 \\
+            -2 & -10 & 4 & -5 \\
+            -6 & 0 & -3 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    Заметим, что для F  и G это обычные проекторы, на собственные подпространства.
+
+    Проверим, что проекоры в сумме дают единичнцю матрицу:
+
+    \begin{multline}
+        P_4 + P_2 =  \\ 
+        \left(\begin{matrix}
+            -2 & -10 & 3 & -5 \\
+            -4 & 10 & -6 & 4 \\
+            4 & 20 & -6 & 10 \\
+            12 & 0 & 6 & 2
+        \end{matrix}\right) + \left(\begin{matrix}
+            2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            2 & -4 & 3 & -2 \\
+            -2 & -10 & 4 & -5 \\
+            -6 & 0 & -3 & 0
+        \end{matrix}\right) = \\
+        \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{multline}    
+
+
+    \subsubsection{Матрица G}
+
+    \begin{equation}
+        P_5 = -\frac{1}{385} (G + 6E) (G + 2E) (G - 10E) = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            2 & 2 & 2 & 0 \\
+            -1 & -1 & -1 & 0 \\
+            1 & 1 & 1 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \begin{equation}
+        P_{-2} = -\frac{1}{385} (G + 6E) (G - 5E) (G - 10E) = \left(\begin{matrix}
+            0 & 1 & 1 & -1 \\
+            0 & -3 & -3 & 3 \\
+            0 & 2 & 2 & -2 \\
+            0 & -2 & -2 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \begin{equation}
+        P_{-6} = -\frac{1}{385} (G + 2E) (G - 5E) (G - 10E) = \left(\begin{matrix}
+            2 & -2 & -1 & 3 \\
+            -2 & 2 & 1 & -3 \\
+            0 & 0 & 0 & 0 \\
+            -2 & 2 & 1 & -3
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        P_{10} = -\frac{1}{385} (G + 2E) (G - 5E) (G + 6E) = \left(\begin{matrix}
+            -1 & 1 & 0 & -2 \\
+            0 & 0 & 0 & 0 \\
+            1 & -1 & 0 & 2 \\
+            1 & -1 & 0 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+
+    Они совпадают с проекторами на собственные, а мы их уже проверяли.
+
+    
+    \subsubsection{Матрица P}
+
+    Тут просто одно собственное число (помним, что алгебраической кратности 4), то есть всё пространство — корневое, 
+    так что не удивительно, что 
+
+    \begin{equation}
+        P_{-1} = E = \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \subsubsection{Матрица Q}
+
+    Ничего нового:
+
+    \begin{equation}
+        P_{0} = E = \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверять нечего…    
+    
+    \subsubsection{Матрица V}
+
+    \begin{equation}
+        P_{-11} = \frac{1}{32} (V + 7E)^2 (V + 13E) = \left(\begin{matrix}
+            -3 & 1 & -4 & 2 \\
+            -3 & 2 & -4 & 1 \\
+            \frac{3}{4} & 0 & 1 & \frac{-3}{4} \\
+            -3 & 1 & -4 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \begin{equation}
+        P_{-7} = \frac{1}{32} (V + 11E)^2 (-V - 5E) = \left(\begin{matrix}
+            4 & -1 & 4 & -2 \\
+            3 & -1 & 4 & -1 \\
+            \frac{-3}{4} & 0 & 0 & \frac{3}{4} \\
+            3 & -1 & 4 & -1
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверка: \url{https://matrixcalc.org/#1/32*(%7B%7B-5,8,4,-10%7D,%7B5,-7,8,-5%7D,%7B0,-4,-7,4%7D,%7B2,8,4,-17%7D%7D+11%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)%5E2*(-%7B%7B-5,8,4,-10%7D,%7B5,-7,8,-5%7D,%7B0,-4,-7,4%7D,%7B2,8,4,-17%7D%7D-5%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)+1/32*(%7B%7B-5,8,4,-10%7D,%7B5,-7,8,-5%7D,%7B0,-4,-7,4%7D,%7B2,8,4,-17%7D%7D+7%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)%5E2*(%7B%7B-5,8,4,-10%7D,%7B5,-7,8,-5%7D,%7B0,-4,-7,4%7D,%7B2,8,4,-17%7D%7D+13%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)}
+
+
+    \subsubsection{Матрица W}
+
+    \begin{equation}
+        P_{3} = -\frac{1}{32} (W - 5E) (W + 1E)(W + 1E) = \left(\begin{matrix}
+            \frac{-1}{2} & 0 & \frac{1}{2} & 0 \\
+            2 & -1 & 4 & 4 \\
+            \frac{-3}{2} & 0 & \frac{3}{2} & 0 \\
+            \frac{11}{4} & \frac{-1}{2} & \frac{1}{4} & 2
+        \end{matrix}\right)
+    \end{equation}
+
+
+    \begin{equation}
+        P_{-1} = -\frac{1}{96} (W - 5E) (W - 3E)^2 = \left(\begin{matrix}
+            \frac{5}{6} & \frac{-1}{3} & \frac{1}{2} & \frac{2}{3} \\
+            \frac{-10}{3} & \frac{4}{3} & -2 & \frac{-8}{3} \\
+            \frac{5}{6} & \frac{-1}{3} & \frac{1}{2} & \frac{2}{3} \\
+            \frac{-25}{12} & \frac{5}{6} & \frac{-5}{4} & \frac{-5}{3}
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        P_{5} = \frac{1}{24} (W + 1E) (W - 3E)^2 = \left(\begin{matrix}
+            \frac{2}{3} & \frac{1}{3} & -1 & \frac{-2}{3} \\
+            \frac{4}{3} & \frac{2}{3} & -2 & \frac{-4}{3} \\
+            \frac{2}{3} & \frac{1}{3} & -1 & \frac{-2}{3} \\
+            \frac{-2}{3} & \frac{-1}{3} & 1 & \frac{2}{3}
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверка прошла успешно: \url{https://matrixcalc.org/#-(1/32)*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D-5%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D+1%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D+1%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)-1/96*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D-5%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D-3%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)%5E2+1/24*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D+1%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)*(%7B%7B1,2,-4,-4%7D,%7B10,-1,10,8%7D,%7B-2,2,-1,-4%7D,%7B4,-4,10,11%7D%7D-3%2e*%7B%7B1,0,0,0%7D,%7B0,1,0,0%7D,%7B0,0,1,0%7D,%7B0,0,0,1%7D%7D)%5E2}
+
+
+    \subsection{Находение спектральных подпространств}
+
+    Теперь для каждом матрицы-проектора выделим базу столбцов, найдя её образ.
+    Мы можем проверить ранг на матричном калькуляторе, а потом предъявить сколько нужно независимых столбцов. 
+    Ранг должен быть равен алгебраической кратности собственного числа. 
+
+    \subsubsection{Матрица F}
+
+    \begin{equation}
+        \Img P_4  = \Lin \left\{ 
+        \begin{pmatrix} -1 \\-2 \\ 2 \\6 \end{pmatrix},
+        \begin{pmatrix} -1 \\ 1 \\ 2 \\ 0  \end{pmatrix},
+        \right\}
+    \end{equation}
+
+
+    \begin{equation}
+        \Img P_2  = \Lin \left\{ 
+        \begin{pmatrix} 1 \\ 1 \\ -1 \\ -3 \end{pmatrix},
+        \begin{pmatrix} 5 \\ -4 \\ -10 \\ 0  \end{pmatrix},
+        \right\}
+    \end{equation}
+
+
+    
+    \subsubsection{Матрица G}
+
+    \begin{equation}
+        \Img P_5  = \Lin \left\{ 
+            \begin{pmatrix} 0 \\ 2 \\ -1 \\ 1 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+
+    \begin{equation}
+        \Img P_{-2}  = \Lin \left\{ 
+        \begin{pmatrix} 1 \\ -3 \\ 2 \\ -2 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+    \begin{equation}
+        \Img P_{-6}  = \Lin \left\{ 
+        \begin{pmatrix} -1 \\ 1 \\ 0 \\ 1 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+    \begin{equation}
+        \Img P_{10}  = \Lin \left\{ 
+        \begin{pmatrix} -1 \\ 0 \\ 1 \\ 1 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+
+    
+    \subsubsection{Матрица P}
+
+    \begin{equation}
+        \Img P_{-1}  = \Lin \left\{ 
+            \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix},
+            \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},
+            \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix},
+            \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix},
+        \right\} = \sR^4
+    \end{equation}
+    
+
+    \subsubsection{Матрица Q}
+
+    \begin{equation}
+        \Img P_{0}  = \Lin \left\{ 
+            \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix},
+            \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},
+            \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix},
+            \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix},
+        \right\} = \sR^4
+    \end{equation}
+
+
+    \subsubsection{Матрица V}
+
+    \begin{equation}
+        \Img P_{-11}  = \Lin \left\{ 
+            \begin{pmatrix} 1 \\ 2 \\ 0 \\ 1 \end{pmatrix},
+            \begin{pmatrix} -4 \\ -4 \\ 1 \\ -4 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+    \begin{equation}
+        \Img P_{-7}  = \Lin \left\{ 
+            \begin{pmatrix} 1 \\ 1 \\ 0 \\ 1 \end{pmatrix},
+            \begin{pmatrix} -8 \\ -4 \\ 3 \\ -4 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+    
+
+    \subsubsection{Матрица W}
+
+    \begin{equation}
+        \Img P_{3}  = \Lin \left\{ 
+            \begin{pmatrix} 0 \\ 2 \\ 0 \\ 1 \end{pmatrix},
+            \begin{pmatrix} 2 \\ 16 \\ 6 \\ 1 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+    \begin{equation}
+        \Img P_{-1}  = \Lin \left\{ 
+            \begin{pmatrix} 2 \\ -8 \\ 2 \\ -5 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+    \begin{equation}
+        \Img P_{5}  = \Lin \left\{ 
+            \begin{pmatrix} 1 \\ 2 \\ 1 \\ -1 \end{pmatrix},
+        \right\}
+    \end{equation}
+
+
+    \section{Разложение Жордана}
+
+
+    Для матриц F и G оно просто будет сама матрица плюс ноль. (в этом убедились выше)
+    Для остальных построим оператор простой структуры с собственными подпространствами 
+    из корневых подпространств нашего оператора.
+
+
+    \subsection{Матрица P}
+
+    \begin{equation}
+        \mathfrak{D} = -1 \cdot \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right) = \left(\begin{matrix}
+            -1 & 0 & 0 & 0 \\
+            0 & -1 & 0 & 0 \\
+            0 & 0 & -1 & 0 \\
+            0 & 0 & 0 & -1
+        \end{matrix}\right)
+    \end{equation}
+
+    Тогда 
+
+    \begin{equation}
+        \mathfrak{B} = P - \mathfrak{D} = 
+        \left(\begin{matrix}
+            -3 & 6 & 3 & 3 \\
+            3 & -5 & -3 & -2 \\
+            -3 & 5 & 3 & 2 \\
+            -6 & 11 & 6 & 5
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверим, что $\mathfrak{B}$ нильпотентно с индексом $\max\{3\} = 3$.
+
+    \begin{equation}
+        \mathfrak{B}^2 = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            -3 & 6 & 3 & 3 \\
+            3 & -6 & -3 & -3 \\
+            3 & -6 & -3 & -3
+        \end{matrix}\right) \neq \mathbb{0}
+    \end{equation}
+
+    \begin{equation}
+        \mathfrak{B}^3 = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) = \mathbb{0}
+    \end{equation}
+
+    Проверка прошла успешно.
+
+
+
+    \subsection{Матрица Q}
+    
+
+    \begin{equation}
+        \mathfrak{D} = 0 \cdot \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right) = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+
+    Тогда 
+
+    \begin{equation}
+        \mathfrak{B} = Q - \mathfrak{D} = Q = 
+        \left(\begin{matrix}
+            -26 & -39 & 65 & 13 \\
+            -18 & -27 & 45 & 9 \\
+            -16 & -24 & 40 & 8 \\
+            -26 & -39 & 65 & 13
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверим, что $\mathfrak{B}$ нильпотентно с индексом $\max\{2\} = 2$.
+
+    \begin{equation}
+        \mathfrak{B}^1 = Q \neq \mathbb{0}
+    \end{equation}
+
+    \begin{equation}
+        \mathfrak{B}^2 = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) = \mathbb{0}
+    \end{equation}
+
+    Проверка прошла успешно.
+
+    
+
+
+    \subsection{Матрица V}
+
+    \begin{equation}
+        \mathfrak{D} = -11 \cdot \left(\begin{matrix}
+            -3 & 1 & -4 & 2 \\
+            -3 & 2 & -4 & 1 \\
+            \frac{3}{4} & 0 & 1 & \frac{-3}{4} \\
+            -3 & 1 & -4 & 2
+        \end{matrix}\right) - 7 \cdot \left(\begin{matrix}
+            4 & -1 & 4 & -2 \\
+            3 & -1 & 4 & -1 \\
+            \frac{-3}{4} & 0 & 0 & \frac{3}{4} \\
+            3 & -1 & 4 & -1
+        \end{matrix}\right)  = \left(\begin{matrix}
+            5 & -4 & 16 & -8 \\
+            12 & -15 & 16 & -4 \\
+            -3 & 0 & -11 & 3 \\
+            12 & -4 & 16 & -15
+        \end{matrix}\right)
+    \end{equation}
+
+
+    Тогда 
+
+    \begin{equation}
+        \mathfrak{B} = V - \mathfrak{D} = 
+        \left(\begin{matrix}
+            -10 & 12 & -12 & -2 \\
+            -7 & 8 & -8 & -1 \\
+            3 & -4 & 4 & 1 \\
+            -10 & 12 & -12 & -2
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверим, что $\mathfrak{B}$ нильпотентно с индексом $\max\{2, 2\} = 2$.
+
+    \begin{equation}
+        \mathfrak{B}^1 = \mathfrak{B} \neq \mathbb{0}
+    \end{equation}
+
+    \begin{equation}
+        \mathfrak{B}^2 = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) = \mathbb{0}
+    \end{equation}
+
+    Проверка прошла успешно.
+
+
+
+
+    \subsection{Матрица W}
+
+    \begin{multline}
+        \mathfrak{D} = 3 \left(\begin{matrix}
+            \frac{-1}{2} & 0 & \frac{1}{2} & 0 \\
+            2 & -1 & 4 & 4 \\
+            \frac{-3}{2} & 0 & \frac{3}{2} & 0 \\
+            \frac{11}{4} & \frac{-1}{2} & \frac{1}{4} & 2
+        \end{matrix}\right) \\ 
+        - 1 \left(\begin{matrix}
+            \frac{5}{6} & \frac{-1}{3} & \frac{1}{2} & \frac{2}{3} \\
+            \frac{-10}{3} & \frac{4}{3} & -2 & \frac{-8}{3} \\
+            \frac{5}{6} & \frac{-1}{3} & \frac{1}{2} & \frac{2}{3} \\
+            \frac{-25}{12} & \frac{5}{6} & \frac{-5}{4} & \frac{-5}{3}
+        \end{matrix}\right) + 5 \left(\begin{matrix}
+            \frac{2}{3} & \frac{1}{3} & -1 & \frac{-2}{3} \\
+            \frac{4}{3} & \frac{2}{3} & -2 & \frac{-4}{3} \\
+            \frac{2}{3} & \frac{1}{3} & -1 & \frac{-2}{3} \\
+            \frac{-2}{3} & \frac{-1}{3} & 1 & \frac{2}{3}
+        \end{matrix}\right) = \\ \left(\begin{matrix}
+            1 & 2 & -4 & -4 \\
+            16 & -1 & 4 & 8 \\
+            -2 & 2 & -1 & -4 \\
+            7 & -4 & 7 & 11
+        \end{matrix}\right)
+    \end{multline}
+
+
+    Тогда 
+
+    \begin{equation}
+        \mathfrak{B} = W - \mathfrak{D} = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            -6 & 0 & 6 & 0 \\
+            0 & 0 & 0 & 0 \\
+            -3 & 0 & 3 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверим, что $\mathfrak{B}$ нильпотентно с индексом $\max\{1, 1, 2\} = 2$.
+
+    \begin{equation}
+        \mathfrak{B}^1 = \mathfrak{B} \neq \mathbb{0}
+    \end{equation}
+
+    \begin{equation}
+        \mathfrak{B}^2 = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right) = \mathbb{0}
+    \end{equation}
+
+    Проверка прошла успешно.
+
+    
+
+
+
+    \section{Корневые подпространства}
+
+    Будем находить $\Ker (\mathcal{A} - \lambda \mathcal{E})^{m(\lambda)}$ для каждого собственного числа и матрицы
+    
+    Для этого достаточно решить систему уравнений $(A - \lambda E)^{m(\lambda)} x = \mathbb{0}$.
+
+    Там, где $m(\lambda) = 1$, переиспользуем собственные подпространства.
+
+
+    Для каждом матрицы попутно будем сверять, одинаковы ли образы спектральных проекторов и полученные корневые пространства.
+
+    \subsection{Матрица F}
+
+    \begin{equation}
+        K_2: \Lin \left\{\begin{pmatrix} -5\\4\\10\\0 \end{pmatrix}, \begin{pmatrix} -5\\-14\\0\\30 \end{pmatrix} \right\}
+    \end{equation}
+
+    \begin{equation}
+        K_4: \Lin \left\{\begin{pmatrix} -1\\1\\2\\0 \end{pmatrix}, \begin{pmatrix} 0\\-1\\0\\2 \end{pmatrix} \right\}
+    \end{equation}
+
+
+    \subsection{Матрица G}
+
+
+    \begin{equation}
+        K_{-6}: \Lin \left\{\begin{pmatrix} -1\\1\\0\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+    
+    \begin{equation}
+        K_{-2}: \Lin \left\{\begin{pmatrix} -1\\3\\-2\\2 \end{pmatrix} \right\}
+    \end{equation}
+
+
+    \begin{equation}
+        K_{5}: \Lin \left\{\begin{pmatrix} 0\\2\\-1\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+    
+    \begin{equation}
+        K_{10}: \Lin \left\{\begin{pmatrix} -1\\0\\1\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+
+    \subsection{Матрица P}
+
+    Здесь уже посчитаем $\Ker (\mathcal{P} - \lambda \mathcal{E})^{m(\lambda)}$
+
+    СЛОУ:
+    \begin{equation}
+        (\mathcal{P} + E)^3 = \left( \left(\begin{matrix}
+            -4 & 6 & 3 & 3 \\
+            3 & -6 & -3 & -2 \\
+            -3 & 5 & 2 & 2 \\
+            -6 & 11 & 6 & 4
+        \end{matrix}\right) - \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right) \right)^3 = \left(\begin{matrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    Впрочем, никто не сомневался, что тут всё пространство — корневое.
+
+    Базис $K_{-1}$ берём канонический:
+
+    \begin{equation}
+        K_{-1} = \Lin \left\{ \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\0\\1 \end{pmatrix}  \right\}
+    \end{equation}
+
+    \subsection{Матрица Q}
+
+    Аналогично с матрицей Q, у которой одно собственнок число с алгебраической кратностью 4:
+
+    \begin{equation}
+        K_{0} = \Lin \left\{ \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\0\\1 \end{pmatrix}  \right\}
+    \end{equation}
+
+
+    
+    \subsection{Матрица V}
+
+    Для начала — $\lambda_1 = -11$
+
+    \begin{equation}
+        (V + 11E)^2 = \left(\begin{matrix}
+            56 & -16 & 64 & -24 \\
+            40 & -16 & 64 & -8 \\
+            -12 & 0 & 0 & 12 \\
+            40 & -16 & 64 & -8
+        \end{matrix}\right)
+    \end{equation}
+
+    Получим, что 
+
+    \begin{equation}
+        K_{-11} = \Lin \left\{ \begin{pmatrix} 0\\4\\1\\0 \end{pmatrix}, \begin{pmatrix} 1\\2\\0\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+    Вот так это получили: \url{https://matrixcalc.org/slu.html#solve-using-Gaussian-elimination(%7B%7B56,-16,64,-24,0%7D,%7B40,-16,64,-8,0%7D,%7B-12,0,0,12,0%7D,%7B40,-16,64,-8,0%7D%7D)}.
+
+    Заметим, что собстыенное подпространство из части 1 содержится в нём, проверя ранг, если записать всё в матрицу (он равен двум).
+
+    Далее — $\lambda_1 = -7$
+
+    \begin{equation}
+        (V + 7E)^2 = \left(\begin{matrix}
+            24 & -80 & 32 & 56 \\
+            0 & -32 & 0 & 32 \\
+            -12 & 32 & -16 & -20 \\
+            24 & -80 & 32 & 56
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        K_{-7} = \Lin \left\{ \begin{pmatrix} -4\\0\\3\\0 \end{pmatrix}, \begin{pmatrix} 1\\1\\0\\1 \end{pmatrix} \right\}
+    \end{equation}
+    
+
+    \subsection{Матрица W}
+
+    Начнём с $\lambda_1 = -1$.
+
+    Кратность один, поэтому переиспользуем собственное.
+
+    \begin{equation}
+        K_{-1} = \Lin \left\{\begin{pmatrix} -2\\8\\-2\\5 \end{pmatrix} \right\}
+    \end{equation}
+    
+
+    Далее $\lambda_2 = 3$.
+
+
+    \begin{equation}
+        (W - 3E)^2 = \left(\begin{matrix}
+            16 & -4 & 4 & 8 \\
+            -48 & 24 & -40 & -48 \\
+            16 & -4 & 4 & 8 \\
+            -36 & 12 & -16 & -24
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        K_{3} = \Lin \left\{\begin{pmatrix} 1\\7\\3\\0 \end{pmatrix}, \begin{pmatrix} 0\\2\\0\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+    
+    Для $\lambda_3 = 5$ переиспользуем собственное.
+
+    \begin{equation}
+        K_{5} = \Lin \left\{ \begin{pmatrix} -1\\-2\\-1\\1 \end{pmatrix} \right\}
+    \end{equation}
+
+
+    Для всех матриц проверили и получили, что корневые подпространства совпадают с образами спектральных проекторов.
+
+    
+
+\end{document}
