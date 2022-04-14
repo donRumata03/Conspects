@@ -163,5 +163,40 @@
         \end{matrix}\right)^{-1}
     \end{multline}
 
+    Теперь найдём $exp(J_Q t)$. Тут всего одно собственное число, причём $\lambda = 0 \Longrightarrow t\lambda = 0$.
+    $f^{(n)}(0) = 1$.
+
+    Очевидно получаем, что
+    
+    \begin{equation}
+        exp(J_Q t) = \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 1 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right)
+    \end{equation}
+
+
+    Осталось расправиться с $exp(Q t)$. Ну, это
+
+    \begin{equation}
+        T \exp(J_Q t) T^{-1} = \left(\begin{matrix}
+            -3 & 5 & -26 & 1 \\
+            2 & 0 & -18 & 0 \\
+            0 & 2 & -16 & 0 \\
+            0 & 0 & -26 & 0
+        \end{matrix}\right) \left(\begin{matrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 1 \\
+            0 & 0 & 0 & 1
+        \end{matrix}\right) \left(\begin{matrix}
+            -3 & 5 & -26 & 1 \\
+            2 & 0 & -18 & 0 \\
+            0 & 2 & -16 & 0 \\
+            0 & 0 & -26 & 0
+        \end{matrix}\right)^{-1}
+    \end{equation}
 
 \end{document}
