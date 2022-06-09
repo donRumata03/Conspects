@@ -1,0 +1,181 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Дополнительное домашнее задание №4»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие можно найти здесь: \url{https://drive.google.com/drive/folders/1SidXsfLaleNJ1MgryzOB-4zpUpHHtcAN}
+    \end{statement}
+
+    \section{Ортогонализация и дополнение со скалярным произведением через матрицу Грама}
+
+    Работаем с вещественым пространством, матрица Грама скалярного произведения будет симметрична.
+
+    \begin{equation}
+        \Gamma = \left(\begin{matrix}
+            2 & -2 & -1 \\
+            -2 & 5 & 2 \\
+            -1 & 2 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+    Через неё вычисляем $a_i \Gamma \overline{a_j} = a_i \Gamma a_j$:
+
+    \url{https://matrixcalc.org/#%7B%7B1,0,1%7D%7D*%7B%7B2,-2,-1%7D,%7B-2,5,2%7D,%7B-1,2,2%7D%7D*%7B%7B1%7D,%7B0%7D,%7B1%7D%7D}
+
+    \begin{equation}
+        a_1 = \begin{pmatrix}
+            1 \\ 0 \\ 1
+        \end{pmatrix},
+        a_2 = \begin{pmatrix}
+            0\\1\\1
+        \end{pmatrix},
+        a_3 = \begin{pmatrix}
+            0\\0\\1
+        \end{pmatrix}
+    \end{equation}
+
+    Тогда
+    \begin{gather*}
+        \left\langle a_1, a_1 \right\rangle = 2 \\
+        \left\langle a_1, a_2 \right\rangle = 1 \\
+        \left\langle a_1, a_3 \right\rangle = 1 \\
+        \left\langle a_2, a_2 \right\rangle = 11 \\
+        \left\langle a_2, a_3 \right\rangle = 4 \\
+        \left\langle a_3, a_3 \right\rangle = 2
+    \end{gather*}
+
+    Можно через матричные операции получить сразу матрицу попарных скалярных произведений
+
+    \url{https://matrixcalc.org/#%7B%7B1,0,1%7D,%7B0,1,1%7D,%7B0,0,1%7D%7D*%7B%7B2,-2,-1%7D,%7B-2,5,2%7D,%7B-1,2,2%7D%7D*%7B%7B1,0,0%7D,%7B0,1,0%7D,%7B1,1,1%7D%7D}
+
+
+    Как раз получится, что 
+
+    \begin{equation}
+        \left(\begin{matrix}
+            1 & 0 & 1 \\
+            0 & 1 & 1 \\
+            0 & 0 & 1
+        \end{matrix}\right)\left(\begin{matrix}
+            2 & -2 & -1 \\
+            -2 & 5 & 2 \\
+            -1 & 2 & 2
+        \end{matrix}\right)\left(\begin{matrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            1 & 1 & 1
+        \end{matrix}\right) = \left(\begin{matrix}
+            2 & 1 & 1 \\
+            1 & 11 & 4 \\
+            1 & 4 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{gather}
+        b_1 = a_1 = \begin{pmatrix}
+            1 \\ 0 \\ 1
+        \end{pmatrix} \\
+        b_2 \hookleftarrow a_2 - \frac{\left\langle b_1, a_2 \right\rangle}
+        {\left\langle b_1, b_1 \right\rangle} b_1 = a_2 - \frac{1}{2} b_1 
+        \leadsto 2 a_2 - a_1 = \begin{pmatrix}
+            -1 \\ 2 \\ 1
+        \end{pmatrix} \\
+        b_3 \hookleftarrow  a_3 - \frac{\left\langle b_1, a_3 \right\rangle}
+        {\left\langle b_1, b_1 \right\rangle} b_1 - \frac{\left\langle b_2, a_3 \right\rangle}
+        {\left\langle b_2, b_2 \right\rangle} b_2 = a_3 - \frac{1}{2} b_1 - \frac{7}{42} b_2 
+        = a_3 - \frac{3}{6} b_1 - \frac{1}{6} b_2 \\
+        \leadsto 6 a_3 - 3 b_1 - b_2 
+        = \begin{pmatrix}
+            -2 \\ -2 \\ 2
+        \end{pmatrix} \leadsto \begin{pmatrix}
+            1 \\ 1 \\ -1
+        \end{pmatrix}
+    \end{gather}
+
+    Теперь с системой.
+
+    Для попадения в $L^{\perp}$ нужно, чтобы $\left\langle x, b_i \right\rangle$ был нулём.
+    То есть
+
+    \begin{equation}
+        \begin{pmatrix}
+            b_1 \\ b_2
+        \end{pmatrix} \Gamma \begin{pmatrix}
+            x_1 \\ x_2 \\ x_3
+        \end{pmatrix} = \mathbb{0}
+    \end{equation}
+
+    Тогда матрица системы:
+    \begin{equation}
+        \begin{pmatrix}
+            b_1 \\ b_2
+        \end{pmatrix} \Gamma = \left(\begin{matrix}
+            -2 & 8 & 3 \\
+            -4 & 9 & 6
+        \end{matrix}\right)
+    \end{equation}
+
+    Получаем, что $L^{\perp} = \Span \begin{pmatrix}
+        3 \\ 0 \\ 2
+    \end{pmatrix}$
+
+    Тогда система уравнений для $L$:
+
+    \begin{equation}
+        \begin{pmatrix}
+            3 & 0 & 2
+        \end{pmatrix} \Gamma \begin{pmatrix}
+            x_1 \\ x_2 \\ x_3
+        \end{pmatrix} = \mathbb{0}
+    \end{equation}
+    
+    Считая, получам:
+    \begin{equation}
+        \begin{pmatrix}
+            4 & -2 & 1
+        \end{pmatrix} x = \mathbb{0}
+    \end{equation}
+
+
+    \section{Сопряжённый оператор}
+
+    \begin{equation}
+        \Gamma = G(e_1, e_2) = \begin{pmatrix}
+            2 & 1 \\
+            1 & 1
+        \end{pmatrix}
+    \end{equation}
+    
+    Тогда
+    
+    \begin{equation}
+        A^{\circledast} = \overline{\Gamma^{-1}}A^{*}\overline{\Gamma} 
+        = \Gamma^{-1}A^{*}\Gamma = \Gamma^{-1}\overline{A^{T}}\Gamma = \left(\begin{matrix}
+            1 & -i \\
+            -2*i & 1
+        \end{matrix}\right)
+    \end{equation}
+
+    Получили оператор, который, согласно matrixcalc, как и сопряжённый, имеет собственные числа 
+    $1 \pm \sqrt{2}i$. Понятно, что получилось их совпадение за счёт того, что они сопряжённы друг другу у самого оператора.
+
+    В общем же случае у сопряжённых операторов собственные числа сопряжённы соответственным с.ч. друг друга. 
+
+\end{document}

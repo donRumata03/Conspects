@@ -1,0 +1,162 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Дополнительное домашнее задание №3»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие можно найти здесь: \url{https://drive.google.com/drive/folders/1SidXsfLaleNJ1MgryzOB-4zpUpHHtcAN}
+
+        \begin{enumerate}
+            \item Считая, что векторы заданы в ортонормированном базисе, ортонормировать систему векторов
+
+            \begin{equation}
+                a_1 = \begin{pmatrix}
+                    1\\1\\i
+                \end{pmatrix},
+                a_2 = \begin{pmatrix}
+                    i\\1\\1
+                \end{pmatrix},
+                a_3 = \begin{pmatrix}
+                    1\\i\\1
+                \end{pmatrix}
+            \end{equation}            
+            
+            \item Векторы
+            
+            \begin{equation}
+                a_1 = \begin{pmatrix}
+                    1+i \\ 1+i \\ 1 \\ 1
+                \end{pmatrix},
+                a_2 = \begin{pmatrix}
+                    1-i\\-1+i\\1\\-1
+                \end{pmatrix}    
+            \end{equation}
+            заданы в ортонормированном базисе.
+            
+            а) выписать СЛОУ, задающих ортогональное дополнение к подпространству, натянутому на векторы $a_1, a_2$
+            
+            б) выписать СЛОУ, задающих линейное подпространство, натянутое на векторы $a_1, a_2$
+            
+            в) дополнить систему векторов $a_1, a_2$ до ортогонального базиса.
+        \end{enumerate}
+        
+    \end{statement}
+
+    \section{Ортонормирование системы}
+
+    Применим Грамма-Шмидта. Потом возьмём орты. Конец.
+
+    Получаем
+
+    \begin{equation}
+        b_1 = \begin{pmatrix}
+            \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{3}} \\ \frac{i}{\sqrt{3}}
+        \end{pmatrix},
+        b_2 = \begin{pmatrix}
+            -\frac{\frac 12  - \frac{3i}{2}}{\sqrt{6}} \\ \frac{1}{\sqrt{6}} \\ \frac{\frac 32 - \frac{i}{2}}{\sqrt{6}}
+        \end{pmatrix},
+        b_3 = \begin{pmatrix}
+            \frac{\frac 32  - \frac{i}{2}}{\sqrt{10}} \\ -\frac{1 - 2i}{\sqrt{10}} \\ \frac{\frac 32 - \frac{i}{2}}{\sqrt{10}}
+        \end{pmatrix}        
+    \end{equation}
+
+    \section{Ортогональное дополнение}
+
+    Вектор принадлежит дополнению $\Longleftrightarrow$ скалярное произведение с любым элементом 
+    ($\Longleftrightarrow$ базисом) исходного пространства было равно нулю.
+
+    Запишем это в матричном виде (у нас всё задано в ортонормированном базисе, так что матрица Грама единичная):
+
+    \begin{equation}
+        \begin{pmatrix}
+            a_1 \\ a_2
+        \end{pmatrix} \overline{\begin{pmatrix}
+            x_1 \\ x_2 \\ x_3 \\ x_4
+        \end{pmatrix}} = \mathbb{0}
+    \end{equation}
+
+    Это всё равно что
+
+    \begin{equation}
+        \overline{\begin{pmatrix}
+            a_1 \\ a_2
+        \end{pmatrix}} \begin{pmatrix}
+            x_1 \\ x_2 \\ x_3 \\ x_4
+        \end{pmatrix} = \mathbb{0}
+    \end{equation}
+
+    Тогда дополнение:
+
+    \begin{equation}
+        y_1 = \begin{pmatrix}
+            -1 \\ -i \\ 2 \\ 0
+        \end{pmatrix},
+        y_2 = \begin{pmatrix}
+            -i \\ -1\\ 0\\2
+        \end{pmatrix}
+    \end{equation}
+
+    Тогда по аналогии запишем СЛОУ для системы, натянутой на исходные векторы: 
+    это ортогональное дополнение к $\Span \{ y_1, y_2 \}$:
+
+    \begin{equation}
+        \overline{\begin{pmatrix}
+            y_1 \\ y_2
+        \end{pmatrix}} \begin{pmatrix}
+            z_1 \\ z_2 \\ z_3 \\ z_4
+        \end{pmatrix} = \mathbb{0}
+    \end{equation}
+
+    \begin{equation}
+        \begin{pmatrix}
+            -1 & i & 2 & 0 \\ 
+            i & -1& 0 & 2
+        \end{pmatrix} \begin{pmatrix}
+            z_1 \\ z_2 \\ z_3 \\ z_4
+        \end{pmatrix} = \mathbb{0}
+    \end{equation}
+
+    Отлично, осталось только дополнить $a_1, a_2$ до ортогонального базиса. Дополнение уже есть, 
+    нужно только внутри дополнения и внутри исходной системы провести Грама Шмидта и записать в ряд. 
+    Хотя чего мелочиться — проведём ГШ сразу вместе для всей системы.
+
+    Хотя нет, внутри друг друга они и так получились ортогональными, просто запишем всё вместе
+
+    Получим:
+
+    \begin{equation}
+        \left\{
+            \begin{pmatrix}
+                1+i \\ 1+i \\ 1 \\ 1
+            \end{pmatrix},
+            \begin{pmatrix}
+                1-i\\-1+i\\1\\-1
+            \end{pmatrix},
+            \begin{pmatrix}
+                -1 \\ -i \\ 2 \\ 0
+            \end{pmatrix},
+            \begin{pmatrix}
+                -i \\ -1 \\ 0 \\ 2
+            \end{pmatrix}
+         \right\}
+    \end{equation}
+
+
+
+\end{document}
