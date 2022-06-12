@@ -105,41 +105,20 @@
 
     \section{Симметрирование}
 
-    Здесь посчитаем по определению, однако ручками звучит очень больно. Поэтому:
+    Здесь посчитаем по определению, в прошлом варианте была программа, 
+    которую на самом деле, было дольше писать, чем посчитать всё вручную, 
+    но я сначала её написал, а потом только полностью прочилал учловие 
+    и понял, что вычислять здесь нужно не так много. 
 
-    \begin{lstlisting}[language=Python]
-        def full_symmetrize_tensor(t):
-        	n = len(t.shape)
-	        return Fraction(1, math.factorial(n)) * sum([
-                (t + Fraction()).transpose(p) 
-                for p in permutations(range(n))
-                ])
-    \end{lstlisting}
+    В этом пункте у нас 6 слагаемых из по всем возможным перестановкам, все со знаком плюс:
 
-    Получаем вывод:
+    $\alpha^{(i j k)}=\frac{1}{6}\left(\alpha^{i j k}+\alpha^{i k j}+\alpha^{k j i}+ \alpha^{k i j}+\alpha^{j i k}+\alpha^{j k i}\right)$
+    
+    Причём элементы разбиваются на группы, внутри которой всё результаты оддинаковы, 
+    да ещё и для вычисления этого результата нужны только исходные значения внутри этой группы.
 
-    \begin{lstlisting}[language=Python]
-        Symmetrized:
-        [
-            [
-                [Fraction(-2, 1) Fraction(3, 1) Fraction(5, 3)]
-                [Fraction(3, 1) Fraction(7, 3) Fraction(1, 6)]
-                [Fraction(5, 3) Fraction(1, 6) Fraction(2, 1)]
-            ]
-            [
-                [Fraction(3, 1) Fraction(7, 3) Fraction(1, 6)]
-                [Fraction(7, 3) Fraction(4, 1) Fraction(-8, 3)]
-                [Fraction(1, 6) Fraction(-8, 3) Fraction(5, 3)]
-                ]
-            [
-                [Fraction(5, 3) Fraction(1, 6) Fraction(2, 1)]
-                [Fraction(1, 6) Fraction(-8, 3) Fraction(5, 3)]
-                [Fraction(2, 1) Fraction(5, 3) Fraction(4, 1)]
-            ]
-        ]
-    \end{lstlisting}
+    Итого получим:
 
-    Зто записывается в виде многомерной матрицы
     \begin{equation}
         \arr{ccc|ccc|ccc}{
             -2 & 3 & \frac{5}{3}           & 3 & \frac73 & \frac16              & \frac53 & \frac16 & 2 \\
@@ -151,49 +130,20 @@
 
     \section{Альтенирование}
 
-    По факту — тут достаточно найти значение для одного элемента, индексы которого — перестановка, 
+    Формула по определению такая:
+
+    \begin{equation}
+        \beta^{123}=\frac{1}{6}\left(\alpha^{123}-\alpha^{132}+\alpha^{231}-\alpha^{213}+\alpha^{312}-\alpha^{321}\right)
+    \end{equation}
+
+    Достаточно найти значение для одного элемента (например, 123), индексы которого — перестановка, 
     а потом поставить нули везде, где не она и полученное значение со знаком $(-1)^{\varepsilon(\sigma_1) + \varepsilon(\sigma_2)}$
     , где вторая — чётной очередной перестановки, а первая — исходной.
 
-    Но проще использовать автоматизированну. протестированную версию…
+    Например, найдём $\beta^{123}= -\frac{5}{6}$
 
 
-    Стало лениво перепечатывать в $LaTeX$, поэтому автоматизируем это:
-
-    \begin{lstlisting}[language=Python]
-        def fraction_as_latex(f):
-            if f.denominator == 1:
-                return str(f.numerator)
-            else:
-                return f"\\frac{{{f.numerator}}}{{{f.denominator}}}"
-    
-        def format_3d_matrix(m): # M's internal (right index sequence)
-            s = m.shape
-            for i in range(s[0]):
-                line = []
-                for k in range(s[2]):
-                    for j in range(s[1]):
-                        line.append(fraction_as_latex(m[i][j][k]))
-                print(f"{' & '.join(line)}\\\\")
-    \end{lstlisting}
-
-
-
-    Аналогично симметрированию, но умножаем на -1, если нечётная перестановка.
-
-    \begin{lstlisting}[language=Python]
-        def full_alternate_tensor(t):
-            n = len(t.shape)
-	        return 
-            Fraction(1, math.factorial(n)) * 
-                sum([
-                    Fraction(perm_parity(list(p))) * 
-                    (t + Fraction()).transpose(p) 
-                    for p in permutations(range(n))
-                    ])
-    \end{lstlisting}
-
-    Получаем:
+    Тогда рзультат альтенирования:
 
     \begin{equation}
         \arr{ccc|ccc|ccc}{
@@ -208,41 +158,11 @@
 
     \section{Симметрирование по части индексов}
 
-    Для части индексов пришлось немного повозиться, но суть та же:
-
+    Симметрируем всего по паре индексов, то есть перестановки всего две.
     
-    \begin{lstlisting}[language=Python]
-        def slice_around(indexes, n):
-            # Create slices around indexes
-            slice_between = [-1] + indexes + [n]
-            slices = []
-            for i in range(len(slice_between) - 1):
-                slices.append(list(range(slice_between[i] + 1, slice_between[i + 1])))
-            return slices
-        
-        # print(slice_around([0, 3, 4], 6))
-        
-        def interchange_arrays(first, second):
-            res = [first[0]]
-            for i in range(0, len(second)):
-                res.append(second[i])
-                res.append(first[i + 1])
-            return res
-        
-        def flatten(lst):
-            return [item for sublist in lst for item in sublist]
-        
-        def permute_index_set(n, permuting_index_set):
-            slices = slice_around(permuting_index_set, n)
-        
-            raw_ps = permutations(permuting_index_set)
-            for p in raw_ps:
-                yield flatten(interchange_arrays(slices, [[v] for v in p]))
-    \end{lstlisting}
-
-    Теперь просто в качестве перестановок передаём вызов permute\_index\_set от нужных аргументов.
-
-    Получаем ответ на нашем тензоре:
+    \begin{equation}
+        \beta^{ijk} = \frac{1}{2} \left( \alpha^{ijk} + \alpha^{kji} \right)
+    \end{equation}
 
     \begin{equation}
         \arr{ccc|ccc|ccc}{
@@ -255,7 +175,11 @@
 
     \section{Альтенирование по части индексов}
 
-    Применяем уже написанные функции:
+    Опять же — перестановки две
+
+    \begin{equation}
+        \beta^{ijk} = \frac{1}{2} \left( \alpha^{ijk} - \alpha^{kji} \right)
+    \end{equation}
 
     \begin{equation}
         \arr{ccc|ccc|ccc}{
@@ -265,11 +189,5 @@
         }
     \end{equation}
 
-
-    \section{Послесловие}
-
-    Кажется, быстрее было сделать всё ручками… Особенно — учитывая возню с тем, что естественный способ нумерации размерностей в программировании отличается от индексации многомерных матриц, и с этим тоже много возни… 
-    
-    Но это для слабаков
 
 \end{document}
