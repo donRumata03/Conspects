@@ -1,0 +1,11 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "AnalExamination_semenester_2.xdv" "AnalExamination_semenester_2.pdf" "AnalExamination_semenester_2" 0
+  "AnalExamination_semenester_2.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "AnalExamination_semenester_2.pdf"
+["xelatex"] 0 "d:/Projects/Education/Conspects/MathAnal/AnalExamination_semenester_2.tex" "AnalExamination_semenester_2.xdv" "AnalExamination_semenester_2" 0
+  "AnalExamination_semenester_2.aux" 1656108598 34 3985256e7290058c681f74d7a3565a19 ""
+  "d:/Projects/Education/Conspects/MathAnal/AnalExamination_semenester_2.tex" 0 -1 0 ""
+  (generated)
+  "AnalExamination_semenester_2.log"
+  "AnalExamination_semenester_2.xdv"
