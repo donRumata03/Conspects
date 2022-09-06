@@ -1,0 +1,103 @@
+span.confirmation-button {
+    font-size: 1.0rem;
+    border-radius: 3px;
+    color: white;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.group-form div.title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #3B5998 !important;
+}
+
+.group-form .table-form .field-name {
+    width: auto !important;
+}
+
+.group-form .table-form tr td .field-input {
+    width: 25em;
+}
+
+.group-form .input-description {
+    font-size: 1.1rem;
+    color: #777;
+    width: 35em;
+    margin-top: 2px;
+    margin-bottom: 1em;
+}
+
+.groupName {
+    color: black !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none !important;
+    font-weight: bold;
+}
+
+/* Classes for OverallCustomRatingFrame */
+
+.overall-custom-rating-cell {
+    color: #37474F;
+    font-weight: bold;
+}
+
+/* Verdicts */
+
+.overall-custom-rating-no-attempts {
+
+}
+
+.overall-custom-rating-accepted.overall-custom-rating-contestant {
+    background-color: #00E676 !important;
+}
+
+.overall-custom-rating-accepted.overall-custom-rating-virtual {
+    background-color: #69F0AE !important;
+}
+
+.overall-custom-rating-accepted.overall-custom-rating-practice {
+    background-color: #B9F6CA !important;
+}
+
+.overall-custom-rating-accepted {
+    /*color: #0a0;*/
+    /*font-weight: bold;*/
+}
+
+.overall-custom-rating-rejected {
+    color: red;
+    font-weight: normal;
+}
+
+.overall-custom-rating-partial {
+    color: black !important;
+    background-color: #64FFDA !important;
+    font-weight: bold !important;
+
+    /*font-weight: bold;*/
+}
+
+/* Participation type */
+
+.overall-custom-rating-contestant {
+
+}
+
+.overall-custom-rating-virtual {
+
+}
+
+.overall-custom-rating-practice {
+
+}
+
+/* User or team submission */
+
+.overall-custom-rating-user {
+
+}
+
+.overall-custom-rating-team {
+
+}
