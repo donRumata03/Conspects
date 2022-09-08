@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.24)  5 SEP 2022 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.24)  8 SEP 2022 12:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/dev/Education/Conspects/MathAnal/Practice/AnalPractice.tex
-(d:/dev/Education/Conspects/MathAnal/Practice/AnalPractice.tex
+**d:/dev/Education/Conspects/History/Practice.tex
+(d:/dev/Education/Conspects/History/Practice.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -22,7 +22,7 @@ File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (../../LatexGloves/latex_math_header.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+) (../LatexGloves/latex_math_header.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
@@ -618,15 +618,48 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \mult@nat@firstbox=\box107
 \colbreak@box=\box108
 \mc@col@check@num=\count349
-) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box109
+\UL@hyphenbox=\box110
+\UL@skip=\skip72
+\UL@hook=\toks45
+\UL@height=\dimen308
+\UL@pe=\count350
+\UL@pixel=\dimen309
+\ULC@box=\box111
+Package: ulem 2019/11/18
+\ULdepth=\dimen310
+) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count351
+\lst@gtempboxa=\box112
+\lst@token=\toks46
+\lst@length=\count352
+\lst@currlwidth=\dimen311
+\lst@column=\count353
+\lst@pos=\count354
+\lst@lostspace=\dimen312
+\lst@width=\dimen313
+\lst@newlines=\count355
+\lst@lineno=\count356
+\lst@maxwidth=\dimen314
+ (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count357
+\lst@skipnumbers=\count358
+\lst@framebox=\box113
+) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count350
-\csq@gtype=\count351
-\csq@glevel=\count352
-\csq@qlevel=\count353
-\csq@maxlvl=\count354
-\csq@tshold=\count355
-\csq@ltx@everypar=\toks45
+\csq@reset=\count359
+\csq@gtype=\count360
+\csq@glevel=\count361
+\csq@qlevel=\count362
+\csq@maxlvl=\count363
+\csq@tshold=\count364
+\csq@ltx@everypar=\toks47
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
@@ -646,58 +679,58 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count356
+\c@abspage=\count365
 Package zref Info: New property: abspage on input line 66.
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip72
-\c@mdf@globalstyle@cnt=\count357
-\mdf@skipabove@length=\skip73
-\mdf@skipbelow@length=\skip74
-\mdf@leftmargin@length=\skip75
-\mdf@rightmargin@length=\skip76
-\mdf@innerleftmargin@length=\skip77
-\mdf@innerrightmargin@length=\skip78
-\mdf@innertopmargin@length=\skip79
-\mdf@innerbottommargin@length=\skip80
-\mdf@splittopskip@length=\skip81
-\mdf@splitbottomskip@length=\skip82
-\mdf@outermargin@length=\skip83
-\mdf@innermargin@length=\skip84
-\mdf@linewidth@length=\skip85
-\mdf@innerlinewidth@length=\skip86
-\mdf@middlelinewidth@length=\skip87
-\mdf@outerlinewidth@length=\skip88
-\mdf@roundcorner@length=\skip89
-\mdf@footenotedistance@length=\skip90
-\mdf@userdefinedwidth@length=\skip91
-\mdf@needspace@length=\skip92
-\mdf@frametitleaboveskip@length=\skip93
-\mdf@frametitlebelowskip@length=\skip94
-\mdf@frametitlerulewidth@length=\skip95
-\mdf@frametitleleftmargin@length=\skip96
-\mdf@frametitlerightmargin@length=\skip97
-\mdf@shadowsize@length=\skip98
-\mdf@extratopheight@length=\skip99
-\mdf@subtitleabovelinewidth@length=\skip100
-\mdf@subtitlebelowlinewidth@length=\skip101
-\mdf@subtitleaboveskip@length=\skip102
-\mdf@subtitlebelowskip@length=\skip103
-\mdf@subtitleinneraboveskip@length=\skip104
-\mdf@subtitleinnerbelowskip@length=\skip105
-\mdf@subsubtitleabovelinewidth@length=\skip106
-\mdf@subsubtitlebelowlinewidth@length=\skip107
-\mdf@subsubtitleaboveskip@length=\skip108
-\mdf@subsubtitlebelowskip@length=\skip109
-\mdf@subsubtitleinneraboveskip@length=\skip110
-\mdf@subsubtitleinnerbelowskip@length=\skip111
+\mdf@templength=\skip73
+\c@mdf@globalstyle@cnt=\count366
+\mdf@skipabove@length=\skip74
+\mdf@skipbelow@length=\skip75
+\mdf@leftmargin@length=\skip76
+\mdf@rightmargin@length=\skip77
+\mdf@innerleftmargin@length=\skip78
+\mdf@innerrightmargin@length=\skip79
+\mdf@innertopmargin@length=\skip80
+\mdf@innerbottommargin@length=\skip81
+\mdf@splittopskip@length=\skip82
+\mdf@splitbottomskip@length=\skip83
+\mdf@outermargin@length=\skip84
+\mdf@innermargin@length=\skip85
+\mdf@linewidth@length=\skip86
+\mdf@innerlinewidth@length=\skip87
+\mdf@middlelinewidth@length=\skip88
+\mdf@outerlinewidth@length=\skip89
+\mdf@roundcorner@length=\skip90
+\mdf@footenotedistance@length=\skip91
+\mdf@userdefinedwidth@length=\skip92
+\mdf@needspace@length=\skip93
+\mdf@frametitleaboveskip@length=\skip94
+\mdf@frametitlebelowskip@length=\skip95
+\mdf@frametitlerulewidth@length=\skip96
+\mdf@frametitleleftmargin@length=\skip97
+\mdf@frametitlerightmargin@length=\skip98
+\mdf@shadowsize@length=\skip99
+\mdf@extratopheight@length=\skip100
+\mdf@subtitleabovelinewidth@length=\skip101
+\mdf@subtitlebelowlinewidth@length=\skip102
+\mdf@subtitleaboveskip@length=\skip103
+\mdf@subtitlebelowskip@length=\skip104
+\mdf@subtitleinneraboveskip@length=\skip105
+\mdf@subtitleinnerbelowskip@length=\skip106
+\mdf@subsubtitleabovelinewidth@length=\skip107
+\mdf@subsubtitlebelowlinewidth@length=\skip108
+\mdf@subsubtitleaboveskip@length=\skip109
+\mdf@subsubtitlebelowskip@length=\skip110
+\mdf@subsubtitleinneraboveskip@length=\skip111
+\mdf@subsubtitleinnerbelowskip@length=\skip112
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks46
-\pgfutil@tempdima=\dimen308
-\pgfutil@tempdimb=\dimen309
+\pgfutil@everybye=\toks48
+\pgfutil@tempdima=\dimen315
+\pgfutil@tempdimb=\dimen316
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box109
+\pgfutil@abb=\box114
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
@@ -705,26 +738,26 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)
-\pgf@x=\dimen310
-\pgf@y=\dimen311
-\pgf@xa=\dimen312
-\pgf@ya=\dimen313
-\pgf@xb=\dimen314
-\pgf@yb=\dimen315
-\pgf@xc=\dimen316
-\pgf@yc=\dimen317
-\pgf@xd=\dimen318
-\pgf@yd=\dimen319
+\pgf@x=\dimen317
+\pgf@y=\dimen318
+\pgf@xa=\dimen319
+\pgf@ya=\dimen320
+\pgf@xb=\dimen321
+\pgf@yb=\dimen322
+\pgf@xc=\dimen323
+\pgf@yc=\dimen324
+\pgf@xd=\dimen325
+\pgf@yd=\dimen326
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count358
-\c@pgf@countb=\count359
-\c@pgf@countc=\count360
-\c@pgf@countd=\count361
-\t@pgf@toka=\toks47
-\t@pgf@tokb=\toks48
-\t@pgf@tokc=\toks49
-\pgf@sys@id@count=\count362
+\c@pgf@counta=\count367
+\c@pgf@countb=\count368
+\c@pgf@countc=\count369
+\c@pgf@countd=\count370
+\t@pgf@toka=\toks49
+\t@pgf@tokb=\toks50
+\t@pgf@tokc=\toks51
+\pgf@sys@id@count=\count371
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -735,50 +768,50 @@ File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count363
-\pgfsyssoftpath@bigbuffer@items=\count364
+\pgfsyssoftpath@smallbuffer@items=\count372
+\pgfsyssoftpath@bigbuffer@items=\count373
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen320
-\pgf@picmaxx=\dimen321
-\pgf@picminy=\dimen322
-\pgf@picmaxy=\dimen323
-\pgf@pathminx=\dimen324
-\pgf@pathmaxx=\dimen325
-\pgf@pathminy=\dimen326
-\pgf@pathmaxy=\dimen327
-\pgf@xx=\dimen328
-\pgf@xy=\dimen329
-\pgf@yx=\dimen330
-\pgf@yy=\dimen331
-\pgf@zx=\dimen332
-\pgf@zy=\dimen333
+\pgf@picminx=\dimen327
+\pgf@picmaxx=\dimen328
+\pgf@picminy=\dimen329
+\pgf@picmaxy=\dimen330
+\pgf@pathminx=\dimen331
+\pgf@pathmaxx=\dimen332
+\pgf@pathminy=\dimen333
+\pgf@pathmaxy=\dimen334
+\pgf@xx=\dimen335
+\pgf@xy=\dimen336
+\pgf@yx=\dimen337
+\pgf@yy=\dimen338
+\pgf@zx=\dimen339
+\pgf@zy=\dimen340
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen334
-\pgf@path@lasty=\dimen335
+\pgf@path@lastx=\dimen341
+\pgf@path@lasty=\dimen342
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen336
-\pgf@shorten@start@additional=\dimen337
+\pgf@shorten@end@additional=\dimen343
+\pgf@shorten@start@additional=\dimen344
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box110
-\pgf@hbox=\box111
-\pgf@layerbox@main=\box112
-\pgf@picture@serial@count=\count365
+\pgfpic=\box115
+\pgf@hbox=\box116
+\pgf@layerbox@main=\box117
+\pgf@picture@serial@count=\count374
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen338
+\pgflinewidth=\dimen345
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen339
-\pgf@pt@y=\dimen340
-\pgf@pt@temp=\dimen341
+\pgf@pt@x=\dimen346
+\pgf@pt@y=\dimen347
+\pgf@pt@temp=\dimen348
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -787,17 +820,17 @@ File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen342
+\pgfarrowsep=\dimen349
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen343
-\pgf@sys@shading@range@num=\count366
-\pgf@shadingcount=\count367
+\pgf@max=\dimen350
+\pgf@sys@shading@range@num=\count375
+\pgf@shadingcount=\count376
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box113
+\pgfexternal@startupbox=\box118
 )) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -808,136 +841,136 @@ File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box114
+\pgfnodeparttextbox=\box119
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen344
-\pgf@nodesepend=\dimen345
+\pgf@nodesepstart=\dimen351
+\pgf@nodesepend=\dimen352
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
-\pgffor@iter=\dimen346
-\pgffor@skip=\dimen347
-\pgffor@stack=\toks50
-\pgffor@toks=\toks51
+\pgffor@iter=\dimen353
+\pgffor@skip=\dimen354
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
 )) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count368
-\pgfplotmarksize=\dimen348
+\pgf@plot@mark@count=\count377
+\pgfplotmarksize=\dimen355
 )
-\tikz@lastx=\dimen349
-\tikz@lasty=\dimen350
-\tikz@lastxsaved=\dimen351
-\tikz@lastysaved=\dimen352
-\tikz@lastmovetox=\dimen353
-\tikz@lastmovetoy=\dimen354
-\tikzleveldistance=\dimen355
-\tikzsiblingdistance=\dimen356
-\tikz@figbox=\box115
-\tikz@figbox@bg=\box116
-\tikz@tempbox=\box117
-\tikz@tempbox@bg=\box118
-\tikztreelevel=\count369
-\tikznumberofchildren=\count370
-\tikznumberofcurrentchild=\count371
-\tikz@fig@count=\count372
+\tikz@lastx=\dimen356
+\tikz@lasty=\dimen357
+\tikz@lastxsaved=\dimen358
+\tikz@lastysaved=\dimen359
+\tikz@lastmovetox=\dimen360
+\tikz@lastmovetoy=\dimen361
+\tikzleveldistance=\dimen362
+\tikzsiblingdistance=\dimen363
+\tikz@figbox=\box120
+\tikz@figbox@bg=\box121
+\tikz@tempbox=\box122
+\tikz@tempbox@bg=\box123
+\tikztreelevel=\count378
+\tikznumberofchildren=\count379
+\tikznumberofcurrentchild=\count380
+\tikz@fig@count=\count381
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count373
-\pgfmatrixcurrentcolumn=\count374
-\pgf@matrix@numberofcolumns=\count375
+\pgfmatrixcurrentrow=\count382
+\pgfmatrixcurrentcolumn=\count383
+\pgf@matrix@numberofcolumns=\count384
 )
-\tikz@expandcount=\count376
+\tikz@expandcount=\count385
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
-\mdf@frametitlebox=\box119
-\mdf@footnotebox=\box120
-\mdf@splitbox@one=\box121
-\mdf@splitbox@two=\box122
-\mdf@splitbox@save=\box123
-\mdfsplitboxwidth=\skip112
-\mdfsplitboxtotalwidth=\skip113
-\mdfsplitboxheight=\skip114
-\mdfsplitboxdepth=\skip115
-\mdfsplitboxtotalheight=\skip116
-\mdfframetitleboxwidth=\skip117
-\mdfframetitleboxtotalwidth=\skip118
-\mdfframetitleboxheight=\skip119
-\mdfframetitleboxdepth=\skip120
-\mdfframetitleboxtotalheight=\skip121
-\mdffootnoteboxwidth=\skip122
-\mdffootnoteboxtotalwidth=\skip123
-\mdffootnoteboxheight=\skip124
-\mdffootnoteboxdepth=\skip125
-\mdffootnoteboxtotalheight=\skip126
-\mdftotallinewidth=\skip127
-\mdfboundingboxwidth=\skip128
-\mdfboundingboxtotalwidth=\skip129
-\mdfboundingboxheight=\skip130
-\mdfboundingboxdepth=\skip131
-\mdfboundingboxtotalheight=\skip132
-\mdf@freevspace@length=\skip133
-\mdf@horizontalwidthofbox@length=\skip134
-\mdf@verticalmarginwhole@length=\skip135
-\mdf@horizontalspaceofbox=\skip136
-\mdfsubtitleheight=\skip137
-\mdfsubsubtitleheight=\skip138
-\c@mdfcountframes=\count377
+\mdf@frametitlebox=\box124
+\mdf@footnotebox=\box125
+\mdf@splitbox@one=\box126
+\mdf@splitbox@two=\box127
+\mdf@splitbox@save=\box128
+\mdfsplitboxwidth=\skip113
+\mdfsplitboxtotalwidth=\skip114
+\mdfsplitboxheight=\skip115
+\mdfsplitboxdepth=\skip116
+\mdfsplitboxtotalheight=\skip117
+\mdfframetitleboxwidth=\skip118
+\mdfframetitleboxtotalwidth=\skip119
+\mdfframetitleboxheight=\skip120
+\mdfframetitleboxdepth=\skip121
+\mdfframetitleboxtotalheight=\skip122
+\mdffootnoteboxwidth=\skip123
+\mdffootnoteboxtotalwidth=\skip124
+\mdffootnoteboxheight=\skip125
+\mdffootnoteboxdepth=\skip126
+\mdffootnoteboxtotalheight=\skip127
+\mdftotallinewidth=\skip128
+\mdfboundingboxwidth=\skip129
+\mdfboundingboxtotalwidth=\skip130
+\mdfboundingboxheight=\skip131
+\mdfboundingboxdepth=\skip132
+\mdfboundingboxtotalheight=\skip133
+\mdf@freevspace@length=\skip134
+\mdf@horizontalwidthofbox@length=\skip135
+\mdf@verticalmarginwhole@length=\skip136
+\mdf@horizontalspaceofbox=\skip137
+\mdfsubtitleheight=\skip138
+\mdfsubsubtitleheight=\skip139
+\c@mdfcountframes=\count386
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count378
-\c@mdf@env@i=\count379
-\c@mdf@env@ii=\count380
-\c@mdf@zref@counter=\count381
+\mdf@envdepth=\count387
+\c@mdf@env@i=\count388
+\c@mdf@env@ii=\count389
+\c@mdf@zref@counter=\count390
 Package zref Info: New property: mdf@pagevalue on input line 895.
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
-\t@pgfplots@toka=\toks52
-\t@pgfplots@tokb=\toks53
-\t@pgfplots@tokc=\toks54
-\pgfplots@tmpa=\dimen357
-\c@pgfplots@coordindex=\count382
-\c@pgfplots@scanlineindex=\count383
+\t@pgfplots@toka=\toks54
+\t@pgfplots@tokb=\toks55
+\t@pgfplots@tokc=\toks56
+\pgfplots@tmpa=\dimen364
+\c@pgfplots@coordindex=\count391
+\c@pgfplots@scanlineindex=\count392
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count384
-) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count385
-\t@pgfplotstable@a=\toks55
-) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex)
-(C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count386
- (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen358
-\pgfdecoratedremainingdistance=\dimen359
-\pgfdecoratedinputsegmentcompleteddistance=\dimen360
-\pgfdecoratedinputsegmentremainingdistance=\dimen361
-\pgf@decorate@distancetomove=\dimen362
-\pgf@decorate@repeatstate=\count387
-\pgfdecorationsegmentamplitude=\dimen363
-\pgfdecorationsegmentlength=\dimen364
+\c@pgfplotsarray@tmp=\count393
 )
-\tikz@lib@dec@box=\box124
+(C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count394
+\t@pgfplotstable@a=\toks57
+) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count395
+ (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen365
+\pgfdecoratedremainingdistance=\dimen366
+\pgfdecoratedinputsegmentcompleteddistance=\dimen367
+\pgfdecoratedinputsegmentremainingdistance=\dimen368
+\pgf@decorate@distancetomove=\dimen369
+\pgf@decorate@repeatstate=\count396
+\pgfdecorationsegmentamplitude=\dimen370
+\pgfdecorationsegmentlength=\dimen371
+)
+\tikz@lib@dec@box=\box129
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count388
-\pgfplots@xmin@reg=\dimen365
-\pgfplots@xmax@reg=\dimen366
-\pgfplots@ymin@reg=\dimen367
-\pgfplots@ymax@reg=\dimen368
-\pgfplots@zmin@reg=\dimen369
-\pgfplots@zmax@reg=\dimen370
+\pgfplots@numplots=\count397
+\pgfplots@xmin@reg=\dimen372
+\pgfplots@xmax@reg=\dimen373
+\pgfplots@ymin@reg=\dimen374
+\pgfplots@ymax@reg=\dimen375
+\pgfplots@zmin@reg=\dimen376
+\pgfplots@zmax@reg=\dimen377
 ) (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
@@ -996,11 +1029,11 @@ l.45 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
 
  
 Here is how much of TeX's memory you used:
- 37722 strings out of 478582
- 861749 string characters out of 2844816
- 1407442 words of memory out of 3000000
- 55283 multiletter control sequences out of 15000+600000
- 469557 words of font info for 29 fonts, out of 8000000 for 9000
+ 39001 strings out of 478582
+ 880924 string characters out of 2844816
+ 1427026 words of memory out of 3000000
+ 56545 multiletter control sequences out of 15000+600000
+ 469663 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,0n,136p,836b,609s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 109i,0n,136p,819b,609s stack positions out of 10000i,1000n,20000p,200000b,80000s
 C:\Users\vova\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty:45:  ==> Fatal error occurred, no output PDF file produced!
