@@ -1,0 +1,115 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+\newcommand\arr[2]{\left(\begin{array}{#1}#2\end{array}\right)}
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Нахождение проекторов через сопряжённый базис»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{statement}
+        Условие таково:
+
+        Для матрицы $F$ найти провекторы на собственные подпространства 
+        (они же — спектральный проекторы, так как это ОПС) через сопряжённый базис.
+
+        \begin{equation}
+            F = \left(\begin{matrix}
+                0 & -10 & 3 & -5 \\
+                -4 & 12 & -6 & 4 \\
+                4 & 20 & -4 & 10 \\
+                12 & 0 & 6 & 4
+            \end{matrix}\right)
+        \end{equation}
+
+    \end{statement}
+
+
+    \section{Идея}
+
+    У нас есть базис $\sR^4$ из собственных векторов:
+
+    Тогда любое $x$ единственным образом раскладывается как $\sum\limits_\lambda x_\lambda=\mathrm x^iv_i=\omega^i(x)v_i$. 
+    И $\mathcal{P}_\lambda x=x_\lambda=\sum\limits_{v_k\in V_\lambda}\mathrm x^kv_k=\sum\limits_{v_k\in V_\lambda}\omega^k(x)v_k=\left(\sum\limits_{v_k\in V_\lambda}v_ka^k\right)x$. 
+    И можно выразить проектор (а значит, и его матрицу) вот так: $v_ka^k=\mathcal{P}_\lambda$.
+
+
+    \section{Подсчёты}
+
+    \begin{equation}
+        F: \left\{ 
+            \left(2, \left\{\begin{pmatrix} -5\\4\\10\\0 \end{pmatrix}, \begin{pmatrix} -5\\-14\\0\\30 \end{pmatrix} \right\} \right),
+            \left(4, \left\{\begin{pmatrix} -1\\1\\2\\0 \end{pmatrix}, \begin{pmatrix} 0\\-1\\0\\2 \end{pmatrix} \right\} \right)
+        \right\}
+    \end{equation}
+    
+
+    Найдём сопряжённый базис к нему (по определению, символ кронекера) через обратную матрицу.
+
+    \begin{equation}
+        W = \begin{pmatrix}
+            w^1 \\ w^2 \\ w^3 \\ w^4
+        \end{pmatrix} = \left(\begin{matrix}
+            \frac{-1}{5} & -1 & \frac{2}{5} & \frac{-1}{2} \\
+            \frac{-1}{5} & 0 & \frac{-1}{10} & 0 \\
+            1 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            3 & 0 & \frac{3}{2} & \frac{1}{2}
+        \end{matrix}\right)
+    \end{equation}
+
+    Тогда находим $P$-шки.
+
+    \begin{multline}
+        P_{2} = \\
+        v_1 w^1 + v_2 w^2 = \\
+        \begin{pmatrix} -5\\4\\10\\0 \end{pmatrix}
+        \begin{pmatrix}
+            \frac{-1}{5} & -1 & \frac{2}{5} & \frac{-1}{2}
+        \end{pmatrix} + \begin{pmatrix} -5\\-14\\0\\30 \end{pmatrix}
+        \begin{pmatrix}
+            \frac{-1}{5} & 0 & \frac{-1}{10} & 0
+        \end{pmatrix} = \\
+         \left(\begin{matrix}
+            2 & 5 & \frac{-3}{2} & \frac{5}{2} \\
+            2 & -4 & 3 & -2 \\
+            -2 & -10 & 4 & -5 \\
+            -6 & 0 & -3 & 0
+        \end{matrix}\right)
+    \end{multline}
+
+
+    \begin{multline}
+        P_{4} = \\
+        v_3 w^3 + v_4 w^4 = \\
+         \begin{pmatrix} -1\\1\\2\\0 \end{pmatrix} \begin{pmatrix}
+            1 & 5 & \frac{-3}{2} & \frac{5}{2}
+        \end{pmatrix} + \begin{pmatrix} 0\\-1\\0\\2 \end{pmatrix} \begin{pmatrix}
+            3 & 0 & \frac{3}{2} & \frac{1}{2}
+        \end{pmatrix} = \\
+        \left(\begin{matrix}
+            -1 & -5 & \frac{3}{2} & \frac{-5}{2} \\
+            -2 & 5 & -3 & 2 \\
+            2 & 10 & -3 & 5 \\
+            6 & 0 & 3 & 1
+        \end{matrix}\right)
+    \end{multline}
+
+    
+
+    Ровно то же самое, что получалось двумя предыдущими способами! Совпадение? Не думаю. Дело не в сухом расчете, дело — в мировом законе!
+
+\end{document}

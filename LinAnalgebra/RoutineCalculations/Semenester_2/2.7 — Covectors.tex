@@ -1,0 +1,224 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре 2, задание 7»}
+
+\begin{document}
+    \tit
+
+\section{Формулировка условия}
+
+\begin{statement}
+    Задача. Заданы три линейные формы, определенные на векторах $x(\xi^1, \xi^2, \xi^3)$ пространства .
+
+    \begin{gather}
+        \begin{cases}
+            (f^1, x) = -8 \xi^1 + \xi^2 - 8 \xi^3 \\
+            (f^2, x) = 9 \xi^1 + \xi^2 + 4 \xi^3 \\
+            (f^3, x) = -9 \xi^1 -3 \xi^2 - 2 \xi^3
+        \end{cases}
+    \end{gather}
+
+    \begin{enumerate}
+        \item Доказать, что они образуют базис в пространстве $\left(\mathbb{R}^3\right)^*$ линейных форм;
+        \item Найти базис $\{e_1, e_2, e_3\}$ пространства $\mathbb{R}^3$, сопряженный к базису $\{ f^1, f^2, f^3 \}$.
+        \item С помощью теории линейных форм найти координаты вектора $x = (4, -2, 13)^\top$ в этом базисе и проверить вычисления прямым
+        разложением вектора $x$ по базису $\{e_1, e_2, e_3\}$ пространства $\mathbb{R}^3$.
+        \item Найти коэффициенты формы $(f, x) = 5\xi^1 -4 \xi^2 + 2 \xi^3$ относительно базиса $\{e_1, e_2, e_3\}$ пространства $\mathbb{R}^3$. 
+        Вычисления проверить прямым разложением формы f по базису $\{ f^1, f^2, f^3 \}$ пространства $\left(\mathbb{R}^3\right)^*$.
+    \end{enumerate}
+\end{statement}
+
+
+\section{Проверка базовости}
+
+Так как их и так $3 = \dim \mathbb{R}^3$, достаточно проверить линейную независимость.
+Для этого заметим, что в каноническом базисе
+
+\begin{gather}
+    \begin{cases}
+        f^1 = (a^1_1, a^1_2, a^1_3) = (-8, 1, -8) \\
+        f^2 = (a^2_1, a^2_2, a^2_3) = (9, 1, 4) \\
+        f^3 = (a^3_1, a^3_2, a^3_3) = (-9, -3, -2)
+    \end{cases}
+\end{gather}
+
+Тогда достаточно проверить ранг матрицы $\begin{pmatrix} f^1 \\ f^2 \\ f^3 \end{pmatrix}$.
+
+\begin{equation}
+    \rg \left(\begin{matrix}
+        -8 & 1 & -8 \\
+        9 & 1 & 4 \\
+        -9 & -3 & -2
+    \end{matrix}\right) = 3
+\end{equation}
+
+То есть они ЛН $\Rightarrow$ получаем успех, это базис.
+
+\section{Нахождение сопряжённого базиса}
+
+Необходимое и достаточное условие сопряжённости — чтобы $f^i(e_j) = \delta^i_j$, то есть чтобы одни друг другу действительно были координатными функциями.
+То есть нужно решить матричное уравнение $F \cdot E = \Delta$. (За $\Delta$ считаем матрицу символок Кронекера).
+
+\begin{equation}
+    F = \left(\begin{matrix}
+        -8 & 1 & -8 \\
+        9 & 1 & 4 \\
+        -9 & -3 & -2
+    \end{matrix}\right)^{-1} = \left(\begin{matrix}
+        \frac{5}{23} & \frac{13}{23} & \frac{6}{23} \\
+        \frac{-9}{23} & \frac{-28}{23} & \frac{-20}{23} \\
+        \frac{-9}{23} & \frac{-33}{46} & \frac{-17}{46}
+    \end{matrix}\right)
+\end{equation}
+
+Тогда 
+
+\begin{equation}
+    e_1 = \begin{pmatrix}
+        \frac{5}{23} \\
+        \frac{-9}{23} \\
+        \frac{-9}{23}
+    \end{pmatrix}, e_2 = \begin{pmatrix}
+        \frac{13}{23} \\
+        \frac{-28}{23} \\
+        \frac{-33}{46}
+    \end{pmatrix}, e_3 = \begin{pmatrix}
+        \frac{6}{23} \\
+        \frac{-20}{23} \\
+        \frac{-17}{46}
+    \end{pmatrix}
+\end{equation}
+
+\section{Раскладываем \textbf{контр}вектор по базису двумя способами}
+
+    \subsection{Через ковекторы}
+
+    Для нахождения очередной координаты достаточно применить очередную координатную функцию из сопряжённого базиса.
+
+    \begin{gather}
+        \eta^1 = f^1(x) = \begin{pmatrix}
+            -8 & 1 & -8
+        \end{pmatrix} \begin{pmatrix}
+            4 \\ -2 \\ 13
+        \end{pmatrix} = -138 \\
+        \eta^2 = f^2(x) = \begin{pmatrix}
+            9 & 1 & 4
+        \end{pmatrix} \begin{pmatrix}
+            4 \\ -2 \\ 13
+        \end{pmatrix} = 86 \\
+        \eta^3 = f^3(x) = \begin{pmatrix}
+            -9 & -3 & -2
+        \end{pmatrix} \begin{pmatrix}
+            4 \\ -2 \\ 13
+        \end{pmatrix} = -56
+    \end{gather}
+
+    Получим, что $x$ в базисе $e_i$ — это $\begin{pmatrix} \eta^1 \\ \eta^2 \\ \eta^3 \end{pmatrix} = \begin{pmatrix} -138 \\ 86 \\ -56 \end{pmatrix}$
+
+    \subsection{Через решение системы}
+
+    Альтернытивный вариант — решить систему \begin{equation}
+        E\begin{pmatrix} \eta^1 \\ \eta^2 \\ \eta^3 \end{pmatrix} = \begin{pmatrix}4 \\ -2 \\ 13\end{pmatrix}
+    \end{equation}
+
+    Решая это через обратную матрицу (базис же), получаем:
+    
+    \begin{equation}
+        \begin{pmatrix} \eta^1 \\ \eta^2 \\ \eta^3 \end{pmatrix} = \left(\begin{matrix}
+            -138 \\
+            86 \\
+            -56
+        \end{matrix}\right)
+    \end{equation}
+
+    Решено через matrixcalc.org:
+    \url{https://matrixcalc.org/slu.html#solve-using-inverse-matrix-method(%7B%7B5/23,13/23,6/23,4%7D,%7B-9/23,-28/23,-20/23,-2%7D,%7B-9/23,-33/46,-17/46,13%7D%7D)}
+
+    Символично, что в процессе возникла как раз та самая матрица $F$ и что действия далее были такие же, что и в первом способе.
+
+\section{Раскладываем \textbf{ко}вектор по базису двумя способами}
+
+    \subsection{Через контрвекторы}
+
+    Для нахождения очередной координаты достаточно применить очередную координатную функцию из сопряжённого базиса.
+
+    \begin{gather}
+        \zeta_1 = e_1(f) = \begin{pmatrix}
+            5 & -4 & 2
+        \end{pmatrix} \begin{pmatrix}
+            \frac{5}{23} \\
+            \frac{-9}{23} \\
+            \frac{-9}{23}
+        \end{pmatrix} = \frac{43}{23} \\
+        \zeta_2 = e_2(f) = \begin{pmatrix}
+            5 & -4 & 2
+        \end{pmatrix} \begin{pmatrix}
+            \frac{13}{23} \\
+            \frac{-28}{23} \\
+            \frac{-33}{46}
+        \end{pmatrix} = \frac{144}{23} \\
+        \zeta_3 = e_3(f) = \begin{pmatrix}
+            5 & -4 & 2
+        \end{pmatrix} \begin{pmatrix}
+            \frac{6}{23} \\
+            \frac{-20}{23} \\
+            \frac{-17}{46}
+        \end{pmatrix} = \frac{93}{23}
+    \end{gather}
+
+    Получим, что $f$ в базисе $f^i$ — это $\begin{pmatrix} \zeta_1 & \zeta^2 & \zeta^3 \end{pmatrix} = \left(\begin{matrix}\frac{43}{23} & \frac{144}{23} & \frac{93}{23}\end{matrix}\right)$
+
+    Как раз заметим, что 
+    \begin{equation}
+        \left(\begin{matrix}
+            \frac{43}{23} & \frac{144}{23} & \frac{93}{23}
+        \end{matrix}\right) F = \left(\begin{matrix}
+                5 & -4 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+    \subsection{Через решение системы}
+
+    Альтернытивный вариант — решить систему \begin{equation}
+        \begin{pmatrix} \zeta_1 & \zeta^2 & \zeta^3 \end{pmatrix} F = \left(\begin{matrix}
+            5 & -4 & 2
+        \end{matrix}\right)
+    \end{equation}
+
+    То есть 
+    \begin{equation}
+        F^\top \begin{pmatrix} \zeta_1 \\ \zeta^2 \\ \zeta^3 \end{pmatrix} = \left(\begin{matrix}
+            5 \\ -4 \\ 2
+        \end{matrix}\right)
+    \end{equation}
+
+    Решая это через обратную матрицу (базис же), получаем:
+
+    \begin{equation}
+        \left(\begin{matrix}
+            \frac{43}{23} &
+            \frac{144}{23} &
+            \frac{93}{23}
+        \end{matrix}\right)
+    \end{equation}
+
+    Решено через matrixcalc.org:
+    \url{https://matrixcalc.org/slu.html#solve-using-inverse-matrix-method(%7B%7B-8,9,-9,5%7D,%7B1,1,-3,-4%7D,%7B-8,4,-2,2%7D%7D)}
+
+    Символично, что в процессе возникла как раз та самая матрица $E$ и что действия далее были такие же, что и в первом способе.
+    А также то, что в обеих частях текст почти совпадает…
+
+
+\end{document}

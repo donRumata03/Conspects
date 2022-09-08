@@ -224,4 +224,221 @@
 
     Это определённо успех.
 
+    \section{Отступление}
+
+    Далее будем использовать несклько более надёжный способ, чем метод тыка.
+    Будем пропалывать базис из конкатенации базисов $\mathfrak{B}K, \left\{ K_i \right\}_{i = 1}^m$ и получать $\left\{ \overline{K_i} \right\}_{i = 1}^m$.
+    Ну а дальнше просто применять оператор к векторам из $\left\{ \overline{K_i} \right\}_{i = 1}^m$ соответствующее количество раз ($i - 1$).
+
+
+    \section{Матрица Q}
+    
+    Тут у нас единственное собственное число — $0$, то есть корневым пространством для него является всё $\sR^4$.
+    Найдём $\mathfrak{B}K$ для этого выделим базу столбцов характеристического оператора ($\mathfrak{Q}- 0 \mathcal{E} = \mathfrak{Q}$)
+
+    \begin{equation}
+        \mathfrak{B}K = \Lin \left\{ \begin{pmatrix} 13 \\ 9 \\ 8 \\ 13 \end{pmatrix} \right\}
+    \end{equation}
+
+    \begin{equation}
+        K_1 = V = \Lin \left\{\begin{pmatrix} -3\\2\\0\\0 \end{pmatrix}, \begin{pmatrix} 5\\0\\2\\0 \end{pmatrix}, \begin{pmatrix} 1\\0\\0\\2 \end{pmatrix} \right\}
+    \end{equation}
+
+    \begin{equation}
+        K_2 = \Ker \mathfrak{B}^2 = \Ker \mathbb{0} = K = \Lin \left\{ \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\0\\1 \end{pmatrix}  \right\}
+    \end{equation}
+
+    Теперь прополем базис
+
+    \begin{multline}
+        \Lin \left\{ \begin{pmatrix} 13 \\ 9 \\ 8 \\ 13 \end{pmatrix} \begin{pmatrix} -3\\2\\0\\0 \end{pmatrix}, \begin{pmatrix} 5\\0\\2\\0 \end{pmatrix}, \begin{pmatrix} 1\\0\\0\\2 \end{pmatrix} \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\1\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\0\\1 \end{pmatrix} \right\} = \\
+        = \Lin \left\{ \begin{pmatrix} 13 \\ 9 \\ 8 \\ 13 \end{pmatrix} \begin{pmatrix} -3\\2\\0\\0 \end{pmatrix}, \begin{pmatrix} 5\\0\\2\\0 \end{pmatrix}, \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix} \right\}
+    \end{multline}
+
+    То есть
+
+    \begin{equation}
+        \overline{K_1} = \Lin \left\{ \begin{pmatrix} -3\\2\\0\\0 \end{pmatrix}, \begin{pmatrix} 5\\0\\2\\0 \end{pmatrix} \right\}
+    \end{equation}
+
+    \begin{equation}
+        \overline{K_2} = \Lin \left\{ \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix} \right\}
+    \end{equation}
+
+    То есть у нас есть два циклических базиса высоты 1 и один — высоты 2.
+
+    \begin{equation}
+        j_1 = \begin{pmatrix} -3\\2\\0\\0 \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        j_2 = \begin{pmatrix} 5\\0\\2\\0 \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        (j_4, j_3) = \left( \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \mathfrak{B}\begin{pmatrix} 1\\0\\0\\0 \end{pmatrix} \right)  =\left( \begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}, \left(\begin{matrix}-26 \\-18 \\-16 \\-26\end{matrix}\right) \right)
+    \end{equation}
+
+    Получим матрицу перехода к Жорданову базису
+
+    \begin{equation}
+        T = \left(\begin{matrix}
+            -3 & 5 & -26 & 1 \\
+            2 & 0 & -18 & 0 \\
+            0 & 2 & -16 & 0 \\
+            0 & 0 & -26 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    Проверим, что $Q = T J T^{-1}$:
+
+    \url{https://matrixcalc.org/#%7B%7B-3,5,-26,1%7D,%7B2,0,-18,0%7D,%7B0,2,-16,0%7D,%7B0,0,-26,0%7D%7D*%7B%7B0,0,0,0%7D,%7B0,0,0,0%7D,%7B0,0,0,1%7D,%7B0,0,0,0%7D%7D*%7B%7B-3,5,-26,1%7D,%7B2,0,-18,0%7D,%7B0,2,-16,0%7D,%7B0,0,-26,0%7D%7D%5E(-1)}
+
+
+
+    \section{Матрица V}
+    
+    Заметим, что тут есть два корневых пространства, и топология каждого очевидна: одна башня высоты 2.
+    Нижние векторы у нас есть, а верхние можно найти из условия $j_{k + 1}: \mathfrak{B} j_{k + 1} = j_{k}$ 
+    % (решение на $j_{k + 1}$ должно получиться только одно, так как $\mathfrak{B}$ — изоморфизм меджу этажами башни).
+    Заметим, что $j_{k + 1}$, найденный так, будет гарантированно лежать в нужном ядре и в нужной башне, так как $\mathfrak{B}$, применённое к нему, будет давать наш вектор $j_{k}$.
+
+    Начнём с $\lambda_1 = -11$
+
+    \begin{equation}
+        B = V + 11E = \left(\begin{matrix}
+            6 & 8 & 4 & -10 \\
+            5 & 4 & 8 & -5 \\
+            0 & -4 & 4 & 4 \\
+            2 & 8 & 4 & -6
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        j_1 = \begin{pmatrix}
+            3 \\ 2 \\ -1 \\ 3
+        \end{pmatrix}
+    \end{equation}
+    
+    $j_2$ найдём через уравнение выше. Например, $\left(\begin{matrix}
+        0 \\
+        \frac{1}{3} \\
+        \frac{1}{12} \\
+        0
+        \end{matrix}\right)$.
+
+    Однако можно умножить обе штуки на 12. Тогда получим 
+
+    \begin{equation}
+        (j_1, j_2) = \left( \left(\begin{matrix}
+            36 \\
+            24 \\
+            -12 \\
+            36
+        \end{matrix}\right), \left(\begin{matrix}
+            0 \\
+            4 \\
+            1 \\
+            0
+        \end{matrix}\right) \right)
+    \end{equation}
+
+    Теперь на повестке дня $\lambda_2 = -7$
+
+    \begin{equation}
+        B = V + 7E = \left(\begin{matrix}
+            2 & 8 & 4 & -10 \\
+            5 & 0 & 8 & -5 \\
+            0 & -4 & 0 & 4 \\
+            2 & 8 & 4 & -10
+        \end{matrix}\right)
+    \end{equation}
+
+    \begin{equation}
+        j_1 = \begin{pmatrix}
+            1 \\ 1 \\ 0 \\ 1
+        \end{pmatrix}
+    \end{equation}
+    
+    $j_2$ найдём через уравнение выше. Например, $\left(\begin{matrix}
+        -1 \\
+        0 \\
+        \frac{3}{4} \\
+        0
+        \end{matrix}\right)$.
+
+    Можно умножить обе штуки на 4. Тогда получим 
+
+    \begin{equation}
+        (j_3, j_4) = \left( \left(\begin{matrix}
+            4 \\ 4 \\ 0 \\ 4
+        \end{matrix}\right), \left(\begin{matrix}
+            -4 \\
+            0 \\
+            3 \\
+            0
+        \end{matrix}\right) \right)
+    \end{equation}
+
+
+    Запишем, наконец, матрицу перехода к Жорданову базису:
+
+    \begin{equation}
+        T = \left(\begin{matrix}
+            36 & 0 & 4 & -4 \\
+            24 & 4 & 4 & 0 \\
+            -12 & 1 & 0 & 3 \\
+            36 & 0 & 4 & 0
+        \end{matrix}\right)
+    \end{equation}
+
+    И проверим, что всё сошлось: $V = T J T^{-1}$:
+
+    \url{https://matrixcalc.org/#%7B%7B36,0,4,-4%7D,%7B24,4,4,0%7D,%7B-12,1,0,3%7D,%7B36,0,4,0%7D%7D*%7B%7B-11,1,0,0%7D,%7B0,-11,0,0%7D,%7B0,0,-7,1%7D,%7B0,0,0,-7%7D%7D*%7B%7B36,0,4,-4%7D,%7B24,4,4,0%7D,%7B-12,1,0,3%7D,%7B36,0,4,0%7D%7D%5E(-1)}
+
+    \section{Матрица W}
+    
+    Здесь опять вырисовываетс простой случай: есть толко один дополнительный элемент циклических базисов, который нужно найти.
+    Сделаем это из условия $j_{k + 1}: \mathfrak{B} j_{k + 1} = j_{k}$.
+
+    Для $\lambda_1 = -1: j_1 = \begin{pmatrix}
+        -2 \\ 8 \\ -2 \\ 5
+    \end{pmatrix}$
+
+    Для $\lambda_3 = 5: j_4 = \begin{pmatrix}
+        -1 \\ -2 \\ -1 \\ 1
+    \end{pmatrix}$
+
+
+    Для $\lambda_2 = 3: j_2 = k\begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 1
+    \end{pmatrix}$
+
+    Тогда, решив уравнение, получим:
+
+    \begin{equation}
+        j_3 = \begin{pmatrix}
+            1 \\ 7 \\ 3 \\ 0
+        \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        j_2 = \begin{pmatrix}
+            0 \\ 12 \\ 0 \\ 6
+        \end{pmatrix}
+    \end{equation}
+
+    Запишем матрицу перехода:
+
+    \begin{equation}
+        T = \left(\begin{matrix}
+            -2 & 0 & 1 & -1 \\
+            8 & 12 & 7 & -2 \\
+            -2 & 0 & 3 & -1 \\
+            5 & 6 & 0 & 1
+        \end{matrix}\right)
+    \end{equation}
+
+    Проведём проверку, сошлось: \url{https://matrixcalc.org/#%7B%7B-2,0,1,-1%7D,%7B8,12,7,-2%7D,%7B-2,0,3,-1%7D,%7B5,6,0,1%7D%7D*%7B%7B-1,0,0,0%7D,%7B0,3,1,0%7D,%7B0,0,3,0%7D,%7B0,0,0,5%7D%7D*%7B%7B-2,0,1,-1%7D,%7B8,12,7,-2%7D,%7B-2,0,3,-1%7D,%7B5,6,0,1%7D%7D%5E(-1)}.
+
 \end{document}

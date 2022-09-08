@@ -1,0 +1,247 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=30mm,
+%     right=30mm,
+%     top=30mm,
+%     bottom=20mm
+% }
+
+
+\author{Латыпов Владимир Витальевич, \\ ИТМО КТ M3138, \Huge{\textit{\textbf{вариант 10}}}}
+\title{Типовик по линейной алгебре «Приведение поверхности второго порядка к каноническому виду»}
+
+\begin{document}
+    \tit
+
+    \section{Формулировка условия}
+
+    \begin{enumerate}
+        \item \begin{enumerate}
+            \item Выделить из уравнения поверхности квадратичную форму. Ортогональным
+            преобразованием привести кв. ф. к каноническому виду.
+            \item Интерпретировать ортогональное преобразование, как преобразование поворота
+            трехмерной системы координат. Проверить, что новый базис образует правую тройку.
+            Сделать рис. поворота.
+            \item Преобразовать соответствующим образом уравнение поверхности, используя формулу
+            связи координат в старом и новых базисах.    
+        \end{enumerate}
+        \item Если это необходимо, преобразовать уравнение, совершив параллельный перенос
+        начала системы координат, поворот соответствующей плоскости. Сделать рис.
+        \item Выписать каноническое уравнение поверхности. Сделать рис. в канонической системе
+        координат.
+        \item Выписать итоговое преобразование координат. Сделать рис.
+    \end{enumerate} 
+
+    Причём во варианте 10 уравнение такое: 
+
+    \begin{equation}
+        P: x^2 + y^2 + z^2 + 4 xy + 4 yz + 4 xz + 10 x + 10 y + 10 z + 15 = 0
+    \end{equation}
+
+    \section{Ортогональное преобразование}
+
+    Разделим левую часть уравнения на квадратичную форму, линейную и константную части
+
+    \begin{equation}
+        A = \begin{pmatrix}
+            1 & 2 & 2
+            2 & 1 & 2
+            2 & 2 & 1
+        \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        a = \begin{pmatrix}
+            5 \\ 5 \\ 5
+        \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        P: v^T A v + 2 a^T v + a_0 = 0
+    \end{equation}
+
+    Избавимся от перекрёстных квадратичных слагаемых, приведя A к каноническому виду заменой координат ортогональной матрицей с определителем 1 (а не -1), 
+    чтобы была правая тройка.
+
+    \begin{equation}
+        \begin{pmatrix}
+            x \\ y \\ z
+        \end{pmatrix} = v = Q v' = Q \begin{pmatrix}
+            x' \\ y' \\ z'
+        \end{pmatrix}
+    \end{equation}
+
+    Всё в Евклидовом пространстве, так что $Q^T = Q^{-1}$, так что достаточно диагонализовать матрицу $A$ в о.н.б. 
+    Благо она симметричная, значит, нормальная, значит, это сделать можно.
+
+    Собственные числа: -1, кратность 2 и число 5: кратность, соответственно, 1.
+
+    Просто базис из собственных: 
+    
+    \begin{equation}
+        \begin{pmatrix}
+            -1 \\ 1 \\ 0
+        \end{pmatrix}, \begin{pmatrix}
+            -1 \\ 0 \\ 1
+        \end{pmatrix}, \begin{pmatrix}
+            1 \\ 1 \\ 1
+        \end{pmatrix}
+    \end{equation}
+
+    Ортонормирем его, причём так, чтобы определитель был $\mathbb{+}1$:
+
+    \begin{equation}
+        e'_1 = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            -1 \\ 1 \\ 0
+        \end{pmatrix}, 
+        e'_2 = \frac{1}{\sqrt{6}} \begin{pmatrix}
+            -1 \\ -1 \\ 2
+        \end{pmatrix}, 
+        e'_3 = \frac{1}{\sqrt{3}} \begin{pmatrix}
+            1 \\ 1 \\ 1
+        \end{pmatrix}
+    \end{equation}
+
+    Получим формулу замены координат, а также матрицу новой формы (по сути той же, но в новом базисе).
+
+    \begin{equation}
+        Q = T_{e → e'} = (e'_1 e'_2 e'_3) = \begin{pmatrix}
+            -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+            \frac{1}{\sqrt{2}}  & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+            0                   & \frac{2}{\sqrt{6}}  & \frac{1}{\sqrt{3}}
+        \end{pmatrix}
+    \end{equation}
+
+    \begin{equation}
+        \begin{pmatrix}
+            x \\ y \\ z
+        \end{pmatrix} = v = \begin{pmatrix}
+            -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+            \frac{1}{\sqrt{2}}  & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+            0                   & \frac{2}{\sqrt{6}}  & \frac{1}{\sqrt{3}}
+        \end{pmatrix} v' = \begin{pmatrix}
+            -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+            \frac{1}{\sqrt{2}}  & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+            0                   & \frac{2}{\sqrt{6}}  & \frac{1}{\sqrt{3}}
+        \end{pmatrix} \begin{pmatrix}
+            x' \\ y' \\ z'
+        \end{pmatrix}
+    \end{equation}
+
+
+    Теперь можем нарисовать новый базис:
+
+    \vspace{40cm}
+
+
+    А ещё мы знаем матрицу новой формы — это диагональ из собственных чисел в правильном порядке:
+
+    \begin{equation}
+        \Lambda = \diag (-1, -1, 5)
+    \end{equation}
+
+    Наша форма для новых переменных превращается в:
+
+    \begin{equation}
+        P: -1 x^2 -1 y^2 + 5 z^2 + 2 \left( Q^T a \right)^T v' + 15 = 0
+    \end{equation}
+
+    Назовём $\left( a^T Q \right)$ новым $a'$
+
+    \begin{equation}
+        \begin{pmatrix}
+            a' = \begin{pmatrix}
+                0 \\ 0 \\ 5 \sqrt{3}
+            \end{pmatrix}
+        \end{pmatrix}
+    \end{equation}
+
+    
+    Итак, на этом этапе получаем:
+
+    \begin{equation}
+        P: -1 x'^2 -1 y'^2 + 5 z'^2 + 10 z' + 15 = 0
+    \end{equation}
+
+
+    \section{Параллельный перенос}
+
+    
+    \begin{equation}
+        P: -1 x'^2 -1 y'^2 + 5 (z' + 1)^2 + 10 = 0
+    \end{equation}
+
+    Тогда
+
+    \begin{equation}
+        \begin{complex}
+            x'' = x' \\
+            y'' = y' \\
+            z'' = z' + 1 \\
+        \end{complex}
+    \end{equation}
+
+    Сделаем рисунок такого преобразования:
+
+    
+
+    \begin{equation}
+        P: -1 x''^2 -1 y''^2 + 5 z''^2 + 10 = 0
+    \end{equation}
+
+    \begin{equation}
+        P: \frac{1}{10} x''^2 + \frac{1}{10} y''^2 - \frac{1}{2} z''^2 = 1
+    \end{equation}
+
+    Получили однополостной гиперболоид.
+
+    Нарисуем его в базисе $e''$:
+
+
+    \section{Итоговое преобразование координат}
+
+    Итак, у нас есть два преобразования:
+
+
+    \begin{gather}
+        v = Q v' \\
+        v' = v'' + v_0 = v'' + \begin{pmatrix}
+            0 \\ 0 \\ -1
+        \end{pmatrix}
+    \end{gather}
+
+    Тогда получим
+
+    \begin{equation}
+        v = Q v'' + Q v_0 = Q v'' + \left(\begin{matrix}
+            \frac{-\sqrt{3}}{3} \\
+            \frac{-\sqrt{3}}{3} \\
+            \frac{-\sqrt{3}}{3}
+        \end{matrix}\right)
+    \end{equation}
+
+    Отсюда поймём, где находится $0''$ в исходных координатах:
+
+    \begin{equation}
+        (0'')_e = Q \mathbb{0} + \left(\begin{matrix}
+            \frac{-\sqrt{3}}{3} \\
+            \frac{-\sqrt{3}}{3} \\
+            \frac{-\sqrt{3}}{3}
+        \end{matrix}\right) = \left(\begin{matrix}
+            \frac{-\sqrt{3}}{3} \\
+            \frac{-\sqrt{3}}{3} \\
+            \frac{-\sqrt{3}}{3}
+    \end{matrix}\right)
+    \end{equation}
+
+    Это позволяет нам нарисовать ПВП в исходном базисе:
+
+    
+
+\end{document}
+
+

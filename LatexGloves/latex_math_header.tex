@@ -45,8 +45,11 @@
 \usepackage{multicol}
 \usepackage{xcolor}
 
+\usepackage[normalem]{ulem}
+
 % For beautiful code listings:
 % \usepackage{minted}
+\usepackage{listings}
 
 \usepackage{csquotes} % For citations
 \usepackage[framemethod=tikz]{mdframed} % For further information see: http://marcodaniel.github.io/mdframed/
@@ -61,6 +64,10 @@
 
 \usepackage{fontspec}
 \usepackage{polyglossia}
+
+% Named references to sections in document:
+\usepackage{nameref}
+
 
 % \setmainfont{Times New Roman}
 \setdefaultlanguage{russian}
@@ -211,8 +218,14 @@
 % Math operators
 
 \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\rg}{rg}
 \DeclareMathOperator{\determinant}{det}
+
+\DeclareMathOperator{\Aut}{Aut}
+
+\DeclareMathOperator{\Sim}{Sim}
+\DeclareMathOperator{\Alt}{Alt}
 
 
 
@@ -230,6 +243,18 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Lin}{Lin}
 \DeclareMathOperator{\Span}{span}
+
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\diag}{diag}
+
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+\newcommand{\splitdoc}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}
 
 % \newcommand{\hm}[1]{#1\nobreak\discretionary{}{\hbox{\ensuremath{#1}}}{}}
