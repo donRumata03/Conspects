@@ -1,7 +1,0 @@
-\selectlanguage *{russian}
-\contentsline {section}{\numberline {1}Таблица эквивалантности}{3}{section.1}%
-\contentsline {section}{\numberline {2}Функциональные ряды}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Исследуем равномерную сходимость}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Доказывем отсутствие равномерной сходимости}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Свойства равномерно сходящихся}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Степенные ряды}{4}{subsection.2.4}%
