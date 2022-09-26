@@ -1,30 +1,46 @@
 # Conspects && useful resources
-ITMO CT M3138 useful resources including:
 
-- _**Conspects**_
-- Related books
-- Links to recorded lections at youtube
-- HomeTasks
+ITMO CT (Applied Mathematics and Computer Science) group M3*38 (y2021) useful resources in Russian including:
 
-## Supported subjects
+- _**Conspects of practices**_
+- _**Aggressively compressed conspects for exams and future knowledge recollection**_
+- Conspects of a little part of lections
+- Some of the HomeTasks (e. g. Linear algebra «типовики»)
 
-- [Algorithms and data structures](Analgorithms)
+## Featured subjects
+
 - [Mathematical analysis](MathAnal)
+- [Linear algebra](LinAnalgebra)
+- [History (reforms and reformers in Russian history)](History)
+
+## Abandoned subjects
+- [Algorithms and data structures](Analgorithms)
 - [Discrete Mathematics](DICKreteMath)
 - [Computer architecture](CUMputerAAAAAAAAH)
-- [Linear algebra](LinAnalgebra)
 
-## Awaited subjects:
-- FuckToAnal Programming
-- Programming PornoDicks (Paradigms)
+## Links
+
+Apart from this, you would probably want to use these resources (the ones dedicated to course organization are not listed)
+- Sources of Timofey Ivanov's exhaustive lecture conspects at Overleaf: 
+  - SemenAssters 1-2: https://www.overleaf.com/read/hcmjjqmhwqzx
+  - -||- 3-4: https://www.overleaf.com/read/zvkmsvcphwym
+- Textbooks, Task books (+ answers for some of them), some home tasks, Timofey's conspects regulary being compiled and updated by @donRumata at yandex disk: https://disk.yandex.ru/d/BeIxqrNHSvqx0w
+- Resources connected to differential equations course (by German Andosov): https://docs.google.com/document/d/e/2PACX-1vQv0RikC6gGVkdBqHChc_A06rhWAlUYwyhBQLSy51lozPgjk5Fz6h8ofjJ06ybdAmBt_6p1nRiFOuLd/pub
+- Public CT YouTube channel with lection streams and recordings scrupulously sorted by playlists: https://www.youtube.com/channel/UCc8_XiJXPMz699NvDmtGoTA
+
+## Awaited subjects which already have names for their folders:
+- FuckToAnal Programming (functional)
+- ~~Programming PornoDicks (Paradigms)~~ (actually, this course is already over…)
+
+## Conception
+
+This repository is intended for wide collaboration of students for conspect production (fortunately, GitHub is ideal for such regime).
+
+If you want to contribute, you can either install all the tools for fully-fledged development or just add some latex- or md- shaped text with plane text editor.
+
+After that you are welcome to open pull request and if the strict compiler doesn't like something, I'll fix that. 
 
 ## Brief technical description 
-
-
-            
-    
-
-          
 
 There are two major conspect formats:
 - LaTeX
@@ -32,7 +48,7 @@ There are two major conspect formats:
 
 both of them are compiled to pdf.
 
-Latex is — through XeLaTeX compiler (its killer features were modern font support (vs. pdfLaTeX) and relatively fast compilation compared to LuaLaTeX).
+Latex is — through XeLaTeX compiler (its killer features were modern font support (unlike pdfLaTeX) and relatively fast compilation compared to LuaLaTeX).
 And .md files are compiled to pdf by [pandoc](https://pandoc.org/).
 
 But, unfortunately, these tools require: too much command line arguments and escaping characters, clearing temp files, providing temp files and many other additional procedures.
@@ -75,9 +91,10 @@ What are scripts responsible for:
 Those things can drastically boost your performance at writing electronic conspects.
 
 Basically, typical workflow is as following:
-- Write some code in latex editor. Optionally - use its recompiling-on-fly features.
-- Just run python script ``./deploy.py``. It will:
+- Write some code in latex editor. Optionally - use its recompiling-on-fly features to see what you are typing.
+- Just run python script ``./deploy.py``. It will do all these things do you:
   - Compile changed conspect source files
+  - Perform a clean-up by removing cache files generated while compilation
   - For each committing group - ``git add`` it; 
     ``commit`` with respective message;
   - ``git push`` the commits to ``origin/master`` branch
@@ -90,8 +107,8 @@ everyday conspectors' activities:
 
 - deploy.py - description's already provided above
 - commit.py - is responsible for all `deploy`'s work except running `git push`
-- compile_latex.py - compiles specified LaTeX files
-- compile_latex.py - compiles 
+- compile_latex.py - compiles specified LaTeX files (its CLI argument is a list of unix pseudo-regexps called file masks)
+- compile_md.py - compiles 
 
 
 ```
