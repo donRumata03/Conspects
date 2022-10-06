@@ -1,2 +1,9 @@
 .pdf filter=lfs diff=lfs merge=lfs -text
 *.obj filter=lfs diff=lfs merge=lfs -text
+
+*.md linguist-detectable
+
+* linguist-vendored
+*.tex linguist-vendored=false
+*.md linguist-vendored=false
+*.py linguist-vendored=false
