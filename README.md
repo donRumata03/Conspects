@@ -11,7 +11,7 @@ ITMO CT (Applied Mathematics and Computer Science) group M3*38 (y2021) useful re
 
 - [Mathematical analysis](MathAnal)
 - [Linear algebra](LinAnalgebra)
-- [History (reforms and reformers in Russian history)](History)
+- [History (reforms and reformers in Russian history), also known as FISTory](Fistory)
 
 ## Abandoned subjects
 - [Algorithms and data structures](Analgorithms)
