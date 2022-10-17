@@ -248,6 +248,10 @@
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\diag}{diag}
 
+\expandafter\let\expandafter\originald\csname\encodingdefault\string\d\endcsname
+\DeclareRobustCommand*\d
+  {\ifmmode\mathop{}\!\mathrm{d}\else\expandafter\originald\fi}
+
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
   \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
   #1 % the function
