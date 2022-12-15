@@ -1,0 +1,24 @@
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {1}Иван Грозный}{3}{section.1}%
+\contentsline {section}{\numberline {2}Пётр Первый}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}РЕформы первых Романовых (до Петра)}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Военные реформы}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Экономические реформы}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Реформы в сфере культуры}{4}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Борьба за власть перед правлением Петра I}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Правление Петра I}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Итоги реформ}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Екатерина II}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Идеи эпохи просвящения}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Отношение помещиков к крестьянам}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Крестьянские восстания}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}…}{11}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Александр II}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Отмена крепостного права}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Городская земская реформа}{13}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Судебная реформа}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Вооенная реформа}{14}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Революция}{15}{section.6}%
+\contentsline {section}{\numberline {7}Период 20-х - 30-х}{15}{section.7}%
+\contentsline {section}{\numberline {8}Период Хрущёв, эпоха застоя}{15}{section.8}%
+\contentsline {section}{\numberline {9}Реформы 90-х}{15}{section.9}%
