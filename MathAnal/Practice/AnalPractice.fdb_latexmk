@@ -1,0 +1,11 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "AnalPractice.xdv" "AnalPractice.pdf" "AnalPractice" 0
+  "AnalPractice.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "AnalPractice.pdf"
+["xelatex"] 0 "d:/Projects/Education/Conspects/MathAnal/Practice/AnalPractice.tex" "AnalPractice.xdv" "AnalPractice" 0
+  "AnalPractice.aux" 1673720196 34 3985256e7290058c681f74d7a3565a19 ""
+  "d:/Projects/Education/Conspects/MathAnal/Practice/AnalPractice.tex" 0 -1 0 ""
+  (generated)
+  "AnalPractice.log"
+  "AnalPractice.xdv"

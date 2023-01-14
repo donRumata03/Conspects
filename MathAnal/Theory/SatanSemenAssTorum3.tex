@@ -832,6 +832,39 @@
 \chapter{Мера и интеграл}
 
 
+\section{Мера в абстрактных множествах}
+
+\subsection{Определения}
+
+\begin{definition}
+    [Полукольцо множеств]
+
+    Семейство $\sP$ подмножеств $X$, удовлетворяющее аксиомам 1-3:
+
+    \begin{enumerate}
+        \item $\varnothing \in \sP$
+        \item $\forall A, B \in \sP A \cap B \in \sP$ (замкнутость относительно бинарного пересечения)
+        \item $\forall A, B \in \sP B \subset A \exists \{ C \}_{k = 1}^n \in \sP: A \setminus B = \bigsqcup_{k = 1}^n C_k$
+        (разность разложима на конечное дизъюнктное объединение множеств полукольца)
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    [$\sigma$-алгебра множеств]
+
+    \textit{Непустое} семейство $\sA$ подмножеств $X$, удовлетворяющее аксиомам 1-2:
+
+    \begin{enumerate}
+        \item $\forall A \in \sA: A^{\complement} \in \sA$
+        \item $\forall C_1 … C_n \in \sA: \bigcup_{k = 1}^\infty C_k \in \sA$ (замкнтутость относительно счётного объединения)
+    \end{enumerate}
+\end{definition}
+
+\begin{remark}
+    Если замкнтутость только относительно счётного объединения, то это алгебра множеств (но не $\sigma$-алгебра).
+\end{remark}
+
+
 \section{Простейшие свойства полуколец и сигма-алгебр}
 \section{Простейшие свойства объема и меры}
 \section{Непрерывность меры}
