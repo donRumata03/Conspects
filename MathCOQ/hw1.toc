@@ -1,0 +1,7 @@
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {3}Доказать или опровергнуть}{3}{section.3}%
+\contentsline {section}{\numberline {4}АссоциативностИ импликации}{5}{section.4}%
+\contentsline {section}{\numberline {5}Новые связки}{5}{section.5}%
+\contentsline {section}{\numberline {6}Неполная система}{6}{section.6}%
+\contentsline {section}{\numberline {7}Тетраграмматон}{6}{section.7}%
+\contentsline {section}{\numberline {8}Вывод из противоположных предпосылок}{6}{section.8}%
