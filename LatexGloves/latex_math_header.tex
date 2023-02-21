@@ -35,12 +35,13 @@
 
 % Fancier tables and lists
 \usepackage{booktabs}
-\usepackage{enumitem}
 % Don't indent paragraphs, leave some space between them
 \usepackage{parskip}
 % Hide page number when page is empty
 \usepackage{emptypage}
 
+% Intuitive enum labeling style selection
+\usepackage[shortlabels]{enumitem}
 
 \usepackage{multicol}
 \usepackage{xcolor}
@@ -85,6 +86,8 @@
 \newcommand{\sRp}{{\mathbb{R^{+}}}}
 \newcommand{\sC}{{\mathbb{C}}}
 \newcommand{\sB}{{\mathbb{B}}}
+\newcommand{\sP}{{\mathbb{P}}}
+\newcommand{\sA}{{\mathbb{A}}}
 
 % Math operators
 
@@ -119,7 +122,7 @@
 
 
 % MD framed environments:
-\mdfsetup{skipabove=1em,skipbelow=0em}
+\mdfsetup{skipabove=0.5em,skipbelow=0.5em}
 
 % \mdfdefinestyle{definition}{%
 %     linewidth=2pt,%
@@ -127,16 +130,52 @@
 %     % innertopmargin=\topskip,
 % }
 
+
+
 \theoremstyle{definition}
-\newmdtheoremenv[nobreak=true]{definition}{Определение}
+% \newmdtheoremenv[nobreak=true]{definition}{Определение}
+
+\newtheorem*{definition}{Определение}
+% \counterwithin*{definition}{section}
+
+
+\theoremstyle{plain} % See: https://www.overleaf.com/learn/latex/Theorems_and_proofs#Reference_guide
 \newmdtheoremenv[nobreak=true]{theorem}{Теорема}
+
 \newmdtheoremenv[nobreak=true]{lemma}{Лемма}
 \newmdtheoremenv[nobreak=true]{problem}{Задача}
-\newmdtheoremenv[nobreak=true]{property}{Свойство}
-\newmdtheoremenv[nobreak=true]{statement}{Утверждение}
-\newmdtheoremenv[nobreak=true]{corollary}{Следствие}
-\newtheorem*{note}{Замечание}
+% \newmdtheoremenv[nobreak=true]{property}{Свойство}
+% \newmdtheoremenv[nobreak=true]{statement}{Утверждение}
+% \newmdtheoremenv[nobreak=true]{corollary}{Следствие}
+\newtheorem*{claim}{Утверждение}
+\newtheorem{property}{Свойство}[section]
+
+\counterwithin*{theorem}{section} % Without changing appearance
+\counterwithin*{lemma}{section}
+
+
+\newtheorem{corollary}{Следствие}[theorem]
+\counterwithin{corollary}{theorem} % Changing appearance
+% \counterwithin{corollary}{lemma}
+
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
 \newtheorem*{example}{Пример}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\counterwithin{equation}{section}
+
+
+
+
+
+% To mark logical parts
+\newcommand{\existence}{{\circled{$\exists$}} $\hspace{0.4pt}$}
+\newcommand{\uniqueness}{{\circled{$\hspace{0.5pt}!$}} $\hspace{0.4pt}$}
+\newcommand{\rightimp}{{\circled{$\Rightarrow$}} $\hspace{0.4pt}$}
+\newcommand{\leftimp}{{\circled{$\Leftarrow$}} $\hspace{0.4pt}$}
+
 
 % Useful symbols:
 \renewcommand{\qed}{\ensuremath{\blacksquare}}
@@ -214,6 +253,9 @@
     \end{center}%
 }
 
+% Ditto symbol definition
+
+\newcommand*{\ditto}{---''---}
 
 % Math operators
 
@@ -248,6 +290,11 @@
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\diag}{diag}
 
+% Some specific Math Anal stuff:
+\newcommand{\anal}{{\mathcal{A}}}
+\DeclareMathOperator{\res}{res}
+
+
 \expandafter\let\expandafter\originald\csname\encodingdefault\string\d\endcsname
 \DeclareRobustCommand*\d
   {\ifmmode\mathop{}\!\mathrm{d}\else\expandafter\originald\fi}
@@ -262,3 +309,12 @@
 \newcommand{\splitdoc}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}
 
 % \newcommand{\hm}[1]{#1\nobreak\discretionary{}{\hbox{\ensuremath{#1}}}{}}
+
+% MathLog
+
+\usepackage{cmll}
+
+\newcommand{\bz}{{\text{Л}}}
+\newcommand{\bo}{{\text{И}}}
+
+

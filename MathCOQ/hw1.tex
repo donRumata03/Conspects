@@ -1,0 +1,231 @@
+\documentclass[12pt, a4paper]{article}
+\input{../LatexGloves/latex_math_header.tex}
+\usepackage{cmll}
+
+\graphicspath{{res/}}
+
+
+\title{{\Large\textsc{Решения \textbf{теоретических („малых“) домашних заданий}}}\\
+\it Математическая логика, ИТМО, М3232-М3239, весна 2023 года} 
+
+\author{
+  \vova
+}
+
+\date{\today}
+
+
+\begin{document}
+  \tittoc
+
+При решении заданий вам может потребоваться теорема о дедукции (будет доказана на второй лекции): 
+$\Gamma, \alpha \vdash \beta$ 
+тогда и только тогда, когда $\Gamma \vdash \alpha\rightarrow\beta$. Например, если было показано 
+существование вывода $A \vdash A$, то тогда теорема гарантирует и существование вывода $\vdash A \rightarrow A$.
+
+\setcounter{section}{2}
+
+\section{Доказать или опровергнуть}
+
+\ornamentheader{Доказать или опровергнуть}
+
+\begin{enumerate}[(a)]
+\item $\vdash (A \rightarrow B) \rightarrow (B \rightarrow C) \rightarrow (C \rightarrow A)$ 
+\item $\vdash (A \rightarrow B) \rightarrow (\neg B \rightarrow \neg A)$ \emph{(правило контрапозиции)}
+\item $\vdash A \with B \rightarrow \neg (\neg A \vee \neg B)$
+\item $\vdash \neg (\neg A \vee \neg B) \rightarrow (A \with B)$
+\item $\vdash (A \rightarrow B) \rightarrow (\neg A \vee B)$
+\item $\vdash A \with B \rightarrow A \vee B$
+\item $\vdash ((A \rightarrow B) \rightarrow A)\rightarrow A$ \emph{(закон Пирса)}
+\end{enumerate}
+
+Решение:
+
+\begin{enumerate}[(a)]
+  \item $\vdash \alpha = (A \rightarrow B) \rightarrow (B \rightarrow C) \rightarrow (C \rightarrow A)$
+  
+  Если оно выводимо в исчислении высказываний, значит, по теореме о корректности, общезначимо.
+  
+  Опровергнем это, приведя оценку, переменных, при которой оценка высказывания ложна.
+
+  Ищем, чтобы $\begin{cases}
+    A → C \\
+    C \cancel{→} A
+  \end{cases}$.
+  То есть $\begin{cases}
+    A = \text{Л} \\
+    C = \text{И}
+  \end{cases}$.
+  Остаётся, например, положить $B = \bz$.
+  
+  Итого: $\llbracket \alpha \rrbracket^{A := \bz, B := \bz, C := \bo} = \bz$
+
+
+
+
+  \item $\vdash (A \rightarrow B) \rightarrow (\neg B \rightarrow \neg A)$ \emph{(правило контрапозиции)}
+  
+  За счёт теоремы о дедукции достаточно показать, что $(A \rightarrow B) \vdash \neg B \rightarrow \neg A$ или даже $A \rightarrow B, \neg B \vdash \neg A$.
+
+  \begin{tabular}{lll}
+    (1) & $A → B$ & Гипотеза 1 \\
+    (2) & $\neg B$ & Гипотеза 2 \\
+    (3) & $\neg B → (A → \neg B)$ & Аксиома ослабления (1) \\
+    (4) & $A → \neg B$ & (MP 3, 2) \\
+    (5) & $(A → B) → (A → \neg B) → \neg A$ & \sout{Апология} Аксиома проитвности (9) \\ 
+    (6) & $(A → \neg B) → \neg A$ & MP 5, 1 \\
+    (7) & $\neg A$ & MP 6, 4 \\
+  \end{tabular}
+  
+  
+
+
+  \item $\vdash A \& B → \neg (\neg A \vee \neg B)$. По теореме о дедукции достаточно показать $A \& B \vdash \neg (\neg A \vee \neg B)$
+
+  \begin{tabular}{lll}
+    (1) & $A \& B$ & Гипотеза \\
+    (2) & $A \& B → A$ & Аксиома избавления от $\&$ №1 \\
+    (3) & $A \& B → B$ & Аксиома избавления от $\&$ №2 \\
+    (4) & $A$ & (MP 2, 1) \\
+    (5) & $B$ & (MP 3, 1) \\
+    (6) & $A → \neg \neg A$ & 2a \\
+    (7) & $B → \neg \neg B$ & 2a \\
+    (8) & $\neg \neg A$ & (MP 6, 4) \\
+    (9) & $\neg \neg B$ & (MP 7, 5) \\
+    (10) & $\neg \neg A → \neg \neg B → \neg (\neg A \vee \neg B)$ & 2c для $\neg A, \neg B$ \\
+    (11) & $\neg (\neg A \vee \neg B)$ & ДваждыМодусПоненс! (10, 8; 10.5, 9)
+  \end{tabular}
+  
+
+  \item $\vdash \neg (\neg A \vee \neg B) \rightarrow (A \with B)$
+  
+  \begin{tabular}{lll}
+    (1) & $\neg (\neg A \vee \neg B)$ & Гипотеза \\
+    (x - 1) & $(\neg A → ?) → (\neg A → ?) → \neg\neg A$ & \\
+    (x) & $A$ & MP \\
+    (7) & $A \& B$ & MP … \\
+  \end{tabular}
+
+
+  \item $\vdash (A \rightarrow B) \rightarrow (\neg A \vee B)$
+  
+  \begin{tabular}{lll}
+    (1) & $A → B$ & Гипотеза \\
+    (7) & $\neg A \vee B$ & MP … \\
+  \end{tabular}
+
+
+
+  \item $\vdash A \with B \rightarrow A \vee B$
+  
+  \begin{tabular}{lll}
+    (1) & $A \& B$ & Гипотеза \\
+    (2) & $A \& B → A$ & Аксиома избавления от $\&$ №1 \\
+    (3) & $A$ & (MP 2, 1) \\
+    (4) & $A → (A \vee B)$ & Аксиома получения $\vee$ \\
+    (5) & $A \vee B$ & MP 4, 3
+  \end{tabular}
+
+
+  \item $\vdash ((A \rightarrow B) \rightarrow A)\rightarrow A$ \emph{(закон Пирса)}
+  
+  ?
+
+\end{enumerate}
+
+\section{АссоциативностИ импликации}
+
+\ornamentheader{Следует ли какая-нибудь расстановка скобок из другой: $(A \rightarrow B) \rightarrow C$ и 
+$A \rightarrow (B \rightarrow C)$? Предложите вывод в исчислении высказываний или докажите, что его не
+существует (например, воспользовавшись теоремой о корректности, предложив соответствующую оценку)}
+
+Левая: $\mathcal{l}: (A → B) → C$.
+Утверждает, что мы можем получить $C$,
+если выполнено $A → B$ (есть 3 варианта оценок).
+
+Правая: $\mathcal{r}: A → (B → C)$.
+Утверждает лишь, что $C$ можно получить,
+если выполнено одновременно и $A$, и $B$.
+Очевидно, более «слабое» условие
+(за счёт того, что его опредпосылка сильнее).
+
+Покажем, что $l \vdash r$:
+
+\begin{tabular}{lll}
+  (1) & $(A → B) → C$ & Гипотеза 1 \\
+  (2) & $A$ & Гипотеза 2 \\
+  (3) & $B$ & Гипотеза 3 \\
+  (4) & $B → A → B$ & Ослабление \\
+  (5) & $A → B$ & MP \\
+  (7) & $C$ & MP 1, 5 \\
+\end{tabular}
+
+
+
+
+Покажем, что $r \nvdash l$.
+Если бы можно было, для любой оценки было бы верно $r → l$,
+но это не выполняется (то есть $\llbracket r \rrbracket = \bo,
+\llbracket l \rrbracket = \bz$)
+при $A = \bz, B = \bz, C = \bz$.
+
+\section{Новые связки}
+
+\ornamentheader{Предложите схемы аксиом, позволяющие добавить следующие новые связки к исчислению}
+
+\begin{enumerate}[(a)]
+\item связка <<и-не>> (<<штрих шеффера>>, ``|''): $A\ |\ B$ истинно, когда один из аргументов ложен. Новые схемы аксиом должны 
+давать возможность исключить конъюнкцию и отрицание из исчисления. 
+
+Поясним, что мы понимаем под словами <<исключить связку>>.
+Как вы знаете, конъюнкция и отрицание выражаются через <<и-не>> ($\neg \alpha := \alpha\ |\ \alpha$ и т.п.). 
+При такой замене все схемы аксиом для конъюнкции и отрицания должны стать теоремами.
+При этом исчисление должно остаться корректным относительно классической модели исчисления высказываний.
+
+\item связка <<или-не>> (<<стрелка пирса>>, ``$\downarrow$''): $A \downarrow B$ истинно, когда оба аргумента ложны.
+Новые схемы аксиом должны давать возможность исключить дизъюнкцию и отрицание из исчисления.
+\item Нуль-местная связка <<ложь>> (``$\bot$''). Мы ожидаем вот такую замену: $\neg A := A \     \bot$.
+Аналогично, аксиомы для отрицания в новом исчислении должны превратиться в теоремы. 
+\end{enumerate}
+
+\section{Неполная система} Достаточно ли лжи и <<исключённого или>> ($A \oplus B$ истинно, когда $A \ne B$) для выражения
+всех остальных связок?
+
+Заметим, что в булевой логике для выражения произвольной функции этого недостаточно
+(критерий Поста, обе функции линейные, значит, и композиции тоже будут линейными).
+
+В частности, оценка связки „$\&$“ (которая таблица истинности) задаёт нелинейную функцию. \textit{То, что таблица истинности будет такая 
+— следует из леммы о таблицах истинности к теореме о полноте.}
+
+Если мы попробуем выразить её через имеющиеся, получится формула вида $f(\alpha, \beta) = \mathrm{Const} [\oplus \alpha] [\oplus \beta]$
+
+Но $f$ обязана иметь такую же таблицу истинности, как и „$\&$“ (иначе мы не «\textbf{выразили}»).
+
+P.S. Там вообще ложь, так что они ещё и ноль сохраняют.
+
+
+\section{Тетраграмматон}
+
+\ornamentheader{Даны высказывания $\alpha$ и $\beta$, причём $\vdash \alpha\rightarrow\beta$ и $\not\vdash\beta\rightarrow\alpha$. 
+Укажите способ построения высказывания $\gamma$, такого, что
+$\vdash\alpha\rightarrow\gamma$ и $\vdash\gamma\rightarrow\beta$, причём $\not\vdash\gamma\rightarrow\alpha$ и
+$\not\vdash\beta\rightarrow\gamma$}
+
+\section{Вывод из противоположных предпосылок}
+
+\ornamentheader{Покажите, что если $\alpha \vdash \beta$ и $\neg\alpha\vdash\beta$, то $\vdash\beta$}
+
+Первые два вывода преобразуем в форму $\vdash \alpha \beta$ и $\vdash \neg\alpha → \beta$ и скопипастим в доказательство.
+
+  
+\begin{tabular}{lll}
+  (1) & $\alpha → \beta$ & Гипотеза \\
+  (2) & $\neg \alpha → \beta$ & Гипотеза \\
+  (3) & $\neg \beta → \neg \alpha$ & 1 + контрапозиция + MP \\
+  (4) & $\neg \beta → \neg \neg \alpha$ & 2 + контрапозиция + MP \\
+  (3) & $(\neg\beta → \neg \alpha) → (\neg\beta → \neg \neg \alpha) → \neg \neg \beta$ & Аксиома противности \\
+  (7) & $\beta$ & Дважды MP + акс.10 + MP \\
+\end{tabular}
+
+
+\end{document}
