@@ -1,0 +1,275 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=13mm,
+    right=13mm,
+    top=15mm,
+    bottom=10mm
+}
+
+\graphicspath{{res/}}
+
+
+\title{Теорвер. Домашнее задание №2 \\ \large Условная вероятность} 
+
+\author{
+  Латыпов Владимир
+}
+
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Независимость в подпространстве}
+
+\begin{enumerate}
+    \item Выберем такое $p_A$, что $\forall B, C \subset A: p_A(B | C) = p_\Omega(B | C)$.
+    
+    \begin{gather}
+        p_A(B | C) \eqdef \frac{p_A(BC)}{p_A(C)} \\
+        p_\Omega(B | C) \eqdef \frac{p(BC)}{p(C)}
+    \end{gather}
+
+    Если мы возьмём $p_A(D) = p(D | A) = \frac{p(DA)}{p(A)} = \frac{p(D)}{p(A)}, D \subset A$, 
+    то аксиомы будут, тривиально, выполнены,
+    а числитель и знаменатель дроби $\frac{p_A(BC)}{p_A(C)}$ отнормируется в $p(A)$ раз, 
+    значит, требуемое соотношение тоже выполнено.
+
+    \item Пусть $p(A) = 1$. Докажем, что $\forall B \in \Omega p(B | A) = p(B)$.
+    
+    \begin{multline}
+        p(B | A) \eqdef \frac{p(AB)}{p(A)} = p(AB) = \\
+        p((\Omega \backslash (\Omega \backslash A))B) = \\
+        p(\Omega B + \backslash (\Omega \backslash A) B) \underset{disj} = \\
+        p(B) - p((\Omega \backslash A) B) = p(B)
+    \end{multline}
+
+    \item \begin{enumerate}
+        \item Верно ли, что независимость в подпространстве 
+        влечёт независимость во всём пространстве?
+        
+        Если $B, C \subset A$ независимы, $p(BC) = p(B) p(C)$. 
+
+        \begin{gather}
+            p_A(BC) = \frac{p(BC)}{p(A)} \\
+            p_A(B)p_A(C) = \frac{p(B)p(C)}{p^2(A)} = \frac{p(BC)}{p^2(A)}
+        \end{gather}
+        
+        Что верно только если $p(A) = 1$ или кто-то из $B, C$ — пустой: только в паталогическом случае.
+
+        Берём контрпример от балды: $B, C$: в Питере, Москве идёт дождь. $A = B \cup C$.
+
+        \item Верна ли обратная импликация? Ровно те же формулы.
+        
+        \item Выполняется ли такая хрень для попарно независимых событий.
+        
+        $p_A(AB \cdot AC) = p_A(ABC) = \frac{p(ABC)}{p(A)} \eqOrNot p_A(AB)p_A(AC) = \frac{p(AB)p(AC)}{p^2(A)} = p(B)p(C)$.
+
+        То есть требование задачи — чтобы не были зависимы в совокупности, а условие — лишь попарная зависимость.
+
+        Контрпример:
+
+        \begin{sidewaysfigure}[h!]
+            \centering
+            \includegraphics[width=\paperwidth]{res/counterexample.png}
+            \caption{Контрпример}
+            \label{fig:counterexample}
+        \end{sidewaysfigure}
+        \FloatBarrier
+    \end{enumerate}
+\end{enumerate}
+
+
+\section{\textit{Простая} задача}
+
+$p(k) = a^{k - 1} \underbrace{\frac{1 - a}{1 - a^6}}_c$
+
+Чётные: $E = \{2, 4, 6\}$.
+
+Не простые: $N = \{1, 4, 6\}$.
+
+\begin{equation}
+    P(EN) = P(\{4, 6\}) = p(N) - p_1 = p(E) - p_2 = c(a^3 + a^5)
+\end{equation}
+
+\begin{equation}
+    p(E)p(N) = c(a^1 + a^3 + a^5) \cdot c(a^0 + a^3 + a^5) = (c a + P(EN))(c + P(EN))
+\end{equation}
+
+$E, N$ независимы $\Leftrightarrow$
+
+\begin{equation}
+    P(EN) = r = (ca + r)(c + r) = c^2 a + r(c + ca) + r^2
+\end{equation}
+
+То есть должно быть: $r^2 + r (ca + c - 1) + c^2 a = 0$.
+
+
+\begin{enumerate}
+    \item $a = \sqrt{\frac{-2+\sqrt{7}}{2}}$.
+    
+    \begin{gather}
+        c = \frac{1 - \sqrt{\frac12 (\sqrt{7} - 2)}}{1 - \frac18 (\sqrt{7} - 2)^3} \\
+        r = c(a^3 + a^5) = \frac{\left(1-\sqrt{\frac{1}{2}(\sqrt{7}-2)}\right)\left(\frac{(\sqrt{7}-2)^{3 / 2}}{2 \sqrt{2}}+\frac{(\sqrt{7}-2)^{5 / 2}}{4 \sqrt{2}}\right)}{1-\frac{1}{8}(\sqrt{7}-2)^3}
+    \end{gather}
+
+    Получим гадость (не ноль): \url{https://www.wolframalpha.com/input?i=find+r%5E2+%2B+r+%28ca+%2B+c+-+1%29+%2B+c%5E2+a+for+a%3Dsqrt%281%2F2+%28sqrt%287%29+-+2%29%29%2C+c%3D%281+-+a%29%2F%281+-+a%5E6%29%2C+r+%3D+c*+%28a%5E3+%2B+a%5E5%29}.
+
+
+    \item Получим ноль: \url{https://www.wolframalpha.com/input?i=find+r%5E2+%2B+r+%28ca+%2B+c+-+1%29+%2B+c%5E2+a+for+a%3Dsqrt%281%2F2+%28sqrt%285%29+-+1%29%29%2C+c%3D%281+-+a%29%2F%281+-+a%5E6%29%2C+r+%3D+c*+%28a%5E3+%2B+a%5E5%29}.
+\end{enumerate}
+
+
+\section{Контрпримеры}
+
+\begin{itemize}
+    \item Да, $A = \varnothing$.
+    \item $B: 2 × 2 = 4$, $A$ — злая воля сумасшедшего диктатора.
+    \item $A = B:$ Я сегодня пойду гулять.
+\end{itemize}
+
+
+\section{Неравенства}
+
+\begin{enumerate}
+    \item Буль: \begin{itemize}
+        \item Буль1 [aka Полуаддитивность меры]: $P\left(\bigcup_{i=1}^n A_i\right) \leqslant \sum_{i=1}^n P\left(A_i\right)$. 
+        
+        Заведём $B_i = A_i \backslash \bigcup_{j=1}^{i - 1} A_j$. Тогда они дизъюнктны, $B_i \subset A_i$ и имеют то же объединение.
+
+        \begin{equation}
+            P\left(\bigcup_{i=1}^n A_i\right) = P\left(\bigsqcup_{i=1}^n B_i\right) = \sum_{i=1}^n P\left(B_i\right) \leqslant \sum_{i=1}^n P\left(A_i\right)
+        \end{equation}
+        
+        \item Буль2: $P\left(\bigcap_{i=1}^n A_i\right) \geqslant 1-\sum_{i=1}^n P\left(\bar{A}_i\right)$.
+        
+        \begin{equation}
+            P\left(\bigcap_{i=1}^n A_i\right) = P\left(\overline{\bigcup_{i=1}^n \overline{A_i}}\right) = 1 - P\left(\bigcup_{i=1}^n \overline{A_i}\right) \geqslant 1 - \sum_{i=1}^n P\left(\overline{A_i}\right)
+        \end{equation}
+
+    \end{itemize}
+
+    \item Буль-Буль
+    
+    \begin{equation}
+        P\left(\bigcap_{i=1}^n A_i\right) \geqslant 1 - \sum_{i=1}^n P\left(\overline{A_i}\right) = 
+        1 - \left(n - \sum_{i=1}^n P\left(A_i\right)\right) = \sum_{i=1}^n P\left(A_i\right) - (n - 1)
+    \end{equation}
+
+    \item Буль-Буль-Буль [Куниасс]
+    
+    \begin{equation}
+        (!) \forall k P\left(\bigcup_{i=1}^n A_i\right) \leqslant \sum_{i=1}^n P\left(A_i\right) - \sum_{i \neq k} P\left(A_i \cap A_k\right)
+    \end{equation}
+
+    НУО, $k = 1$. 
+
+
+    \begin{multline}
+        P\left(\bigcup_{i=1}^n A_i\right) = P\left(\left(A_1 \backslash \bigcup_{i=2}^n A_i \right) \cup \bigcup_{i=2}^n A_i\right) \leqslant \\
+        P(A_1) - \sum_{i \neq k} P\left(A_i \cap A_k\right) + \sum_{i=2}^n P\left(A_i\right) = \\
+        \sum_{i=1}^n P\left(A_i\right) - \sum_{i \neq k} P\left(A_i \cap A_k\right)
+    \end{multline}
+\end{enumerate}
+
+\section{Априорные шары}
+
+Заметим, что по определению условной вероятности, $P(B_j | A_k) = \frac{p(B_j \cap A_k)}{p(A_k)}$,
+а это ровно числа, фигурирующие в подсказке. Если поделить одно на другое, получится роавно то, что надо.
+
+Равенства из подсказки получаются, если сначала \textit{выбрать} позиции белых шаров,
+а потом расставить (с возвратом или без) конкретные белые/цветные шары на них.
+В первом случае вылезает обычная степень, втором — убывающая.
+
+
+\section{„Добавленный“ белый шар}
+
+$A$ — оставшийся шар — белый.
+$B$ — вытащили белый.
+
+$W$ — добавили белый шар.
+
+\begin{equation}
+    P(A | B) = \frac{p(AB)}{p(B)} = \frac{\frac{1}{2}}{p(W)p(B | W) + p(\overline{W})p(B | \overline{W})} =
+    \frac{\frac{1}{2}}{½ \cdot 1 + ½\cdot ½} = \frac{\frac{1}{2}}{\frac 34} = \frac 46 = \frac 23
+\end{equation}
+
+\section{А было ли письмо?}
+
+$A$ — письмо есть. $B$ — письмо есть в первых 7-и.
+
+
+
+\begin{equation}
+    p(A | \overline{B}) = p(A) \frac{p(\overline{B} | A)}{p(\overline{B})} = p \frac{\frac{1}{8}}{1 - \frac{7}{8}p} = \frac{p}{8 - 7p}
+\end{equation}
+
+
+Заметим, что без дополниельной информации, вероятность найти письмо в последнем ящике была бы $\frac{p}{8}$, а так она повышается,
+причём при больших $p$ повышается сильнее.
+
+
+\section{Совисимая незакупность}
+
+Разобъём на $2^n$ дизъюнктных событий $\bigcap A_i^{[\complement]}$,
+каждое из которых непусто, тем самым покажем,
+что как минимум $2^n$ различных элементов пространства точно есть.
+
+\begin{lemma}
+    Если события $\{B_i\}^n_{i = 0}$ независимы в совокупности,
+    то события $B_1, … \overline{B_k}, … B_n$ — тоже независимы в совокупности.
+\end{lemma}
+
+\begin{proof}
+    Если $k \notin I \subset [1; n]$, $p\left(\bigcap_{i \in I} B_i'\right) = p\left(\bigcap_{i \in I} B_i\right) = \prod_{i \in I} p(B_i)$ (ничего не меняется).
+
+    Если $k \in I \subset [1; n]$,
+    \begin{multline}
+        p\left(\bigcap_{i \in I} B'_i\right)
+        = p\left(\overline{B_i} \cap \bigcap_{i \in (I \backslash \{k\})} B_i\right)
+        = p\left(\bigcap_{i \in (I \backslash \{k\})} B_i\right) - p\left(\bigcap_{i \in I} B_i\right) \\
+        = \prod_{i \in (I \backslash \{k\})} B_i - \prod_{i \in I} B_i \\
+        = (1 - p(B_i)) \prod_{i \in (I \backslash \{k\})} B_i
+        = \prod_{i \in I} p(B'_i)
+    \end{multline}
+\end{proof}
+
+А значит, для любой битовой маски окажется, что событие $\bigcap A_i^{[\complement]}$, где дополнения стоят на местах нулей,
+имеет ненулевую вероятность (каждый из сомножителетей не ноль по условию):
+
+\begin{equation}
+    \prod^n_{i = 0} \begin{cases}
+        p(A_i) & i \in I \\
+        1 - p(A_i) & i \notin I
+    \end{cases}
+\end{equation}
+
+Итак, получили $2^n$ дизъюнктных непустых событий $\bigcap A_i^{[\complement]}$
+
+\begin{remark}
+    Почему эти пересечения событий дизъюнктно разбивают $\Omega$?
+
+    \begin{proof}
+    Возьмём точку $x \in \Omega$ и докажем, что что существует единственная битовая маска, содержащая её.
+    
+    \existence Выберем такое $I(x)$, что $i \in I$ при $x \in A_i$. Тогда $x \in \bigcap^n_{i = 0} \begin{cases}
+        p(A_i) & i \in I \\
+        1 - p(A_i) & i \notin I
+    \end{cases}$.
+
+    \uniqueness Никакому другому пересечению такого вида $x$ не принадлежит, так как у другого найдётся место,
+    в котором требование противоположно таковому в $I(x)$ тогда $x$ ему не удовлетворяет.
+\end{proof}
+
+\end{remark}
+
+Пример для $2^n$ — гиперкуб с событиями $A_i$: $i$-й бит = $1$.
+
+\end{document}
