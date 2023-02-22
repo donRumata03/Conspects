@@ -4,19 +4,21 @@ ITMO CT (Applied Mathematics and Computer Science) group M3*38 (y2021) useful re
 
 - _**Conspects of practices**_
 - _**Aggressively compressed conspects for exams and future knowledge recollection**_
-- Conspects of a little part of lections
-- Some of the HomeTasks (e. g. Linear algebra «типовики»)
+- Conspects of a little part of lections (for the guys who don't have time to read long conspects let alone watching lections)
+- Some of the HomeTasks (e. g. Linear algebra «типовики», Math Logic, )
 
 ## Featured subjects
 
 - [Mathematical analysis](MathAnal)
 - [Linear algebra](LinAnalgebra)
-- [History (reforms and reformers in Russian history), also known as FISTory](Fistory)
+- [Probability theory](BillyTheory)
+- [Math Logic](MathCOQ)
 
 ## Abandoned subjects
 - [Algorithms and data structures](Analgorithms)
 - [Discrete Mathematics](DICKreteMath)
 - [Computer architecture](CUMputerAAAAAAAAH)
+- [History (reforms and reformers in Russian history), also known as FISTory](Fistory)
 
 ## Links
 
@@ -64,14 +66,14 @@ committing them with proper commit messages and splitting the changes between co
 - Ensure you have a working latex distribution. The mainstream options are: tex-live for Linux && MacOS and MikTex for Windows.
   Note that MikTex automatically installs all required packages at compilation while tex-live requiers them to be pre-downloaded by `tlmgr` (tex-live manager) utility.
   If you experience problems with `tlmgr`'s work, visit [this page](https://tex.stackexchange.com/questions/540429/tlmgr-in-ubuntu-20-04-local-tex-live-2019-is-older-than-remote-repository-2).
-  So, to compile everything successfully with tex-live, 
+  As you can see, compiling everything successfully with tex-live (especially for the first time) would inevitably lead to big buttheart…
 - Install font pack from directory `Fonts/Kurale`
 - Install latexmk (via package manager on Linux or from binaries. In the second case — don't forget to install perl before…)
 - Install an IDE for efficient work with latex (I've recently switched to Visual Studio Code from Texify Idea. It's a bit less clever but offers some tasty features…)
 - To compile Markdown to pdf from console you also need to install pandoc. There are should not be any pitfalls…
-- For editing Markdown files I recommend [Typora - a truly minimal markdown editor](https://typora.io/).
-  As well as pandoc, typora supports something called «enriched markdown» (my own term).
-  But it's much more convenient to edit md conspects in typora but compile through pandoc. 
+- For editing Markdown files I recommend [Obsidian markdown editor](https://obsidian.md/).
+  As well as pandoc, Obsidian supports something called «enriched markdown» (my own term).
+  But it's much more convenient to edit md conspects in Obsidian but compile through pandoc automatically in commit script. 
   Unfortunately, «enriched markdowns» are a bit different and not fully compatible, 
   so you probably need to make sure that you files are maintained compilable…
 
