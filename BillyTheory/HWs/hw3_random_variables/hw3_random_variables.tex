@@ -1,0 +1,61 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=13mm,
+    right=13mm,
+    top=15mm,
+    bottom=10mm
+}
+
+\graphicspath{{res/}}
+
+
+\title{Теорвер. Домашнее задание №3 \\ \large Случайные величины} 
+
+\author{
+  Латыпов Владимир
+}
+
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+
+\section{Каким идти на экзамен}
+
+У первого: $\frac{n}{N}$.
+
+У второго: 
+
+\begin{equation}
+  p_{\text{first is lucky}} \cdot \frac{n - 1}{N - 1} + p_{\text{first isn't lucky}} \cdot \frac{n}{N - 1} =
+  \frac{n}{N} \cdot \frac{n - 1}{N - 1} + \frac{N - n}{N} \cdot \frac{n}{N - 1} = \frac{n}{N}
+\end{equation}
+
+Аналогично — у третьего. Странно, если было бы иначе, ведь каждая перестановка равновероятна (обсуждали ещё на дискретке),
+а количество перестановок с хорошим билетом на месте: $n \cdot (N - 1)!$ из всех $N (N - 1)!$.
+
+
+\section{Случайное копирование}
+
+Исходное $\Omega$ — битовые векторы выборов (aka ветки в полном бинарном дереве выбора), у каждого своя вероятность, однако суммарная вероятность $= 1$.
+
+Нужно найти суммарную вероятность тех веток длины $s$, в которых последний шаг равен нулю (белый шар).
+
+Однако заметим, что, если знать матожидание процента белых шаров после $s - 1$-го шага, то это и будет искомая вероятность.
+
+\begin{gather*}
+  E[W_{s - 1}] = \sum_{\omega \in \Omega_{s - 1}} W_{s - 1}(\omega) p(\omega) \\
+  p(\text{s_th is white}) = \sum_{\omega \in \Omega_{s}} [\omega_{n - 1} = \text{White}] p(\omega) 
+  = \sum_{\omega' \in \Omega_{s - 1}} 1 \cdot W_{s - 1}(\omega') p(\omega') + 0 \cdot p(\omega') (1 - W_{s - 1}(\omega'))
+\end{gather*}
+
+Попробуем выразить $E[W_{s}]$, зная $E[W_{s - 1}]$.
+
+\end{document}

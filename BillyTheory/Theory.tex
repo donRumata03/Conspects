@@ -133,4 +133,35 @@
     $(2, 3) \Leftrightarrow 1$: разбиваем на кольца, остаток сходящегося ряда $→ 0$. 
 \end{proof}
 
+\begin{theorem}
+    [Формула полной вероятности]
+
+    Пусть $\{A_i\}^n$ дизъюнктны, $B \in \bigcup_i A_i$.
+
+    Тогда $P(B) = \sum_i P(A_i)P(B | A_i)$.
+\end{theorem}
+
+
+
+\begin{theorem}
+    [Байеса]
+
+    \begin{equation}
+        \underbrace{P(A | B)}_{\mathrm{likelihood}} = \frac{\overbrace{P(A)}^{\mathrm{prior}} \overbrace{P(B | A)}^{\mathrm{likelihood}}}{\underbrace{P(B)}_{\mathrm{marginal}}}
+    \end{equation}
+\end{theorem}
+
+Можно переписать в виде:
+
+$\{A_i\}$ — система дизъюнктных событий, $B \in \bigcup A_i$.
+(((Каждое из них „могло вызвать“ $B$ и какое-то точно вызвало))).
+Вопрос — какое:
+
+\begin{equation}
+    P(A_i | B) = \frac{P(A_i)P(B | A_i)}{P(B)} = \frac{P(A_i)P(B | A_i)}{\sum_i P(A_i)P(B | A_i)}
+\end{equation}
+
+То есть при получении информации, что произошло $B$, ожидания событий скейлятся пропорционально тому,
+насколько вероятно они вызывают $B$.
+
 \end{document}
