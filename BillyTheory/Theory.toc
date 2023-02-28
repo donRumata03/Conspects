@@ -1,4 +1,0 @@
-\selectlanguage *{russian}
-\contentsline {chapter}{Оглавление}{2}{section*.1}%
-\contentsline {section}{\numberline {0.1}Как работать с этим сжатым конспектом}{3}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Определения}{3}{section.0.2}%
