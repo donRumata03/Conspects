@@ -22,7 +22,9 @@ subject_decryption = {
 	"LinAnalgebra": "Linear algebra",
 	"MathAnal": "Mathematics anal",
 	"DiffECation": "Differential equations",
-	"Fistory": "History (reforms and reformers in russian history)"
+	"Fistory": "History (reforms and reformers in russian history)",
+	"MathCOQ": "Math logic",
+	"BillyTheory": "Probability theory"
 }
 
 special_dir_decryption = {
