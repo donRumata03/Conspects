@@ -7,7 +7,7 @@
     left=13mm,
     right=13mm,
     top=15mm,
-    bottom=10mm
+    bottom=15mm
 }
 
 \graphicspath{{res/}}
@@ -41,6 +41,7 @@
 Аналогично — у третьего. Странно, если было бы иначе, ведь каждая перестановка равновероятна (обсуждали ещё на дискретке),
 а количество перестановок с хорошим билетом на месте: $n \cdot (N - 1)!$ из всех $N (N - 1)!$.
 
+Note: частный случай следующей задачи для $k = -1$…
 
 \section{Случайное копирование}
 
@@ -48,14 +49,245 @@
 
 Нужно найти суммарную вероятность тех веток длины $s$, в которых последний шаг равен нулю (белый шар).
 
-Однако заметим, что, если знать матожидание процента белых шаров после $s - 1$-го шага, то это и будет искомая вероятность.
+Однако заметим, что, если знать матожидание \textit{процента белых шаров \textbf{после}} $s - 1$\textit{-го шага} (назовём этот процент — случайную величину), то это и будет искомая вероятность.
 
-\begin{gather*}
-  E[W_{s - 1}] = \sum_{\omega \in \Omega_{s - 1}} W_{s - 1}(\omega) p(\omega) \\
-  p(\text{s_th is white}) = \sum_{\omega \in \Omega_{s}} [\omega_{n - 1} = \text{White}] p(\omega) 
-  = \sum_{\omega' \in \Omega_{s - 1}} 1 \cdot W_{s - 1}(\omega') p(\omega') + 0 \cdot p(\omega') (1 - W_{s - 1}(\omega'))
-\end{gather*}
+\begin{equation}
+  E[W_{s - 1}] = \sum_{\omega \in \Omega_{s - 1}} W_{s - 1}(\omega) p(\omega)
+\end{equation}
+
+
+\begin{equation}
+  p(\text{s th is white}) = \sum_{\omega \in \Omega_{s}} [\omega_{n - 1} = \text{White}] p(\omega)  = \sum_{\omega' \in \Omega_{s - 1}} 1 \cdot W_{s - 1}(\omega') p(\omega') + 0 \cdot p(\omega') (1 - W_{s - 1}(\omega'))
+\end{equation}
 
 Попробуем выразить $E[W_{s}]$, зная $E[W_{s - 1}]$.
+
+По формуле полного матожидания (разделим все исходы на два события: выпал в $s$-ый раз белый шар или нет):
+
+\begin{multline}
+  E[W_{s}] = \sum_{\omega \in \Omega_{s}} W_{s}(\omega) p(\omega) = \\
+  \sum_{\omega \in \Omega_{s}} \frac{M(\omega)}{N(\omega) + M(\omega)} p(\omega) = \\
+  \sum_{\omega \in \Omega_{s - 1}} \frac{M(\omega \#\# 0)}{N(\omega \#\# 0) + M(\omega \#\# 0)} p(\omega \#\# 0) + \frac{M(\omega \#\# 1)}{N(\omega \#\# 1) + M(\omega \#\# 1)} p(\omega \#\# 1) = \\
+  \sum_{\omega \in \Omega_{s - 1}} \frac{M(\omega) + k}{N(\omega) + M(\omega) + k} p(\omega) \frac{M(\omega)}{N(\omega) + M(\omega)}
+   + \frac{M(\omega) + k}{N(\omega) + M(\omega) + k} p(\omega) \frac{N(\omega)}{N(\omega) + M(\omega)} = \\
+   \sum_{\omega \in \Omega_{s - 1}} \frac{N(\omega)}{N(\omega) + M(\omega)} p(\omega) = \sum_{\omega \in \Omega_{s - 1}} W_{s - 1}(\omega) p(\omega) = E[W_{s - 1}]
+\end{multline}
+
+В предпредпоследнем переходе мы воспользовались \url{https://www.wolframalpha.com/input?i=%28m+%2B+k%29+%2F+%28n+%2B+m+%2B+k%29+m%2F%28n+%2B+m%29+%2B+%28m%29+%2F+%28n+%2B+m+%2B+k%29+n%2F%28n+%2B+m%29}.
+
+
+\begin{equation}
+  p(\text{s th is white}) E[W_{s} | \text{s th is white}] + (1 - p(\text{s th is white})) E[W_{s} | \text{s th isn't white}] = \\
+  E[W_{s - 1}] E[W_{s} | \text{s th is white}] + (1 - E[W_{s - 1}]) E[W_{s} | \text{s th isn't white}] = TODO \\
+  \left(\sum_{\omega \in \Omega_{s - 1}} W_{s - 1}(\omega) p(\omega)\right) = E[W_{s - 1}]
+\end{equation}
+
+\section{Случайный диодный мост с замыканием}
+
+Убьём двух зайцев, разделив $\Omega$ на события «$E$ открыто» ($E$) и «$E$ закрыто» ($\overline{E}$).
+
+$S$ — success.
+
+\begin{equation}
+  P(S | E) = P(A \cup C) \cdot P(B \cup D) = (1 - P(\overline{A}\overline{C}))^2 = (1 - (1 - p)^2)^2 = 4 p^2 - 4 p^3 + p^4
+\end{equation}
+
+\begin{equation}
+  P(S | \overline{E}) = P(AB \cup CD) = P(AB) + P(CD) - P(ABCD) = 2p^2 - p^4
+\end{equation}
+
+\begin{gather}
+  P(S) = P(E) P(S | E) + P(\overline{E}) P(S | \overline{E}) = p (4 p^2 - 4 p^3 + p^4) + (1 - p)(2p^2 - p^4) = 2 p^5 - 5 p^4 + 2 p^3 + 2 p^2 \\
+  P(E | S) = \frac{P(E) P(S | E)}{P(S)} = \frac{p (4 p^2 - 4 p^3 + p^4)}{2 p^5 - 5 p^4 + 2 p^3 + 2 p^2}
+\end{gather}
+
+
+
+\section{Диффур потребления}
+
+\subsection{Для случая одного механизма}
+
+$p = P_1, (1 - p) = P_0$.
+
+Записав условие задачи, получим определение дифференцируемости:
+
+\begin{equation}
+  p(t + \Delta t) = p(t) - p(t) (\alpha \Delta t + o(\Delta t)) + 
+  (1 - p(t)) (\beta \Delta t + o(\Delta t))
+\end{equation}
+
+То есть диффур: $p' = -\alpha p + \beta(1 - p) = (-\alpha - \beta) p + \beta$
+
+
+\subsection{Общий случай}
+
+Случаи, когда мутировало больше одного механизма случаются с вероятностью $o(\Delta t)$,
+их конечное количество, так что и сумма такова.
+
+\begin{multline}
+  P_r(t + \Delta t) = P_r(t) + \sum_{k = 0}^n P_k(t) p_{kr} - P_r(t) \left(\alpha \binom{r}{1} \Delta t + o(\Delta t)\right) \\
+  = P_r(t) - P_r(t) \alpha r \Delta t + P_{r - 1}(t) \beta (n - r + 1) \Delta t + P_{r + 1}(t) \alpha (n - r + 1) \Delta t + o(\Delta t) 
+\end{multline}
+
+(Полагаем $P_i(t) = 0$ для $i \notin [0, n]$)
+
+Получаем систему диффуров:
+
+\begin{equation}
+  P'_r(t) = P_r(t)((n - r)\beta - r \alpha) \alpha r + P_{r - 1}(t) \beta (n - r + 1) + P_{r + 1}(t) \alpha (n - r + 1) \quad \forall r \in [0..n]
+\end{equation}
+
+ЛОС с разреженной матрицей
+
+
+
+
+\section{Независимость случайных величин}
+
+Интуитивно: какие же они независимые, они чётко выражаются одна через другую,
+то есть одна даёт полную информацию о другой.
+
+Проверим определение: $f_{\xi, \nu}(x, y) = f_\xi(x)f_\nu(y)$ (опять интуитивно: не-ноль на пути не представим в виде тензроного произведения).
+
+Но это уже гарантированно неправда: например, для $x = \frac{1}{2}, y = \cos(1)$:
+$f_{\xi, \nu}(x, y) = 0$, ведь эти условия несовместны в окрестности.
+
+С другой стороны, оба $f_\xi(x), f_\nu(y)$ не нули, так как в окрестности 
+функции дифференцируемы, производная обратной функции не ноль, функция плотности очень даже не ноль.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\paperwidth]{res/5.png}
+  \caption{Случайные величины}
+  \label{fig:counterexample}
+\end{figure}
+\FloatBarrier
+
+
+В силу возрастания синуса на $\Omega$:
+
+\begin{equation}
+  P(a \leqslant sin(\omega) \leqslant b) = P(\arcsin(a) \leqslant \omega \leqslant \arcsin(b))
+\end{equation}
+
+
+\section{Парадокс Монти Холла}
+
+На самом деле, он должен был понять про апостериорные вероятности
+помилования для трёх заключённых следующее: у него — $1/3$, у названного — $0$,
+у не названного $2/3$.
+
+В терминах шоу — вопрошающему стоит сменить тело, а не оставаться в своём.
+
+Если формально:
+
+Назовём их $R_1$ (названный), $R_2$ (оставшийся), $R_3$ (он).
+
+$\Omega = {(R_i, S_j)}$
+
+
+\begin{equation}
+  p(R_2 | S_1) = \frac{p(R_2 S_1)}{p(S_1)} = \frac{p(R_2) p(S_1 | R_2)}{p(R_2) p(S_1 | R_2) + p(R_3) p(S_1 | R_3)} = 
+  \frac{1/3 \cdot 1}{1/3 \cdot 1 + 1/3 \cdot 1/2} = \frac{2}{3}
+\end{equation}
+
+В чём не прав заключённый? Почему он решил, что $1/2$?
+Если есть несколько событий, это ещё не значит, что они равновероятны.
+
+Информации о себе он действительно не получил,
+так как в любом случае услышал бы неизвестную фамилию.
+
+А вот об оставшемся человеке — информации добавилось: 
+если бы он был помилован, вероятность, что стражник об этом скажет — $100\%$,
+а если помилован был автор, то лишь $50\%$.
+Вероятность помилования от обоих незнакомцев распределилась к нему. 
+
+
+\paragraph{Доп. вопрос} Когда $\xi$ и $\xi^2$ независимы?
+
+\begin{equation}\label{eq:indep}
+  p_{\xi, \xi^2}(x, y) = p_\xi(x)p_{\xi^2}(y)
+\end{equation}
+
+Для отрицательных $y$ это тривиально. Рассмотрим, например, положительные $\xi$.
+Упорядочим по возрастанию и занумеруем в этом порядке $\xi(\Omega) = x_1, … x_n$.
+
+Тогда $\xi^2(\Omega) = x_1^2, … x_n^2$.
+
+Совместный график будет выглядеть как парабола на прямоугольничке.
+
+\begin{equation}
+  p_{\xi, \xi^2}(x, y) = \begin{cases}
+    p_\xi(x) & x^2 = y \\
+    0 & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+Если найдутся два разных значения $\xi^2$: $y_1 = x_1^2, y_2 = x_2^2$,
+принимаемые с ненулевой вероятностью (на множестве ненулевой меры Лебега-Стилтьеса)
+то найдутся и два различных значения $\xi$ с тем же свойством: $x_1, x_2$.
+
+Тогда равенство \ref{eq:indep} нарёшается при $x = x_1, y = y_2$.
+
+Иначе (если все значения, принимаемые $\xi$ с положительной вероятностью, одинаковы) $\xi^2$
+независима с чем угодно.
+
+
+\section{Выпускной}
+
+Элементарные исходы: случайные векторы выборов — для каждого студента — то, куда он пошёл.
+Вероятность каждого: $\frac{1}{n^k}$.
+
+По линейности матожидания достаточно
+посчитать матожидание количество пролетевших студентов в одном заведении:
+
+\begin{equation}
+  E[N_{\mathrm{fail}}] = E\left[\sum_{i = 1}^n \mathrm{failed}_i\right] = \sum_{s = 1}^n E[\mathrm{failed}_i] = n E[\mathrm{failed}_i]
+\end{equation}
+
+\begin{equation}
+  P([N_i = x]) = [\text{vec with N(i) = x}] = \frac{\binom{k}{x} \cdot (n - 1)^{k - x}}{n^k}
+\end{equation}
+
+\begin{multline}
+  E[\mathrm{failed}_i] = E\left[\begin{cases}
+    N_i - r & N_i \geqslant r, \\
+    0 & \text{otherwise}
+  \end{cases}\right] = -r + \sum_{x = r}^{k} x P([N_i = x]) = -r + \sum_{x = r}^{k} x P([N_i = x]) = \\
+  -r + \frac{1}{n^r}\sum_{x = r}^{k} x \binom{k}{x} \cdot (n - 1)^{k - x}
+\end{multline}
+
+\begin{equation}
+  E[N_{\mathrm{fail}}] = E\left[\sum_{i = 1}^n \mathrm{failed}_i\right] = \sum_{s = 1}^n E[\mathrm{failed}_i] = n E[\mathrm{failed}_i] = 
+  -rn + \frac{1}{n^{r - 1}}\sum_{x = r}^{k} x \binom{k}{x} \cdot (n - 1)^{k - x}
+\end{equation}
+
+Рассмотрим студента и заведение, которое он выбрал $p_s$ — вероятность, что туда
+
+\section{Оптимизация}
+
+\begin{equation}
+  \begin{cases}
+    3 (p - p^2) \leqslant 1 \\
+    2p^2 \leqslant p
+  \end{cases}
+\end{equation}
+
+$1/2$ — достигается при $\{a, b, c, d\}; P(x) = 1/4; A = \{a, b\}, B = \{b, c\}, D = \{c, a\}$
+
+
+\section{Три вещи несовместные — как ты да я}
+
+\begin{equation}
+  0 = P(AB) \neq P(A) P(B) > 0
+\end{equation}
+
+Чтобы $AB$ и $A \cup B$ были независимы:
+
+\begin{equation}
+  p(AB \cap (A \cup B)) = p(ABA \cup ABB) = p(AB) = [\text{independence}] = p(AB)p(A \cup B)
+\end{equation}
+
+То есть события должны быть либо несовместными, либо вместе составлять всё пространство.
 
 \end{document}
