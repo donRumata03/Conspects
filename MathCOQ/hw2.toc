@@ -1,5 +1,0 @@
-\selectlanguage *{russian}
-\contentsline {section}{\numberline {1}Условная полнота}{3}{section.1}%
-\contentsline {section}{\numberline {2}Недоказуемость неинтуитивных высказываний}{3}{section.2}%
-\contentsline {section}{\numberline {3}}{4}{section.3}%
-\contentsline {section}{\numberline {4}Пропадение полноты}{4}{section.4}%
