@@ -803,9 +803,33 @@ $\underset{\infty}{\res} f = \frac{1}{2 \pi \i}\int_{\gamma^{-}} f$.
 Частные ситуации:
 \begin{itemize}
   \item Линейная замена
-  \item полярная замена (якоибан $r$), замена $\begin{cases}
+  \item полярная замена $\begin{cases}
+    x = r \cos \varphi \\
+    y = r \sin \varphi
+  \end{cases}$ (якоибан $r$)
+  \item сферическая замена $\begin{cases}
+    x = r \cos \psi \cos \varphi \\
+    y = r \cos \psi \sin \varphi \\
+    z = r \sin \psi
+  \end{cases}$ (якобиан $r^2 \cos \psi$)
+  \item циллиндрическая замена $\begin{cases}
+    x = \rho \cos \varphi \\
+    y = \rho \sin \varphi \\
+    z = h
+  \end{cases}$ (якоибан $\rho$)
+  \item эллипсодиная замена (и аналогичная ей эллиптическая) $\begin{cases}
+    x = a \rho \cos \psi \cos \varphi \\
+    y = b \rho \cos \psi \sin \varphi \\
+    z = c \rho \sin \psi
+  \end{cases}$ (якобиан $\rho^2 \cos \psi$). 
+  Для особых ценителей можно перейти в обобщённые э. координаты, возвеля тригонометрические функции в какую-то степень
+  \item замена $\begin{cases}
     u = y/x \\
     v = xy
+  \end{cases}$ — часто в новых координатах получится прямоугольник
+  \item Можно также сделать вариацию: $\begin{cases}
+    u = \alpha x + \beta y \\
+    v = \frac{x}{y}
   \end{cases}$
   \item При четырёхугольнике (проще, если при параллелограмме), ограниченом прямыми,
   вместо того, чтобы втупую его резать, можно сделать афинную замену,
