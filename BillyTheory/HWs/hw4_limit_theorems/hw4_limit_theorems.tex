@@ -1,0 +1,56 @@
+\documentclass[12pt, a4paper]{article}
+\input{../../../LatexGloves/latex_math_header.tex}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=13mm,
+    right=13mm,
+    top=15mm,
+    bottom=15mm
+}
+
+\graphicspath{{res/}}
+
+
+\title{Теорвер. Домашнее задание №4 \\ \large Предельные теоремы} 
+
+\author{
+  Латыпов Владимир
+}
+
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\setcounter{section}{5}
+
+\section{Ставки на монету}
+
+$x(\omega) = \sum_{k = 0}^{n(\omega) - 1} 2^k = 2^{n(\omega)} - 1$
+
+\begin{equation}
+    E[x] = \sum_{n = 0}^{\infty} (2^n - 1) \cdot 2^{-n - 1} = \frac{1}{2} \left(\sum_{n = 0}^{\infty} 2^n \cdot 2^{-n} - \sum_{n = 0}^{\infty} 1 \cdot 2^{-n}\right) = \infty
+\end{equation}
+
+Но если рассматривать логарифмическую функцию полезности денег…
+
+\begin{equation}
+    E[y] = \sum_{n = 1}^{\infty} \ln (2^n - 1) \cdot 2^{-n - 1} ~ \sum_{n = 1}^{\infty} n 2^{-n} ≈ [\text{converges}] ≈ 0.47
+\end{equation}
+
+Тогда за такое стоило бы заплатить порядка $e^{0.47} ≈ 1.6$ (эквивелентное по полезности количество денег).
+
+
+\setcounter{section}{11}
+
+\section{Первый и единственный успех}
+
+\begin{equation}
+    P(\text{m is first} | \text{only one of n}) = P(\text{only m} | \text{only one of n}) = \frac{P(\text{only m})}{P(\text{only one of n})} = \frac{1}{n}
+\end{equation}
+
+\end{document}
