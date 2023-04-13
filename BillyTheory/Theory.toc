@@ -1,7 +1,0 @@
-\selectlanguage *{russian}
-\contentsline {section}{\numberline {1}Как работать с этим сжатым конспектом}{3}{section.1}%
-\contentsline {section}{\numberline {2}Определения}{3}{section.2}%
-\contentsline {section}{\numberline {3}Процесс Бернулли, предельные теоремы}{5}{section.3}%
-\contentsline {section}{\numberline {4}Переход вероятностному пространству распределения}{6}{section.4}%
-\contentsline {section}{\numberline {5}Примеры дискретных распределений}{6}{section.5}%
-\contentsline {section}{\numberline {6}Примеры непрерывных распределений}{6}{section.6}%
