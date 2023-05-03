@@ -1,0 +1,52 @@
+\documentclass[12pt, a4paper]{article}
+\input{../LatexGloves/latex_math_header.tex}
+\usepackage{cmll}
+
+\graphicspath{{res/}}
+
+
+\title{{\Large\textsc{Решения \textbf{теоретических („малых“) домашних заданий}}}\\
+\it Математическая логика, ИТМО, М3232-М3239, весна 2023 года} 
+
+\author{
+  \vova
+}
+
+\date{\today}
+
+
+\begin{document}
+  \tittoc
+
+
+\section{Непротиворечивость омега-непротиворечивой теории}
+
+\begin{definition}
+    [$\omega$-непротиворечивая теория]
+
+    Такая $\mathcal{T}$, что для любой формулы $\phi$ из $\vdash_{\mathcal{T}} \phi\left( \overline{i} \right)$ для любого $i \in \mathbb{N}$ следует $\nvdash_{\mathcal{T}} \exists x. \lnot \phi\left( x \right)$.
+\end{definition}
+
+То есть в $\omega$-непротиворечивой теории существует недоказуемая формула, например, для $\phi \equiv x = x$ имеем $\nvdash \exists x. \lnot \left( x = x \right)$.
+
+Однако в противоречивой теории все формулы доказуемы: $\alpha → \lnot \alpha → \beta$ (аксиома 10и, в КИВ — она выводится для любых $\alpha, \beta$).
+
+Значит, $\omega$-непротиворечивая теория непротиворечива. \qed
+
+
+\section{Омега-протеворечивое расширение формальной арифметики}
+
+\begin{definition}
+  [Расширение теории]
+
+  Теория $\mathcal{S}$ расширяет теорию $\mathcal{T}$, если из $\vdash_{\mathcal{S}} \alpha$ следует $\vdash_{\mathcal{T}} \alpha$ для любой формулы $\alpha$.
+\end{definition}
+
+
+Добавим аксиому $A \& \lnot A$. Тогда новая теория противоречива,
+а значит расширяет (неслыханно расширяет!) формальную ароифметику
+(так как правая часть импликации выполнена всегда).
+
+Тогда по (1) она тем более $\omega$-противоречива. \qed
+
+\end{document}

@@ -56,6 +56,9 @@ def print_green(string, *args, **kwargs):
     colored_print(console_colors.OKGREEN, string, *args, **kwargs)
 
 
+def path_is_child(child: Path, parent: Path):
+    return parent in child.parents
+
 def split(sequence: Iterable, pred: Callable):
     """ Splits sequence into two parts by predicate: trues, falses """
     sat, non_sat = [], []

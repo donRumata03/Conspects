@@ -1,0 +1,188 @@
+\documentclass[12pt, a4paper]{article}
+\input{../LatexGloves/latex_math_header.tex}
+\usepackage{cmll}
+
+\graphicspath{{res/}}
+
+
+\title{{\Large\textsc{Решения \textbf{теоретических („малых“) домашних заданий}}}\\
+\it Математическая логика, ИТМО, М3232-М3239, весна 2023 года} 
+
+\author{
+  \vova
+}
+
+\date{\today}
+
+
+\begin{document}
+  \tittoc
+
+
+\section{Равенства в аксимоматике Пеано}
+
+   
+\begin{enumerate}[(a)]
+    \item $a \cdot b = b \cdot a$ (коммутативность умножения)
+    
+    Как вводится умножение в аксиоматике Пеано?
+
+    \begin{equation}
+        a \cdot b = \begin{cases}
+            0 & b = 0 \\
+            a \cdot c + a & b = c'
+        \end{cases}
+    \end{equation}
+
+
+    \begin{lemma}
+        $a \cdot 0 = 0 \cdot a$
+    \end{lemma}
+    \begin{proof}
+        Индукция.
+
+        База: функциональная экстенсиональность.
+    \end{proof}
+
+    \begin{theorem}
+        \begin{equation}
+            a \cdot b = b \cdot a
+        \end{equation}
+    \end{theorem}
+    \begin{proof}
+        Докажем по индукции по $b$ при фиксированном $a$.
+
+        $P(b) = a \cdot 0 = 0 \cdot a$ — лемма 1
+
+        База: $a \cdot b = b \cdot a$
+
+        Покажем 
+    \end{proof}
+
+    \item …
+\end{enumerate}
+
+\setcounter{section}{3}
+
+\newpage
+
+
+\section{Вывод в формальной арифметике}
+
+\subsection{Единственность нуля}
+
+Введём „предикат“ (не предикат в смысле КИП) $\psi$ (выражение со свободной переменной $x$):
+
+\begin{equation}
+    \left( \exists q. q' = x \right) \vee x = 0
+\end{equation}
+
+$\vdash \psi[x := 0]$, так как это $\left( \exists q. q' = 0 \right) \vee 0 = 0$, что доказуемо через схему 11: $(\forall a. a = a)[x := a]$.
+
+Теперь доказательство $\forall x. \psi → \psi[x := x']$, то есть что 
+
+$\forall x. \left( \exists q. q' = x \right) \vee x = 0 → \left( \exists q. q' = x' \right) \vee x' = 0$
+
+$\exists q. q' = x'$ докажем так:
+
+\begin{tabular}{lll}
+    (n) & $x' = x'$ & Генерализованное $a = a$ \\
+    (n + 1) & $(q' = x')[q := x] → \exists q. q' = x'$ & схема 12 \\
+    (n + 2) & $\exists q. q' = x'$ & MP предыдущих
+\end{tabular}
+
+Последний штрих: применим аксиому об индукции: 
+
+$\psi[x := 0] \& \left( \forall x. \psi → \psi[x := x'] \right) → \psi$.
+
+и дважды MP: $\psi$, то есть $\left( \exists q. q' = x \right) \vee x = 0$.
+
+Генерализуем, применим к $x$: $\left( \exists q. q' = p \right) \vee p = 0$. $\blacksquare$
+
+
+\newpage
+
+\section{Двухместные отношения}
+
+\begin{enumerate}[(a)]
+    \item Полное отношение на $\sN^2$: формула $(x_1 = x_1) \& (x_2 = x_2)$
+    (некая заготовка на тавтологию, но \textit{со свободными переменными}).
+    
+    Если $\langle a_1, a_2 \rangle \in \sN$ (то есть всегда), покажем, что $\rho[x_1 := \overline{a_1}][x_2 := \overline{a_2}]$ доказуема.
+
+    На лекции мы доказали, что $a = a$. Не можем просто сказать, что на самом деле доказали для $\alpha$, а не для $a$,
+    так как у нас не схемы аксиом, а просто аксиомы. Зато можем воспользоваться выразительностью исчисления предикатов.
+
+    Допишем доказательство:
+
+    \begin{tabular}{lll}
+        (n) & $a = a$ & С лекции \\
+        (n + 1) & $B \vee \lnot B → a = a$ & Ослабление \\
+        (…) & $B \vee \lnot B → \forall a. a = a$ & Правило вывода для $\forall$ \\
+        (…) & $B \vee \lnot B$ & Тавтология из полноты КИВ \\
+        (…) & $\forall a. a = a$ & MP двух предыдущих \\
+        (…) & $(\forall a. a = a) → \overline{a_1} = \overline{a_1}$ & Схема аксиом 11 \\
+        (…) & $\overline{a_1} = \overline{a_1}$ & MP двух предыдущих \\
+        (…) & $\overline{a_2} = \overline{a_2}$ & Аналогично для $\overline{a_2}$ \\
+        (…) & $(\overline{a_1} = \overline{a_1}) → (\overline{a_2} = \overline{a_2}) → (\overline{a_1} = \overline{a_1}) \& (\overline{a_2} = \overline{a_2})$ & Введение $\&$ \\
+        (…) & $(\overline{a_1} = \overline{a_1}) \& (\overline{a_2} = \overline{a_2})$ & Дважды MP
+    \end{tabular}
+
+    Для пустого множества пар, не входящих в отношение, верно всё, что угодно. $\blacksquare$
+
+    \item Удивительно: выражение равенства — равенство.
+    
+    Что для $a_1 = a_2$ $\vdash \overline{a_1} = \overline{a_2}$ — доказали на лекции + генерализация.
+
+    Покажем, что для $a_1 \neq a_2$ $\vdash \lnot \left( \overline{a_1} = \overline{a_2} \right)$.
+
+    Для этого достаточно прийти к противоречию из $\overline{a_1} = \overline{a_2}$.
+
+    Будем получать равенства с мЕньшим количеством штрихов по аксиоме А3, пока меньшее не станет нулём.
+    То есть для каждого $i \in [1; \min\left( a_1, a_2 \right)]$ будем добавлять такие строчки:
+
+
+    \begin{tabular}{lll}
+        (k) & $\overline{a_1 - (i - 1)} = \overline{a_2 - (i - 1)}$ & Уже имеем это утверждение \\
+        (k + 1) & $\overline{a_1 - i}' = \overline{a_2 - i}' → \overline{a_1 - i} = \overline{a_2 - i}$ & A3 \\
+        (k + 2) & $\overline{a_1 - i} = \overline{a_2 - i}$ & MP k, k + 1 \\
+    \end{tabular}
+    
+
+    Теперь получили либо $(…)' = 0$, либо $0 = (…)'$. В первом случае пришли к противоречию с А4 ($\lnot a' = 0$),
+    во втором — ещё применим аксиому $\alpha = \forall p. \forall q. p = q → q = p$, подставив в неё $\alpha[p := 0][q:=(…)']$
+
+
+    \item Отношение «хотя бы один аргумент $= 0$»
+    
+    Отношение такое: $x_1 \cdot x_2 = 0$.
+
+    \begin{itemize}
+        \item     Для пары, где $a_2 = 0$, доказуемо, что $\overline{a_1} \cdot \overline{0} = 0$:
+
+        \begin{tabular}{lll}
+            (n) & $x_1 \cdot 0 = 0$ & Генерализованная А7
+        \end{tabular}
+    
+        Для пары, где $a_1 = 0$, воспользуемся перестановочностью $a$ и $0$ при умножении.
+
+        \item Если оба аргумента $\neq 0$, то по $A3$: $\lnot \overline{a_1 - 1}' = 0$ и $\lnot \overline{a_2 - 1}' = 0$.
+        
+        Для доказательства $\lnot \overline{a_1} \cdot \overline{a_2} = 0$
+        достаточно прийти к противоречию из $\overline{a_1} \cdot \overline{a_2} = 0$.
+
+        Выведем по $4c$, что $p \cdot q = 0 → p = 0 \vee q = 0$.
+        Тогда по MP с предположением: $p = 0 \vee q = 0$ 
+        
+        Получим неверную формулу
+    \end{itemize}
+
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
