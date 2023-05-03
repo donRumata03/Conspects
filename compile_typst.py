@@ -3,6 +3,7 @@ import time
 from pathlib import Path
 from typing import Tuple
 
+from scripts.compilation_interface import collect_files, compile_file_set
 from scripts.script_commons import print_red, console_colors, colored_print, run_command, conspects_root_dir, \
     path_is_child
 
@@ -37,3 +38,8 @@ def typst_file_should_be_compiled(path: str | Path):
     is_in_gloves_typst_demo = path_is_child(path, conspects_root_dir / "LatexGloves" / "typst" / "demo")
 
     return not is_in_gloves_typst or is_in_gloves_typst_demo
+
+
+if __name__ == '__main__':
+    files_to_compile = collect_files(".typ", typst_file_should_be_compiled)
+    compile_file_set(files_to_compile, compile_one_file)

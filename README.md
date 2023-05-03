@@ -15,10 +15,11 @@ ITMO CT (Applied Mathematics and Computer Science) group M3*38 (y2021) useful re
 - [Math Logic](MathCOQ)
 
 ## Abandoned subjects
-- [Algorithms and data structures](Analgorithms)
+- [Algorithms and data structures](Analgorithms) still some home tasks are present
 - [Discrete Mathematics](DICKreteMath)
 - [Computer architecture](CUMputerAAAAAAAAH)
-- [History (reforms and reformers in Russian history), also known as FISTory](Fistory)
+- [History (reforms and reformers in Russian history), also known as FISTory](Fistory) — the course is over, but the conspect is still _in progress_…
+  In an infinite progress, to be precise… 
 
 ## Links
 
@@ -44,13 +45,32 @@ After that you are welcome to open pull request and if the strict compiler doesn
 
 ## Brief technical description 
 
-There are two major conspect formats:
+There are three major conspect formats:
+- [Typst](https://github.com/typst/typst) — The new LaTeX && Markdown killer written in Rust.
+  It incorporates the best qualities of both: the MD's simplicity of typical case
+  and LaTeX's customizability of a hard one.
 - LaTeX
 - Markdown
 
-both of them are compiled to pdf.
+all of them are compiled to pdf and the artifacts are stored in this repo.
 
-Latex is — through XeLaTeX compiler (its killer features were modern font support (unlike pdfLaTeX) and relatively fast compilation compared to LuaLaTeX).
+### Typst compilation
+
+It's easy here: [install](https://github.com/typst/typst) it with package manager and compile with `typst compile {file}`
+or `typst watch {file}` (for continuous compilation).
+
+It goes without saying that compilation is _blazingly fast_ (due to incremental compilation and _wise language choice_).
+It really changes the way you work with typesetting systems: the on-the-fly preview now justifies this name…
+
+### Markdown compilation
+
+Markdown compilation is done by pandoc which is translated to LaTeX and then compiled by XeLaTeX.
+
+
+### LaTeX compilation
+
+Latex is compiled through the XeLaTeX compiler
+(its killer features were modern font support (unlike pdfLaTeX) and relatively fast compilation times compared to LuaLaTeX).
 And .md files are compiled to pdf by [pandoc](https://pandoc.org/).
 
 But, unfortunately, these tools require: too much command line arguments and escaping characters, clearing temp files, providing temp files and many other additional procedures.
@@ -63,14 +83,17 @@ committing them with proper commit messages and splitting the changes between co
 
 ## Requierd tools' installation
 
-- Ensure you have a working latex distribution. The mainstream options are: tex-live for Linux && MacOS and MikTex for Windows.
+- For Typst: follow this [link](https://github.com/typst/typst) and the instructions there.
+- For latex, firstly ensure that you have a working latex distribution. The mainstream options are: tex-live for Linux && MacOS and MikTex for Windows.
   Note that MikTex automatically installs all required packages at compilation while tex-live requiers them to be pre-downloaded by `tlmgr` (tex-live manager) utility.
   If you experience problems with `tlmgr`'s work, visit [this page](https://tex.stackexchange.com/questions/540429/tlmgr-in-ubuntu-20-04-local-tex-live-2019-is-older-than-remote-repository-2).
   As you can see, compiling everything successfully with tex-live (especially for the first time) would inevitably lead to big buttheart…
 - Install font pack from directory `Fonts/Kurale`
 - Install latexmk (via package manager on Linux or from binaries. In the second case — don't forget to install perl before…)
-- Install an IDE for efficient work with latex (I've recently switched to Visual Studio Code from Texify Idea. It's a bit less clever but offers some tasty features…)
-- To compile Markdown to pdf from console you also need to install pandoc. There are should not be any pitfalls…
+- Install an IDE for efficient work with latex
+  (For latex I've recently switched to Visual Studio Code from Texify Idea. It's a bit less clever but offers some tasty features…)
+  For Typst I recommend to use VS Code with Typst extension.
+- To compile Markdown to pdf from console you also need to install pandoc. There are should not be any pitfalls: just do it!
 - For editing Markdown files I recommend [Obsidian markdown editor](https://obsidian.md/).
   As well as pandoc, Obsidian supports something called «enriched markdown» (my own term).
   But it's much more convenient to edit md conspects in Obsidian but compile through pandoc automatically in commit script. 
@@ -82,18 +105,19 @@ committing them with proper commit messages and splitting the changes between co
 
 Now, when all the desired software is installed, it's time to get used to python scripts for common operations with conspects.
 
-What are scripts responsible for:
-- Compile LaTeX source code to PDFs with special settings (latexmk; xelatex)
-- Compile Markdown source code to PDFs with special settings
-- Track changes using git api
+This is what scripts are responsible for:
+- Compiling Typst source code to PDFs
+- Compiling LaTeX source code to PDFs with special settings (latexmk; xelatex)
+- Compiling Markdown source code to PDFs with special settings
+- Tracking changes using git api
 - Distributing changes between commits smartly
-- Commit naming based on folders in which the changes were made
-- Fully automatically perform the actions above and run ``git push`` after that.
+- Committing naming based on folders in which the changes were made
+- Fully automatically performing the actions above and running ``git push`` after that.
 
 Those things can drastically boost your performance at writing electronic conspects.
 
-Basically, typical workflow is as following:
-- Write some code in latex editor. Optionally - use its recompiling-on-fly features to see what you are typing.
+Basically, typical workflow is as following (consists of 2 (two) steps):
+- Write some code in a typst/latex editor. Optionally - use its recompiling-on-fly features to see what you are typing.
 - Just run python script ``./deploy.py``. It will do all these things do you:
   - Compile changed conspect source files
   - Perform a clean-up by removing cache files generated while compilation
@@ -109,8 +133,9 @@ everyday conspectors' activities:
 
 - deploy.py - description's already provided above
 - commit.py - is responsible for all `deploy`'s work except running `git push`
-- compile_latex.py - compiles specified LaTeX files (its CLI argument is a list of unix pseudo-regexps called file masks)
-- compile_md.py - compiles 
+- compile_typst.py - compiles specified Typst files (its CLI argument is a list of unix pseudo-regexps called file masks)
+- compile_latex.py - compiles specified LaTeX files
+- compile_md.py - compiles md files 
 
 
 ```
@@ -120,8 +145,9 @@ everyday conspectors' activities:
  ┃ ┗ 📜    implementation... \
  ┃ ┗ 📜                  details... \
  ┃ ┗ 📜                         .py... \
- ┣ 📜 compile_md.py \
  ┣ 📜 compile_latex.py \
+ ┣ 📜 compile_md.py \
+ ┣ 📜 compile_typst.py \
  ┣ 📜 commit.py \
  ┣ 📜 deploy.py \
  ┗ 📜 ***some other files...***
