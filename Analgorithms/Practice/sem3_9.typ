@@ -1,5 +1,4 @@
-#import "../../LatexGloves/typst/template.typ": *
-#import "../../LatexGloves/typst/theorems.typ": *
+#import "../algo.typ": *
 
 
 #show: project.with(
@@ -9,20 +8,7 @@
   authors: (vova, english_vova)
 )
 
-#let gcd = $op("gcd")$
 
-#let memorizer = thmbox(
-  "memorizer",            // use the same counter as Memorizer
-  "Напоминалочка",
-  fill: rgb("#efe6ff")
-)
-
-#let statement = thmbox(
-    "statement",            // use the same counter as Memorizer
-    "Условие",
-    fill: rgb("#e6f7ff"),
-    base: none
-)
 
 
 #counter(heading).update(4)

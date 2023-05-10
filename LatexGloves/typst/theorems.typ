@@ -195,3 +195,17 @@
 ).with(numbering: none)
 
 
+
+#let memorizer = thmbox(
+  "memorizer",            // use the same counter as Memorizer
+  "Напоминалочка",
+  fill: rgb("#efe6ff")
+)
+
+#let statement = thmbox(
+    "statement",            // use the same counter as Memorizer
+    "Условие",
+    fill: rgb("#e6f7ff"),
+    base: none
+)
+
