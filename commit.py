@@ -123,7 +123,7 @@ def file_in_subj_subdir(path):
 
 
 def file_is_conspect_source_in_decryption_subfolder(path: str):
-    return file_in_subj_subdir(path) and Path(path).suffix in {".tex", ".md"}
+    return file_in_subj_subdir(path) and Path(path).suffix in compiling_script_by_extension
 
 
 def file_is_conspect_source_in_decryption(path: str):
