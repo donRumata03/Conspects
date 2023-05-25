@@ -30,3 +30,9 @@
 // $ #goedel_index($xi$) d $
 
 // $ #goedel_index([#goedel_index([#goedel_index([$xi$])])]) $
+
+#let goedelIndex(x) = {
+  $attach(tl: ┌, tr: ┐, #x)$
+}
+
+

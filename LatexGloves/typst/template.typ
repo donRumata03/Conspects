@@ -77,3 +77,8 @@ align(center)[
 
   body
 }
+
+
+
+
+#let empty = $diameter$
