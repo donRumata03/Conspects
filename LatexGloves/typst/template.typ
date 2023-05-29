@@ -82,3 +82,5 @@ align(center)[
 
 
 #let empty = $diameter$
+#let argmax = $op("argmax")$
+#let argmin = $op("argmin")$

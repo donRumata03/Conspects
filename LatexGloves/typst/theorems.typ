@@ -194,6 +194,13 @@
   ]
 ).with(numbering: none)
 
+#let property = thmbox(
+  "property",
+  "Свойство",
+  base: "definition",      // Properties are 'attached' to Definitions
+  fill: rgb("#f8e8e8")
+)
+
 
 
 #let memorizer = thmbox(

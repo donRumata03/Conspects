@@ -22,6 +22,8 @@
 #let prob = $cal(P)$
 // EE is already defined
 // Same applies to DD
+#let med = $op("med")$
+#let Var = $op("Var")$
 
 #let Cov = $"Cov"$
 
