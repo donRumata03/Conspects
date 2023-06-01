@@ -184,6 +184,7 @@ if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name pr
 
 else:
     user_commit_message = sys.argv[1] if len(sys.argv) > 1 else None
+    print("User commit message:", user_commit_message)
 
 
     def commit_with_user_message(description):
