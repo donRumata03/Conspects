@@ -183,6 +183,13 @@ if "--all" in sys.argv[1:]:  # Compile and commit all files at once with name pr
     try_commit(rep, m=commit_message)
 
 else:
+    user_commit_message = sys.argv[1] if len(sys.argv) > 1 else None
+
+
+    def commit_with_user_message(description):
+        try_commit(rep, m=f"{description}: {user_commit_message}")
+
+
     # Subsequently processing different file categories
     # Those thing have special meaning:
     # - DIR € decryption
@@ -196,8 +203,7 @@ else:
         paths = list(ps)
         try_add_many_files_to_git(paths, rep)
         # print(describe_file_formats(paths))
-        try_commit(rep,
-                   m=f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
+        commit_with_user_message(f"{random.choice(updating_phrases)} {subject_decryption[group]} conspect ({describe_file_formats(paths)})")
 
     # 2. Conspects in subdirectories is ones in decryption:
     secondary_conspects, changed_files = split(changed_files,
@@ -207,20 +213,19 @@ else:
         subj_folder, topic_folders = Path(group).parts[0], Path(*Path(group).parts[1:]).as_posix()
 
         try_add_many_files_to_git(paths, rep)
-        try_commit(rep,
-                   m=f"{random.choice(updating_phrases)} {subject_decryption[subj_folder]} conspect with topic: \"{topic_folders}\" ({describe_file_formats(paths)})")
+        commit_with_user_message(f"{random.choice(updating_phrases)} {subject_decryption[subj_folder]} conspect with topic: \"{topic_folders}\" ({describe_file_formats(paths)})")
 
     # 3. Python scripts «for compiling and committing»:
     changed_scripts, changed_files = split(changed_files, lambda path: Path(path).suffix == ".py")
     if changed_scripts:
         try_add_many_files_to_git(changed_scripts, rep)
-        try_commit(rep, m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
+        commit_with_user_message(f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
     # 4. Latex/typst templates and demonstration:
     templates, changed_files = split(changed_files, lambda path: in_template_subdir(path))
     if templates:
         try_add_many_files_to_git(templates, rep)
-        try_commit(rep, m=f"{random.choice(updating_phrases)} LaTeX/Typst templates/demonstrations")
+        commit_with_user_message(f"{random.choice(updating_phrases)} LaTeX/Typst templates/demonstrations")
 
     # 5. Supporting materials (non-connected pdfs; images and etc.) by directory (if it's subject's subdir):
     # TODO: Mark only certain file extensions as supporting materials:
@@ -231,8 +236,7 @@ else:
     for subj_folder, path_it in it.groupby(supporting_materials, lambda p: Path(p).parts[0]):
         paths = list(path_it)
         try_add_many_files_to_git(paths, rep)
-        try_commit(rep,
-                   m=f"Add supporting materials for {subject_decryption[subj_folder]} ({describe_file_formats(paths)})")
+        commit_with_user_message(f"Add supporting materials for {subject_decryption[subj_folder]} ({describe_file_formats(paths)})")
 
     # 6. Font-connected stuff:
     changed_fonts, changed_files = split(changed_files,
@@ -240,12 +244,12 @@ else:
                                                                                                           ["Fonts"]))
     if changed_fonts:
         try_add_many_files_to_git(changed_scripts, rep)
-        try_commit(rep, m=f"{random.choice(updating_phrases)} python scripts for compilation and committing")
+        commit_with_user_message(f"{random.choice(updating_phrases)} python scripts for compilation and committing")
 
     # 7. Unknown files by directory (or empty)…
     if changed_files:
         try_add_many_files_to_git(changed_files, rep)
-        try_commit(rep, m=f"{random.choice(updating_phrases)} some unknown files: {', '.join(changed_files)}")
+        commit_with_user_message(f"{random.choice(updating_phrases)} some unknown files: {', '.join(changed_files)}")
 
 # ***All the other files appeared before we started compilation***
 
