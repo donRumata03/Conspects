@@ -36,7 +36,7 @@ def run_command(command):
 
 
 def run_python_script(path_to_script, *args):
-    arg_string = " ".join(list(args))
+    arg_string = " ".join([f"\"{arg}\"" for arg in list(args)])
     return run_command(f"{'python3' if os.name == 'posix' else 'python'} {path_to_script} {arg_string}")
 
 
