@@ -224,19 +224,36 @@
   #mathSymbol
 ]$
 
-#let rightimpl = logicalProofPart($=>$)
-#let leftimpl = logicalProofPart($arrow.double.l$)
+#let rightImpl = logicalProofPart($=>$)
+#let leftImpl = logicalProofPart($arrow.double.l$)
 
 #let existence = logicalProofPart($exists$)
 #let uniqueness = logicalProofPart($!$)
 
-#rightimpl Доказательство1
+#let contradiction = logicalProofPart($?!$)
+
+#let underset(major, under) = $attach(b: #under, limits(#major))$
+#let overset(major, over) = $attach(t: #over, limits(#major))$
+
+#let eqDef = underset($=$, $op("eq")$)
+#let bilateralImplDef = underset($<==>$, $op("eq")$)
+
+#let restriction(x, y) = $lr(#x"|", size: #200%)_#y$
+
+// Demonstration
+
+#rightImpl Доказательство1
 
 Ещё доказательство
 
-#leftimpl Доказательство2
+#leftImpl Доказательство2
 
 #existence
 
 #uniqueness
 
+$1 eqDef 0'$ 
+
+$1 bilateralImplDef 0'$ 
+
+$contradiction$
