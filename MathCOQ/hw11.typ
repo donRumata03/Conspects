@@ -8,7 +8,6 @@
 )
 
 
-#let empty = $diameter$
 #let Bl = $cal(P)$
 
 

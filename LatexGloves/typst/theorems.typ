@@ -216,3 +216,27 @@
     base: none
 )
 
+
+// Logically separate proof parts
+
+#let logicalProofPart(mathSymbol) = $#circle(radius: 9pt)[
+  #set align(center + horizon)
+  #mathSymbol
+]$
+
+#let rightimpl = logicalProofPart($=>$)
+#let leftimpl = logicalProofPart($arrow.double.l$)
+
+#let existence = logicalProofPart($exists$)
+#let uniqueness = logicalProofPart($!$)
+
+#rightimpl Доказательство1
+
+Ещё доказательство
+
+#leftimpl Доказательство2
+
+#existence
+
+#uniqueness
+

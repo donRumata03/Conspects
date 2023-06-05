@@ -14,17 +14,28 @@
 
 == dsfgsdf #label("g")
 
-#ticket[]
+#ticket[df]
 
 
 См. anal
 
 = Многообразия
-
+  
 = Ряды Фурье и приближение функций
 
 
 #ticket[anal]
+
+#theorem[Dick]
+#proof[
+
+#rightimpl Туда
+
+#leftimpl Суда
+
+$leftimpl + rightimpl = op("proof")$
+]
+
 
 
 #counter(heading).update(100)
@@ -32,7 +43,7 @@
 == sdafasd
 
 ```rust
-fn main() {
+fn main() { 
   println!("sdfdea");
 }
 ```
