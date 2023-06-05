@@ -188,7 +188,7 @@ else:
 
 
     def commit_with_user_message(description):
-        try_commit(rep, m=f"{description}: {user_commit_message}")
+        try_commit(rep, m=f"{description}: {user_commit_message}" if user_commit_message is not None else description)
 
 
     # Subsequently processing different file categories
