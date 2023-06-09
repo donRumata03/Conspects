@@ -19,24 +19,9 @@
     ])
 ] 
 
-#let t = counter("ticket")
-  
-
-#ticket[dsfgdsf]
-
-= sdfgsdgsd
- 
-== dfgdfs
-
-#ticket[dsfgdsf]
-
-#ticket[dsfgdsf] 
-
-#ticket(lb: "hello")[dsfgdsf]
-
-
- dsfs 
- = dfgsd
-== dfgdf
-
-#ticket[dsfgdsf]
+#let essSup = $limits(op("ess sup"))$
+#let AE = "п. в."
+#let scalar(l, r) = $angle.l #l, #r angle.r$
+#let conj(x) = $overline(#x)$
+#let Hilbert = $cal(H)$
+#let Lin = $cal(L)$

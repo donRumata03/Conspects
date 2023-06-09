@@ -157,13 +157,26 @@
   titlefmt: emph,
 )
 
+// Last-element-numbering:
+// (there's a property «base_level» but it takes prefix, not suffix of base)
+#let lastElementsNumbering = (elementCount) => (..nums) => if (nums.pos().len() == 0) {
+  "shouldn't happen LOL"
+} else {
+  str(nums 
+      .pos()
+      .slice(nums.pos().len() - elementCount)
+      .map(str)
+      .join(".")
+    )
+}
+
 // Theorem environments
 
 #let theorem = thmbox(
   "theorem",
   "Теорема",
   fill: rgb("#e8e8f8")
-)
+).with(numbering: lastElementsNumbering(1))
 #let lemma = thmbox(
   "theorem",            // Lemmas use the same counter as Theorems
   "Лемма",
@@ -174,7 +187,7 @@
   "Следствие",
   base: "theorem",      // Corollaries are 'attached' to Theorems
   fill: rgb("#f8e8e8")
-)
+).with(numbering: lastElementsNumbering(2))
 
 #let definition = thmbox(
   "definition",
@@ -257,3 +270,24 @@ $1 eqDef 0'$
 $1 bilateralImplDef 0'$ 
 
 $contradiction$
+
+= df
+
+== df
+
+=== dfd
+
+==== sdfads
+
+#theorem[
+  Теорема
+]
+
+#corollary[
+  Следствие
+]
+
+#corollary[
+  Следствие
+]
+
