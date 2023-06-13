@@ -25,3 +25,5 @@
 #let conj(x) = $overline(#x)$
 #let Hilbert = $cal(H)$
 #let Lin = $cal(L)$
+#let supp = $op("supp")$
+#let mf(r, k, n) = $MM^((#r))_(#k #n)$

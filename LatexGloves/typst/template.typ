@@ -84,6 +84,7 @@ align(center)[
 #let empty = $diameter$
 #let argmax = $op("argmax")$
 #let argmin = $op("argmin")$
+#let comp = $circle.stroked.tiny$ // Composition
 
 // Show rule for beautiful «>=» and «<=»
 // leqslant and geqslant are not supported yet…
