@@ -22,6 +22,8 @@
   show math.equation: set text(weight: 400)
   set heading(numbering: "1.1")
 
+  show raw: set text(font: "MonoLisa")
+
   // Title page.
   // The page can contain a logo if you pass one with `logo: "logo.png"`.
   v(0.6fr)

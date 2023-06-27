@@ -297,3 +297,49 @@ $.^┌s^┐$
 
 
 $d$
+
+
+```cpp
+
+#include <iostream>
+#include <functional>
+#include <variant>
+
+using namespace std;
+
+template<typename A, typename B>
+function<B(A)> a (A) {
+  throw 0;
+}
+
+template<typename A, typename B>
+variant<A, B> b( pai r<A, B>) {
+  throw 0;
+}
+
+template<typename A, typename B, typename C>
+variant<pai r<A, B>, pai r<A, C>> c_func ( pai r<A, var iant<B, C>> abc ) {
+if (holds_alternative<B>(abc.second)) {
+  return variant <pair<A, B>, pair<A, C>>
+5
+(make_pair ( abc . f i r s t , get<B>(abc . second ) ) ) ;
+} el se {
+return v a r i ant < pai r<A, B>, pai r<A, C>>
+(make_pair ( abc . f i r s t , get<C>(abc . second ) ) ) ;
+}
+}
+int main ( ) {
+auto var = v a r i ant < int , s t r ing >(" 123 " ) ;
+auto ans = c_func<int , int , s t r ing >(pai r<int , var iant<int , s t r ing >>(0, var ) ) ;
+i f ( ho lds_a l t e rna t ive<pai r<int , s t r ing >>(ans ) ) {
+cout << get<pai r<int , s t r ing >>(ans ) . f i r s t << "␣" <<
+get<pai r<int , s t r ing >>(ans ) . second ;
+} el se {
+cout << get<pai r<int , s t r ing >>(ans ) . f i r s t << "␣" <<
+get<pai r<int , s t r ing >>(ans ) . second ;
+}
+// ans = <0, "123">
+return 0 ;
+}
+
+```
