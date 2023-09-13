@@ -25,7 +25,8 @@ subject_decryption = {
     "DiffECation": "Differential equations",
     "Fistory": "History (reforms and reformers in russian history)",
     "MathCOQ": "Math logic",
-    "BillyTheory": "Probability theory"
+    "BillyTheory": "Probability theory",
+    "CockumberTheory": "Number theory"
 }
 
 special_dir_decryption = {

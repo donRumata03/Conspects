@@ -60,7 +60,7 @@
 
 #definition(name: [$omega$-непротиворечивая теория])[
     Если для формулы $phi(x)$ при $tack.r phi(overline(x))$ для всех $x in NN_0$ будет: $
-    \u{22AC} exists x. not phi(x)
+    tack.r.not exists x. not phi(x)
     $
 ]
 
