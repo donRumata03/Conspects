@@ -14,7 +14,7 @@ def compile_one_file(path, show_compilation_output=False) -> Tuple[bool, float]:
         print_red(f"Extension is: \"{extension}\", should be typ!!!")
     assert extension == ".typ"
 
-    compiling_command = f"typst compile {path}"
+    compiling_command = f"typst compile --root ./ {path}"
     colored_print(console_colors.OKGREEN, f"Compiling {Path(path).name} file with command: {compiling_command}")
 
     comp_start = time.perf_counter()
