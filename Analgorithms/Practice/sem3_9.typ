@@ -57,10 +57,10 @@ PS: если $dif x$ отрицательный, → поставим минус
     ]
 
 #proof[
-    Если зафиксирован $y$, то существование $x, {b_i}$ $<==> a_i ident_y a_j ident_y a_0$, так как
+    Если зафиксирован $y$, то существование $x, {b_i}$ $<==> a_i equiv_y a_j equiv_y a_0$, так как
 
-- Если нашли, $x, {b_i}$, то $forall i:  x mod y ident_y a_i = x + y dot.c b_i$
-- Если $forall i: c ident_y a_i$, то для $a_i = x + y dot.c b_i$ возьмём $
+- Если нашли, $x, {b_i}$, то $forall i:  x mod y equiv_y a_i = x + y dot.c b_i$
+- Если $forall i: c equiv_y a_i$, то для $a_i = x + y dot.c b_i$ возьмём $
 cases(x := c \ b_i = (a_i - c)/y)
 $
 ]

@@ -89,4 +89,8 @@ align(center)[
 #let comp = $circle.stroked.tiny$ // Composition
 
 // Show rule for beautiful «>=» and «<=»
-// leqslant and geqslant are not supported yet…
+// \leqslant and \geqslant are not supported yet…
+
+#let isdef = $attach(<==>, t: "def")$
+
+$isdef$

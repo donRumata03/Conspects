@@ -53,7 +53,7 @@ $
 + $
   phi(x) := not (x in b)
   $
-  $a \\ b ident  {x in a | phi(x)}$ aka `filter `$phi$` a`
+  $a \\ b equiv  {x in a | phi(x)}$ aka `filter `$phi$` a`
 + 
 
 

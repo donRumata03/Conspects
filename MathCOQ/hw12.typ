@@ -29,7 +29,7 @@ $ (alpha quad not alpha) / beta $ доказуем в $SInf$.
   Покажите $tack.r_∞ forall a. forall b. a + b = b + a$.
 ]
 
-Сначала покажем, что при каждом $a ident overline(x)$, $ tack.r_∞ forall b. overline(x) + b = b + overline(x) $. 
+Сначала покажем, что при каждом $a equiv overline(x)$, $ tack.r_∞ forall b. overline(x) + b = b + overline(x) $. 
 
 Для этого докажем для всех $y$ утверждения вида $tack.r_∞ overline(x) + overline(y) = overline(y) + overline(x)$. И воспользуемся бесконечной индукцией для формулы $phi_x(y) = overline(x) + overline(y) = overline(y) + overline(x)$.
 
