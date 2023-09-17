@@ -79,6 +79,9 @@
   body
 }
 
+/*
+= Тест
+
 #show thm-selector("thm-group"): my-theorem-styles
 
 #theorem(name: "Some theorem")[
@@ -94,3 +97,4 @@
 #definition(name: "Something")[
     asdf
 ]
+*/

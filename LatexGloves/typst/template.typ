@@ -95,5 +95,17 @@ align(center)[
 // \leqslant and \geqslant are not supported yet…
 
 #let isdef = $attach(<==>, t: "def")$
+#let eqdef = $eq.def$ // $attach(eq, t: "def")$
+
+#let proofDir(from, to, arrow: $->$) = {
+  $(#from) #arrow (#to)$
+}
 
 $isdef$
+
+$a eqdef b$
+
+#proofDir(1, 2): 112 1212 dfsg sdfg sdf 
+
+#proofDir(3, $*$, arrow: $=>$): … \*
+
