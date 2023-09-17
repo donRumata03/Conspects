@@ -1,18 +1,21 @@
 #import "cockumber_theory.typ" : *
 #import "@preview/big-todo:0.2.0": *
 
+#import "@local/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine
+#show: apply(variant: "rose-pine-moon")
+
 #show: project.with(
   title: 
-  "Теория чисел 
-(теория)",
+  "Теория чисел  (теория)",
   authors: (vova, english_vova)
 )
 
 
-
-
-
 = Базовые определения
+
+#text(fill: rose-pine.love)[Some red text]
+
+https://1
 
 #definition(name: "группа")[
     $lr(angle.l G, star angle.r)$ — группа, если
@@ -178,8 +181,8 @@
 #definition(name: "Неприводимый элемент")[
     $a != 0, a in.not R^* quad a = b c => b in R^* or c in R^*$
 ]
-
-#property[
+#todo[use propertym not remark]
+#remark[
     Неприводимость сохраняется при домножении на обратимые ($r in R^*$)
 ]
 
@@ -258,4 +261,4 @@ $FF_(p^m)[x] "«=»" FF_p[m]/((f))$
 
 Над конечным полем существуют неприводимые многочлены любой степени.
 
-…
+sdfsd

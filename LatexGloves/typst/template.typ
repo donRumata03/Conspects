@@ -1,3 +1,5 @@
+#import "theorems.typ": *
+
 #let vova_email = "donrumata03@gmail.com";
 
 #let vova = (name: "Владимир Латыпов", email: vova_email)
@@ -23,6 +25,7 @@
   set heading(numbering: "1.1")
 
   show raw: set text(font: "MonoLisa")
+  show thm-selector("thm-group"): my-theorem-styles
 
   // Title page.
   // The page can contain a logo if you pass one with `logo: "logo.png"`.

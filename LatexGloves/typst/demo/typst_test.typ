@@ -242,7 +242,7 @@ _dfsgsg_
 ]
 #example[
   The numbers $2$, $3$, and $17$ are prime.
-  #thmref(<cor_largest_prime>)[Corollary] shows that this list is not
+  // #thmref(<cor_largest_prime>)[Corollary] shows that this list is not
   exhaustive!
 ]
 
@@ -343,3 +343,7 @@ return 0 ;
 }
 
 ```
+
+#theorem[
+  1
+]

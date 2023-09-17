@@ -32,7 +32,10 @@
 // $ #goedel_index([#goedel_index([#goedel_index([$xi$])])]) $
 
 #let goedelIndex(x) = {
-  $attach(tl: ┌, tr: ┐, #x)$
+  // $attach(tl: ┌, tr: ┐, #x)$
+  $lr(⸢#x⸣)$
 }
 
+#let goedelLiteral(x) = $overline(goedelIndex(#x))$
 
+$goedelLiteral(sigma)$
