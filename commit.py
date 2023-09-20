@@ -254,8 +254,9 @@ else:
 # ***All the other files appeared before we started compilation***
 
 # Separate commit for compiled files:
-if successful_files:
-    compiled_pdfs = [item.b_path for item in rep.head.commit.diff(None) if Path(item.b_path).suffix == ".pdf"]
+
+compiled_pdfs = [item.b_path for item in rep.head.commit.diff(None) if Path(item.b_path).suffix == ".pdf"]
+if compiled_pdfs:
     compiled_names = [Path(path).stem for path in compiled_pdfs]
 
     rep.git.add(all=True)
