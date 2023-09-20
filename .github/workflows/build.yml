@@ -21,6 +21,10 @@ jobs:
           version: 'v0.8.0'
       - name: "Setup python"
         uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install git-repo for python
+        run: python -m pip install GitPython
 
       - name: Build typst
         run: |
