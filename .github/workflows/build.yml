@@ -11,8 +11,7 @@ jobs:
         uses: lvignoli/typst-action@main
         with:
           source_file: "CockumberTheory/practice.typ"
-          options: |
-            "--root ./"
+          options: --root ./
       - name: Add-and-commit
         uses: EndBug/add-and-commit@v9
         with:
