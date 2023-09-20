@@ -22,7 +22,7 @@ jobs:
 
       - name: Build typst
         run: |
-          ls | xargs -L 1 -d '\n' typst compile --root ./
+          find . -iname \*.typ | xargs -L 1 -d '\n' typst compile --root ./
           
         # typst compile --root ./ CockumberTheory/practice.typ
         # if: success() || failure()
