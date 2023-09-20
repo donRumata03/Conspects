@@ -14,7 +14,7 @@
     
     "memorizer": "Напоминалочка",
     "property": "Свойство",
-    "Statement": "Условие",
+    "statement": "Условие",
 
     "proof": "Доказательство"
 ))
@@ -29,7 +29,7 @@
   proof-styling: thm-style-proof,
   thm-numbering: thm-numbering-heading,
   ref-styling: thm-ref-style-simple,
-  max-reset-level: 2
+  max-reset-level: 1
 ) = {
   let (proof, ..subgroup-map) = translations.at(lang)
 
@@ -50,7 +50,10 @@
 
   return (
     ..theorems,
-    proof: proof,
+    proof: 
+      // use-proof-numbering(proof)
+      proof
+      ,
     rules: concat-fold((
       thm-reset-counter-heading.with(group, max-reset-level),
       rules-theorems,
@@ -60,8 +63,9 @@
 }
 
 #let (
-  definition, theorem, lemma, corollary, remark, proposition, example, memorizer, property, proof, rules: thm-rules
-) = right-default-theorems("thm-group", lang: "ru", max-reset-level: 3)
+  definition, theorem, lemma, corollary, remark, proposition, example, memorizer, property, statement, proof, rules: thm-rules
+) = right-default-theorems("thm-group", lang: "ru", max-reset-level: 1)
+
 
 
 // #let (property, memorizer, rules: custom-rules) = new-theorems("thm-group", (
@@ -70,42 +74,8 @@
 // ))
 // #show: custom-rules
 
-// #show: thm-rules
-// #show thm-selector("thm-group", subgroup: "definition"): it => box(
-//   it,
-//   stroke: (left: (thickness: 2pt)),
-//   inset: 1em,
-// )
-// #show thm-selector("thm-group", subgroup: "theorem"): it => box(
-//   it,
-//   stroke: 1pt,
-//   inset: 1em
-// )
-// #show thm-selector("thm-group", subgroup: "lemma"): it => box(
-//   it,
-//   stroke: (thickness: 1pt, dash: "dotted"),
-//   inset: 1em
-// )
-// #show thm-selector("thm-group", subgroup: "corollary"): it => box(
-//   it,
-//   stroke: 1pt,
-//   inset: 1em
-// )
-// #show thm-selector("thm-group", subgroup: "example"): it => box(
-//   it,
-//   inset: (left: 1em, right: 1em, top: 1em, bottom: 1em),
-// )
-// #show thm-selector("thm-group", subgroup: "remark"): it => box(
-//   it,
-//   inset: (left: 1em, right: 1em, top: 1em, bottom: 1em),
-// )
-// #show thm-selector("thm-group", subgroup: "proof"): it => box(
-//   it,
-//   stroke: (left: (thickness: 1pt, dash: "dotted")),
-//   inset: (left: 1em, right: 1em, top: 0.5em, bottom: 0.5em),
-// )
 
-#import "@preview/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine
+#import "@preview/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine, apply-theme
 
 
 #show: apply(variant: "rose-pine-moon")
@@ -133,6 +103,9 @@
 
 #let my-theorem-styles = (thm-styles: (_nothing: none)) => body => {
   show: thm-rules
+
+  // show: it => thm-reset-counter-heading-at("thm-group", 1, it)
+
   show thm-selector("thm-group", subgroup: "definition"): it => box(
     it,
     stroke: (left: add-paint-if-some((thickness: 2pt), thm-styles, "definition")),
@@ -233,3 +206,6 @@
 ]
 
 
+#statement[
+  adsfasd
+]

@@ -1,8 +1,8 @@
 #import "cockumber_theory.typ" : *
 #import "@preview/big-todo:0.2.0": *
 
-#import "@preview/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine
-#show: apply(variant: "rose-pine-moon")
+// #import "@preview/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine
+
 
 #show: project.with(
   title:
@@ -13,9 +13,11 @@
 
 = Базовые определения
 
-#text(fill: rose-pine.love)[Some red text]
+// #text(fill: rose-pine.love)[Some red text]
 
-https://1
+// https://1
+
+// #footnote[asdf]
 
 #definition(name: "группа")[
     $lr(angle.l G, star angle.r)$ — группа, если
@@ -205,8 +207,7 @@ https://1
 #definition(name: "Неприводимый элемент")[
     $a != 0, a in.not R^* quad a = b c => b in R^* or c in R^*$
 ]
-#todo[use propertym not remark]
-#remark[
+#property[
     Неприводимость сохраняется при домножении на обратимые ($r in R^*$)
 ]
 
@@ -291,19 +292,44 @@ $FF_(p^m)[x] "«=»" FF_p[m]/((f))$
     Таблица сложения:
 
     #table(columns: 5,
-    [], [0],[1],[$alpha$],[$beta$],
-    [0],[0],[1],[3],[4]
+    [], [$0$],[$1$],[$alpha$],[$beta$],
+    [$0$],[$0$],[$1$],[$3$],[$4$]
 
     )
 ]
 
 #theorem[Группа простого порядка — циклическая]
 
-_Тестовое изменение_
 
-sdzf
+// #thm-reset-counter("thm-group")
 
-asdf
-sdfg
-asdf
+#show: my-theorem-styles()
 
+== sdafasf
+=== dasasd
+
+==== asdf
+
+= vdsf
+
+== 231
+
+
+#theorem[sdfs] #todo[Why isn't the theorem counter reset?]
+
+
+#show heading: it => [
+    
+    #it<label>
+]
+
+= Master <master>
+
+@master
+
+= sdfsda sadfsd
+
+#repr([= #text("sfgdfs")])
+jhj
+
+asdfsdsds
