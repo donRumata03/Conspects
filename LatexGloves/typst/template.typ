@@ -15,6 +15,7 @@
   date: none,
   logo: none,
   font: "Kurale",
+  which-rose-pine: none,
   body,
 ) = {
   // Set the document's basic properties.
@@ -25,7 +26,13 @@
   set heading(numbering: "1.1")
 
   show raw: set text(font: "MonoLisa")
-  show thm-selector("thm-group"): my-theorem-styles
+  show thm-selector("thm-group"): my-theorem-styles(thm-styles:
+    if which-rose-pine != none {
+      rose-pine-theorem-colors(which-rose-pine)
+    } else {
+      (_nothing: none )
+    }
+  )
 
   // Title page.
   // The page can contain a logo if you pass one with `logo: "logo.png"`.

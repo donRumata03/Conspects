@@ -1,13 +1,14 @@
 #import "cockumber_theory.typ" : *
 #import "@preview/big-todo:0.2.0": *
 
-#import "@local/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine
+#import "@preview/rose-pine:0.1.0": apply, rose-pine-dawn, rose-pine-moon, rose-pine
 #show: apply(variant: "rose-pine-moon")
 
 #show: project.with(
-  title: 
+  title:
   "Теория чисел  (теория)",
-  authors: (vova, english_vova)
+  authors: (vova, english_vova),
+  which-rose-pine: rose-pine-moon
 )
 
 = Базовые определения
