@@ -21,7 +21,13 @@ jobs:
           version: 'v0.8.0'
 
       - name: Build typst
-        run: typst compile --root ./ CockumberTheory/practice.typ
+        run: |
+          for file in ./*.typ
+          do
+            echo "$file"
+          done
+          
+          typst compile --root ./ CockumberTheory/practice.typ CockumberTheory/cockumber_theory.typ
         # if: success() || failure()
       - name: Add-and-commit
         uses: EndBug/add-and-commit@v9
