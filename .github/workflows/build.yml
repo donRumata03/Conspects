@@ -43,5 +43,7 @@ jobs:
         # if: success() || failure()
         with:
           message: ${{ env.commitMessage }}
+          committer_name: github-actions[bot]
+          committer_email: github-actions[bot]@users.noreply.github.com
 
 
