@@ -1,6 +1,9 @@
 name: Build Typst document
 on: push
 
+env:
+  ACTIONS_RUNNER_DEBUG: true
+
 jobs:
   build_typst_documents:
     runs-on: ubuntu-latest
