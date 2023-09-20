@@ -13,9 +13,7 @@ jobs:
       - name: Typst
         uses: lvignoli/typst-action@main
         with:
-          source_file:
-            CockumberTheory/practice.typ
-          options: --root ./
+          source_file: --root ./CockumberTheory/practice.typ
 
       - name: build
         run: typst compile --root ./ CockumberTheory/practice.typ
