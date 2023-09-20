@@ -24,15 +24,20 @@ jobs:
 
       - name: Build typst
         run: |
-          find . -iname \*.typ | xargs -L 1 -d '\n' typst compile --root ./
+          (find . -iname \*.typ | xargs -L 1 -d '\n' typst compile --root ./) || true
           
         # typst compile --root ./ CockumberTheory/practice.typ
         # if: success() || failure()
       
+      - name: Generate commit message
+        run: |
+            echo "commitMessage=$(python ./generate_compiled_commit_message.py)" >> $GITHUB_ENV
+
       - name: Add-and-commit
-        # uses: EndBug/add-and-commit@v9
-        run: python -m pip install GitPython && python commit.py
-        if: success() || failure()
-        # with:
-          # message: Build typst → PDF
+        uses: EndBug/add-and-commit@v9
+        # run: python -m pip install GitPython && python commit.py
+        # if: success() || failure()
+        with:
+          message: ${{ env.commitMessage }}
+
 
