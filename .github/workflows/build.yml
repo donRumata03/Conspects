@@ -28,6 +28,7 @@ jobs:
         # if: success() || failure()
       - name: Add-and-commit
         uses: EndBug/add-and-commit@v9
+        if: success() || failure()
         with:
           message: Build typst → PDF
 
