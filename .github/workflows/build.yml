@@ -2,7 +2,7 @@ name: Build Typst document
 on: push
 
 env:
-  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
 
 jobs:
   build_typst_documents:
@@ -15,7 +15,8 @@ jobs:
         with:
           source_file:
             CockumberTheory/practice.typ
-            --root ./
+          options: --root ./
+
       - name: build
         run: typst compile --root ./ CockumberTheory/practice.typ
         if: success() || failure()
