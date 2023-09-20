@@ -27,7 +27,7 @@ jobs:
             echo "$file"
           done
           
-          typst compile --root ./ CockumberTheory/practice.typ CockumberTheory/cockumber_theory.typ
+        # typst compile --root ./ CockumberTheory/practice.typ
         # if: success() || failure()
       - name: Add-and-commit
         uses: EndBug/add-and-commit@v9
