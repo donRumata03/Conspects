@@ -36,7 +36,7 @@
 #let Norm = $cal(N)$
 #let Poly = $op("Poly")$
 
-
+#let iid = $"i.i.d."$
 
 $DD$ 
 
