@@ -15,6 +15,7 @@ jobs:
         with:
           source_file: CockumberTheory/practice.typ
 
+          
       - name: build
         run: typst compile --root ./ CockumberTheory/practice.typ
         if: success() || failure()
