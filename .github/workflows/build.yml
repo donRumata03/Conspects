@@ -10,8 +10,7 @@ jobs:
       - name: Typst
         uses: lvignoli/typst-action@main
         with:
-          source_file: "CockumberTheory/practice.typ"
-          options: --root ./
+          source_file: CockumberTheory/practice.typ --root ./
       - name: Add-and-commit
         uses: EndBug/add-and-commit@v9
         with:
