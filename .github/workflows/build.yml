@@ -10,15 +10,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Typst
-        uses: donRumata03/typst-action@patch-1
+      # - name: Typst
+      #   uses: donRumata03/typst-action@patch-1
+      #   with:
+      #     source_file: CockumberTheory/practice.typ
+      - name: Setup typst
+        uses: yusancky/setup-typst@v2
+        id: setup-typst
         with:
-          source_file: CockumberTheory/practice.typ
+          version: 'v0.8.0'
 
-          
-      - name: build
+      - name: Build typst
         run: typst compile --root ./ CockumberTheory/practice.typ
-        if: success() || failure()
+        # if: success() || failure()
       - name: Add-and-commit
         uses: EndBug/add-and-commit@v9
         with:
