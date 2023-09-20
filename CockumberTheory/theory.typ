@@ -318,18 +318,49 @@ $FF_(p^m)[x] "«=»" FF_p[m]/((f))$
 #theorem[sdfs] #todo[Why isn't the theorem counter reset?]
 
 
-#show heading: it => [
-    
-    #it<label>
-]
 
-= Master <master>
+// Renders an image or a placeholder if it doesn't exist.
+// Don’t try this at home, kids!
+#let maybe-include(path) = locate(loc => {
+  let path-label = label(path)
+  let first-time = query(locate(_ => {}).func(), loc).len() == 0
+  if first-time or query(path-label, loc).len() > 0 {
+    [#include path
+    #path-label]
+  } else {
+    rect(width: 50%, height: 5em, stroke: 1pt)[
+      #set align(center + horizon)
+      Could not find #raw(path)
+    ]
+    // none
+  }
+})
 
-@master
+#for i in range(1, 15) {
+    let path = "theory/lecture-" + str(i) + ".typ"
+    let failed = false
 
-= sdfsda sadfsd
-
-#repr([= #text("sfgdfs")])
-jhj
-
-asdfsdsds
+    let content = locate(loc => {
+        let path-label = label(path)
+        let first-time = query(locate(_ => {}).func(), loc).len() == 0
+        if first-time or query(path-label, loc).len() > 0 {
+            [#include path
+            #path-label]
+        } else {
+            // failed = true
+            rect(width: 50%, height: 5em, stroke: 1pt)[
+            #set align(center + horizon)
+            Could not find #raw(path)
+            ]
+            // none
+        }
+        })
+    if failed {
+        break
+    } else {
+        [
+            #content
+            
+        ]
+    }
+}
