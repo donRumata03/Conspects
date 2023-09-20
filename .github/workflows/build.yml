@@ -22,10 +22,7 @@ jobs:
 
       - name: Build typst
         run: |
-          for file in ./*.typ
-          do
-            echo "$file"
-          done
+          ls | xargs -L 1 -d '\n' typst compile --root ./
           
         # typst compile --root ./ CockumberTheory/practice.typ
         # if: success() || failure()
