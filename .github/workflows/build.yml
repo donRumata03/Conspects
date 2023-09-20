@@ -11,9 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Typst
-        uses: lvignoli/typst-action@main
+        uses: donRumata03/typst-action@patch-1
         with:
-          source_file: --root ./CockumberTheory/practice.typ
+          source_file: CockumberTheory/practice.typ
 
       - name: build
         run: typst compile --root ./ CockumberTheory/practice.typ
