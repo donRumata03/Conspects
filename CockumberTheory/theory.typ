@@ -233,7 +233,6 @@
 
 
 
-#todo[Перейти на `lemmify`]
 #proof(name: "Евклидово → ОГИ")[
     …
 ] 
@@ -338,7 +337,7 @@ $FF_(p^m)[x] "«=»" FF_p[m]/((f))$
 
 #for i in range(1, 15) {
     let path = "theory/lecture-" + str(i) + ".typ"
-    let failed = false
+    let failed = false // TODO: handle loop ending condition (first read the typst.meta docs)
 
     let content = locate(loc => {
         let path-label = label(path)
