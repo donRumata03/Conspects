@@ -28,6 +28,3 @@ $a slash b$ // Should be slash
 $frac(a, b)$ // Should be fraction
 
 $1 = fraction(a, b) - 1$
-$k + 1$
-
-$232$
