@@ -143,6 +143,24 @@
   body
 }
 
+
+
+
+#let def = definition
+#let thm = theorem
+#let rm = remark
+#let lm = lemma
+#let cor = corollary
+
+
+
+
+
+
+
+
+
+
 = Тест
 
 #show thm-selector("thm-group"): my-theorem-styles(

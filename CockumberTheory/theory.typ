@@ -302,7 +302,7 @@ $FF_(p^m)[x] "«=»" FF_p[m]/((f))$
 
 // #thm-reset-counter("thm-group")
 
-#show: my-theorem-styles()
+// #show: my-theorem-styles()
 
 == sdafasf
 === dasasd
@@ -363,3 +363,147 @@ $FF_(p^m)[x] "«=»" FF_p[m]/((f))$
         ]
     }
 }
+
+#lectureSplitter[Лекция 3]
+
+= Поля
+
+#definition(name: "Подполе")[]
+
+#property[$R — "поле" <=> "в" R " ровно 2 идеала"$]
+#property[Гомоморфизмы полей инъективны, так как ядро — идеал]
+
+#definition(name: [$F$-аглебра (алгебра над $F$)])[
+    кольцо $R$, тч $F <= R$
+]
+#remark[Тогда это заодно и векторное пространство]
+
+#definition(name: [Гомофморфизм $F$-алгебр])[
+    - $f: R → R'$ — гомоморфизм колец
+    - $f(alpha) = alpha forall alpha in F$ (сохраняет элементы поля)
+]
+#remark[Получается, это автоматически гомоморфизм векторных пространств]
+
+#definition(name:[Характеристика])[
+    $ZZ attach(→, t: f) F \ n |-> underbrace(1_F + 1_F + … 1_F, n "раз")$.
+
+    + $ker f = 0$
+        
+    #align(center)[#commutative-diagram(
+        node((0, 0), [$ZZ$]),
+        node((0, 2), [$F$]),
+        node((2, 1), [$QQ$]),
+        arr((0, 0), (0, 2), [$f$]),
+        arr((2, 1), (0, 2), [$$], label-pos: -1em, "dashed", "inj"),
+        arr((0, 0), (2, 1), [$$]),
+    )]
+
+    + $ker f = (p)$
+
+    Итого: минимальное количество раз, которое нужно сложить единицу с собой, чтобы стала нулём.
+] 
+
+#definition(name: [Простые поля])[
+    Не содержат подполя
+]
+
+#remark(name: "Бином Ньютона")[
+    В полях характеристики $p$/в $FF_p$ алгебрах $p dot (a = 0) => quad (a + b)^p = a^p + b^p$.
+]
+
+#definition(name: [эндоморфизм Фробениуса])[
+    $f: mat(R → R; a |-> a^p)$.
+
+-  Если поле, то инъективен ($ker f = 0$) и $"Im" f$ — подполе
+- $R = FF_p$ — конечное поле $=>$ назвают «автоморфизм Фробениуса»
+]
+
+$ FF_p(x) →^f FF_p(x) quad Im f = FF_p(X^p) = { g(x^p) / h(x^p) | g, h in FF_p[x], h != 0 } $.
+
+#definition(name: [Унитарный многочлен])[
+    Старший коэфициент = 1
+]
+
+#theorem(name: [Лемма Гаусса])[
+    
+]
+
+#theorem(name: "Критерий Эйзенштейна")[
+    $ h = a_n x^n + … + a_1 x + a_0, quad a_i in ZZ, quad p is "простой" $
+    
+    + $p divides.not a_n$
+    + $p divides a_(n - 1), … a_0$
+    + $p^2 divides.not a_0$
+
+    Тогда $h is "неприводим"$
+]
+
+#proof[
+
+]
+
+#definition(name: "Расширение поля")[
+    $E is "расширение" F$, если $F <= E$. "$E\/F$" — $E "расширяет" F$.
+
+    $E\/F$ называется конечным, если $∞ > dim_F E := [E::F] is "степень" E "над" F$.
+
+    $E →^f E'$
+]
+
+#example[
+    - $CC\/RR$
+    - $RR\/QQ$
+    - $QQ[i]\/QQ$
+    - $F(x)\/F$
+]
+
+#theorem[
+$letBe F <= E <= L quad L\/ F < ∞ <==>  E\/F < infinity$, при этом $ [L:F] = [L:E] dot [E:F] $
+]
+
+#proof[
+
+#rightImpl
+- $E$ — подпространство $F => dim_F E < ∞$
+- ${e}_1^n is "базис" L "над" F => {e}_1^n "порождает" L "над" E$
+
+#leftImpl …
+
+]
+
+#def(name: [Подалгебра, порождённая ?])[
+    $ E\/F quad S <= E quad F[S] = { sum a_I alpha^I | a_I in F, alpha_I in S} $
+]
+
+#lm[$R is "конечная F-алг." quad R is "область целостности" => R is "поле"$]
+#proof[
+    $a != 0 quad f: R → R quad f(r) = a r$
+
+    - $f in "F-Lin"$
+    - $f in "Inj"$
+    
+    $=>$ $f in "Surj"$, а тогда $exists b$, тч $a b = 1$, значит любой $a != 0$ обратим, значит, это поле.
+]
+
+#corollary[
+    $E\/F$ — конечное $R is "подалгебра" E => R is "поле"$
+]
+
+#def(name: "Простое расширение")[
+    $E\/F is "простое" quad E = F(alpha), alpha in E$
+]
+
+#def(name: "Композит двух полей")[
+    $F, F' <= E quad F(F') = F dot F' = F'(F)$
+]
+
+#rm[Поля разных характеристик не могут содержаться в одном поле, так как единица должна лежать и там, и там]
+
+
+
+$F[x] in.rev f is$ непрерывны, унитарны.
+
+
+== Построение циркулем и линейкой
+
+Удалить 

@@ -103,6 +103,9 @@ align(center)[
 #let argmin = $op("argmin")$
 #let comp = $circle.stroked.tiny$ // Composition
 
+#let iso = $tilde.equiv$
+
+
 // Show rule for beautiful «>=» and «<=»
 // \leqslant and \geqslant are not supported yet…
 
@@ -112,10 +115,64 @@ align(center)[
 #let proofDir(from, to, arrow: $->$) = {
   $(#from) #arrow (#to)$
 }
+#let proofRight =  $=>$
 
+#let lectureSplitter(name) = {
+  line(length: 100%)
+  align(center)[
+    #text(size: 2em, name)
+  ]
+  line(length: 100%)
+}
+
+#let letBe = $\]" "$
+#let is = $  " " #[ — ] $
+
+// Logically separate proof parts
+
+#let logicalProofPart(mathSymbol) = $#circle(radius: 9pt)[
+  #set align(center + horizon)
+  #mathSymbol
+]$
+
+#let rightImpl = logicalProofPart($=>$)
+#let leftImpl = logicalProofPart($arrow.double.l$)
+
+#let existence = logicalProofPart($exists$)
+#let uniqueness = logicalProofPart($!$)
+
+#let contradiction = logicalProofPart($?!$)
+
+#let underset(major, under) = $attach(b: #under, limits(#major))$
+#let overset(major, over) = $attach(t: #over, limits(#major))$
+
+// #let bilateralImplDef = underset($<==>$, $op("eq")$)
+
+#let restriction(x, y) = $lr(#x"|", size: #200%)_#y$
+
+///////// Examples 
 $isdef$
 
 $a eqdef b$
+
+#rightImpl Доказательство1
+
+Ещё доказательство
+
+#leftImpl Доказательство2
+
+#existence
+
+#uniqueness
+
+$1 eqdef 0'$ 
+
+$1 isdef 0'$ 
+
+$contradiction$
+
+
+
 
 #proofDir(1, 2): 112 1212 dfsg sdfg sdf 
 
