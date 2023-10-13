@@ -1,72 +1,19 @@
-#import "@preview/lemmify:0.1.2": *
+#import "@local/lemmify:0.2.0": *
 
 
 #set heading(numbering: "1.1")
 
-#translations.insert("ru", (
-    "theorem": "Теорема",
-    "lemma": "Лемма",
-    "corollary": "Следствие",
-    "remark": "Замечание",
-    "proposition": "Предположение",
-    "example": "Пример",
-    "definition": "Определение",
-    
-    "memorizer": "Напоминалочка",
-    "property": "Свойство",
-    "statement": "Условие",
-
-    "proof": "Доказательство"
-))
-
-
-// Create a default set of theorems based
-// on the language and given styling.
-#let right-default-theorems(
-  group,
-  lang: "en",
-  thm-styling: thm-style-simple,
-  proof-styling: thm-style-proof,
-  thm-numbering: thm-numbering-heading,
-  ref-styling: thm-ref-style-simple,
-  max-reset-level: 1
-) = {
-  let (proof, ..subgroup-map) = translations.at(lang)
-
-  let (rules: rules-theorems, ..theorems) = new-theorems(
-    group,
-    subgroup-map,
-    thm-styling: thm-styling,
-    thm-numbering: thm-numbering
-  )
-
-  let (rules: rules-proof, proof) = new-theorems(
-    group,
-    (proof: translations.at(lang).at("proof")),
-    thm-styling: proof-styling,
-    thm-numbering: thm-numbering-proof,
-    ref-numbering: thm-numbering
-  )
-
-  return (
-    ..theorems,
-    proof: 
-      // use-proof-numbering(proof)
-      proof
-      ,
-    rules: concat-fold((
-      thm-reset-counter-heading.with(group, max-reset-level),
-      rules-theorems,
-      rules-proof
-    ))
-  )
-}
+#let smallcaps-style = style-simple.with(
+  kind-name-style: it => smallcaps(it)
+)
 
 #let (
-  definition, theorem, lemma, corollary, remark, proposition, example, memorizer, property, statement, proof, rules: thm-rules
-) = right-default-theorems("thm-group", lang: "ru", max-reset-level: 1)
+  definition, theorem, lemma, corollary, remark, proposition, example,  proof, theorem-rules: thm-rules
+) = default-theorems(lang: "en", max-reset-level: 1, style: smallcaps-style)
 
-
+#let memorizer = theorem-kind("Reminder", style: smallcaps-style)
+#let property = theorem-kind("Property", style: smallcaps-style)
+#let statement = theorem-kind("Statement", style: smallcaps-style) // Not «Утверждение» because it's used for home tasks.
 
 // #let (property, memorizer, rules: custom-rules) = new-theorems("thm-group", (
 //   property: text(red)[Note],
@@ -105,36 +52,36 @@
   show: thm-rules
 
   // show: it => thm-reset-counter-heading-at("thm-group", 1, it)
-
-  show thm-selector("thm-group", subgroup: "definition"): it => box(
+  // show select-kind: it => 
+  show select-kind(definition): it => box(
     it,
     stroke: (left: add-paint-if-some((thickness: 2pt), thm-styles, "definition")),
     inset: 1em,
   )
-  show thm-selector("thm-group", subgroup: "theorem"): it => box(
+  show select-kind(theorem): it => box(
     it,
     stroke: add-paint-if-some((thickness: 1pt), thm-styles, "theorem"),
     inset: 1em
   )
-  show thm-selector("thm-group", subgroup: "lemma"): it => box(
+  show select-kind(lemma): it => box(
     it,
     stroke: add-paint-if-some((thickness: 1pt, dash: "dotted"), thm-styles, "lemma"),
     inset: 1em
   )
-  show thm-selector("thm-group", subgroup: "corollary"): it => box(
+  show select-kind(corollary): it => box(
     it,
     stroke: add-paint-if-some((thickness: 1pt), thm-styles, "corollary"),
     inset: 1em
   )
-  show thm-selector("thm-group", subgroup: "example"): it => box(
+  show select-kind(example): it => box(
     it,
     inset: (left: 1em, right: 1em, top: 1em, bottom: 1em),
   )
-  show thm-selector("thm-group", subgroup: "remark"): it => box(
+  show select-kind(remark): it => box(
     it,
     inset: (left: 1em, right: 1em, top: 1em, bottom: 1em),
   )
-  show thm-selector("thm-group", subgroup: "proof"): it => box(
+  show select-kind(proof): it => box(
     it,
     stroke: (left: add-paint-if-some((thickness: 1pt, dash: "dotted"), thm-styles, "proof")),
     inset: (left: 1em, right: 1em, top: 0.5em, bottom: 0.5em),
@@ -151,7 +98,7 @@
 #let rm = remark
 #let lm = lemma
 #let cor = corollary
-
+#let pr = proof
 
 
 
@@ -163,7 +110,7 @@
 
 = Тест
 
-#show thm-selector("thm-group"): my-theorem-styles(
+#show: my-theorem-styles(
   thm-styles: rose-pine-theorem-colors(rose-pine-moon)
   )
 
@@ -212,6 +159,7 @@
 #proposition[
   asdf
 ]
+
 
 #repr(memorizer[a])
 

@@ -31,7 +31,7 @@
     show: content => if which-rose-pine != none { apply-theme(content, which-rose-pine) } else { content }
   // }
   show heading: set text(which-rose-pine.pine) if which-rose-pine != none
-  show thm-selector("thm-group"): my-theorem-styles(thm-styles:
+  show: my-theorem-styles(thm-styles:
     if which-rose-pine != none {
       rose-pine-theorem-colors(which-rose-pine)
     } else {

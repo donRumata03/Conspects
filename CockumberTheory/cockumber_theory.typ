@@ -14,10 +14,10 @@
 
 // #show math.slash: it => $\/$ // Crashes
 // #show sym.slash: it => $\/$ // Crashes
-#let fraction(a, b) = $frac(#box(fill: red, a), b)$
+#let fraction(a, b) = $frac(#box(a), b)$
 #show math.frac: it => {
 if it.num.func() == box { it } else { 
-    box(fill: blue, $#it.num \/ #it.denom$) 
+    box($#it.num \/ #it.denom$) 
     } // Turns everything into slash
 }
 #let frac = fraction
