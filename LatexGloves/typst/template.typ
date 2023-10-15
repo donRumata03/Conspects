@@ -150,6 +150,16 @@ align(center)[
 
 #let restriction(x, y) = $lr(#x"|", size: #200%)_#y$
 
+#let nTimes(element, n: $n$, startFrom: 1) = {
+  if (type(startFrom) == array) {
+    for startingIndex in startFrom {
+      $#(element)_#startingIndex, $
+    }
+    $…, #(element)_#n$
+  } else {
+    $#(element)_#startFrom, …, #(element)_#n$
+  }
+}
 ///////// Examples 
 $isdef$
 
@@ -177,4 +187,14 @@ $contradiction$
 #proofDir(1, 2): 112 1212 dfsg sdfg sdf 
 
 #proofDir(3, $*$, arrow: $=>$): … \*
+
+
+
+#nTimes($a$)
+
+$nTimes(a)$
+
+$nTimes(a, n: m)$ 
+
+$#nTimes($a$, startFrom: ($1$, $2$,))$
 
