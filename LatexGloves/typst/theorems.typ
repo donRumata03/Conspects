@@ -3,13 +3,18 @@
 
 #set heading(numbering: "1.1")
 
+#let cyrsmallcaps(body) = [
+  #show regex("[а-яё]") : it => text(size:.7em, upper(it))
+  #body
+]
+
 #let smallcaps-style = style-simple.with(
-  kind-name-style: it => smallcaps(it)
+  kind-name-style: cyrsmallcaps // smallcaps
 )
 
 #let (
   definition, theorem, lemma, corollary, remark, proposition, example,  proof, theorem-rules: thm-rules
-) = default-theorems(lang: "en", max-reset-level: 1, style: smallcaps-style)
+) = default-theorems(lang: "ru", max-reset-level: 1, style: smallcaps-style)
 
 #let memorizer = theorem-kind("Reminder", style: smallcaps-style)
 #let property = theorem-kind("Property", style: smallcaps-style)
