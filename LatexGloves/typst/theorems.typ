@@ -1,4 +1,4 @@
-#import "@local/lemmify:0.2.0": *
+#import "@preview/lemmify:0.1.6": *
 
 
 #set heading(numbering: "1.1")
@@ -8,17 +8,18 @@
   #body
 ]
 
-#let smallcaps-style = style-simple.with(
-  kind-name-style: cyrsmallcaps // smallcaps
+#let smallcaps-style = thm-style-simple.with(
+  // name: cyrsmallcaps // smallcaps
 )
 
 #let (
-  definition, theorem, lemma, corollary, remark, proposition, example,  proof, theorem-rules: thm-rules
-) = default-theorems(lang: "ru", max-reset-level: 1, style: smallcaps-style)
+  definition, theorem, lemma, corollary, remark, proposition, example,  proof, rules: thm-rules
+) = default-theorems("def-thms", lang: "ru", max-reset-level: 1, thm-styling: smallcaps-style)
 
-#let memorizer = theorem-kind("Reminder", style: smallcaps-style)
-#let property = theorem-kind("Property", style: smallcaps-style)
-#let statement = theorem-kind("Statement", style: smallcaps-style) // Not «Утверждение» because it's used for home tasks.
+#let memorizer = new-theorems("def-thms", (Reminder: "Reminder"), thm-styling: smallcaps-style)
+#let property = new-theorems("def-thms", (Property: "Property"), thm-styling: smallcaps-style)
+#let statement = new-theorems("def-thms", (Statement: "Statement"), thm-styling: smallcaps-style)
+// #let statement = theorem-kind("Statement", style: smallcaps-style) // Not «Утверждение» because it's used for home tasks.
 
 // #let (property, memorizer, rules: custom-rules) = new-theorems("thm-group", (
 //   property: text(red)[Note],
@@ -58,35 +59,35 @@
 
   // show: it => thm-reset-counter-heading-at("thm-group", 1, it)
   // show select-kind: it => 
-  show select-kind(definition): it => box(
+  show thm-selector("def-thms", subgroup: "definition"): it => box(
     it,
     stroke: (left: add-paint-if-some((thickness: 2pt), thm-styles, "definition")),
     inset: 1em,
   )
-  show select-kind(theorem): it => box(
+  show thm-selector(theorem): it => box(
     it,
     stroke: add-paint-if-some((thickness: 1pt), thm-styles, "theorem"),
     inset: 1em
   )
-  show select-kind(lemma): it => box(
+  show thm-selector(lemma): it => box(
     it,
     stroke: add-paint-if-some((thickness: 1pt, dash: "dotted"), thm-styles, "lemma"),
     inset: 1em
   )
-  show select-kind(corollary): it => box(
+  show thm-selector(corollary): it => box(
     it,
     stroke: add-paint-if-some((thickness: 1pt), thm-styles, "corollary"),
     inset: 1em
   )
-  show select-kind(example): it => box(
+  show thm-selector(example): it => box(
     it,
     inset: (left: 1em, right: 1em, top: 1em, bottom: 1em),
   )
-  show select-kind(remark): it => box(
+  show thm-selector(remark): it => box(
     it,
     inset: (left: 1em, right: 1em, top: 1em, bottom: 1em),
   )
-  show select-kind(proof): it => box(
+  show thm-selector("def-thms", subgroup: "proof"): it => box(
     it,
     stroke: (left: add-paint-if-some((thickness: 1pt, dash: "dotted"), thm-styles, "proof")),
     inset: (left: 1em, right: 1em, top: 0.5em, bottom: 0.5em),
@@ -166,17 +167,17 @@
 ]
 
 
-#repr(memorizer[a])
+// #repr(memorizer[a])
 
-#memorizer[
-  TODO
-]
+// #memorizer[
+//   TODO
+// ]
 
-#property[
-  asdfasdf
-]
+// #property[
+//   asdfasdf
+// ]
 
 
-#statement[
-  adsfasd
-]
+// #statement[
+//   adsfasd
+// ]
