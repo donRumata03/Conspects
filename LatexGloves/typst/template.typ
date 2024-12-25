@@ -196,5 +196,5 @@ $nTimes(a)$
 
 $nTimes(a, n: m)$ 
 
-$#nTimes($a$, startFrom: ($1$, $2$,))$
+$nTimes(a, startFrom: #($1$, $2$,))$
 
