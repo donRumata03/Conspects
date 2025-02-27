@@ -1,4 +1,4 @@
-#import "@preview/lemmify:0.1.6": *
+#import "@preview/lemmify:0.1.7": *
 
 
 #set heading(numbering: "1.1")

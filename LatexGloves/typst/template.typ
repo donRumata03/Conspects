@@ -85,7 +85,7 @@ align(center)[
   }
   
   // Table of contents.
-  outline(depth: 3, indent: true)
+  outline(depth: 3)
   pagebreak()
 
 

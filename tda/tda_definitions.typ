@@ -6,3 +6,7 @@
 #let gcd = $op("gcd")$
 
 #gcd
+
+
+#let inv = $zwj^(-1)$
+$lr(| union.big.big / union.big.big |) inv$
