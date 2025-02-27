@@ -2,7 +2,7 @@
 
 #show: project.with(
   title:
-  "Топологический анализ данных (листок 2)",
+  "Топологический анализ данных (листок 1)",
   authors: (vova,),
   which-rose-pine: rose-pine-moon
 )
