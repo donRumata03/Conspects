@@ -15,10 +15,10 @@ jobs:
       #   with:
       #     source_file: CockumberTheory/practice.typ
       - name: Setup typst
-        uses: yusancky/setup-typst@v2
+        uses: typst-community/setup-typst@v4
         id: setup-typst
         with:
-          version: 'v0.8.0'
+          typst-version: 'v0.8.0'
       - name: "Setup python"
         uses: actions/setup-python@v4
         with:
